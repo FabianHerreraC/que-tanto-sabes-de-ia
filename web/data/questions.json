@@ -1,0 +1,2740 @@
+[
+ {
+  "id": "gen-001",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 1,
+  "enunciado": "Los lineamientos también orientan a terceros vinculados a la universidad cuando usan recursos o servicios institucionales.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Además de la comunidad universitaria, orientan a terceros que, por una relación académica, contractual o de servicios, usan información, recursos o servicios institucionales.",
+  "cita": {
+   "fragmento": "GEN-005",
+   "documento": "Generales",
+   "pagina": 9
+  },
+  "evidencia": "También orientan a terceros vinculados a la universidad",
+  "conceptos": [
+   "terceros",
+   "responsabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-002",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 1,
+  "enunciado": "La Comisión Institucional de Expertos en IA es la instancia que decide qué usos de IA se permiten en la universidad.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "La Comisión cumple un papel orientador y consultivo: apoya la revisión técnica, ética y estratégica, pero no decide por las instancias competentes.",
+  "cita": {
+   "fragmento": "GEN-004",
+   "documento": "Generales",
+   "pagina": 8
+  },
+  "evidencia": "La Comisión cumple un papel orientador y consultivo",
+  "conceptos": [
+   "comision",
+   "decisiones"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-003",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 1,
+  "enunciado": "La discusión institucional sobre IA debe concentrarse en qué herramienta se usa.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Los referentes coinciden en que la discusión no debe girar en torno a una herramienta, sino a las condiciones bajo las cuales se utiliza.",
+  "cita": {
+   "fragmento": "GEN-007",
+   "documento": "Generales",
+   "pagina": 11
+  },
+  "evidencia": "la discusión institucional no debe concentrarse en una herramienta, sino en las condiciones bajo las cuales se utiliza",
+  "conceptos": [
+   "riesgo",
+   "responsabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-004",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Un riesgo frecuente de la IA generativa es incorporar información plausible pero incorrecta.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Entre los riesgos de la IA generativa están la información plausible pero incorrecta, perder claridad sobre el origen de los contenidos y exponer información en plataformas externas.",
+  "cita": {
+   "fragmento": "GEN-007",
+   "documento": "Generales",
+   "pagina": 11
+  },
+  "evidencia": "incorporar información plausible pero incorrecta",
+  "conceptos": [
+   "alucinaciones",
+   "ia-generativa",
+   "verificacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-005",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Los lineamientos de IA reemplazan las políticas institucionales previas sobre datos y propiedad intelectual.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Se apoyan en la normatividad vigente de la universidad y no la sustituyen; se articulan con las políticas de datos, ética y propiedad intelectual.",
+  "cita": {
+   "fragmento": "GEN-009",
+   "documento": "Generales",
+   "pagina": 15
+  },
+  "evidencia": "Estos lineamientos se apoyan en la normatividad vigente de la UEB y no la sustituyen",
+  "conceptos": [
+   "propiedad-intelectual",
+   "privacidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-006",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 1,
+  "enunciado": "La universidad busca que la IA reemplace el pensamiento humano.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "La IA puede ampliar las capacidades de las personas, pero eso no significa reemplazar el pensamiento humano sino fortalecerlo cuando se usa con criterio.",
+  "cita": {
+   "fragmento": "GEN-012",
+   "documento": "Generales",
+   "pagina": 18
+  },
+  "evidencia": "no significa reemplazar el pensamiento humano, sino fortalecerlo",
+  "conceptos": [
+   "agencia-humana"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-007",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "El control humano debe aumentar cuando el uso de IA puede afectar personas, decisiones o asignación de recursos.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Es el principio de control humano proporcional al riesgo.",
+  "cita": {
+   "fragmento": "GEN-012",
+   "documento": "Generales",
+   "pagina": 19
+  },
+  "evidencia": "El control humano aumenta cuando el uso puede afectar personas, decisiones o asignación de recursos.",
+  "conceptos": [
+   "supervision-humana",
+   "decisiones",
+   "riesgo"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-008",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Para la universidad, «IA» se refiere solo a la IA generativa que produce texto e imágenes.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "La definición institucional incluye la IA generativa y también los sistemas de análisis o automatización que clasifican, predicen o priorizan.",
+  "cita": {
+   "fragmento": "GEN-013",
+   "documento": "Generales",
+   "pagina": 20
+  },
+  "evidencia": "también sistemas de análisis o automatización que operan mediante clasificación, predicción o priorización",
+  "conceptos": [
+   "ia-generativa",
+   "automatizacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-009",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Los lineamientos generales definen una lista de herramientas autorizadas.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Por su carácter general no definen procedimientos ni herramientas autorizadas; eso se desarrolla en lineamientos orientadores posteriores.",
+  "cita": {
+   "fragmento": "GEN-014",
+   "documento": "Generales",
+   "pagina": 21
+  },
+  "evidencia": "estos lineamientos no definen procedimientos específicos ni herramientas autorizadas",
+  "conceptos": [
+   "herramientas-autorizadas"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-010",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "La supervisión humana se cumple con una revisión rápida al final del proceso.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "La supervisión humana es una condición del uso institucional cuando hay efectos relevantes, no una revisión superficial al final.",
+  "cita": {
+   "fragmento": "GEN-018",
+   "documento": "Generales",
+   "pagina": 24
+  },
+  "evidencia": "y no como una revisión superficial al final del proceso",
+  "conceptos": [
+   "supervision-humana",
+   "responsabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-011",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "La valoración del riesgo de un uso de IA debe revisarse si cambia la herramienta, el proveedor o la versión.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Esos cambios pueden modificar el nivel de riesgo y exigir ajustes en la implementación.",
+  "cita": {
+   "fragmento": "GEN-017",
+   "documento": "Generales",
+   "pagina": 23
+  },
+  "evidencia": "La valoración se revisa cuando cambian condiciones relevantes del uso, como la herramienta, el proveedor, la versión",
+  "conceptos": [
+   "riesgo",
+   "proveedores"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-012",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Manipular las instrucciones de una herramienta para alterar su comportamiento esperado es un riesgo de seguridad que los lineamientos mencionan.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Junto a los sesgos y la exposición involuntaria de información, se menciona la manipulación de instrucciones que alteran el comportamiento de la herramienta.",
+  "cita": {
+   "fragmento": "GEN-017",
+   "documento": "Generales",
+   "pagina": 23
+  },
+  "evidencia": "manipulación de instrucciones que alteren el comportamiento esperado de la herramienta",
+  "conceptos": [
+   "seguridad-informacion",
+   "riesgo"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-013",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "El nivel de detalle que exige la trazabilidad puede variar según el caso.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "La exigencia de trazabilidad no implica el mismo nivel de detalle en todos los casos: depende de la incidencia del uso.",
+  "cita": {
+   "fragmento": "GEN-019",
+   "documento": "Generales",
+   "pagina": 24
+  },
+  "evidencia": "Esta exigencia no implica el mismo nivel de detalle en todos los casos.",
+  "conceptos": [
+   "trazabilidad",
+   "transparencia"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-014",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Si la IA solo apoya tareas auxiliares sin incidencia relevante, basta con claridad básica sobre el propósito y el tipo de uso.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Cuando la IA influye en decisiones, productos o entregables a terceros se requiere más información; en tareas auxiliares basta con claridad básica.",
+  "cita": {
+   "fragmento": "GEN-019",
+   "documento": "Generales",
+   "pagina": 24
+  },
+  "evidencia": "basta con claridad básica sobre el propósito y el tipo de uso",
+  "conceptos": [
+   "trazabilidad",
+   "niveles-de-uso"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-015",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Con datos personales conviene darle a la IA toda la información disponible para obtener mejores resultados.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "El criterio es usar únicamente la información necesaria para la finalidad prevista, con medidas de protección acordes al riesgo.",
+  "cita": {
+   "fragmento": "GEN-020",
+   "documento": "Generales",
+   "pagina": 25
+  },
+  "evidencia": "usar únicamente la información necesaria para la finalidad prevista",
+  "conceptos": [
+   "datos-personales",
+   "privacidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-016",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Declarar el uso de IA exime de cumplir la Política de Propiedad Intelectual.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "La declaración no exime de la Política de Propiedad Intelectual ni de las reglas sobre derechos morales y patrimoniales u obras de terceros.",
+  "cita": {
+   "fragmento": "GEN-021",
+   "documento": "Generales",
+   "pagina": 26
+  },
+  "evidencia": "La declaración del uso de IA no exime del cumplimiento de la Política de Propiedad Intelectual",
+  "conceptos": [
+   "declaracion-de-uso",
+   "propiedad-intelectual"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-017",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Un resultado generado solo por IA, sin intervención creativa humana suficiente, puede no reconocerse como obra protegida por derecho de autor.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Por regla general esos resultados pueden no reunir las condiciones de una obra protegida; si hay intervención humana relevante, se analiza caso a caso.",
+  "cita": {
+   "fragmento": "GEN-022",
+   "documento": "Generales",
+   "pagina": 27
+  },
+  "evidencia": "pueden no reunir las condiciones para ser reconocidos como obras protegidas por el derecho de autor",
+  "conceptos": [
+   "propiedad-intelectual",
+   "ia-generativa",
+   "autoria"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-018",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "La gobernanza de la IA en la universidad se organiza en tres niveles.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Un nivel de entrada (principios, normativa, objetivos), uno orientador liderado por la Comisión y uno de acción.",
+  "cita": {
+   "fragmento": "GEN-026",
+   "documento": "Generales",
+   "pagina": 30
+  },
+  "evidencia": "La gobernanza se organiza en tres niveles",
+  "conceptos": [
+   "comision"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-019",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Los lineamientos generales se revisan de manera ordinaria al menos una vez al año.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Además de la revisión anual, hay revisiones extraordinarias ante nuevas regulaciones, incidentes o cambios tecnológicos relevantes.",
+  "cita": {
+   "fragmento": "GEN-027",
+   "documento": "Generales",
+   "pagina": 32
+  },
+  "evidencia": "La revisión del documento se realiza de manera ordinaria al menos una vez al año",
+  "conceptos": [
+   "comision",
+   "riesgo"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "gen-020",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "En investigación, el uso de IA se declara cuando tiene incidencia relevante en el desarrollo o los resultados.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Se declara con un nivel de detalle acorde con el área, el tipo de estudio y los estándares de integridad y reproducibilidad.",
+  "cita": {
+   "fragmento": "GEN-021",
+   "documento": "Generales",
+   "pagina": 26
+  },
+  "evidencia": "en investigación se declara el uso cuando tenga incidencia relevante en el desarrollo o los resultados",
+  "conceptos": [
+   "declaracion-de-uso",
+   "integridad-cientifica"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-001",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 1,
+  "enunciado": "La universidad prohíbe usar IA en actividades de enseñanza-aprendizaje.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "No la prohíbe: puede apoyar el aprendizaje, la escritura, la búsqueda de información y la preparación de clases, con un uso claro y responsable.",
+  "cita": {
+   "fragmento": "ENS-049",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 33
+  },
+  "evidencia": "No. La IA puede apoyar en aprendizaje, escritura, búsqueda de información",
+  "conceptos": [
+   "aprendizaje"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-002",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 1,
+  "enunciado": "El estudiante debe abstenerse de ocultar el uso de IA.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "También debe abstenerse de entregar como propio aquello que no elaboró.",
+  "cita": {
+   "fragmento": "ENS-034",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 7
+  },
+  "evidencia": "El estudiante debe abstenerse de ocultar el uso de IA",
+  "conceptos": [
+   "declaracion-de-uso",
+   "integridad-academica"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-003",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 1,
+  "enunciado": "Si la IA te propone una cita y no la encuentras, puedes usarla igual si suena confiable.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Si la herramienta propone una cita hay que buscarla; si no aparece, no debe usarse.",
+  "cita": {
+   "fragmento": "ENS-039",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 17
+  },
+  "evidencia": "Si la herramienta propone una cita, hay que buscarla; si no aparece, no debe usarse.",
+  "conceptos": [
+   "citas",
+   "verificacion",
+   "alucinaciones"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-004",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 1,
+  "enunciado": "Puedes usar IA para estudiar un tema sin declararlo, si ese uso no pasa al producto final.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Vale para comprender un tema o practicar preguntas. Pero si el profesor pide declarar cualquier apoyo, hay que seguir esa instrucción.",
+  "cita": {
+   "fragmento": "ENS-049",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 33
+  },
+  "evidencia": "Sí, cuando se usa solo para comprender un tema, practicar preguntas, organizar ideas",
+  "conceptos": [
+   "declaracion-de-uso",
+   "aprendizaje"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-005",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "Aunque el uso de IA sea solo de estudio, el profesor puede pedir que se declare.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "El profesor o el programa pueden pedir declaración incluso en usos personales de estudio, si la actividad lo requiere.",
+  "cita": {
+   "fragmento": "ENS-037",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 13
+  },
+  "evidencia": "profesor o el programa pueden pedir declaración incluso en estos casos",
+  "conceptos": [
+   "declaracion-de-uso"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-006",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "Declarar el uso de IA equivale a admitir que se usó de forma inadecuada.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Declarar significa informar con claridad qué apoyo se recibió y asumir la responsabilidad por el resultado final.",
+  "cita": {
+   "fragmento": "ENS-037",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 13
+  },
+  "evidencia": "Declarar el uso de IA no significa que la herramienta se haya usado de manera inadecuada",
+  "conceptos": [
+   "declaracion-de-uso",
+   "transparencia"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-007",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 1,
+  "enunciado": "Las sustentaciones aparecen como ejemplo de actividad «Sin IA».",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "En el nivel «Sin IA» están los exámenes individuales, las pruebas cerradas, las sustentaciones y las demostraciones prácticas.",
+  "cita": {
+   "fragmento": "ENS-036",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 11
+  },
+  "evidencia": "Exámenes individuales, pruebas cerradas, sustentaciones, demostraciones prácticas.",
+  "conceptos": [
+   "niveles-de-uso",
+   "evaluacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-008",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "En el nivel «IA integrada en la actividad», lo que se evalúa es el uso crítico de la IA.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "La IA hace parte del ejercicio: por ejemplo, analizar sus respuestas, comparar fuentes o identificar errores y sesgos.",
+  "cita": {
+   "fragmento": "ENS-036",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 11
+  },
+  "evidencia": "La IA hace parte del ejercicio. Lo que se evalúa es su uso crítico.",
+  "conceptos": [
+   "niveles-de-uso",
+   "competencias"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-009",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 1,
+  "enunciado": "Una respuesta de IA puede usarse como fuente académica primaria.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "La IA no reemplaza libros, artículos, normas, bases de datos ni fuentes verificables.",
+  "cita": {
+   "fragmento": "ENS-038",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 15
+  },
+  "evidencia": "La IA no reemplaza libros, artículos, normas, bases de datos ni fuentes verificables.",
+  "conceptos": [
+   "fuentes",
+   "citas"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-010",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "Un detector de IA basta como prueba única para sancionar un trabajo.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Los detectores pueden equivocarse y dar falsos positivos: sirven como alerta para revisar un caso, no como prueba concluyente.",
+  "cita": {
+   "fragmento": "ENS-038",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 15
+  },
+  "evidencia": "Estos sistemas pueden equivocarse y producir falsos positivos.",
+  "conceptos": [
+   "detectores",
+   "evaluacion",
+   "integridad-academica"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-011",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "Subir datos clínicos o sensibles a una herramienta de IA abierta está bien si es para estudiar.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Cargar datos personales, clínicos, sensibles o confidenciales en herramientas abiertas puede vulnerar la privacidad y la protección de datos.",
+  "cita": {
+   "fragmento": "ENS-038",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 15
+  },
+  "evidencia": "Cargar datos personales, clínicos, sensibles o confidenciales en herramientas abiertas.",
+  "conceptos": [
+   "datos-clinicos",
+   "datos-sensibles",
+   "privacidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-012",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 1,
+  "enunciado": "Si un trabajo lleva tu nombre, debes poder explicarlo, defenderlo y responder por él.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "La IA no puede aprender por el estudiante ni responder por su criterio: el autor responde por lo que entrega.",
+  "cita": {
+   "fragmento": "ENS-039",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 17
+  },
+  "evidencia": "este debe poder explicarlo, defenderlo y responder por él",
+  "conceptos": [
+   "autoria",
+   "responsabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-013",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "Si no tienes claro si un uso de IA está permitido, debes resolver la duda antes de entregar.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Cuando no sea claro si el uso está permitido, la duda se resuelve antes de entregar la actividad.",
+  "cita": {
+   "fragmento": "ENS-039",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 17
+  },
+  "evidencia": "la duda debe resolverse antes de entregar la actividad",
+  "conceptos": [
+   "declaracion-de-uso",
+   "integridad-academica"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-014",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "Cuando la IA hace parte de una actividad, conviene evaluar el proceso y no solo el producto.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Se puede pedir que el estudiante compare respuestas de IA con fuentes, identifique errores y muestre cómo transformó un borrador.",
+  "cita": {
+   "fragmento": "ENS-040",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 18
+  },
+  "evidencia": "conviene evaluar el proceso, no solo el producto",
+  "conceptos": [
+   "evaluacion",
+   "competencias"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-015",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "Los programas deberían tratar la IA solo como un asunto de fraude académico.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "No es solo un asunto de fraude: también es un tema curricular, con usos y riesgos distintos según cada disciplina.",
+  "cita": {
+   "fragmento": "ENS-041",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 20
+  },
+  "evidencia": "Los programas no deberían abordar la IA solo como un asunto de fraude académico",
+  "conceptos": [
+   "competencias",
+   "integridad-academica"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-016",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "Se pueden cargar calificaciones o trabajos de estudiantes en una herramienta cuyos términos permitan usarlos para entrenamiento.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "No se debe ingresar información a herramientas cuyos términos permitan almacenarla, usarla para entrenamiento o transferirla a terceros.",
+  "cita": {
+   "fragmento": "ENS-043",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 24
+  },
+  "evidencia": "no se debe ingresar información a herramientas de IA cuyos términos permitan almacenar lo que se carga",
+  "conceptos": [
+   "privacidad",
+   "confidencialidad",
+   "herramientas-autorizadas"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-017",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "En una decisión de admisión o promoción, la IA puede entregar insumos, pero una persona o instancia responsable debe revisar, interpretar y decidir.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "La IA puede ayudar a organizar información, pero no debe decidir por la Universidad.",
+  "cita": {
+   "fragmento": "ENS-044",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 25
+  },
+  "evidencia": "una persona o instancia responsable debe revisar, interpretar y decidir",
+  "conceptos": [
+   "decisiones",
+   "supervision-humana"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-018",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "Cuando se necesitan ejemplos, deben usarse datos ficticios o anonimizados.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Y en contextos clínicos, comunitarios, escolares o de práctica profesional el cuidado debe ser mayor.",
+  "cita": {
+   "fragmento": "ENS-044",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 25
+  },
+  "evidencia": "Cuando se requieran ejemplos, deben usarse datos ficticios o anonimizados.",
+  "conceptos": [
+   "anonimizacion",
+   "datos-personales"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-019",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "Si es fácil copiar y pegar información en una herramienta, desaparecen las obligaciones de confidencialidad.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Esa facilidad no elimina las obligaciones de confidencialidad, consentimiento, protección de datos y propiedad intelectual.",
+  "cita": {
+   "fragmento": "ENS-044",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 25
+  },
+  "evidencia": "La facilidad de copiar y pegar información en una herramienta no elimina las obligaciones de confidencialidad",
+  "conceptos": [
+   "confidencialidad",
+   "consentimiento"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ens-020",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "Los lineamientos de enseñanza-aprendizaje son, ante todo, una lista de prohibiciones.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "No son una lista de prohibiciones ni un manual técnico: buscan ayudar a decidir cuándo usar la IA, cuándo evitarla y cómo declararla.",
+  "cita": {
+   "fragmento": "ENS-033",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 5
+  },
+  "evidencia": "No son una lista de prohibiciones ni un manual técnico.",
+  "conceptos": [
+   "aprendizaje",
+   "niveles-de-uso"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-001",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 1,
+  "enunciado": "Una herramienta de IA puede figurar como coautora de un artículo si aportó buena parte del texto.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "La IA no puede ser autora ni coautora: la autoría implica contribución intelectual, aprobar la versión final y responder por el contenido.",
+  "cita": {
+   "fragmento": "CIE-069",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 36
+  },
+  "evidencia": "La IA no puede figurar como autora o coautora de artículos",
+  "conceptos": [
+   "autoria",
+   "publicacion",
+   "responsabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-002",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 1,
+  "enunciado": "La Universidad prohíbe el uso de IA en investigación e innovación.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Puede apoyar la búsqueda, el análisis preliminar, la programación o la redacción, siempre de forma transparente y verificable.",
+  "cita": {
+   "fragmento": "CIE-078",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 52
+  },
+  "evidencia": "No. La IA puede apoyar en búsqueda, organización, análisis preliminar",
+  "conceptos": [
+   "integridad-cientifica"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-003",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "Una hipótesis propuesta por la IA en la etapa de ideación basta como evidencia de que la idea es novedosa.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Lo que propone la IA en la ideación es un insumo exploratorio, no evidencia suficiente de novedad, pertinencia o viabilidad.",
+  "cita": {
+   "fragmento": "CIE-057",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 12
+  },
+  "evidencia": "Estas salidas deben tratarse como insumos exploratorios, no como evidencia suficiente de novedad",
+  "conceptos": [
+   "verificacion",
+   "prototipos"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-004",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 1,
+  "enunciado": "Las herramientas generativas pueden producir citas inexistentes o atribuciones incorrectas.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Por eso su uso en revisión de literatura e innovación exige verificación.",
+  "cita": {
+   "fragmento": "CIE-057",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 12
+  },
+  "evidencia": "pueden producir citas inexistentes, atribuciones incorrectas",
+  "conceptos": [
+   "alucinaciones",
+   "citas",
+   "ia-generativa"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-005",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "La aprobación ética y la revisión por pares confidencial son usos que no se delegan a la IA.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "La IA no puede asumir responsabilidad científica, ética, editorial ni evaluativa: son usos no delegables.",
+  "cita": {
+   "fragmento": "CIE-058",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 14
+  },
+  "evidencia": "Autoría, aprobación ética, revisión por pares confidencial",
+  "conceptos": [
+   "etica",
+   "revision-por-pares",
+   "alto-riesgo"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-006",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "Una corrección de estilo exige el mismo nivel de documentación que un análisis de datos.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "La clasificación por niveles permite controles proporcionales al uso.",
+  "cita": {
+   "fragmento": "CIE-058",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 14
+  },
+  "evidencia": "Un ajuste de estilo no requiere el mismo nivel de documentación que un análisis de datos",
+  "conceptos": [
+   "niveles-de-uso",
+   "trazabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-007",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "Si usaste IA para generar una figura de una publicación, se recomienda declararlo en el pie de figura.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Indicando la herramienta y el proveedor.",
+  "cita": {
+   "fragmento": "CIE-059",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 16
+  },
+  "evidencia": "se recomienda declararlo en el pie de figura",
+  "conceptos": [
+   "declaracion-de-uso",
+   "publicacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-008",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "Si la IA incidió en análisis o programación, la documentación debería incluir herramienta, versión, fecha, propósito e instrucciones relevantes.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "También los datos utilizados, las validaciones, las limitaciones y quién revisó.",
+  "cita": {
+   "fragmento": "CIE-060",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 17
+  },
+  "evidencia": "nombre de la herramienta, versión, fecha, propósito, instrucciones relevantes",
+  "conceptos": [
+   "trazabilidad",
+   "prototipos"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-009",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "Se puede usar IA para completar o simular datos de investigación sin justificación metodológica.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Modificar, completar o simular datos sin justificación ni trazabilidad afecta la validez, la reproducibilidad y la integridad del estudio.",
+  "cita": {
+   "fragmento": "CIE-061",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 19
+  },
+  "evidencia": "Modificar, completar o simular datos de investigación",
+  "conceptos": [
+   "integridad-cientifica",
+   "trazabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-010",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "Inventar referencias con apoyo de IA puede configurar fabricación o falsificación.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Y conducir a decisiones mal soportadas.",
+  "cita": {
+   "fragmento": "CIE-061",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 19
+  },
+  "evidencia": "Puede configurar fabricación, falsificación o mala práctica científica",
+  "conceptos": [
+   "integridad-cientifica",
+   "citas"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-011",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "La interpretación final de resultados y la formulación de conclusiones pueden delegarse en la IA.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Eso traslada el juicio científico a una herramienta que no responde por errores ni comprende el contexto.",
+  "cita": {
+   "fragmento": "CIE-061",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 19
+  },
+  "evidencia": "Delegar en la IA la interpretación final de resultados, la formulación de conclusiones",
+  "conceptos": [
+   "decisiones",
+   "responsabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-012",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 1,
+  "enunciado": "La reflexión sobre cómo usar IA en un proyecto debe hacerse al inicio, no cuando el producto ya está listo.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Antes de usarla, el equipo se pregunta qué función cumplirá, qué información ingresará y cómo verificará el resultado.",
+  "cita": {
+   "fragmento": "CIE-062",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 22
+  },
+  "evidencia": "Esa reflexión debe ocurrir al inicio del proceso",
+  "conceptos": [
+   "riesgo"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-013",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "Puedes usar una referencia sugerida por la IA aunque no logres encontrarla ni consultarla.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Toda referencia sugerida por IA debe buscarse y comprobarse; si no existe o no puede consultarse, no se usa.",
+  "cita": {
+   "fragmento": "CIE-063",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 24
+  },
+  "evidencia": "Si la fuente no existe, no coincide con lo afirmado o no puede consultarse, no debe ser usada.",
+  "conceptos": [
+   "fuentes",
+   "verificacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-014",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "La vigilancia tecnológica hecha con IA reemplaza la búsqueda especializada de patentes.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Es un apoyo preliminar: no reemplaza las bases de patentes, normas técnicas, análisis de mercado ni la revisión de libertad de operación.",
+  "cita": {
+   "fragmento": "CIE-063",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 24
+  },
+  "evidencia": "estos resultados no reemplazan la búsqueda especializada en bases de datos de patentes",
+  "conceptos": [
+   "transferencia",
+   "verificacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-015",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "En un protocolo de investigación basta con nombrar la herramienta de IA que se usará.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Hay que indicar qué hará, qué datos usará, qué riesgos introduce, cómo se validará y cuál será la supervisión humana.",
+  "cita": {
+   "fragmento": "CIE-065",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 28
+  },
+  "evidencia": "No basta con nombrar la herramienta; debe indicarse qué hará",
+  "conceptos": [
+   "etica",
+   "transparencia"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-016",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "Algunos datos anonimizados pueden permitir la reidentificación si se combinan con otras fuentes.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Por eso la anonimización debe revisarse con cuidado.",
+  "cita": {
+   "fragmento": "CIE-066",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 30
+  },
+  "evidencia": "algunos conjuntos de datos pueden permitir la reidentificación si se combinan con otras fuentes",
+  "conceptos": [
+   "anonimizacion",
+   "datos-personales"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-017",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "Como par evaluador, puedes usar una IA externa para analizar un manuscrito confidencial sin autorización.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "La revisión por pares debe proteger la reserva, la propiedad intelectual y la confiabilidad del proceso.",
+  "cita": {
+   "fragmento": "CIE-078",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 52
+  },
+  "evidencia": "No debe usarse IA externa para procesar documentos confidenciales sin autorización expresa.",
+  "conceptos": [
+   "revision-por-pares",
+   "confidencialidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-018",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "Si existe la opción de usar infraestructura controlada por la Universidad, se prioriza sobre servicios externos.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Esas alternativas reducen la exposición de la información.",
+  "cita": {
+   "fragmento": "CIE-072",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 41
+  },
+  "evidencia": "se priorizarán esas opciones, porque reducen la exposición de información",
+  "conceptos": [
+   "proveedores",
+   "seguridad-informacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-019",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "Si una revista tiene reglas sobre IA más exigentes que los lineamientos, se aplican las de la revista.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Cuando son más exigentes, prevalecen las condiciones de la revista, la editorial, la convocatoria o el financiador.",
+  "cita": {
+   "fragmento": "CIE-078",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 52
+  },
+  "evidencia": "Si son más exigentes que estos lineamientos, se aplican las condiciones específicas",
+  "conceptos": [
+   "publicacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "cie-020",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 2,
+  "enunciado": "La fluidez de un texto basta para medir su calidad científica.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "La calidad depende de la relación entre pregunta, método, datos, resultados, fuentes y conclusiones.",
+  "cita": {
+   "fragmento": "CIE-068",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 34
+  },
+  "evidencia": "La calidad de un texto no se mide solo por su fluidez",
+  "conceptos": [
+   "publicacion",
+   "integridad-cientifica"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-001",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 1,
+  "enunciado": "La Universidad prohíbe el uso de IA en extensión.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Puede apoyar la educación continuada, la consultoría, la transferencia y la comunicación, con un uso revisado y transparente.",
+  "cita": {
+   "fragmento": "EXT-102",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 42
+  },
+  "evidencia": "No. La IA puede apoyar tareas en educación continuada",
+  "conceptos": [
+   "formacion",
+   "comunidades"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-002",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 1,
+  "enunciado": "La IA puede reemplazar el diálogo con las comunidades si ahorra tiempo.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "La IA no debe reemplazar el diálogo con las comunidades ni presentar como definitiva una lectura no validada por los participantes.",
+  "cita": {
+   "fragmento": "EXT-091",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 22
+  },
+  "evidencia": "La IA no debe reemplazar el diálogo con las comunidades.",
+  "conceptos": [
+   "comunidades"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-003",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Un entregable de consultoría solo es final cuando el equipo experto lo revisa, lo valida y asume su responsabilidad.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "La IA puede apoyar el trabajo, pero la calidad técnica y los compromisos del entregable son del equipo.",
+  "cita": {
+   "fragmento": "EXT-086",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 11
+  },
+  "evidencia": "el entregable institucional solo se considera final cuando el equipo experto lo revisa, lo valida",
+  "conceptos": [
+   "entregables",
+   "responsabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-004",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 1,
+  "enunciado": "Puedes usar IA para diseñar un curso o un diplomado.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Como apoyo para organizar contenidos, actividades y materiales; el diseño final lo revisa el equipo académico.",
+  "cita": {
+   "fragmento": "EXT-102",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 42
+  },
+  "evidencia": "Sí, como apoyo en organización de contenidos, actividades, materiales y casos.",
+  "conceptos": [
+   "formacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-005",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "En educación continuada, la IA puede definir por sí sola los objetivos de aprendizaje y la evaluación de un curso.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Debe mantenerse el criterio pedagógico del equipo responsable.",
+  "cita": {
+   "fragmento": "EXT-090",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 20
+  },
+  "evidencia": "La IA no debe definir por sí sola los objetivos de aprendizaje",
+  "conceptos": [
+   "formacion",
+   "evaluacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-006",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "En extensión, los ejemplos y materiales de formación deben usar datos ficticios, anonimizados o enmascarados.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Así se evita exponer información real de participantes, aliados o comunidades.",
+  "cita": {
+   "fragmento": "EXT-095",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 29
+  },
+  "evidencia": "deben usarse datos ficticios, anonimizados o enmascarados",
+  "conceptos": [
+   "anonimizacion",
+   "datos-personales",
+   "formacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-007",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Puedes cargar la base de asistentes de un curso en una herramienta de IA no autorizada.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "No se ingresan datos personales, información de participantes ni bases de asistentes en herramientas no autorizadas.",
+  "cita": {
+   "fragmento": "EXT-095",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 29
+  },
+  "evidencia": "información de participantes, bases de asistentes",
+  "conceptos": [
+   "datos-personales",
+   "herramientas-autorizadas"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-008",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Revisar con IA un contrato o convenio sin validación jurídica es un uso que debe evitarse.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Puede producir interpretaciones incompletas o comprometer a la Universidad.",
+  "cita": {
+   "fragmento": "EXT-089",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 17
+  },
+  "evidencia": "Revisar contratos, convenios o condiciones comerciales, sin validación jurídica.",
+  "conceptos": [
+   "terceros",
+   "entregables"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-009",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Que una herramienta externa facilite la tarea basta para asumir que puede procesar información de un aliado.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Hay que respetar los convenios y acuerdos de confidencialidad; con información reservada se requiere revisión jurídica y de datos.",
+  "cita": {
+   "fragmento": "EXT-093",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 26
+  },
+  "evidencia": "No debe asumirse que una herramienta externa puede procesar información de un aliado solo porque facilita la tarea.",
+  "conceptos": [
+   "terceros",
+   "confidencialidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-010",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Puedes publicar una pieza de comunicación generada con IA sin revisión del área responsable.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Antes hay que revisar derechos, licencias, sesgos, uso de marca y coherencia institucional.",
+  "cita": {
+   "fragmento": "EXT-102",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 42
+  },
+  "evidencia": "No deben publicarse piezas generadas por IA sin revisión del área responsable.",
+  "conceptos": [
+   "reputacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-011",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Con imágenes de personas generadas con IA, debe evitarse cualquier representación engañosa o discriminatoria.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Sobre todo cuando simulan situaciones reales y pueden afectar la dignidad de personas o comunidades.",
+  "cita": {
+   "fragmento": "EXT-096",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 31
+  },
+  "evidencia": "debe evitarse cualquier representación engañosa, discriminatoria",
+  "conceptos": [
+   "reputacion",
+   "sesgos"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-012",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "La evaluación de impacto de la extensión puede reducirse a una lectura automática de la IA, sin contexto.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Los resultados deben interpretarse con contexto, considerando la calidad de los datos y la participación de los actores.",
+  "cita": {
+   "fragmento": "EXT-097",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 32
+  },
+  "evidencia": "La IA no debe convertir la evaluación de impacto en una lectura automática sin contexto.",
+  "conceptos": [
+   "calidad",
+   "comunidades"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-013",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Si un contrato o un aliado restringe el uso de IA, prevalecen esas condiciones.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Esas condiciones prevalecen y deben consultarse con las áreas competentes.",
+  "cita": {
+   "fragmento": "EXT-102",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 42
+  },
+  "evidencia": "esas condiciones prevalecen y deben consultarse con las áreas competentes",
+  "conceptos": [
+   "terceros"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-014",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Las funciones de IA incorporadas en plataformas ya contratadas también deben revisarse antes de usarlas en extensión.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "La revisión aplica tanto a herramientas nuevas como a funciones de IA dentro de plataformas existentes.",
+  "cita": {
+   "fragmento": "EXT-098",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 34
+  },
+  "evidencia": "Esto aplica tanto a herramientas nuevas como a funciones de IA incorporadas en plataformas ya contratadas.",
+  "conceptos": [
+   "proveedores",
+   "herramientas-autorizadas"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-015",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Un diseño o código generado con IA debe revisarse antes de considerarse protegible o comercializable.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "La IA puede generar riesgos sobre obras protegidas, titularidad, licencias y derechos de terceros.",
+  "cita": {
+   "fragmento": "EXT-094",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 27
+  },
+  "evidencia": "debe ser revisado antes de considerarse protegible, publicable, transferible o comercializable",
+  "conceptos": [
+   "propiedad-intelectual",
+   "transferencia"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-016",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "En un emprendimiento, la IA reemplaza la validación con usuarios y la revisión de libertad de operación.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Puede apoyar la ideación y el pitch, pero no reemplaza la validación, el análisis jurídico ni la prueba técnica.",
+  "cita": {
+   "fragmento": "EXT-094",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 27
+  },
+  "evidencia": "no reemplaza la validación con usuarios, la revisión de libertad de operación",
+  "conceptos": [
+   "transferencia",
+   "verificacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-017",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 1,
+  "enunciado": "Mejorar la redacción de una invitación y procesar datos de una comunidad requieren el mismo cuidado.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "El nivel de cuidado depende del papel de la herramienta y del tipo de información.",
+  "cita": {
+   "fragmento": "EXT-087",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 13
+  },
+  "evidencia": "No es lo mismo mejorar la redacción de una invitación a un curso",
+  "conceptos": [
+   "niveles-de-uso",
+   "comunidades"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-018",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "En procesos con terceros, la documentación del uso de IA requiere mayor detalle.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Herramienta, fecha, propósito, tipo de información, validaciones, límites y responsable de la revisión.",
+  "cita": {
+   "fragmento": "EXT-088",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 15
+  },
+  "evidencia": "En procesos con terceros, la documentación requiere mayor detalle.",
+  "conceptos": [
+   "trazabilidad",
+   "terceros"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-019",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Se pueden automatizar con IA respuestas a aliados sin revisión humana cuando hay impacto contractual.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Puede generar compromisos no autorizados o respuestas incorrectas.",
+  "cita": {
+   "fragmento": "EXT-089",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 17
+  },
+  "evidencia": "Automatizar respuestas sin revisión humana a aliados, comunidades o usuarios externos",
+  "conceptos": [
+   "automatizacion",
+   "supervision-humana"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ext-020",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 1,
+  "enunciado": "La IA puede apoyar la transferencia tecnológica, por ejemplo en vigilancia tecnológica y fichas tecnológicas.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Esos resultados deben verificarse con fuentes especializadas y con las unidades de propiedad intelectual y transferencia.",
+  "cita": {
+   "fragmento": "EXT-102",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 42
+  },
+  "evidencia": "Sí, puede apoyar en vigilancia tecnológica, análisis preliminar de patentes",
+  "conceptos": [
+   "transferencia"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-001",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 1,
+  "enunciado": "La universidad prohíbe usar IA en procesos administrativos o de gestión.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Puede apoyar la redacción, la síntesis o la clasificación, con revisión humana, trazabilidad y protección de la información.",
+  "cita": {
+   "fragmento": "GES-127",
+   "documento": "Gestión Institucional",
+   "pagina": 40
+  },
+  "evidencia": "No. La IA puede apoyar tareas como redacción, síntesis, clasificación",
+  "conceptos": [
+   "automatizacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-002",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 1,
+  "enunciado": "Una herramienta de IA puede clasificar solicitudes, pero no resolver un derecho de petición.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "La diferencia entre apoyo y decisión debe mantenerse en todos los procesos.",
+  "cita": {
+   "fragmento": "GES-109",
+   "documento": "Gestión Institucional",
+   "pagina": 8
+  },
+  "evidencia": "puede clasificar solicitudes, pero no resolver un derecho de petición",
+  "conceptos": [
+   "decisiones",
+   "automatizacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-003",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 1,
+  "enunciado": "La IA puede decidir a quién contratar a partir de las hojas de vida.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Puede resumir hojas de vida, pero no decidir una contratación.",
+  "cita": {
+   "fragmento": "GES-109",
+   "documento": "Gestión Institucional",
+   "pagina": 8
+  },
+  "evidencia": "puede resumir hojas de vida, pero no decidir una contratación",
+  "conceptos": [
+   "decisiones",
+   "sesgos"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-004",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Si la universidad paga la suscripción, el contrato ya garantiza la privacidad de lo que se procesa.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Hay que verificar si el proveedor retiene datos, los usa para entrenamiento o permite transferencias a terceros.",
+  "cita": {
+   "fragmento": "GES-122",
+   "documento": "Gestión Institucional",
+   "pagina": 30
+  },
+  "evidencia": "el contrato no garantiza por sí mismo privacidad o propiedad sobre la información procesada",
+  "conceptos": [
+   "proveedores",
+   "privacidad",
+   "auditoria"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-005",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Las funciones de IA de una plataforma ya contratada también se rigen por los lineamientos.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "La existencia de un contrato no sustituye definir el alcance permitido, las restricciones y los responsables.",
+  "cita": {
+   "fragmento": "GES-122",
+   "documento": "Gestión Institucional",
+   "pagina": 30
+  },
+  "evidencia": "Cuando la IA esté integrada en plataformas institucionales ya contratadas, su uso también se rige por estos lineamientos.",
+  "conceptos": [
+   "herramientas-autorizadas",
+   "proveedores"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-006",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Antes de usar IA analítica conviene verificar la exactitud, completitud y consistencia de los datos de entrada.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "La confiabilidad del resultado depende de la calidad y actualización de esos datos.",
+  "cita": {
+   "fragmento": "GES-110",
+   "documento": "Gestión Institucional",
+   "pagina": 10
+  },
+  "evidencia": "conviene verificar la exactitud, completitud y consistencia de la información utilizada",
+  "conceptos": [
+   "calidad",
+   "verificacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-007",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Enrutar solicitudes con reglas claras y revisión humana es un ejemplo de «apoyo operativo controlado».",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "En ese nivel la IA apoya tareas repetitivas o clasificación preliminar bajo reglas y revisión humana.",
+  "cita": {
+   "fragmento": "GES-111",
+   "documento": "Gestión Institucional",
+   "pagina": 12
+  },
+  "evidencia": "Enrutamiento de solicitudes, respuestas frecuentes, organización documental",
+  "conceptos": [
+   "niveles-de-uso",
+   "automatizacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-008",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "La IA puede emitir un concepto jurídico definitivo.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Los conceptos jurídicos, financieros o disciplinarios definitivos basados solo en IA pueden tener errores u omisiones.",
+  "cita": {
+   "fragmento": "GES-113",
+   "documento": "Gestión Institucional",
+   "pagina": 16
+  },
+  "evidencia": "Emitir conceptos jurídicos, financieros, disciplinarios o técnicos definitivos basados exclusivamente en IA.",
+  "conceptos": [
+   "decisiones",
+   "responsabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-009",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Las cifras o indicadores obtenidos con IA deben validarse contra las fuentes oficiales antes de divulgarse.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Así se evita que se consoliden reportes paralelos que contradigan la información institucional.",
+  "cita": {
+   "fragmento": "GES-116",
+   "documento": "Gestión Institucional",
+   "pagina": 22
+  },
+  "evidencia": "debe validarse contra las fuentes oficiales definidas por la Universidad",
+  "conceptos": [
+   "verificacion",
+   "calidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-010",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "El área de compras puede cargar cotizaciones de proveedores en una herramienta externa de IA.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Si se necesita comparar, la información se anonimiza, se generaliza o se procesa en herramientas autorizadas.",
+  "cita": {
+   "fragmento": "GES-117",
+   "documento": "Gestión Institucional",
+   "pagina": 23
+  },
+  "evidencia": "deben evitar cargar en herramientas externas cotizaciones, contratos, condiciones comerciales",
+  "conceptos": [
+   "confidencialidad",
+   "proveedores"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-011",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "El reglamento europeo de IA clasifica como de alto riesgo los sistemas usados para reclutar o seleccionar personas.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Por eso esos procesos necesitan controles reforzados: criterios definidos, revisión de sesgos y validación humana.",
+  "cita": {
+   "fragmento": "GES-118",
+   "documento": "Gestión Institucional",
+   "pagina": 25
+  },
+  "evidencia": "incluye en las categorías de alto riesgo los sistemas relacionados con empleo y gestión de trabajadores",
+  "conceptos": [
+   "alto-riesgo",
+   "sesgos"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-012",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "El criterio jurídico puede delegarse en la IA si la herramienta es especializada.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Toda respuesta o decisión con efecto institucional la revisa y valida el profesional responsable.",
+  "cita": {
+   "fragmento": "GES-119",
+   "documento": "Gestión Institucional",
+   "pagina": 26
+  },
+  "evidencia": "El criterio jurídico no puede delegarse en la IA.",
+  "conceptos": [
+   "responsabilidad",
+   "decisiones"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-013",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 1,
+  "enunciado": "Antes de enviar una respuesta redactada con IA hay que revisar datos, enlaces, fechas, nombres y cargos.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "La IA puede producir respuestas imprecisas, incompletas o fuera del contexto institucional.",
+  "cita": {
+   "fragmento": "GES-120",
+   "documento": "Gestión Institucional",
+   "pagina": 27
+  },
+  "evidencia": "el responsable debe verificar datos, enlaces, fechas, nombres, cargos",
+  "conceptos": [
+   "verificacion",
+   "responsabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-014",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Si una herramienta genera puntajes o predicciones, hay que considerar dónde se almacenan y si pueden eliminarse.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Y si el proveedor usa la información institucional para entrenamiento, para no crear repositorios externos no auditables.",
+  "cita": {
+   "fragmento": "GES-122",
+   "documento": "Gestión Institucional",
+   "pagina": 30
+  },
+  "evidencia": "se debe considerar dónde se almacenan, si pueden exportarse o eliminarse",
+  "conceptos": [
+   "proveedores",
+   "auditoria"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-015",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Habilitar herramientas de IA sin formar al personal aumenta el riesgo de usos inconsistentes.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "La formación del personal es una condición necesaria para la implementación.",
+  "cita": {
+   "fragmento": "GES-124",
+   "documento": "Gestión Institucional",
+   "pagina": 34
+  },
+  "evidencia": "aumenta el riesgo de usos inconsistentes y decisiones mal soportadas",
+  "conceptos": [
+   "formacion",
+   "riesgo"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-016",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Un uso técnicamente correcto de la herramienta compensa datos incompletos o desactualizados.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "La calidad del dato, su clasificación y su actualización siguen siendo indispensables.",
+  "cita": {
+   "fragmento": "GES-124",
+   "documento": "Gestión Institucional",
+   "pagina": 34
+  },
+  "evidencia": "de la herramienta no compensa datos incompletos, desactualizados o mal clasificados",
+  "conceptos": [
+   "calidad",
+   "formacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-017",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Una decisión institucional apoyada por IA debe tener un responsable humano que revise y valide la información.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Y debe poder explicarse cómo se produjo el insumo, qué datos usó y qué criterio se aplicó.",
+  "cita": {
+   "fragmento": "GES-123",
+   "documento": "Gestión Institucional",
+   "pagina": 32
+  },
+  "evidencia": "deberá haber un responsable humano que revise, interprete y valide la información",
+  "conceptos": [
+   "supervision-humana",
+   "decisiones"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-018",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 2,
+  "enunciado": "Si se le dan reglas claras, la IA puede resolver por sí sola trámites con efectos académicos.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 1,
+  "explicacion": "Puede cometer errores o reproducir sesgos de sus datos de entrenamiento y generar decisiones injustas.",
+  "cita": {
+   "fragmento": "GES-113",
+   "documento": "Gestión Institucional",
+   "pagina": 16
+  },
+  "evidencia": "Aprobar, negar o resolver trámites con efectos jurídicos, financieros, laborales o académicos.",
+  "conceptos": [
+   "decisiones",
+   "sesgos"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-019",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Una dependencia que quiere adoptar una nueva herramienta de IA debe revisar el caso con las áreas competentes antes de usarla.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "La revisión considera seguridad, protección de datos, proveedor, alcance permitido y responsable del uso.",
+  "cita": {
+   "fragmento": "GES-127",
+   "documento": "Gestión Institucional",
+   "pagina": 40
+  },
+  "evidencia": "Debe revisar el caso con las áreas competentes antes de usarla en procesos institucionales",
+  "conceptos": [
+   "herramientas-autorizadas",
+   "comision"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ges-020",
+  "tipo": "verdad_mentira",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 1,
+  "enunciado": "Puedes usar IA para preparar el borrador de un acta o un correo institucional.",
+  "opciones": [
+   "Verdad",
+   "Mentira"
+  ],
+  "correcta": 0,
+  "explicacion": "Siempre como apoyo, y con el contenido final revisado por el área responsable.",
+  "cita": {
+   "fragmento": "GES-127",
+   "documento": "Gestión Institucional",
+   "pagina": 40
+  },
+  "evidencia": "Sí, siempre que se use como apoyo y el contenido final sea revisado por el área responsable.",
+  "conceptos": [
+   "verificacion",
+   "responsabilidad"
+  ],
+  "estado": "pendiente_revision"
+ }
+]

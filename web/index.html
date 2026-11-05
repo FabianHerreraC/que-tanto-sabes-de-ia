@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>¿Qué tanto sabes de IA? · Verdad o mentira</title>
+<meta name="description" content="Un juego para conocer los Lineamientos de IA de la Universidad El Bosque.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20261105p">
+</head>
+<body data-vista="carga">
+
+<div id="carga" class="carga" aria-hidden="true">
+  <span class="marca"><img src="img/bosque-logo.svg" alt="Universidad El Bosque" width="1108" height="317"></span>
+  <span class="contador" id="contador">000</span>
+</div>
+
+<header class="barra">
+  <a class="marca" href="#" data-ir="inicio" aria-label="Universidad El Bosque · inicio"><img src="img/bosque-logo.svg" alt="" width="1108" height="317"></a>
+  <nav class="pestanas" aria-label="Secciones">
+    <button class="pestana" data-ir="inicio" aria-current="page"><span>Juego</span><sup>1</sup></button>
+    <button class="pestana" data-ir="mapa"><span>Mapa</span><sup>2</sup></button>
+    <button class="pestana" data-ir="consulta"><span>Consulta</span><sup>3</sup></button>
+    <button class="pestana" data-ir="historias"><span>Historias</span><sup>4</sup></button>
+    <button class="pestana" data-ir="acerca"><span>Acerca</span><sup>5</sup></button>
+  </nav>
+  <button class="punto" id="movimiento" aria-pressed="false" title="Pausar movimiento"><i></i><span class="sr">Pausar movimiento</span></button>
+</header>
+
+<canvas id="nube" aria-label="Mapa de conceptos de los lineamientos" role="img"></canvas>
+
+<main>
+  <!-- Inicio -->
+  <section class="panel" id="inicio" aria-labelledby="inicio-t">
+    <p class="globo" id="inicio-t">¿Qué tanto sabes de IA? <em>¿Verdad o mentira?</em></p>
+    <p class="nota">Con base en los Lineamientos de IA de la Universidad El Bosque, vamos a revisar cuánto sabes sobre cómo usar la IA en la vida universitaria.</p>
+    <p class="etiqueta" id="rol-t">¿Qué rol tienes?</p>
+    <div class="selector-rol">
+      <div class="caja-rol" role="group" aria-labelledby="rol-t">
+        <button class="flecha" id="rol-ant" aria-label="Rol anterior"><svg viewBox="0 0 12 20" width="10" height="16" aria-hidden="true"><path d="M10 2 2 10l8 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <span class="rol-actual" id="rol-actual" aria-live="polite">Estudiante</span>
+        <button class="flecha" id="rol-sig" aria-label="Rol siguiente"><svg viewBox="0 0 12 20" width="10" height="16" aria-hidden="true"><path d="M2 2l8 8-8 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+      <button class="pildora oscura" id="empezar">Empezar <span aria-hidden="true">→</span></button>
+    </div>
+    <div class="progreso" id="progreso-inicio"></div>
+  </section>
+
+  <!-- Quiz -->
+  <section class="panel" id="quiz" aria-live="polite">
+    <div class="quiz-cabeza">
+      <span class="serie" id="serie">01<small>/10</small></span>
+      <span class="meta" id="meta">Nivel 1 · Generales</span>
+      <span class="puntos" id="puntos">0 pts</span>
+    </div>
+    <p class="globo grande" id="enunciado"></p>
+    <div class="opciones" id="opciones"></div>
+    <div class="veredicto" id="veredicto" hidden>
+      <p class="resultado" id="resultado"></p>
+      <p class="explicacion" id="explicacion"></p>
+      <p class="cita" id="cita"></p>
+      <button class="pildora oscura" id="siguiente">Siguiente <span aria-hidden="true">→</span></button>
+    </div>
+  </section>
+
+  <!-- Cierre -->
+  <section class="panel" id="cierre" aria-labelledby="rango">
+    <p class="etiqueta">Tu constelación</p>
+    <p class="cifra"><span id="total">0</span><small> pts</small></p>
+    <p class="rango" id="rango"></p>
+    <dl class="datos">
+      <div><dt>Aciertos</dt><dd id="aciertos"></dd></div>
+      <div><dt>Racha máxima</dt><dd id="racha"></dd></div>
+      <div><dt>Mejor puntaje</dt><dd id="mejor"></dd></div>
+    </dl>
+    <div class="progreso" id="progreso-cierre"></div>
+    <div class="listas">
+      <div><p class="etiqueta">Dominados</p><p id="dominados" class="conceptos"></p></div>
+      <div><p class="etiqueta">Por explorar</p><p id="explorar" class="conceptos"></p></div>
+    </div>
+    <div class="acciones">
+      <button class="pildora oscura" id="otra">Jugar otra vez</button>
+      <button class="pildora" id="compartir">Compartir mi constelación</button>
+    </div>
+  </section>
+
+  <!-- Consulta: asistente sobre los documentos (aún sin conectar) -->
+  <section class="panel" id="consulta" aria-labelledby="consulta-t">
+    <p class="etiqueta">Consulta</p>
+    <p class="globo" id="consulta-t">Pregúntale a los <em>lineamientos</em>.</p>
+    <p class="nota">Pregunta con tus palabras sobre los Lineamientos de IA de la Universidad El Bosque.</p>
+    <div class="chat" id="chat" aria-live="polite">
+      <p class="msg bot">Hola. ¿Qué quieres saber sobre los lineamientos de IA?</p>
+    </div>
+    <form class="caja-pregunta" id="form-consulta">
+      <input id="pregunta" type="text" placeholder="Escribe tu pregunta…" aria-label="Tu pregunta" autocomplete="off">
+      <button class="pildora oscura" type="submit">Enviar <span aria-hidden="true">→</span></button>
+    </form>
+  </section>
+
+  <!-- Acerca -->
+  <section class="panel" id="acerca" aria-labelledby="acerca-t">
+    <p class="globo" id="acerca-t">Un proyecto para explorar <em>de manera compleja y crítica</em> la documentación institucional en torno al uso de la IA.</p>
+    <p class="nota"><b>Una iniciativa de la Vicerrectoría de Investigaciones</b> de la Universidad El Bosque.</p>
+    <p class="nota">Reúne los cinco documentos de Lineamientos de IA de la universidad (Generales, Enseñanza-Aprendizaje, Ciencia, Tecnología e Innovación, Extensión y Educación Continuada, y Gestión Institucional) y propone cuatro maneras de recorrerlos:</p>
+    <ul class="acerca-lista">
+      <li><b>Juego.</b> Afirmaciones de verdad o mentira en ciclos de 10, tomadas de un banco de 100. Cada respuesta cita el documento y la página, y cada ciclo te da una insignia según tus aciertos.</li>
+      <li><b>Mapa.</b> Los conceptos clave de los lineamientos y cómo se conectan entre documentos. Cada punto abre lo que dice el texto oficial.</li>
+      <li><b>Consulta.</b> Un espacio para preguntar con tus palabras sobre los lineamientos.</li>
+      <li><b>Historias.</b> Proyectos que usan IA en la universidad, contados por sus equipos.</li>
+    </ul>
+    <p class="nota">Las preguntas, explicaciones y fichas se preparan a partir del texto oficial y las revisa la comisión. Tus insignias se guardan solo en este navegador.</p>
+    <p class="nota aviso">Versión de prueba: las 100 preguntas y el mapa están pendientes de revisión por la comisión.</p>
+    <button class="pildora" id="borrar">Borrar mi progreso</button>
+  </section>
+</main>
+
+<!-- Historias: revista de proyectos con IA (edición de muestra) -->
+<section class="revista" id="historias" aria-labelledby="historias-t">
+  <div class="rv">
+    <div class="rv-portada" id="rv-portada">
+    <header class="rv-cabecera">
+      <h1 class="rv-titulo" id="historias-t">Historias <em>con IA</em></h1>
+      <p class="rv-bajada">Proyectos, personas y experiencias que usan inteligencia artificial en la universidad.</p>
+    </header>
+    <p class="rv-aviso">Edición de muestra: las historias están por publicarse. Cada espacio corresponde a una de las líneas de trabajo con IA que la universidad identificó en su levantamiento de capacidades.</p>
+    <div class="rv-grilla">
+      <article class="rv-nota destacada" tabindex="0" role="link" data-historia="0">
+        <div class="rv-fila"><span class="rv-num">01</span><span class="rv-tag">Investigación aplicada</span></div>
+        <h2>La historia destacada de la edición</h2>
+        <p>Aquí va el proyecto principal: el equipo, la pregunta que lo mueve, cómo usa la IA y qué cuidados tomó con los datos, la autoría y la supervisión humana.</p>
+        <span class="rv-estado">Próximamente</span>
+      </article>
+      <article class="rv-nota" tabindex="0" role="link" data-historia="1">
+        <div class="rv-fila"><span class="rv-num">02</span><span class="rv-tag">Formación y alfabetización en IA</span></div>
+        <h2>Historia por publicar</h2>
+        <p>Un proyecto de formación y alfabetización en IA en la universidad: quién lo hace, qué problema aborda y qué aprendió.</p>
+        <span class="rv-estado">Próximamente</span>
+      </article>
+      <article class="rv-nota" tabindex="0" role="link" data-historia="2">
+        <div class="rv-fila"><span class="rv-num">03</span><span class="rv-tag">Creación de recursos educativos</span></div>
+        <h2>Historia por publicar</h2>
+        <p>Un proyecto de creación de recursos educativos con IA en la universidad: quién lo hace, qué problema aborda y qué aprendió.</p>
+        <span class="rv-estado">Próximamente</span>
+      </article>
+      <article class="rv-nota" tabindex="0" role="link" data-historia="3">
+        <div class="rv-fila"><span class="rv-num">04</span><span class="rv-tag">Análisis de datos</span></div>
+        <h2>Historia por publicar</h2>
+        <p>Un proyecto de análisis de datos con IA en la universidad: quién lo hace, qué problema aborda y qué aprendió.</p>
+        <span class="rv-estado">Próximamente</span>
+      </article>
+      <article class="rv-nota" tabindex="0" role="link" data-historia="4">
+        <div class="rv-fila"><span class="rv-num">05</span><span class="rv-tag">Servicios al entorno</span></div>
+        <h2>Historia por publicar</h2>
+        <p>Un proyecto de servicios al entorno con IA en la universidad: quién lo hace, qué problema aborda y qué aprendió.</p>
+        <span class="rv-estado">Próximamente</span>
+      </article>
+      <article class="rv-nota" tabindex="0" role="link" data-historia="5">
+        <div class="rv-fila"><span class="rv-num">06</span><span class="rv-tag">Apoyo a procesos administrativos</span></div>
+        <h2>Historia por publicar</h2>
+        <p>Un proyecto de apoyo a procesos administrativos con IA en la universidad: quién lo hace, qué problema aborda y qué aprendió.</p>
+        <span class="rv-estado">Próximamente</span>
+      </article>
+      <aside class="rv-agenda" aria-labelledby="agenda-t">
+        <h3 id="agenda-t">Agenda</h3>
+        <ul>
+          <li><b>Por anunciar</b>Talleres de alfabetización en IA</li>
+          <li><b>Por anunciar</b>Orientaciones para trabajos de grado</li>
+          <li><b>Siempre abierto</b>Canal de orientación: comisionia@unbosque.edu.co</li>
+        </ul>
+      </aside>
+      <div class="rv-convocatoria">
+        <p>¿Tu proyecto usa IA?</p>
+        <span>Pronto podrás postular tu historia para la próxima edición.</span>
+      </div>
+    </div>
+    </div>
+    <article class="rv-articulo" id="rv-articulo" hidden></article>
+  </div>
+</section>
+
+<ul class="leyenda" id="leyenda" aria-label="Documentos"></ul>
+<aside class="intro-mapa" id="intro-mapa" aria-labelledby="intro-mapa-t">
+  <button class="ficha-cerrar" id="intro-cerrar" aria-label="Ocultar explicación del mapa">×</button>
+  <p class="etiqueta">Mapa de conceptos</p>
+  <h2 class="intro-titulo" id="intro-mapa-t">Una nueva forma de navegar los lineamientos</h2>
+  <p class="intro-texto">Cada punto es un concepto de los cinco documentos de Lineamientos de IA. Su color indica el documento donde más aparece, su tamaño cuántas veces se menciona y las líneas unen conceptos que aparecen juntos.</p>
+  <p class="intro-uso">Arrastra para girar. Toca un punto para leer qué dice el texto oficial.</p>
+</aside>
+<aside class="ficha" id="ficha" hidden aria-labelledby="ficha-titulo">
+  <button class="ficha-cerrar" id="ficha-cerrar" aria-label="Cerrar ficha">×</button>
+  <p class="ficha-doc" id="ficha-doc"></p>
+  <h2 class="ficha-titulo" id="ficha-titulo"></h2>
+  <p class="ficha-desc" id="ficha-desc"></p>
+  <blockquote class="ficha-cita"><p id="ficha-evidencia"></p><cite id="ficha-fuente"></cite></blockquote>
+  <p class="etiqueta">Dónde aparece</p>
+  <ul class="ficha-docs" id="ficha-docs"></ul>
+  <p class="etiqueta">Se relaciona con</p>
+  <div class="ficha-rel" id="ficha-rel"></div>
+  <p class="ficha-pie" id="ficha-pie"></p>
+</aside>
+<p class="esquina izq lema">Lineamientos de IA · Universidad El Bosque</p>
+<p class="esquina der" id="pie">129 fragmentos · 5 documentos</p>
+<div class="burbuja" id="burbuja" hidden></div>
+
+
+<script src="app.js?v=20261105o"></script>
+</body>
+</html>
