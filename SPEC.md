@@ -190,7 +190,7 @@ Se coleccionan: cada insignia muestra «×N», las veces que se ha ganado. Las q
 - Titular: «Un proyecto para explorar **de manera compleja y crítica** la documentación institucional en torno al uso de la IA.»
 - «**Una iniciativa de la Vicerrectoría de Investigaciones** de la Universidad El Bosque.»
 - Explica las fuentes, que no hay un LLM respondiendo en vivo, cómo son los ciclos y dónde se guarda el progreso.
-- Aviso de versión de prueba y botón «Borrar mi progreso».
+- Aviso de versión de prueba. No hay botón para borrar el progreso.
 
 ## 6. Diseño
 

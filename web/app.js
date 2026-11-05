@@ -657,16 +657,6 @@
   $("#siguiente").addEventListener("click", siguiente);
   $("#otra").addEventListener("click", () => empezar(juego.rol));
   $("#compartir").addEventListener("click", compartir);
-  $("#borrar").addEventListener("click", () => {
-    if (!confirm("¿Borrar tus aciertos e insignias en este navegador?")) return;
-    progreso.clear();
-    guardarProgreso();
-    Object.keys(coleccion).forEach((k) => delete coleccion[k]);
-    guardar("tita.insignias", "{}");
-    pintarInsignias($("#progreso-inicio"));
-    $("#borrar").textContent = "Progreso borrado";
-  });
-
   const btnMov = $("#movimiento");
   const pintarMov = () => { btnMov.setAttribute("aria-pressed", pausado); btnMov.title = pausado ? "Reanudar movimiento" : "Pausar movimiento"; };
   btnMov.addEventListener("click", () => { pausado = !pausado; pintarMov(); });

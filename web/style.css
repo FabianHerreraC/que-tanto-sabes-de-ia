@@ -123,7 +123,7 @@ body[data-vista="consulta"] #consulta { opacity: 1; visibility: visible; transfo
 .acerca-lista li { padding-left: 14px; position: relative; color: var(--suave); font-size: 13px; line-height: 1.45; }
 .acerca-lista li::before { content: ""; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--menta); box-shadow: inset 0 0 0 .75px rgba(0, 0, 0, .35); }
 .acerca-lista b { color: var(--tinta); font-weight: var(--bold); }
-.nota.aviso { margin: 0 0 14px; color: var(--tinta); font-size: 12px; }
+.nota.aviso { margin: 0; color: var(--tinta); font-size: 12px; }
 .nota.aviso::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 6px; border-radius: 50%; background: var(--verde); vertical-align: 1px; }
 .etiqueta { margin: 0 0 8px; font-size: 10.5px; font-weight: var(--bold); color: var(--suave); text-transform: uppercase; letter-spacing: .08em; }
 
