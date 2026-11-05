@@ -15,6 +15,8 @@ Para verlo en local:
 python3 -m http.server 4321 --directory web
 ```
 
+Publicado en **https://fabianherrerac.github.io/que-tanto-sabes-de-ia/**. Cada `git push` a `main` republica: el workflow `.github/workflows/pages.yml` sirve la carpeta `web/`. Al cambiar `app.js` o `style.css`, sube el `?v=` de sus enlaces en `index.html` para que los navegadores no usen la versión en caché.
+
 ## Estado
 
 - El front está completo: carga, inicio con elección de rol, quiz con feedback y cita, cierre con constelación y PNG para compartir, mapa explorable y página de acerca.
