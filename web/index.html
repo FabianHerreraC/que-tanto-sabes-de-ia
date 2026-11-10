@@ -7,8 +7,8 @@
 <meta name="description" content="Un juego para conocer los Lineamientos de IA de la Universidad El Bosque.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261105q">
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20261110o">
 </head>
 <body data-vista="carga">
 
@@ -31,10 +31,21 @@
 
 <canvas id="nube" aria-label="Mapa de conceptos de los lineamientos" role="img"></canvas>
 
+<!-- recortes de la pieza «IA en la U»: cada vista muestra los suyos -->
+<div class="recortes" aria-hidden="true">
+  <img class="collage" src="img/collage/collage.jpg" alt="" width="1350" height="770">
+  <img class="recorte c-izq" src="img/collage/manos-libro.jpg" alt="" width="405" height="280">
+  <img class="recorte c-der" src="img/collage/lupa.jpg" alt="" width="540" height="610">
+  <img class="recorte r-lupa" src="img/collage/lupa.jpg" alt="" width="540" height="610">
+  <img class="recorte r-manos" src="img/collage/manos-libro.jpg" alt="" width="405" height="280">
+  <img class="recorte r-pluma" src="img/collage/mano-pluma.jpg" alt="" width="310" height="280">
+  <img class="recorte r-foco" src="img/collage/foco.jpg" alt="" width="160" height="150">
+</div>
+
 <main>
   <!-- Inicio -->
   <section class="panel" id="inicio" aria-labelledby="inicio-t">
-    <p class="globo" id="inicio-t">¿Qué tanto sabes de IA? <em>¿Verdad o mentira?</em></p>
+    <h1 class="globo" id="inicio-t"><span class="t1">¿Qué tanto sabes de</span><span class="t2">IA?</span><em>¿Verdad o mentira?</em></h1>
     <p class="nota">Con base en los Lineamientos de IA de la Universidad El Bosque, vamos a revisar cuánto sabes sobre cómo usar la IA en la vida universitaria.</p>
     <p class="etiqueta" id="rol-t">¿Qué rol tienes?</p>
     <div class="selector-rol">
@@ -98,6 +109,64 @@
       <input id="pregunta" type="text" placeholder="Escribe tu pregunta…" aria-label="Tu pregunta" autocomplete="off">
       <button class="pildora oscura" type="submit">Enviar <span aria-hidden="true">→</span></button>
     </form>
+
+    <div class="consulta-bloque">
+      <p class="etiqueta">Descarga los lineamientos</p>
+      <ul class="descargas">
+        <li><a class="descarga" href="docs/lineamientos-generales.pdf" download data-doc="GEN"><span class="d-punto" aria-hidden="true"></span><span class="d-nombre">Generales</span><span class="d-accion" aria-hidden="true">↓</span></a></li>
+        <li><a class="descarga" href="docs/lineamientos-ensenanza-aprendizaje.pdf" download data-doc="ENS"><span class="d-punto" aria-hidden="true"></span><span class="d-nombre">Enseñanza-Aprendizaje</span><span class="d-accion" aria-hidden="true">↓</span></a></li>
+        <li><a class="descarga" href="docs/lineamientos-ciencia-tecnologia-innovacion.pdf" download data-doc="CIE"><span class="d-punto" aria-hidden="true"></span><span class="d-nombre">Ciencia, Tecnología e Innovación</span><span class="d-accion" aria-hidden="true">↓</span></a></li>
+        <li><a class="descarga" href="docs/lineamientos-extension-educacion-continuada.pdf" download data-doc="EXT"><span class="d-punto" aria-hidden="true"></span><span class="d-nombre">Extensión y Educación Continuada</span><span class="d-accion" aria-hidden="true">↓</span></a></li>
+        <li><a class="descarga" href="docs/lineamientos-gestion-institucional.pdf" download data-doc="GES"><span class="d-punto" aria-hidden="true"></span><span class="d-nombre">Gestión Institucional</span><span class="d-accion" aria-hidden="true">↓</span></a></li>
+      </ul>
+    </div>
+
+    <div class="consulta-bloque">
+      <p class="etiqueta">Preguntas frecuentes</p>
+      <div class="faq">
+        <details class="faq-item">
+          <summary>¿Puedo usar IA en mis trabajos?</summary>
+          <p>Depende de la actividad. Los lineamientos piden que cada actividad tenga una regla clara: debes saber si puedes usar IA, para qué, qué tienes que declarar y qué se va a evaluar. Esa instrucción suele estar en el syllabus, la guía de trabajo o la rúbrica.</p>
+          <small>Enseñanza-Aprendizaje, pág. 18</small>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cuándo tengo que declarar que usé IA?</summary>
+          <p>Cuando la IA tuvo incidencia en lo que entregas, se evalúa, se publica o se deposita en un repositorio: por ejemplo, si la usaste para redactar o reescribir apartados, traducir, generar tablas o imágenes, depurar código o revisar referencias. Declararla no significa que la usaste mal: significa que informas qué apoyo recibiste y asumes la responsabilidad del resultado.</p>
+          <small>Enseñanza-Aprendizaje, pág. 13</small>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cómo escribo esa declaración?</summary>
+          <p>Para un apoyo puntual basta una frase breve, como la que proponen los lineamientos: «Para la elaboración de este trabajo utilicé la herramienta [nombre] como apoyo para [describir el uso]. El contenido final fue revisado, ajustado y validado por mí. Asumo la responsabilidad sobre el trabajo entregado». Si el uso fue más amplio, la declaración debe ser más precisa.</p>
+          <small>Enseñanza-Aprendizaje, pág. 14</small>
+        </details>
+        <details class="faq-item">
+          <summary>¿Qué información no debo poner en una herramienta de IA?</summary>
+          <p>No debes cargar información en herramientas cuyos términos permitan almacenarla, usarla para entrenamiento o pasarla a terceros. Eso incluye datos personales y sensibles, historias clínicas, grabaciones o imágenes identificables, calificaciones, trabajos de estudiantes, documentos internos e información institucional no pública, salvo que exista autorización.</p>
+          <small>Enseñanza-Aprendizaje, pág. 24</small>
+        </details>
+        <details class="faq-item">
+          <summary>¿La IA puede decidir por mí?</summary>
+          <p>No. Cuando la IA interviene en algo que puede incidir en decisiones, prioridades o recursos, la universidad exige supervisión humana: la IA puede aportar información o apoyar el análisis, pero no sustituye el criterio ni la responsabilidad. Sus respuestas no se adoptan de manera automática.</p>
+          <small>Generales, pág. 24</small>
+        </details>
+        <details class="faq-item">
+          <summary>¿Lo que genera la IA tiene derechos de autor?</summary>
+          <p>Por regla general, lo que produce una IA sin una intervención creativa humana suficiente puede no reunir las condiciones para ser una obra protegida por el derecho de autor. Cuando hay intervención humana relevante, se analiza según la ley y la Política de Propiedad Intelectual de la universidad.</p>
+          <small>Generales, pág. 27</small>
+        </details>
+        <details class="faq-item">
+          <summary>¿A quién se dirigen estos lineamientos?</summary>
+          <p>A estudiantes, profesores, investigadores, directivos y personal administrativo que usen, gestionen o desarrollen IA. También orientan a terceros vinculados a la universidad cuando usan información, recursos o servicios institucionales.</p>
+          <small>Generales, pág. 9</small>
+        </details>
+        <details class="faq-item">
+          <summary>¿Dónde pregunto si tengo una duda que no está aquí?</summary>
+          <p>Puedes escribir a la Comisión Institucional de Expertos en Inteligencia Artificial al correo <a href="mailto:comisionia@unbosque.edu.co">comisionia@unbosque.edu.co</a>, sobre todo cuando no es claro si un uso está permitido, si debe declararse o qué área debe revisar el caso.</p>
+          <small>Enseñanza-Aprendizaje, pág. 31</small>
+        </details>
+      </div>
+    </div>
+    <p class="contacto">Para más información o inquietudes: <a href="mailto:comisionia@unbosque.edu.co">comisionia@unbosque.edu.co</a></p>
   </section>
 
   <!-- Acerca -->
@@ -113,6 +182,7 @@
     </ul>
     <p class="nota">Las preguntas, explicaciones y fichas se preparan a partir del texto oficial y las revisa la comisión. Tus insignias se guardan solo en este navegador.</p>
     <p class="nota aviso">Versión de prueba: las 100 preguntas y el mapa están pendientes de revisión por la comisión.</p>
+    <p class="contacto">Para más información o inquietudes: <a href="mailto:comisionia@unbosque.edu.co">comisionia@unbosque.edu.co</a></p>
   </section>
 </main>
 
@@ -121,6 +191,7 @@
   <div class="rv">
     <div class="rv-portada" id="rv-portada">
     <header class="rv-cabecera">
+      <img class="rv-foto" src="img/collage/estudiantes.jpg" alt="" width="320" height="155">
       <h1 class="rv-titulo" id="historias-t">Historias <em>con IA</em></h1>
       <p class="rv-bajada">Proyectos, personas y experiencias que usan inteligencia artificial en la universidad.</p>
     </header>
@@ -205,6 +276,6 @@
 <div class="burbuja" id="burbuja" hidden></div>
 
 
-<script src="app.js?v=20261105q"></script>
+<script src="app.js?v=20261110c"></script>
 </body>
 </html>

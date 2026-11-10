@@ -4,11 +4,11 @@
 
   const $ = (s) => document.querySelector(s);
   const DOCS = {
-    GEN: { nombre: "Generales", color: "#000000" },
-    ENS: { nombre: "Enseñanza-Aprendizaje", color: "#00e245" },
-    CIE: { nombre: "Ciencia, Tecnología e Innovación", color: "#4ef581" },
-    EXT: { nombre: "Extensión y Educación Continuada", color: "#ddff88" },
-    GES: { nombre: "Gestión Institucional", color: "#ffffff" },
+    GEN: { nombre: "Generales", color: "#2a4f3c" },
+    ENS: { nombre: "Enseñanza-Aprendizaje", color: "#f74a2d" },
+    CIE: { nombre: "Ciencia, Tecnología e Innovación", color: "#234c92" },
+    EXT: { nombre: "Extensión y Educación Continuada", color: "#f7c733" },
+    GES: { nombre: "Gestión Institucional", color: "#1d1d11" },
   };
   const PREFIJO = Object.fromEntries(Object.entries(DOCS).map(([k, d]) => [d.nombre, k]));
   const DOC_DEL_ROL = { estudiante: "ENS", profesor: "ENS", investigador: "CIE", administrativo: "GES" };
@@ -94,7 +94,7 @@
       for (const l of enlaces) {
         const act = (l.a.estado !== "inactivo" && l.b.estado !== "inactivo");
         const prof = (l.a.pz + l.b.pz) / 2;
-        cx.strokeStyle = act ? `rgba(0,226,69,${0.35 + 0.25 * (prof + 1)})` : `rgba(0,0,0,${0.015 + 0.03 * (prof + 1)})`;
+        cx.strokeStyle = act ? `rgba(247,74,45,${0.3 + 0.25 * (prof + 1)})` : `rgba(0,0,0,${0.015 + 0.03 * (prof + 1)})`;
         cx.beginPath(); cx.moveTo(l.a.px, l.a.py); cx.lineTo(l.b.px, l.b.py); cx.stroke();
       }
 
@@ -107,12 +107,12 @@
         let alfa = 0.25 + 0.75 * prof, txt = `rgba(0,0,0,${0.14 + 0.5 * prof})`;
 
         if (d.estado === "activo") {
-          cx.strokeStyle = "#00e245"; cx.lineWidth = 1.5;
+          cx.strokeStyle = "#f74a2d"; cx.lineWidth = 1.5;
           cx.globalAlpha = 0.3 + 0.6 * (1 - pulso);
           cx.beginPath(); cx.arc(d.px, d.py, r + 4 + 10 * pulso, 0, 7); cx.stroke();
           alfa = 1; txt = "#000";
         } else if (d.estado === "dominado") {
-          cx.fillStyle = "#ddff88"; cx.globalAlpha = 0.85;
+          cx.fillStyle = "#f7c733"; cx.globalAlpha = 0.75;
           cx.beginPath(); cx.arc(d.px, d.py, r * 3.4, 0, 7); cx.fill();
           alfa = 1; txt = "#000";
         } else if (d.estado === "fallado") {
@@ -127,7 +127,7 @@
           cx.setLineDash([]);
         } else {
           // borde fino: la lima y la menta casi no se ven sobre blanco
-          cx.fillStyle = d.estado === "inactivo" && enQuiz ? "#d6d6d6" : DOCS[d.doc_principal].color;
+          cx.fillStyle = d.estado === "inactivo" && enQuiz ? "#d9ccb0" : DOCS[d.doc_principal].color;
           cx.strokeStyle = "rgba(0,0,0,.35)";
           cx.beginPath(); cx.arc(d.px, d.py, r, 0, 7); cx.fill(); cx.stroke();
         }
@@ -138,7 +138,7 @@
           cx.beginPath(); cx.arc(d.px, d.py, r + 6, 0, 7); cx.stroke();
         }
         const destacado = d.estado === "activo" || d.estado === "dominado" || d === hover || d === seleccionado;
-        cx.font = `${destacado ? 700 : 400} ${destacado ? 13 : 11}px "Jost", system-ui, sans-serif`;
+        cx.font = `${destacado ? 700 : 400} ${destacado ? 15 : 13.5}px "Jost", system-ui, sans-serif`;
         cx.fillStyle = d === hover || d === seleccionado ? "#000" : txt;
         const tx = d.px + r + 5;
         cx.fillText(d.label, tx, d.py + 4);
@@ -228,7 +228,7 @@
     // caja (en px de pantalla) que ocupan los puntos visibles y sus etiquetas: sirve para recortar la imagen
     function encuadre() {
       let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
-      cx.font = '700 13px "Jost", system-ui, sans-serif';
+      cx.font = '700 15px "Jost", system-ui, sans-serif';
       for (const d of nodos) {
         const r = d.tam * d.f + 6;
         x0 = Math.min(x0, d.px - r); x1 = Math.max(x1, d.px + r + cx.measureText(d.label).width);
@@ -458,7 +458,7 @@
     const src = Nube.canvas, W = 1080, H = 1350;
     const c = document.createElement("canvas"); c.width = W; c.height = H;
     const x = c.getContext("2d");
-    x.fillStyle = "#ffffff"; x.fillRect(0, 0, W, H);
+    x.fillStyle = "#f6edda"; x.fillRect(0, 0, W, H);
     // recorta solo la constelación y la centra en el espacio entre el logo y el puntaje
     const caja = Nube.encuadre(), area = { x: 72, y: 170, w: W - 144, h: H - 170 - 300 };
     const s = Math.min(area.w / caja.w, area.h / caja.h);
@@ -471,7 +471,7 @@
     x.fillText(`${juego.puntos}`, 72, H - 170);
     x.font = '700 46px "Jost", sans-serif';
     const rango = $("#rango").textContent, rw = x.measureText(rango).width;
-    x.fillStyle = "#ddff88"; x.fillRect(64, H - 142, rw + 16, 58);
+    x.fillStyle = "#f7c733"; x.fillRect(64, H - 142, rw + 16, 58);
     x.fillStyle = "#000"; x.fillText(rango, 72, H - 100);
     x.font = '400 26px "Jost", sans-serif'; x.fillStyle = "#6b6b6b";
     x.fillText("Lineamientos de IA · Universidad El Bosque", 72, H - 56);
