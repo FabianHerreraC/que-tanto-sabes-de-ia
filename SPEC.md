@@ -19,7 +19,7 @@ Que estudiantes, profesores, investigadores y administrativos entiendan los line
 | Tema | v0.1 | v0.2 (construido) |
 |---|---|---|
 | Tipo de pregunta | Dilema (Sí/No) y Verdad/Mentira | Solo Verdad/Mentira: cada pregunta es una afirmación |
-| Banco | 120 a 200 preguntas | 100 preguntas, 20 por documento |
+| Banco | 120 a 200 preguntas | 120 preguntas: 100 de verdad o mentira (20 por documento) y 20 dilemas reflexivos |
 | Sesión | 10 preguntas | Ciclos de 10 que priorizan las preguntas aún no acertadas |
 | Recompensa | Rango por puntaje (nombres por definir) | 4 insignias por ciclo según aciertos, coleccionables |
 | Mapa | `3d-force-graph` (three.js) | Canvas 2D propio con proyección esférica, sin dependencias |
@@ -90,6 +90,7 @@ Que estudiantes, profesores, investigadores y administrativos entiendan los line
 
 ```
 pipeline/banco_preguntas.py        las 100 preguntas (tupla por pregunta, con evidencia)
+pipeline/banco_reflexivas.py       los 20 dilemas reflexivos (mismo formato, tipo "d": Sí/No)
 pipeline/construir_preguntas.py    valida y escribe web/data/questions.json
 pipeline/conceptos_descripcion.py  descripción + evidencia de los 52 conceptos
 pipeline/conceptos_provisionales.py  cuenta conceptos, arma enlaces, valida y escribe web/data/graph.json
@@ -262,7 +263,7 @@ python3 -m http.server 4400 --directory web
 
 ## 11. Pendientes y decisiones abiertas
 
-1. **Revisión de contenido.** Las 100 preguntas y las 52 descripciones deben pasar por la comisión. Al publicar, `ESTADOS_JUGABLES` en `app.js` debe quedar solo con `"aprobada"`. Falta definir el flujo de revisión (Paso D del v0.1).
+1. **Revisión de contenido.** Las 120 preguntas y las 52 descripciones deben pasar por la comisión. Al publicar, `ESTADOS_JUGABLES` en `app.js` debe quedar solo con `"aprobada"`. Falta definir el flujo de revisión (Paso D del v0.1).
 2. **Grafo definitivo.** Reemplazar el conteo por regex por la extracción de conceptos del Paso A/B del v0.1, o validar el vocabulario actual con la comisión.
 3. **Rol de extensión.** Ningún rol se asocia a EXT: sus preguntas solo entran en el 30 % «de otros documentos». Evaluar si se agrega un rol, como «Extensión y educación continuada».
 4. **Publicación.** El proyecto aún no tiene repositorio ni despliegue. El v0.1 pide que se pueda embeber por iframe en la página de la universidad; no se ha probado.

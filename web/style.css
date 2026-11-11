@@ -111,6 +111,7 @@ body[data-vista="consulta"] #consulta { opacity: 1; visibility: visible; transfo
 .globo { font: var(--fino) 28px/1.12 var(--sans); margin: 0 0 12px; letter-spacing: -.005em; text-wrap: balance; }
 .globo em { font-style: normal; font-weight: var(--bold); background: var(--amarillo); padding: 0 .12em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .globo.grande { font-size: clamp(22px, 3.2vw, 30px); min-height: 2.3em; }
+.globo.grande.largo { font-size: clamp(19px, 2.2vw, 23px); line-height: 1.25; }
 .signo { background: var(--azul); color: var(--fondo); padding: 0 .22em; }
 
 /* rodillos de tragamonedas del enunciado */
@@ -196,6 +197,8 @@ body[data-vista="consulta"] #consulta { opacity: 1; visibility: visible; transfo
 .resultado.bien::before { background: var(--verde); }
 .resultado.mal::before { background: var(--tinta); }
 .explicacion { margin: 0 0 8px; font-size: 16.5px; line-height: 1.45; }
+.para-pensar { display: block; margin-top: 10px; padding: 8px 12px; border-left: 3px solid var(--amarillo); background: var(--pastilla); font-style: italic; }
+.para-pensar b { display: block; font-style: normal; font-size: 14px; color: var(--verde); text-transform: uppercase; letter-spacing: .06em; }
 .cita { margin: 0 0 14px; font: italic 300 16px var(--sans); color: var(--suave); }
 @keyframes entra { from { opacity: 0; transform: translateY(6px); } }
 

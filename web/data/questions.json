@@ -1,6 +1,7 @@
 [
  {
   "id": "gen-001",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -30,6 +31,7 @@
  },
  {
   "id": "gen-002",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -48,7 +50,7 @@
   "cita": {
    "fragmento": "GEN-004",
    "documento": "Generales",
-   "pagina": 8
+   "pagina": 9
   },
   "evidencia": "La Comisión cumple un papel orientador y consultivo",
   "conceptos": [
@@ -59,6 +61,7 @@
  },
  {
   "id": "gen-003",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -88,6 +91,7 @@
  },
  {
   "id": "gen-004",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -106,7 +110,7 @@
   "cita": {
    "fragmento": "GEN-007",
    "documento": "Generales",
-   "pagina": 11
+   "pagina": 12
   },
   "evidencia": "incorporar información plausible pero incorrecta",
   "conceptos": [
@@ -118,6 +122,7 @@
  },
  {
   "id": "gen-005",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -147,6 +152,7 @@
  },
  {
   "id": "gen-006",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -165,7 +171,7 @@
   "cita": {
    "fragmento": "GEN-012",
    "documento": "Generales",
-   "pagina": 18
+   "pagina": 19
   },
   "evidencia": "no significa reemplazar el pensamiento humano, sino fortalecerlo",
   "conceptos": [
@@ -175,6 +181,7 @@
  },
  {
   "id": "gen-007",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -193,7 +200,7 @@
   "cita": {
    "fragmento": "GEN-012",
    "documento": "Generales",
-   "pagina": 19
+   "pagina": 20
   },
   "evidencia": "El control humano aumenta cuando el uso puede afectar personas, decisiones o asignación de recursos.",
   "conceptos": [
@@ -205,6 +212,7 @@
  },
  {
   "id": "gen-008",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -234,6 +242,7 @@
  },
  {
   "id": "gen-009",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -262,6 +271,7 @@
  },
  {
   "id": "gen-010",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -291,6 +301,7 @@
  },
  {
   "id": "gen-011",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -320,6 +331,7 @@
  },
  {
   "id": "gen-012",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -349,6 +361,7 @@
  },
  {
   "id": "gen-013",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -378,6 +391,7 @@
  },
  {
   "id": "gen-014",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -407,6 +421,7 @@
  },
  {
   "id": "gen-015",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -436,6 +451,7 @@
  },
  {
   "id": "gen-016",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -465,6 +481,7 @@
  },
  {
   "id": "gen-017",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -495,6 +512,7 @@
  },
  {
   "id": "gen-018",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -513,7 +531,7 @@
   "cita": {
    "fragmento": "GEN-026",
    "documento": "Generales",
-   "pagina": 30
+   "pagina": 31
   },
   "evidencia": "La gobernanza se organiza en tres niveles",
   "conceptos": [
@@ -523,6 +541,7 @@
  },
  {
   "id": "gen-019",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -541,7 +560,7 @@
   "cita": {
    "fragmento": "GEN-027",
    "documento": "Generales",
-   "pagina": 32
+   "pagina": 33
   },
   "evidencia": "La revisión del documento se realiza de manera ordinaria al menos una vez al año",
   "conceptos": [
@@ -552,6 +571,7 @@
  },
  {
   "id": "gen-020",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -581,6 +601,7 @@
  },
  {
   "id": "ens-001",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -607,6 +628,7 @@
  },
  {
   "id": "ens-002",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -634,6 +656,7 @@
  },
  {
   "id": "ens-003",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -662,6 +685,7 @@
  },
  {
   "id": "ens-004",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -678,7 +702,7 @@
   "cita": {
    "fragmento": "ENS-049",
    "documento": "Enseñanza-Aprendizaje",
-   "pagina": 33
+   "pagina": 34
   },
   "evidencia": "Sí, cuando se usa solo para comprender un tema, practicar preguntas, organizar ideas",
   "conceptos": [
@@ -689,6 +713,7 @@
  },
  {
   "id": "ens-005",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -705,7 +730,7 @@
   "cita": {
    "fragmento": "ENS-037",
    "documento": "Enseñanza-Aprendizaje",
-   "pagina": 13
+   "pagina": 14
   },
   "evidencia": "profesor o el programa pueden pedir declaración incluso en estos casos",
   "conceptos": [
@@ -715,6 +740,7 @@
  },
  {
   "id": "ens-006",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -742,6 +768,7 @@
  },
  {
   "id": "ens-007",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -758,7 +785,7 @@
   "cita": {
    "fragmento": "ENS-036",
    "documento": "Enseñanza-Aprendizaje",
-   "pagina": 11
+   "pagina": 12
   },
   "evidencia": "Exámenes individuales, pruebas cerradas, sustentaciones, demostraciones prácticas.",
   "conceptos": [
@@ -769,6 +796,7 @@
  },
  {
   "id": "ens-008",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -785,7 +813,7 @@
   "cita": {
    "fragmento": "ENS-036",
    "documento": "Enseñanza-Aprendizaje",
-   "pagina": 11
+   "pagina": 12
   },
   "evidencia": "La IA hace parte del ejercicio. Lo que se evalúa es su uso crítico.",
   "conceptos": [
@@ -796,6 +824,7 @@
  },
  {
   "id": "ens-009",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -812,7 +841,7 @@
   "cita": {
    "fragmento": "ENS-038",
    "documento": "Enseñanza-Aprendizaje",
-   "pagina": 15
+   "pagina": 16
   },
   "evidencia": "La IA no reemplaza libros, artículos, normas, bases de datos ni fuentes verificables.",
   "conceptos": [
@@ -823,6 +852,7 @@
  },
  {
   "id": "ens-010",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -839,7 +869,7 @@
   "cita": {
    "fragmento": "ENS-038",
    "documento": "Enseñanza-Aprendizaje",
-   "pagina": 15
+   "pagina": 16
   },
   "evidencia": "Estos sistemas pueden equivocarse y producir falsos positivos.",
   "conceptos": [
@@ -851,6 +881,7 @@
  },
  {
   "id": "ens-011",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -867,7 +898,7 @@
   "cita": {
    "fragmento": "ENS-038",
    "documento": "Enseñanza-Aprendizaje",
-   "pagina": 15
+   "pagina": 16
   },
   "evidencia": "Cargar datos personales, clínicos, sensibles o confidenciales en herramientas abiertas.",
   "conceptos": [
@@ -879,6 +910,7 @@
  },
  {
   "id": "ens-012",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -906,6 +938,7 @@
  },
  {
   "id": "ens-013",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -933,6 +966,7 @@
  },
  {
   "id": "ens-014",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -960,6 +994,7 @@
  },
  {
   "id": "ens-015",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -987,6 +1022,7 @@
  },
  {
   "id": "ens-016",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -1015,6 +1051,7 @@
  },
  {
   "id": "ens-017",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -1031,7 +1068,7 @@
   "cita": {
    "fragmento": "ENS-044",
    "documento": "Enseñanza-Aprendizaje",
-   "pagina": 25
+   "pagina": 26
   },
   "evidencia": "una persona o instancia responsable debe revisar, interpretar y decidir",
   "conceptos": [
@@ -1042,6 +1079,7 @@
  },
  {
   "id": "ens-018",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -1069,6 +1107,7 @@
  },
  {
   "id": "ens-019",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -1096,6 +1135,7 @@
  },
  {
   "id": "ens-020",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "estudiante",
@@ -1112,7 +1152,7 @@
   "cita": {
    "fragmento": "ENS-033",
    "documento": "Enseñanza-Aprendizaje",
-   "pagina": 5
+   "pagina": 6
   },
   "evidencia": "No son una lista de prohibiciones ni un manual técnico.",
   "conceptos": [
@@ -1123,6 +1163,7 @@
  },
  {
   "id": "cie-001",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1151,6 +1192,7 @@
  },
  {
   "id": "cie-002",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1177,6 +1219,7 @@
  },
  {
   "id": "cie-003",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1204,6 +1247,7 @@
  },
  {
   "id": "cie-004",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1220,7 +1264,7 @@
   "cita": {
    "fragmento": "CIE-057",
    "documento": "Ciencia, Tecnología e Innovación",
-   "pagina": 12
+   "pagina": 13
   },
   "evidencia": "pueden producir citas inexistentes, atribuciones incorrectas",
   "conceptos": [
@@ -1232,6 +1276,7 @@
  },
  {
   "id": "cie-005",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1248,7 +1293,7 @@
   "cita": {
    "fragmento": "CIE-058",
    "documento": "Ciencia, Tecnología e Innovación",
-   "pagina": 14
+   "pagina": 15
   },
   "evidencia": "Autoría, aprobación ética, revisión por pares confidencial",
   "conceptos": [
@@ -1260,6 +1305,7 @@
  },
  {
   "id": "cie-006",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1276,7 +1322,7 @@
   "cita": {
    "fragmento": "CIE-058",
    "documento": "Ciencia, Tecnología e Innovación",
-   "pagina": 14
+   "pagina": 15
   },
   "evidencia": "Un ajuste de estilo no requiere el mismo nivel de documentación que un análisis de datos",
   "conceptos": [
@@ -1287,6 +1333,7 @@
  },
  {
   "id": "cie-007",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1303,7 +1350,7 @@
   "cita": {
    "fragmento": "CIE-059",
    "documento": "Ciencia, Tecnología e Innovación",
-   "pagina": 16
+   "pagina": 17
   },
   "evidencia": "se recomienda declararlo en el pie de figura",
   "conceptos": [
@@ -1314,6 +1361,7 @@
  },
  {
   "id": "cie-008",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1330,7 +1378,7 @@
   "cita": {
    "fragmento": "CIE-060",
    "documento": "Ciencia, Tecnología e Innovación",
-   "pagina": 17
+   "pagina": 18
   },
   "evidencia": "nombre de la herramienta, versión, fecha, propósito, instrucciones relevantes",
   "conceptos": [
@@ -1341,6 +1389,7 @@
  },
  {
   "id": "cie-009",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1357,7 +1406,7 @@
   "cita": {
    "fragmento": "CIE-061",
    "documento": "Ciencia, Tecnología e Innovación",
-   "pagina": 19
+   "pagina": 20
   },
   "evidencia": "Modificar, completar o simular datos de investigación",
   "conceptos": [
@@ -1368,6 +1417,7 @@
  },
  {
   "id": "cie-010",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1384,7 +1434,7 @@
   "cita": {
    "fragmento": "CIE-061",
    "documento": "Ciencia, Tecnología e Innovación",
-   "pagina": 19
+   "pagina": 20
   },
   "evidencia": "Puede configurar fabricación, falsificación o mala práctica científica",
   "conceptos": [
@@ -1395,6 +1445,7 @@
  },
  {
   "id": "cie-011",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1411,7 +1462,7 @@
   "cita": {
    "fragmento": "CIE-061",
    "documento": "Ciencia, Tecnología e Innovación",
-   "pagina": 19
+   "pagina": 20
   },
   "evidencia": "Delegar en la IA la interpretación final de resultados, la formulación de conclusiones",
   "conceptos": [
@@ -1422,6 +1473,7 @@
  },
  {
   "id": "cie-012",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1448,6 +1500,7 @@
  },
  {
   "id": "cie-013",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1475,6 +1528,7 @@
  },
  {
   "id": "cie-014",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1502,6 +1556,7 @@
  },
  {
   "id": "cie-015",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1529,6 +1584,7 @@
  },
  {
   "id": "cie-016",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1556,6 +1612,7 @@
  },
  {
   "id": "cie-017",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1572,7 +1629,7 @@
   "cita": {
    "fragmento": "CIE-078",
    "documento": "Ciencia, Tecnología e Innovación",
-   "pagina": 52
+   "pagina": 53
   },
   "evidencia": "No debe usarse IA externa para procesar documentos confidenciales sin autorización expresa.",
   "conceptos": [
@@ -1583,6 +1640,7 @@
  },
  {
   "id": "cie-018",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1610,6 +1668,7 @@
  },
  {
   "id": "cie-019",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1626,7 +1685,7 @@
   "cita": {
    "fragmento": "CIE-078",
    "documento": "Ciencia, Tecnología e Innovación",
-   "pagina": 52
+   "pagina": 53
   },
   "evidencia": "Si son más exigentes que estos lineamientos, se aplican las condiciones específicas",
   "conceptos": [
@@ -1636,6 +1695,7 @@
  },
  {
   "id": "cie-020",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "investigador",
@@ -1663,6 +1723,7 @@
  },
  {
   "id": "ext-001",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -1691,6 +1752,7 @@
  },
  {
   "id": "ext-002",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -1718,6 +1780,7 @@
  },
  {
   "id": "ext-003",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -1735,7 +1798,7 @@
   "cita": {
    "fragmento": "EXT-086",
    "documento": "Extensión y Educación Continuada",
-   "pagina": 11
+   "pagina": 12
   },
   "evidencia": "el entregable institucional solo se considera final cuando el equipo experto lo revisa, lo valida",
   "conceptos": [
@@ -1746,6 +1809,7 @@
  },
  {
   "id": "ext-004",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -1773,6 +1837,7 @@
  },
  {
   "id": "ext-005",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -1801,6 +1866,7 @@
  },
  {
   "id": "ext-006",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -1830,6 +1896,7 @@
  },
  {
   "id": "ext-007",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -1858,6 +1925,7 @@
  },
  {
   "id": "ext-008",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -1875,7 +1943,7 @@
   "cita": {
    "fragmento": "EXT-089",
    "documento": "Extensión y Educación Continuada",
-   "pagina": 17
+   "pagina": 18
   },
   "evidencia": "Revisar contratos, convenios o condiciones comerciales, sin validación jurídica.",
   "conceptos": [
@@ -1886,6 +1954,7 @@
  },
  {
   "id": "ext-009",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -1914,6 +1983,7 @@
  },
  {
   "id": "ext-010",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -1931,7 +2001,7 @@
   "cita": {
    "fragmento": "EXT-102",
    "documento": "Extensión y Educación Continuada",
-   "pagina": 42
+   "pagina": 43
   },
   "evidencia": "No deben publicarse piezas generadas por IA sin revisión del área responsable.",
   "conceptos": [
@@ -1941,6 +2011,7 @@
  },
  {
   "id": "ext-011",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -1969,6 +2040,7 @@
  },
  {
   "id": "ext-012",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -1986,7 +2058,7 @@
   "cita": {
    "fragmento": "EXT-097",
    "documento": "Extensión y Educación Continuada",
-   "pagina": 32
+   "pagina": 33
   },
   "evidencia": "La IA no debe convertir la evaluación de impacto en una lectura automática sin contexto.",
   "conceptos": [
@@ -1997,6 +2069,7 @@
  },
  {
   "id": "ext-013",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -2014,7 +2087,7 @@
   "cita": {
    "fragmento": "EXT-102",
    "documento": "Extensión y Educación Continuada",
-   "pagina": 42
+   "pagina": 43
   },
   "evidencia": "esas condiciones prevalecen y deben consultarse con las áreas competentes",
   "conceptos": [
@@ -2024,6 +2097,7 @@
  },
  {
   "id": "ext-014",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -2052,6 +2126,7 @@
  },
  {
   "id": "ext-015",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -2080,6 +2155,7 @@
  },
  {
   "id": "ext-016",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -2097,7 +2173,7 @@
   "cita": {
    "fragmento": "EXT-094",
    "documento": "Extensión y Educación Continuada",
-   "pagina": 27
+   "pagina": 28
   },
   "evidencia": "no reemplaza la validación con usuarios, la revisión de libertad de operación",
   "conceptos": [
@@ -2108,6 +2184,7 @@
  },
  {
   "id": "ext-017",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -2136,6 +2213,7 @@
  },
  {
   "id": "ext-018",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -2153,7 +2231,7 @@
   "cita": {
    "fragmento": "EXT-088",
    "documento": "Extensión y Educación Continuada",
-   "pagina": 15
+   "pagina": 16
   },
   "evidencia": "En procesos con terceros, la documentación requiere mayor detalle.",
   "conceptos": [
@@ -2164,6 +2242,7 @@
  },
  {
   "id": "ext-019",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -2181,7 +2260,7 @@
   "cita": {
    "fragmento": "EXT-089",
    "documento": "Extensión y Educación Continuada",
-   "pagina": 17
+   "pagina": 18
   },
   "evidencia": "Automatizar respuestas sin revisión humana a aliados, comunidades o usuarios externos",
   "conceptos": [
@@ -2192,6 +2271,7 @@
  },
  {
   "id": "ext-020",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "profesor",
@@ -2209,7 +2289,7 @@
   "cita": {
    "fragmento": "EXT-102",
    "documento": "Extensión y Educación Continuada",
-   "pagina": 42
+   "pagina": 43
   },
   "evidencia": "Sí, puede apoyar en vigilancia tecnológica, análisis preliminar de patentes",
   "conceptos": [
@@ -2219,6 +2299,7 @@
  },
  {
   "id": "ges-001",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2244,6 +2325,7 @@
  },
  {
   "id": "ges-002",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2259,7 +2341,7 @@
   "cita": {
    "fragmento": "GES-109",
    "documento": "Gestión Institucional",
-   "pagina": 8
+   "pagina": 9
   },
   "evidencia": "puede clasificar solicitudes, pero no resolver un derecho de petición",
   "conceptos": [
@@ -2270,6 +2352,7 @@
  },
  {
   "id": "ges-003",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2285,7 +2368,7 @@
   "cita": {
    "fragmento": "GES-109",
    "documento": "Gestión Institucional",
-   "pagina": 8
+   "pagina": 9
   },
   "evidencia": "puede resumir hojas de vida, pero no decidir una contratación",
   "conceptos": [
@@ -2296,6 +2379,7 @@
  },
  {
   "id": "ges-004",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2323,6 +2407,7 @@
  },
  {
   "id": "ges-005",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2338,7 +2423,7 @@
   "cita": {
    "fragmento": "GES-122",
    "documento": "Gestión Institucional",
-   "pagina": 30
+   "pagina": 31
   },
   "evidencia": "Cuando la IA esté integrada en plataformas institucionales ya contratadas, su uso también se rige por estos lineamientos.",
   "conceptos": [
@@ -2349,6 +2434,7 @@
  },
  {
   "id": "ges-006",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2375,6 +2461,7 @@
  },
  {
   "id": "ges-007",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2401,6 +2488,7 @@
  },
  {
   "id": "ges-008",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2416,7 +2504,7 @@
   "cita": {
    "fragmento": "GES-113",
    "documento": "Gestión Institucional",
-   "pagina": 16
+   "pagina": 17
   },
   "evidencia": "Emitir conceptos jurídicos, financieros, disciplinarios o técnicos definitivos basados exclusivamente en IA.",
   "conceptos": [
@@ -2427,6 +2515,7 @@
  },
  {
   "id": "ges-009",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2453,6 +2542,7 @@
  },
  {
   "id": "ges-010",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2479,6 +2569,7 @@
  },
  {
   "id": "ges-011",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2505,6 +2596,7 @@
  },
  {
   "id": "ges-012",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2531,6 +2623,7 @@
  },
  {
   "id": "ges-013",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2557,6 +2650,7 @@
  },
  {
   "id": "ges-014",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2572,7 +2666,7 @@
   "cita": {
    "fragmento": "GES-122",
    "documento": "Gestión Institucional",
-   "pagina": 30
+   "pagina": 31
   },
   "evidencia": "se debe considerar dónde se almacenan, si pueden exportarse o eliminarse",
   "conceptos": [
@@ -2583,6 +2677,7 @@
  },
  {
   "id": "ges-015",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2609,6 +2704,7 @@
  },
  {
   "id": "ges-016",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2624,7 +2720,7 @@
   "cita": {
    "fragmento": "GES-124",
    "documento": "Gestión Institucional",
-   "pagina": 34
+   "pagina": 35
   },
   "evidencia": "de la herramienta no compensa datos incompletos, desactualizados o mal clasificados",
   "conceptos": [
@@ -2635,6 +2731,7 @@
  },
  {
   "id": "ges-017",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2661,6 +2758,7 @@
  },
  {
   "id": "ges-018",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2676,7 +2774,7 @@
   "cita": {
    "fragmento": "GES-113",
    "documento": "Gestión Institucional",
-   "pagina": 16
+   "pagina": 17
   },
   "evidencia": "Aprobar, negar o resolver trámites con efectos jurídicos, financieros, laborales o académicos.",
   "conceptos": [
@@ -2687,6 +2785,7 @@
  },
  {
   "id": "ges-019",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2702,7 +2801,7 @@
   "cita": {
    "fragmento": "GES-127",
    "documento": "Gestión Institucional",
-   "pagina": 40
+   "pagina": 41
   },
   "evidencia": "Debe revisar el caso con las áreas competentes antes de usarla en procesos institucionales",
   "conceptos": [
@@ -2713,6 +2812,7 @@
  },
  {
   "id": "ges-020",
+  "serie": "base",
   "tipo": "verdad_mentira",
   "rol": [
    "administrativo"
@@ -2734,6 +2834,596 @@
   "conceptos": [
    "verificacion",
    "responsabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-001",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Eres profesor y tienes 120 ensayos por calificar. La IA propone una nota para cada uno; tú les das una mirada rápida y las firmas. La decisión final es tuya. ¿Esa revisión es suficiente?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 1,
+  "explicacion": "No. Firmar no es lo mismo que supervisar. Los lineamientos piden una supervisión real, con posibilidad de corregir, y no un visto bueno al final. Si casi nunca cambias la nota que propone la IA, la que está calificando es ella. Para pensar: ¿En cuántos casos te habrías atrevido a contradecirla?",
+  "cita": {
+   "fragmento": "GEN-018",
+   "documento": "Generales",
+   "pagina": 24
+  },
+  "evidencia": "no como una revisión superficial al final del proceso",
+  "conceptos": [
+   "supervision-humana",
+   "evaluacion",
+   "decisiones"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-002",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Usas IA para casi todo y te va muy bien: entregas a tiempo y con buena calidad. El detalle es que ya no sabrías hacer esas tareas sin ella. Si los resultados son buenos, ¿igual hay un problema?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 0,
+  "explicacion": "Sí. Los lineamientos aceptan la IA cuando fortalece tu juicio, no cuando lo reemplaza. Un buen resultado puede esconder que dejaste de desarrollar la capacidad que la tarea buscaba. Para pensar: Si mañana no tuvieras la herramienta, ¿qué parte de lo que haces seguiría siendo tuya?",
+  "cita": {
+   "fragmento": "GEN-012",
+   "documento": "Generales",
+   "pagina": 19
+  },
+  "evidencia": "no genere dependencia cognitiva ni delegación acrítica de decisiones",
+  "conceptos": [
+   "agencia-humana",
+   "aprendizaje",
+   "competencias"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-003",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Resumir un artículo publicado con IA no tiene problema. Por lo tanto, resumir con la misma herramienta las actas de un comité disciplinario tampoco debería tenerlo: es exactamente la misma tarea. ¿Es correcto ese razonamiento?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 1,
+  "explicacion": "No. La tarea es la misma, pero el riesgo no. Lo que cambia el riesgo es para qué se usa, qué datos entran, cuánto se automatiza y en manos de qué proveedor queda la información. Las actas tienen datos de personas y efectos sobre ellas. Para pensar: Antes de usar IA, ¿te preguntas qué estás haciendo o con qué lo estás haciendo?",
+  "cita": {
+   "fragmento": "GEN-008",
+   "documento": "Generales",
+   "pagina": 12
+  },
+  "evidencia": "cambia según el propósito del uso, el tipo de datos que intervienen, el grado de automatización",
+  "conceptos": [
+   "riesgo",
+   "datos-personales",
+   "confidencialidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-004",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Quieres ser totalmente transparente con la IA. ¿Deberías documentar con el mismo detalle cada uso, incluso cuando solo corriges la ortografía de un correo?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 1,
+  "explicacion": "No. La transparencia es proporcional: cuando la IA solo apoya tareas menores basta con claridad básica, y el detalle crece cuando influye en decisiones, productos o entregables a terceros. Documentar todo igual también oculta lo importante entre lo trivial. Para pensar: ¿Qué usos tuyos de IA alguien necesitaría poder reconstruir después?",
+  "cita": {
+   "fragmento": "GEN-019",
+   "documento": "Generales",
+   "pagina": 24
+  },
+  "evidencia": "Esta exigencia no implica el mismo nivel de detalle en todos los casos",
+  "conceptos": [
+   "transparencia",
+   "trazabilidad",
+   "niveles-de-uso"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-005",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "estudiante",
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Le hiciste una pregunta a la IA con una premisa equivocada y te devolvió una respuesta sesgada que usaste. La herramienta fue la que se equivocó. ¿Parte de la responsabilidad es tuya?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 0,
+  "explicacion": "Sí. Los lineamientos dicen que la forma de pedirle cosas a la IA influye en lo que responde y que eso es responsabilidad de quien la usa. La IA tiende a seguir el marco que le das. Para pensar: ¿Revisas tus propias preguntas con el mismo cuidado con que revisas las respuestas?",
+  "cita": {
+   "fragmento": "GEN-019",
+   "documento": "Generales",
+   "pagina": 25
+  },
+  "evidencia": "reconociendo su impacto en los resultados y la responsabilidad de quien las emplea",
+  "conceptos": [
+   "responsabilidad",
+   "sesgos",
+   "verificacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-006",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "Usaste IA solo para entender un tema difícil. Después escribiste el ensayo tú, sin copiar nada del chat. El profesor no pidió declarar nada. ¿Tienes que declararlo?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 1,
+  "explicacion": "No, por regla general. Lo que obliga a declarar no es haber usado IA, sino que lo que te dio la IA haya pasado al trabajo que entregas. El profesor puede pedirlo igual. Para pensar: Si la estructura de tu argumento salió de esa conversación, ¿ese uso de verdad se quedó fuera del ensayo?",
+  "cita": {
+   "fragmento": "ENS-037",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 13
+  },
+  "evidencia": "No siempre es necesario declarar usos personales de estudio que no pasan al producto final",
+  "conceptos": [
+   "declaracion-de-uso",
+   "aprendizaje",
+   "integridad-academica"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-007",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "Con IA terminas todas las tareas más rápido y tus notas subieron. Pero en los exámenes sin IA te va peor que antes. ¿Es una señal de que algo en tu uso de la IA no está funcionando?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 0,
+  "explicacion": "Sí. Los lineamientos proponen una pregunta sencilla: ¿la IA te está ayudando a aprender o está reemplazando una tarea que debías hacer tú? Notas más altas con menos aprendizaje son la segunda. Para pensar: ¿Qué parte del trabajo le pasas a la IA justo cuando la tarea empieza a costarte?",
+  "cita": {
+   "fragmento": "ENS-036",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 11
+  },
+  "evidencia": "¿la herramienta está ayudando a aprender, enseñar o decidir mejor, o está reemplazando una tarea que debía hacer una persona?",
+  "conceptos": [
+   "aprendizaje",
+   "agencia-humana",
+   "competencias"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-008",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "La guía del trabajo no dice nada sobre IA. Un compañero razona: «si no lo prohibieron, está permitido». ¿Te corresponde a ti preguntar antes de entregar?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 0,
+  "explicacion": "Sí. Los lineamientos piden que cada actividad tenga una regla clara, pero cuando no la tiene, la duda se resuelve antes de entregar, no después. El silencio no es permiso. Para pensar: ¿Qué ganas y qué arriesgas al interpretar el silencio a tu favor?",
+  "cita": {
+   "fragmento": "ENS-039",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 17
+  },
+  "evidencia": "Cuando no sea claro si el uso está permitido, la duda debe resolverse antes de entregar la actividad",
+  "conceptos": [
+   "niveles-de-uso",
+   "integridad-academica",
+   "responsabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-009",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "La IA te da una cita perfecta para tu argumento, pero no la encuentras en ninguna base de datos. Decides borrar la cita y dejar solo la idea, que suena muy razonable. ¿Puedes dejar esa idea en el trabajo como algo sabido?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 1,
+  "explicacion": "No. Quitar la cita no vuelve verificable la idea: si no puedes comprobarla, sigue siendo una hipótesis de la IA. Los lineamientos piden tratarla como idea preliminar y buscar respaldo propio. Para pensar: ¿Te convence la idea porque es cierta o porque suena bien y te sirve?",
+  "cita": {
+   "fragmento": "ENS-039",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 17
+  },
+  "evidencia": "Si la respuesta presenta coherencia aparente pero no puede ser verificada, hay que tratarla como una idea preliminar",
+  "conceptos": [
+   "alucinaciones",
+   "citas",
+   "verificacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-010",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "estudiante",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "Le pediste a la IA que solo corrigiera el estilo de tu texto. Cambió tantas frases que ahora suena mejor de lo que tú escribirías, aunque las ideas son tuyas. ¿Deberías declarar ese uso?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 0,
+  "explicacion": "Sí. Corregir el estilo es un apoyo menor, pero reescribir apartados ya es un uso que se declara. La línea no la marca lo que le pediste a la IA, sino lo que hizo con tu texto. Para pensar: Si tu profesor te pidiera reescribir un párrafo en voz alta, ¿sonaría como lo que entregaste?",
+  "cita": {
+   "fragmento": "ENS-037",
+   "documento": "Enseñanza-Aprendizaje",
+   "pagina": 13
+  },
+  "evidencia": "cuando se usa para redactar o reescribir apartados",
+  "conceptos": [
+   "declaracion-de-uso",
+   "autoria",
+   "integridad-academica"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-011",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "Te piden evaluar el manuscrito de un colega. No quieres que la IA lo juzgue por ti, solo que te ayude a redactar tu concepto, y para eso le pegas el manuscrito. ¿Está bien?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 1,
+  "explicacion": "No. El problema no es para qué usas la IA, sino qué le entregas: un manuscrito no publicado es reservado y cargarlo en una herramienta externa rompe la confidencialidad. Podrías usarla para ordenar tus propias notas si no contienen información protegida. Para pensar: ¿De quién es la información que estás pegando?",
+  "cita": {
+   "fragmento": "CIE-070",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 38
+  },
+  "evidencia": "no deben cargarse en herramientas abiertas o no autorizadas documentos no publicados, manuscritos",
+  "conceptos": [
+   "revision-por-pares",
+   "confidencialidad",
+   "herramientas-autorizadas"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-012",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "La IA aportó tanto al análisis de tu artículo que te parece deshonesto no darle crédito. ¿Lo honesto es declarar su uso en lugar de ponerla como coautora?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 0,
+  "explicacion": "Sí. La honestidad sobre la IA se ejerce declarando su uso, no dándole autoría. Ser autor implica aprobar la versión final y responder por errores, algo que una herramienta no puede hacer. Para pensar: Si alguien encuentra un error en ese análisis, ¿a quién le va a pedir explicaciones?",
+  "cita": {
+   "fragmento": "CIE-069",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 36
+  },
+  "evidencia": "La IA no puede figurar como autora o coautora",
+  "conceptos": [
+   "autoria",
+   "declaracion-de-uso",
+   "integridad-cientifica"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-013",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "A tu base de datos le faltan valores. La IA puede completarlos de forma estadísticamente plausible. Si lo justificas en la metodología y dejas registro de cómo lo hiciste, ¿puede ser aceptable?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 0,
+  "explicacion": "Sí, puede serlo. Los lineamientos no prohíben completar datos en cualquier caso: lo que debe evitarse es hacerlo sin justificación metodológica y sin trazabilidad. La pregunta no es si se puede, sino si puedes defender el método. Para pensar: ¿Alguien podría reproducir tu resultado sabiendo exactamente qué hizo la IA?",
+  "cita": {
+   "fragmento": "CIE-061",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 20
+  },
+  "evidencia": "sin justificación metodológica y sin trazabilidad",
+  "conceptos": [
+   "integridad-cientifica",
+   "trazabilidad",
+   "verificacion"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-014",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "investigador",
+   "profesor"
+  ],
+  "nivel": 3,
+  "enunciado": "La IA redactó las conclusiones de tu investigación. Tú conoces el tema, las leíste con cuidado y estás de acuerdo con todas. ¿Basta con estar de acuerdo para que sean tus conclusiones?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 1,
+  "explicacion": "No. Formular conclusiones es una tarea que los lineamientos consideran no delegable. Estar de acuerdo con un texto no es lo mismo que haber llegado a él: el razonamiento que lleva de los datos a la conclusión es justamente lo que te toca hacer a ti. Para pensar: ¿Habrías llegado a las mismas conclusiones sin haberlas leído antes?",
+  "cita": {
+   "fragmento": "CIE-061",
+   "documento": "Ciencia, Tecnología e Innovación",
+   "pagina": 20
+  },
+  "evidencia": "Delegar en la IA la interpretación final de resultados, la formulación de conclusiones",
+  "conceptos": [
+   "responsabilidad",
+   "integridad-cientifica",
+   "agencia-humana"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-015",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Resumiste con IA 40 entrevistas de una comunidad. El resumen es claro y preciso con los datos, pero las expresiones propias de la gente desaparecieron. ¿Se perdió algo importante?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 0,
+  "explicacion": "Sí. En el trabajo con comunidades, cómo se dice algo también es información. Los lineamientos piden revisar los resúmenes para que no se pierda el sentido de las voces recogidas. Para pensar: ¿La gente entrevistada se reconocería en ese resumen?",
+  "cita": {
+   "fragmento": "EXT-091",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 22
+  },
+  "evidencia": "evitar que se pierda el sentido de las voces recogidas",
+  "conceptos": [
+   "comunidades",
+   "verificacion",
+   "calidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-016",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "La IA hizo un diagnóstico de las necesidades de una comunidad a partir de encuestas. Tu equipo lo revisó con cuidado y lo encontró coherente. ¿Basta con la revisión de tu equipo para presentarlo como diagnóstico?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 1,
+  "explicacion": "No. Los lineamientos piden que una lectura sobre una comunidad no se presente como definitiva si no la validaron los propios participantes. Que tu equipo esté de acuerdo no reemplaza ese diálogo. Para pensar: ¿Quién tiene la última palabra sobre lo que una comunidad necesita?",
+  "cita": {
+   "fragmento": "EXT-091",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 22
+  },
+  "evidencia": "no validada por los participantes",
+  "conceptos": [
+   "comunidades",
+   "decisiones",
+   "responsabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-017",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "profesor",
+   "investigador",
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Un chatbot responde automáticamente las preguntas de empresas aliadas sobre un convenio. Casi siempre acierta. ¿Necesita revisión humana aunque acierte casi siempre?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 0,
+  "explicacion": "Sí. Cuando hay impacto contractual, una sola respuesta equivocada puede comprometer a la universidad, y el «casi siempre» no protege de ese error. Los lineamientos piden revisión humana en esos casos. Para pensar: ¿Qué error de ese chatbot sería el más difícil de deshacer?",
+  "cita": {
+   "fragmento": "EXT-089",
+   "documento": "Extensión y Educación Continuada",
+   "pagina": 18
+  },
+  "evidencia": "Automatizar respuestas sin revisión humana a aliados, comunidades o usuarios externos, cuando exista impacto contractual",
+  "conceptos": [
+   "automatizacion",
+   "terceros",
+   "supervision-humana"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-018",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "La IA ordena 300 hojas de vida y tú entrevistas solo a las 20 primeras. La decisión final de contratar la tomas tú. ¿Hay supervisión humana suficiente?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 1,
+  "explicacion": "No. Las 280 personas que nunca viste fueron descartadas por la IA, no por ti. Los lineamientos piden criterios definidos, revisión de sesgos y validación humana cuando la IA apoya la selección. Para pensar: ¿Sabes por qué quedó en el puesto 21 la persona que quedó en el puesto 21?",
+  "cita": {
+   "fragmento": "GES-118",
+   "documento": "Gestión Institucional",
+   "pagina": 25
+  },
+  "evidencia": "deberán existir criterios definidos, revisión de sesgos, validación humana",
+  "conceptos": [
+   "supervision-humana",
+   "sesgos",
+   "decisiones"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-019",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Un sistema marca a algunos estudiantes como «en riesgo de deserción» para ofrecerles apoyo. Nadie sabe bien por qué marca a unos y no a otros, pero los resultados son buenos. ¿Es aceptable mientras funcione?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 1,
+  "explicacion": "No. Aunque la intención sea ayudar, la universidad debe poder explicar cómo se produjo esa alerta y qué datos usó. Si nadie sabe por qué marca a alguien, tampoco puede saber a quién deja por fuera. Para pensar: ¿Qué le dirías a un estudiante que pregunta por qué lo marcaron, o por qué no?",
+  "cita": {
+   "fragmento": "GES-123",
+   "documento": "Gestión Institucional",
+   "pagina": 33
+  },
+  "evidencia": "La IA no puede convertirse en una caja negra",
+  "conceptos": [
+   "transparencia",
+   "decisiones",
+   "trazabilidad"
+  ],
+  "estado": "pendiente_revision"
+ },
+ {
+  "id": "ref-020",
+  "serie": "reflexiva",
+  "tipo": "dilema",
+  "rol": [
+   "administrativo"
+  ],
+  "nivel": 3,
+  "enunciado": "Tu dependencia encontró una herramienta gratuita de IA que ahorra mucho trabajo. Solo la van a usar con información «no tan sensible». ¿Deben revisarla con las áreas competentes antes de usarla?",
+  "opciones": [
+   "Sí",
+   "No"
+  ],
+  "correcta": 0,
+  "explicacion": "Sí. Decidir qué es «no tan sensible» es justamente parte de la revisión, y las herramientas gratuitas suelen tener condiciones sobre lo que hacen con los datos. Los lineamientos piden revisar seguridad, proveedor y alcance antes de usarla en procesos institucionales. Para pensar: Si la herramienta es gratis, ¿con qué estás pagando?",
+  "cita": {
+   "fragmento": "GES-127",
+   "documento": "Gestión Institucional",
+   "pagina": 41
+  },
+  "evidencia": "Debe revisar el caso con las áreas competentes antes de usarla en procesos institucionales",
+  "conceptos": [
+   "herramientas-autorizadas",
+   "proveedores",
+   "seguridad-informacion"
   ],
   "estado": "pendiente_revision"
  }

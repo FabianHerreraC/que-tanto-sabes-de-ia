@@ -271,29 +271,35 @@
   const docDe = (p) => PREFIJO[p.cita.documento];
 
   // 70 % del documento del rol, 30 % del resto (siempre con algo de Generales)
-  function elegir(pool, rol) {
+  function elegir(pool, rol, n) {
     const docRol = DOC_DEL_ROL[rol];
     const delRol = barajar(pool.filter((p) => docDe(p) === docRol || p.rol.includes(rol)));
     const resto = barajar(pool.filter((p) => !delRol.includes(p)));
-    const elegidas = delRol.slice(0, Math.round(N_PREGUNTAS * 0.7));
+    const elegidas = delRol.slice(0, Math.round(n * 0.7));
     const gen = resto.find((p) => docDe(p) === "GEN");
     if (gen && !elegidas.some((p) => docDe(p) === "GEN")) elegidas.push(gen);
     for (const p of [...resto, ...delRol]) {
-      if (elegidas.length >= N_PREGUNTAS) break;
+      if (elegidas.length >= n) break;
       if (!elegidas.includes(p)) elegidas.push(p);
     }
+    return elegidas.slice(0, n);
+  }
+
+  // primero las que aún no ha acertado; si no alcanzan, completa con repaso
+  function tomar(pool, rol, n) {
+    let elegidas = elegir(pool.filter((p) => !progreso.has(p.id)), rol, n);
+    if (elegidas.length < n) elegidas = elegidas.concat(elegir(pool.filter((p) => progreso.has(p.id)), rol, n - elegidas.length));
     return elegidas;
   }
 
-  // primero las preguntas que aún no ha acertado; si no alcanzan, completa con repaso. Dificultad creciente.
+  // cada ciclo: 8 del banco base en dificultad creciente y cierra con 2 dilemas de la serie reflexiva
+  const N_REFLEXIVAS = 2;
   function armarSesion(rol) {
-    const pendientes = PREGUNTAS.filter((p) => !progreso.has(p.id));
-    let elegidas = elegir(pendientes, rol);
-    if (elegidas.length < N_PREGUNTAS) {
-      const repaso = elegir(PREGUNTAS.filter((p) => progreso.has(p.id)), rol);
-      elegidas = elegidas.concat(repaso.slice(0, N_PREGUNTAS - elegidas.length));
-    }
-    return elegidas.slice(0, N_PREGUNTAS).sort((a, b) => a.nivel - b.nivel);
+    const reflexivas = PREGUNTAS.filter((p) => p.serie === "reflexiva");
+    const base = PREGUNTAS.filter((p) => p.serie !== "reflexiva");
+    const nRef = Math.min(N_REFLEXIVAS, reflexivas.length);
+    return tomar(base, rol, N_PREGUNTAS - nRef).sort((a, b) => a.nivel - b.nivel)
+      .concat(tomar(reflexivas, rol, nRef));
   }
 
   /* ================= Progreso e insignias ================= */
@@ -365,6 +371,7 @@
     $("#serie").innerHTML = `${String(juego.i + 1).padStart(2, "0")}<small>/${String(total).padStart(2, "0")}</small>`;
     $("#meta").textContent = `Nivel ${p.nivel} · ${p.cita.documento}`;
     $("#puntos").textContent = `${juego.puntos} pts`;
+    $("#enunciado").classList.toggle("largo", p.enunciado.length > 140);   // los dilemas son escenarios: letra un poco menor
     ruleta($("#enunciado"), p.enunciado);
     $("#veredicto").hidden = true;
     const ops = $("#opciones");
@@ -413,7 +420,16 @@
     res.textContent = bien
       ? (juego.racha >= 3 ? `Bien. Racha de ${juego.racha} ×1,5` : "Bien.")
       : "Esta vez no.";
-    $("#explicacion").textContent = p.explicacion;
+    // los dilemas cierran con «Para pensar: …»: va en su propio renglón
+    const [texto, pensar] = p.explicacion.split(/\s*Para pensar:\s*/);
+    $("#explicacion").textContent = texto;
+    if (pensar) {
+      const q = document.createElement("span");
+      q.className = "para-pensar";
+      q.innerHTML = "<b>Para pensar</b> ";
+      q.append(pensar);
+      $("#explicacion").append(q);
+    }
     $("#cita").textContent = `Lineamientos ${p.cita.documento}, pág. ${p.cita.pagina} · ${p.cita.fragmento}`;
     $("#puntos").textContent = `${juego.puntos} pts`;
     $("#siguiente").firstChild.textContent = juego.i + 1 < juego.preguntas.length ? "Siguiente " : "Ver mi constelación ";

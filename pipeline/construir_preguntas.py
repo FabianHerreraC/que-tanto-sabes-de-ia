@@ -1,4 +1,4 @@
-"""Valida el banco de preguntas y escribe web/data/questions.json.
+"""Valida el banco de preguntas (base + reflexivas) y escribe web/data/questions.json.
 
 Comprueba, para cada pregunta, que la evidencia esté literalmente en el fragmento citado,
 que sus conceptos existan en graph.json y calcula la página real de la evidencia con las
@@ -12,6 +12,7 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(BASE / "pipeline"))
 from banco_preguntas import BANCO, ROLES  # noqa: E402
+from banco_reflexivas import BANCO as BANCO_REFLEXIVO  # noqa: E402
 
 FRAG = BASE / "data" / "fragmentos.jsonl"
 CORPUS = BASE / "data" / "corpus_limpio.md"
@@ -47,7 +48,8 @@ def pagina_de(evidencia, documento, desde, paginas):
             continue
         if ev in t:
             return p
-        if i + 1 < len(hojas) and ev in t + " " + hojas[i + 1][1]:
+        # solo si cruza el salto: si cabe entera en la página siguiente, esa es la página
+        if i + 1 < len(hojas) and ev not in hojas[i + 1][1] and ev in t + " " + hojas[i + 1][1]:
             return p
     return None
 
@@ -58,29 +60,32 @@ def main():
     paginas = paginas_por_documento()
     errores, salida = [], []
 
-    for doc, preguntas in BANCO.items():
-        for i, (tipo, nivel, enunciado, correcta, explicacion, fid, evidencia, cons) in enumerate(preguntas, 1):
-            qid = f"{doc.lower()}-{i:03d}"
-            f = frags.get(fid)
-            if not f:
-                errores.append(f"{qid}: no existe el fragmento {fid}"); continue
-            if not fid.startswith(doc):
-                errores.append(f"{qid}: el fragmento {fid} no es de {doc}")
-            if norm(evidencia) not in norm(f["texto"]):
-                errores.append(f"{qid}: la evidencia no está en {fid}: «{evidencia[:60]}…»")
-            faltan = [c for c in cons if c not in conceptos]
-            if faltan:
-                errores.append(f"{qid}: conceptos que no están en graph.json: {faltan}")
-            pag = pagina_de(evidencia, f["documento"], f["pagina_inicio"], paginas) or f["pagina_inicio"]
-            salida.append({
-                "id": qid, "tipo": TIPO[tipo], "rol": ROLES[doc], "nivel": nivel,
-                "enunciado": enunciado, "opciones": OPCIONES[tipo], "correcta": correcta,
-                "explicacion": explicacion,
-                "cita": {"fragmento": fid, "documento": f["documento"], "pagina": pag},
-                "evidencia": evidencia, "conceptos": cons, "estado": "pendiente_revision",
-            })
+    # banco base (100, verdad o mentira) + serie reflexiva (20 dilemas de segundo nivel, ref-NNN)
+    lotes = [(doc, f"{doc.lower()}-{i:03d}", "base", q) for doc, qs in BANCO.items() for i, q in enumerate(qs, 1)]
+    lotes += [(doc, f"ref-{i:03d}", "reflexiva", q) for i, (doc, q) in
+              enumerate(((d, q) for d, qs in BANCO_REFLEXIVO.items() for q in qs), 1)]
+    for doc, qid, serie, (tipo, nivel, enunciado, correcta, explicacion, fid, evidencia, cons) in lotes:
+        f = frags.get(fid)
+        if not f:
+            errores.append(f"{qid}: no existe el fragmento {fid}"); continue
+        if not fid.startswith(doc):
+            errores.append(f"{qid}: el fragmento {fid} no es de {doc}")
+        if norm(evidencia) not in norm(f["texto"]):
+            errores.append(f"{qid}: la evidencia no está en {fid}: «{evidencia[:60]}…»")
+        faltan = [c for c in cons if c not in conceptos]
+        if faltan:
+            errores.append(f"{qid}: conceptos que no están en graph.json: {faltan}")
+        pag = pagina_de(evidencia, f["documento"], f["pagina_inicio"], paginas) or f["pagina_inicio"]
+        salida.append({
+            "id": qid, "serie": serie, "tipo": TIPO[tipo], "rol": ROLES[doc], "nivel": nivel,
+            "enunciado": enunciado, "opciones": OPCIONES[tipo], "correcta": correcta,
+            "explicacion": explicacion,
+            "cita": {"fragmento": fid, "documento": f["documento"], "pagina": pag},
+            "evidencia": evidencia, "conceptos": cons, "estado": "pendiente_revision",
+        })
 
     por_doc = {d: len(v) for d, v in BANCO.items()}
+    por_doc["reflexivas"] = sum(len(v) for v in BANCO_REFLEXIVO.values())
     if errores:
         print("\n".join(errores)); sys.exit(1)
     OUT.write_text(json.dumps(salida, ensure_ascii=False, indent=1), encoding="utf-8")
