@@ -64,9 +64,9 @@
       const conPanel = ["inicio", "quiz", "cierre", "acerca", "consulta"].includes(vista);
       // en móvil la ficha ocupa la mitad de abajo: la nube sube para que el punto elegido se vea
       const cy = movil && (conPanel || seleccionado) ? H * 0.27 : conPanel ? H * 0.38 : H * 0.5;
-      const R = (movil ? (conPanel ? Math.min(W * 0.3, H * 0.22) : W * 0.37) : Math.min(W, H) * (conPanel ? 0.27 : 0.38)) * zoom;
+      const R = (movil ? (conPanel ? Math.min(W * 0.28, H * 0.22) : W * 0.3) : Math.min(W, H) * (conPanel ? 0.27 : 0.38)) * zoom;
       // en móvil las etiquetas salen a la derecha del punto: correr el centro a la izquierda
-      return { cx: movil ? W * 0.42 : W / 2, cy, R };
+      return { cx: movil ? W * 0.4 : W / 2, cy: movil && !conPanel && !seleccionado ? H * 0.38 : cy, R };
     }
 
     function proyectar(d, m) {
@@ -140,10 +140,12 @@
         const destacado = d.estado === "activo" || d.estado === "dominado" || d === hover || d === seleccionado;
         cx.font = `${destacado ? 700 : 400} ${destacado ? 15 : 13.5}px "Jost", system-ui, sans-serif`;
         cx.fillStyle = d === hover || d === seleccionado ? "#000" : txt;
-        const tx = d.px + r + 5;
+        // la etiqueta va a la derecha del punto; si se saldría de la pantalla, va a la izquierda
+        const ancho = cx.measureText(d.label).width;
+        const tx = d.px + r + 5 + ancho > W - 4 ? d.px - r - 5 - ancho : d.px + r + 5;
         cx.fillText(d.label, tx, d.py + 4);
         if (d.estado === "fallado") {          // tachado: concepto por explorar
-          cx.fillRect(tx, d.py, cx.measureText(d.label).width, 0.75);
+          cx.fillRect(tx, d.py, ancho, 0.75);
         }
       }
       requestAnimationFrame(dibujar);
@@ -435,6 +437,8 @@
     $("#siguiente").firstChild.textContent = juego.i + 1 < juego.preguntas.length ? "Siguiente " : "Ver mi constelación ";
     $("#veredicto").hidden = false;
     $("#siguiente").focus({ preventScroll: true });
+    // si la explicación no cabe (celular), baja el panel hasta el botón para seguir
+    $("#siguiente").scrollIntoView({ block: "nearest", behavior: "smooth" });
   }
 
   function siguiente() {

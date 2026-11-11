@@ -508,21 +508,25 @@ body[data-vista="consulta"] .c-der { opacity: .3; transform: none; }
 @media (max-width: 720px) {
   .rv-foto { float: none; display: block; width: 100%; margin: 0 0 12px; }
   .pestanas { overflow-x: auto; scrollbar-width: none; }
-  .pestana { flex: none; padding: 4px 6px 3px; }
-  .pestana span { font-size: 13px; }
-  .intro-mapa { top: auto; bottom: 92px; left: 12px; right: 12px; width: auto; }
+  .pestana { flex: none; padding: 4px 3px 3px; }
+  .pestana span { font-size: 12.5px; }
+  .pestana sup { display: none; }   /* sin los números, las cinco pestañas caben en el ancho del celular */
+  .pestanas { gap: 1px; }
+  .intro-mapa { top: auto; bottom: 96px; left: 12px; right: 12px; width: auto; max-height: calc(100dvh - 170px); overflow-y: auto; }
   body.con-ficha .intro-mapa { display: none; }   /* en móvil la ficha ocupa ese lugar */
   .ficha { top: auto; bottom: 12px; left: 12px; right: 12px; width: auto; max-height: 55vh; }
-  .barra { justify-content: flex-start; gap: 10px; padding-right: 52px; }   /* deja libre el botón de pausa */
+  .barra { justify-content: flex-start; gap: 6px; padding-right: 48px; }   /* deja libre el botón de pausa */
   .marca img { height: 20px; }
-  .panel { bottom: 34px; padding: 18px 16px 16px; max-height: 70vh; overflow-y: auto; }
+  .panel { bottom: 34px; padding: 18px 16px 16px; max-height: calc(100dvh - 84px); overflow-y: auto; }
+  #cierre { max-height: 58dvh; }   /* deja ver la constelación arriba */
+  #inicio { max-height: calc(100dvh - 300px); }   /* el collage de arriba queda entero; las insignias, con scroll */
   .esquina { display: none; }
   .globo { font-size: 23px; }
   #inicio-t .t2 { font-size: 80px; margin: 2px 0 8px; }
   .cifra { font-size: 52px; }
   .datos { gap: 16px; }
   .listas { grid-template-columns: 1fr; gap: 10px; }
-  .leyenda { flex-wrap: wrap; justify-content: center; width: calc(100% - 32px); gap: 6px 12px; bottom: 12px; }
+  .leyenda { flex-wrap: wrap; justify-content: center; width: calc(100% - 32px); gap: 4px 12px; bottom: 12px; font-size: 13px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
