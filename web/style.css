@@ -94,6 +94,7 @@ main { position: fixed; inset: 0; z-index: 10; pointer-events: none; }
   width: min(520px, calc(100% - 2 * var(--gutter)));
   translate: -50% 0;
   padding: 22px 22px 20px;
+  max-height: calc(100dvh - 110px); overflow-y: auto; overscroll-behavior: contain;   /* si no cabe, el panel hace scroll en vez de salirse por arriba */
   border-radius: 6px;
   background: var(--panel);
   -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
@@ -478,7 +479,7 @@ body[data-vista="consulta"] .c-der { opacity: .3; transform: none; }
   #inicio {
     left: 50%; width: min(720px, 64vw); top: 52%; bottom: auto; translate: -50% -50%;
     padding: 7vh 4vw; background: radial-gradient(ellipse 70% 62% at 50% 50%, rgba(247, 234, 212, .95) 62%, rgba(247, 234, 212, 0) 100%);
-    -webkit-backdrop-filter: none; backdrop-filter: none; overflow: visible;
+    -webkit-backdrop-filter: none; backdrop-filter: none; overflow: visible; max-height: none;
   }
   .collage {
     left: 50%; top: 50%; width: 92vw; translate: -50% -50%;
