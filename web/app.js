@@ -292,14 +292,14 @@
     return elegidas;
   }
 
-  // cada ciclo: 8 del banco base en dificultad creciente y cierra con 2 dilemas de la serie reflexiva
+  // cada ciclo abre con 2 dilemas de la serie reflexiva y sigue con 8 del banco base en dificultad creciente
   const N_REFLEXIVAS = 2;
   function armarSesion(rol) {
     const reflexivas = PREGUNTAS.filter((p) => p.serie === "reflexiva");
     const base = PREGUNTAS.filter((p) => p.serie !== "reflexiva");
     const nRef = Math.min(N_REFLEXIVAS, reflexivas.length);
-    return tomar(base, rol, N_PREGUNTAS - nRef).sort((a, b) => a.nivel - b.nivel)
-      .concat(tomar(reflexivas, rol, nRef));
+    return tomar(reflexivas, rol, nRef)
+      .concat(tomar(base, rol, N_PREGUNTAS - nRef).sort((a, b) => a.nivel - b.nivel));
   }
 
   /* ================= Progreso e insignias ================= */
