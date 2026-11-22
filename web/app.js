@@ -15,12 +15,13 @@
   const N_PREGUNTAS = 10;
   // mientras la comisión revisa el banco se juega también lo pendiente; al publicar, dejar solo "aprobada"
   const ESTADOS_JUGABLES = ["aprobada", "pendiente_revision"];
-  // cuatro insignias: cada ciclo de 10 preguntas da una, según los aciertos (de mayor a menor exigencia)
+  // cuatro rangos de resultado: cada ciclo de 10 preguntas da uno, según los aciertos (de mayor a menor exigencia)
+  // (los ids se conservan para no perder lo que cada navegador ya guardó)
   const INSIGNIAS = [
-    { id: "i10", nombre: "Guardián del criterio", min: 10, marca: "10", requisito: "10 de 10" },
-    { id: "i8", nombre: "Criterioso", min: 8, marca: "8", requisito: "8 o 9" },
-    { id: "i6", nombre: "Atento", min: 6, marca: "6", requisito: "6 o 7" },
-    { id: "i0", nombre: "Curioso", min: 0, marca: "5", requisito: "5 o menos" },
+    { id: "i10", nombre: "Dominio del tema", min: 10, marca: "10", requisito: "10 de 10" },
+    { id: "i8", nombre: "Muy buen manejo", min: 8, marca: "8", requisito: "8 o 9" },
+    { id: "i6", nombre: "Buen avance", min: 6, marca: "6", requisito: "6 o 7" },
+    { id: "i0", nombre: "En proceso", min: 0, marca: "5", requisito: "5 o menos" },
   ];
 
   const quieto = matchMedia("(prefers-reduced-motion: reduce)");
@@ -36,6 +37,8 @@
     let yaw = 0.4, pitch = -0.25, yawObj = yaw, pitchObj = pitch;
     let zoom = 1, zoomObj = 1, giro = 0.0009, interactiva = false;
     let hover = null, arrastre = null, seleccionado = null, alSeleccionar = null, t0 = performance.now();
+    let cadena = [];   // inicio: conceptos elegidos en la rueda, en orden; se unen con una línea
+    let resaltados = new Set();   // mapa: conceptos que comparten pregunta con el seleccionado (resalte suave)
 
     function cargar(graph) {
       const orden = [...graph.nodes].sort((a, b) =>
@@ -48,7 +51,7 @@
           tam: 1.6 + 3.2 * Math.sqrt(d.peso / maxPeso), estado: "inactivo", t: 0 };
       });
       porId = Object.fromEntries(nodos.map((d) => [d.id, d]));
-      enlaces = graph.links.filter((l) => l.peso >= 8 && porId[l.source] && porId[l.target])
+      enlaces = graph.links.filter((l) => porId[l.source] && porId[l.target])
         .map((l) => ({ a: porId[l.source], b: porId[l.target], peso: l.peso }));
     }
 
@@ -61,6 +64,14 @@
     // centro y radio según la vista: en móvil la nube sube para dejar sitio al panel
     function marco() {
       const movil = W < 720, vista = document.body.dataset.vista;
+      // acerca: la esfera a la izquierda, el texto a la derecha
+      if (vista === "acerca" && W >= 860) return { cx: W * 0.27, cy: H * 0.52, R: Math.min(H * 0.3, W * 0.17) * zoom };
+      // inicio: esfera arriba a la izquierda, llamado a jugar debajo, rueda de conceptos a la derecha
+      if (vista === "inicio") {
+        if (W < 860) { const r = Math.min(W * 0.3, H * 0.14) * zoom; return { cx: W * 0.5, cy: 62 + r, R: r }; }
+        // mismas medidas que usa el CSS para ubicar la rueda y los indicadores alrededor de la esfera
+        return { cx: W * 0.4, cy: H * 0.37, R: Math.min(H * 0.21, W * 0.14) * zoom };
+      }
       const conPanel = ["inicio", "quiz", "cierre", "acerca", "consulta"].includes(vista);
       // en móvil la ficha ocupa la mitad de abajo: la nube sube para que el punto elegido se vea
       const cy = movil && (conPanel || seleccionado) ? H * 0.27 : conPanel ? H * 0.38 : H * 0.5;
@@ -89,17 +100,27 @@
       const m = marco();
       nodos.forEach((d) => proyectar(d, m));
 
-      // enlaces
-      cx.lineWidth = 0.6;
+      const enInicio = document.body.dataset.vista === "inicio";
+      // enlaces (en el inicio quedan grises: lo que se ilumina es el recorrido)
       for (const l of enlaces) {
-        const act = (l.a.estado !== "inactivo" && l.b.estado !== "inactivo");
+        const act = !enInicio && (l.a.estado !== "inactivo" && l.b.estado !== "inactivo");
         const prof = (l.a.pz + l.b.pz) / 2;
-        cx.strokeStyle = act ? `rgba(247,74,45,${0.3 + 0.25 * (prof + 1)})` : `rgba(0,0,0,${0.015 + 0.03 * (prof + 1)})`;
+        // relación del concepto seleccionado con uno resaltado (comparten pregunta)
+        const rel = seleccionado && ((l.a === seleccionado && resaltados.has(l.b)) || (l.b === seleccionado && resaltados.has(l.a)));
+        cx.lineWidth = rel ? 1.4 + 0.3 * Math.min(l.peso, 5) : 0.6 + 0.25 * Math.min(l.peso, 5);   // más preguntas, línea más gruesa
+        cx.strokeStyle = rel ? `rgba(247,74,45,${0.35 + 0.2 * (prof + 1)})`
+          : act ? `rgba(247,74,45,${0.3 + 0.25 * (prof + 1)})` : `rgba(0,0,0,${0.04 + 0.06 * (prof + 1)})`;
         cx.beginPath(); cx.moveTo(l.a.px, l.a.py); cx.lineTo(l.b.px, l.b.py); cx.stroke();
       }
 
+      // recorrido del inicio: cada concepto elegido se une con el siguiente
+      if (enInicio && cadena.length > 1) {
+        cx.strokeStyle = "#f74a2d"; cx.lineWidth = 2; cx.lineJoin = "round";
+        cx.beginPath(); cadena.forEach((d, i) => (i ? cx.lineTo(d.px, d.py) : cx.moveTo(d.px, d.py))); cx.stroke();
+      }
+
       const pulso = (Math.sin(now / 380) + 1) / 2;
-      const enQuiz = !interactiva && document.body.dataset.vista === "quiz";
+      const enQuiz = document.body.dataset.vista === "quiz";
       const orden = [...nodos].sort((a, b) => a.pz - b.pz);
       for (const d of orden) {
         const prof = (d.pz + 1) / 2;                     // 0 atrás · 1 frente
@@ -112,22 +133,34 @@
           cx.beginPath(); cx.arc(d.px, d.py, r + 4 + 10 * pulso, 0, 7); cx.stroke();
           alfa = 1; txt = "#000";
         } else if (d.estado === "dominado") {
-          cx.fillStyle = "#f7c733"; cx.globalAlpha = 0.75;
+          // acierto: halo verde
+          cx.fillStyle = "#2f9e5b"; cx.globalAlpha = 0.32;
           cx.beginPath(); cx.arc(d.px, d.py, r * 3.4, 0, 7); cx.fill();
-          alfa = 1; txt = "#000";
+          alfa = 1; txt = "#1d5c37";
         } else if (d.estado === "fallado") {
-          alfa = 0.4 + 0.4 * prof; txt = `rgba(0,0,0,${0.3 + 0.35 * prof})`;
+          // fallo: halo rojo
+          cx.fillStyle = "#d83e2e"; cx.globalAlpha = 0.28;
+          cx.beginPath(); cx.arc(d.px, d.py, r * 3.4, 0, 7); cx.fill();
+          alfa = 1; txt = "#a52a1e";
+        }
+        if (resaltados.has(d)) {
+          // resalte suave: halo del color de su documento y nombre visible
+          cx.fillStyle = DOCS[d.doc_principal].color; cx.globalAlpha = 0.18;
+          cx.beginPath(); cx.arc(d.px, d.py, r * 3.2, 0, 7); cx.fill();
+          alfa = Math.max(alfa, 0.9); txt = "rgba(0,0,0,.75)";
         }
 
         cx.globalAlpha = alfa;
         cx.lineWidth = 0.75;
-        if (d.estado === "fallado") {
-          cx.strokeStyle = "#000"; cx.setLineDash([2, 2]);
-          cx.beginPath(); cx.arc(d.px, d.py, r + 1.5, 0, 7); cx.stroke();
-          cx.setLineDash([]);
+        if (d.estado === "fallado" || d.estado === "dominado") {
+          // punto rojo si se falló, verde si se acertó
+          cx.fillStyle = d.estado === "fallado" ? "#d83e2e" : "#2f9e5b";
+          cx.strokeStyle = "rgba(0,0,0,.35)";
+          cx.beginPath(); cx.arc(d.px, d.py, r, 0, 7); cx.fill(); cx.stroke();
         } else {
           // borde fino: la lima y la menta casi no se ven sobre blanco
-          cx.fillStyle = d.estado === "inactivo" && enQuiz ? "#d9ccb0" : DOCS[d.doc_principal].color;
+          cx.fillStyle = d.estado === "inactivo" && enQuiz ? "#d9ccb0"
+            : d.estado === "inactivo" && enInicio ? "#c3c6ca" : DOCS[d.doc_principal].color;
           cx.strokeStyle = "rgba(0,0,0,.35)";
           cx.beginPath(); cx.arc(d.px, d.py, r, 0, 7); cx.fill(); cx.stroke();
         }
@@ -137,16 +170,21 @@
           cx.strokeStyle = "#000"; cx.lineWidth = 1.5;
           cx.beginPath(); cx.arc(d.px, d.py, r + 6, 0, 7); cx.stroke();
         }
-        const destacado = d.estado === "activo" || d.estado === "dominado" || d === hover || d === seleccionado;
+        const destacado = d.estado === "activo" || d.estado === "dominado" || d.estado === "fallado" || d.estado === "elegido" || d === hover || d === seleccionado || resaltados.has(d);
+        const vistaAhora = document.body.dataset.vista;
+        if ((vistaAhora === "inicio" || vistaAhora === "acerca") && !destacado) continue;   // inicio y acerca: esfera limpia
+        if (vistaAhora === "mapa" && W < 860 && !destacado) continue;   // celular: en el mapa solo se rotula lo que se toca
+        // celular, en el test: sin nombres hasta responder; luego solo los de las preguntas ya respondidas
+        if (vistaAhora === "quiz" && W < 860 && d.estado !== "dominado" && d.estado !== "fallado" && d !== hover && d !== seleccionado) continue;
         cx.font = `${destacado ? 700 : 400} ${destacado ? 15 : 13.5}px "Jost", system-ui, sans-serif`;
         cx.fillStyle = d === hover || d === seleccionado ? "#000" : txt;
         // la etiqueta va a la derecha del punto; si se saldría de la pantalla, va a la izquierda
         const ancho = cx.measureText(d.label).width;
-        const tx = d.px + r + 5 + ancho > W - 4 ? d.px - r - 5 - ancho : d.px + r + 5;
+        // en el inicio, los puntos de la mitad derecha se rotulan hacia adentro para no pisar la rueda
+        const haciaIzq = (enInicio && W >= 860 && d.px > m.cx) || d.px + r + 5 + ancho > W - 4;
+        const tx = haciaIzq ? d.px - r - 5 - ancho : d.px + r + 5;
         cx.fillText(d.label, tx, d.py + 4);
-        if (d.estado === "fallado") {          // tachado: concepto por explorar
-          cx.fillRect(tx, d.py, ancho, 0.75);
-        }
+
       }
       requestAnimationFrame(dibujar);
     }
@@ -244,7 +282,10 @@
       if (seleccionado) enfocar([id]);
     }
 
-    return { cargar, enfocar, estado, reiniciar, modo, seleccionar, encuadre, alSeleccionar: (fn) => (alSeleccionar = fn),
+    function fijarCadena(ids) { cadena = ids.map((i) => porId[i]).filter(Boolean); }
+    function resaltar(ids) { resaltados = new Set(ids.map((i) => porId[i]).filter(Boolean)); }
+
+    return { cargar, enfocar, estado, reiniciar, modo, seleccionar, encuadre, fijarCadena, resaltar, alSeleccionar: (fn) => (alSeleccionar = fn),
       canvas: cv, iniciar: () => requestAnimationFrame(dibujar),
       nodo: (id) => porId[id] };
   })();
@@ -260,6 +301,7 @@
     GRAFO = g;
     PREGUNTAS = q.filter((p) => ESTADOS_JUGABLES.includes(p.estado));
     Nube.cargar(g);
+    Rueda.iniciar();
     $("#leyenda").innerHTML = Object.values(DOCS)
       .map((d) => `<li><i style="background:${d.color}"></i>${d.nombre}</li>`).join("");
   }
@@ -319,7 +361,7 @@
 
   function pintarInsignias(el, actual) {
     el.innerHTML = `
-      <p class="etiqueta">Insignias por ciclo de ${N_PREGUNTAS} preguntas</p>
+      <p class="etiqueta">Tu resultado en ${N_PREGUNTAS} preguntas</p>
       <ul class="insignias">${[...INSIGNIAS].reverse().map((i) => {
         const veces = coleccion[i.id] || 0;
         const clase = ["insignia", veces ? "ganada" : "", i.id === actual ? "nueva" : ""].join(" ");
@@ -336,6 +378,7 @@
     Object.assign(juego, { rol, preguntas: armarSesion(rol), i: 0, puntos: 0, racha: 0, rachaMax: 0, aciertos: 0,
       dominados: new Set(), fallados: new Set() });
     Nube.reiniciar();
+    $("#revisados-lista").innerHTML = "";
     ir("quiz");
     mostrarPregunta();
   }
@@ -394,6 +437,33 @@
     ops.firstChild.focus({ preventScroll: true });
   }
 
+  // a la izquierda: una píldora por concepto revisado en el ciclo, con ✓ (acertado alguna vez en el ciclo) o ✗
+  function marcarRevisados(ids, bien) {
+    const lista = $("#revisados-lista");
+    ids.forEach((id) => {
+      const n = Nube.nodo(id);
+      if (!n) return;
+      let b = lista.querySelector(`[data-concepto="${id}"]`);
+      if (!b) {
+        b = document.createElement("button");
+        b.type = "button"; b.className = "pildora revisado"; b.dataset.concepto = id;
+        b.innerHTML = `<span class="marca" aria-hidden="true"></span><span class="nombre"></span>`;
+        b.querySelector(".nombre").textContent = n.label;
+        lista.append(b);
+      }
+      // igual que la esfera: un concepto acertado en el ciclo queda en verde aunque luego se falle
+      const ok = bien || juego.dominados.has(id);
+      b.classList.toggle("bien", ok); b.classList.toggle("mal", !ok);
+      b.querySelector(".marca").textContent = ok ? "✓" : "✗";
+      b.setAttribute("aria-label", `${n.label}: ${ok ? "acertado" : "fallado"}. Ver ficha`);
+    });
+    lista.scrollTop = lista.scrollHeight;
+  }
+  $("#revisados-lista").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-concepto]");
+    if (b) abrirFicha(Nube.nodo(b.dataset.concepto), true);
+  });
+
   function responder(k) {
     if (juego.respondida) return;
     juego.respondida = true;
@@ -417,6 +487,7 @@
       p.conceptos.forEach((c) => { if (!juego.dominados.has(c)) juego.fallados.add(c); });
       Nube.estado(p.conceptos.filter((c) => !juego.dominados.has(c)), "fallado");
     }
+    marcarRevisados(p.conceptos, bien);
     const res = $("#resultado");
     res.className = "resultado " + (bien ? "bien" : "mal");
     res.textContent = bien
@@ -432,9 +503,27 @@
       q.append(pensar);
       $("#explicacion").append(q);
     }
-    $("#cita").textContent = `Lineamientos ${p.cita.documento}, pág. ${p.cita.pagina} · ${p.cita.fragmento}`;
+    // preguntas del Excel: «qué hacer» y la relación entre sus dos conceptos
+    if (p.que_hacer) {
+      const h = document.createElement("span");
+      h.className = "para-pensar que-hacer";
+      h.innerHTML = "<b>Qué hacer en una situación similar</b> ";
+      h.append(p.que_hacer);
+      $("#explicacion").append(h);
+    }
+    if (p.relacion) {
+      const [a, b] = p.conceptos.map((c) => Nube.nodo(c)?.label || c);
+      const r = document.createElement("span");
+      r.className = "relacion";
+      r.innerHTML = `<b>${a} + ${b}</b> `;
+      r.append(p.relacion.texto);
+      $("#explicacion").append(r);
+    }
+    $("#cita").textContent = p.cita.apartado
+      ? `Lineamientos ${p.cita.documento} · ${p.cita.apartado}, pág. ${p.cita.pagina}`
+      : `Lineamientos ${p.cita.documento}, pág. ${p.cita.pagina}`;
     $("#puntos").textContent = `${juego.puntos} pts`;
-    $("#siguiente").firstChild.textContent = juego.i + 1 < juego.preguntas.length ? "Siguiente " : "Ver mi constelación ";
+    $("#siguiente").firstChild.textContent = juego.i + 1 < juego.preguntas.length ? "Siguiente " : "Ver mis resultados ";
     $("#veredicto").hidden = false;
     $("#siguiente").focus({ preventScroll: true });
     // si la explicación no cabe (celular), baja el panel hasta el botón para seguir
@@ -451,7 +540,7 @@
     const insignia = insigniaDe(juego.aciertos);
     coleccion[insignia.id] = (coleccion[insignia.id] || 0) + 1;
     guardar("tita.insignias", JSON.stringify(coleccion));
-    const rango = `Insignia: ${insignia.nombre}`;
+    const rango = `Tu resultado: ${insignia.nombre}`;
     const mejorPrevio = Number(leer("tita.mejor") || 0);
     const mejor = Math.max(mejorPrevio, juego.puntos);
     guardar("tita.mejor", String(mejor));
@@ -478,7 +567,7 @@
     const src = Nube.canvas, W = 1080, H = 1350;
     const c = document.createElement("canvas"); c.width = W; c.height = H;
     const x = c.getContext("2d");
-    x.fillStyle = "#f6edda"; x.fillRect(0, 0, W, H);
+    x.fillStyle = "#eff0f0"; x.fillRect(0, 0, W, H);
     // recorta solo la constelación y la centra en el espacio entre el logo y el puntaje
     const caja = Nube.encuadre(), area = { x: 72, y: 170, w: W - 144, h: H - 170 - 300 };
     const s = Math.min(area.w / caja.w, area.h / caja.h);
@@ -497,33 +586,288 @@
     x.fillText("Lineamientos de IA · Universidad El Bosque", 72, H - 56);
     c.toBlob((b) => {
       const a = document.createElement("a");
-      a.href = URL.createObjectURL(b); a.download = "mi-constelacion.png";
+      a.href = URL.createObjectURL(b); a.download = "mis-resultados.png";
       a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
     });
   }
 
+  /* ================= Rueda de conceptos (inicio) ================= */
+  // Lista curva tipo tambor. En escritorio gira sola cuando el mouse se acerca al borde de arriba
+  // o de abajo, y acelera cuanto más cerca está. Un clic elige el concepto: se colorea en la esfera
+  // y se une con el anterior, armando un recorrido. Sin clics, la esfera queda en gris.
+  const Rueda = (() => {
+    const lista = $("#rueda-lista");
+    let items = [], els = [], pos = 0, obj = 0, n = 0, arr = null;
+    let vel = 0, desde = 0, tPrev = 0, elegidos = [], centro = -1;
+    let impulso = 0, friccion = 0.955, usuario = false;   // usuario: ya movió la rueda (la intro no cuenta)   // rueda del mouse / arrastre: giro con inercia, como un rodillo de tragamonedas
+    // conceptos explorados en esta visita: cada vez que se abre la página, el contador empieza en 00
+    const explorados = new Set();
+    try { localStorage.removeItem("tita.explorados"); } catch (e) { /* versión anterior lo guardaba */ }
+    const NUM_DOC = { GEN: "01", ENS: "02", CIE: "03", EXT: "04", GES: "05" };
+    const dos = (k) => String(k).padStart(2, "0");   // vel: renglones por segundo según el borde; desde: cuándo empezó
+    const MAX_RECORRIDO = 12;
+    const PASO = () => (innerWidth < 860 ? 30 : 40);        // alto de cada renglón
+    const VISIBLES = () => (innerWidth < 860 ? 3 : 7);       // renglones a cada lado del centro
+
+    function crear() {
+      items = [...GRAFO.nodes].sort((a, b) => a.label.localeCompare(b.label, "es"));
+      n = items.length;
+      lista.innerHTML = "";
+      els = items.map((it) => {
+        const b = document.createElement("button");
+        b.type = "button"; b.className = "rueda-item"; b.setAttribute("role", "option");
+        b.textContent = it.label; b.tabIndex = -1;
+        b.style.setProperty("--c", DOCS[it.doc_principal].color);
+        lista.append(b);
+        return b;
+      });
+      pos = obj = 0;
+      pista();
+      pintarExplorados();
+    }
+    // índice relativo más corto (la lista es circular)
+    const rel = (i, p) => { let k = i - p; while (k > n / 2) k -= n; while (k < -n / 2) k += n; return k; };
+    const centrar = (i) => { obj = Math.round(pos) + rel(i, Math.round(pos)); };
+    const mover = (d) => { obj = Math.round(obj) + d; };
+
+    function pintar(now) {
+      const dt = Math.min(now - (tPrev || now), 300); tPrev = now;
+      if (vel) {
+        // giro por borde: la velocidad depende de qué tan cerca del borde está el mouse
+        // y crece mientras se mantiene ahí (hasta 2,5 veces en 1,5 s)
+        const acel = 1 + Math.min((now - desde) / 1000, 1.5);
+        obj += vel * acel * dt / 1000; pos = obj;
+      } else if (impulso) {
+        // inercia: el rodillo sigue girando y frena solo; al detenerse cae en un concepto
+        obj += impulso * dt / 1000; pos = obj;
+        impulso *= Math.pow(friccion, dt / 16);
+        if (Math.abs(impulso) < 1.2) { impulso = 0; friccion = 0.955; obj = Math.round(obj); }
+      } else pos += (obj - pos) * Math.min(1, 0.16 * dt / 16);
+      const paso = PASO(), vis = VISIBLES();
+      // curva cóncava: los conceptos van sobre un arco con centro en el de la esfera
+      const movil = innerWidth < 860;
+      const radio = movil ? 900 : Math.max(200, lista.getBoundingClientRect().left + els[0].offsetLeft - innerWidth * 0.4);
+      const da = paso / radio;
+      els.forEach((el, i) => {
+        const k = rel(i, pos), a = k * da;
+        if (Math.abs(k) > vis + 0.5) { el.style.visibility = "hidden"; return; }
+        el.style.visibility = "visible";
+        const x = radio * (Math.cos(a) - 1), y = radio * Math.sin(a);
+        el.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) translateY(-50%) rotate(${(a * 57.3 * 0.55).toFixed(2)}deg) scale(${(1 - Math.abs(k) * 0.03).toFixed(3)})`;
+        el.style.opacity = Math.max(0, 1 - Math.abs(k) / (vis + 1)).toFixed(3);
+      });
+      // indicador: número y documento del concepto que pasa por el centro
+      const c = ((Math.round(pos) % n) + n) % n;
+      if (c !== centro) {
+        centro = c;
+        const it = items[c];
+        $("#ind-num").textContent = dos(c + 1);
+        $("#ind-doc").textContent = `doc ${NUM_DOC[it.doc_principal]}`;
+      }
+      // explorado: todo concepto en el que la rueda se detiene (o que se elige con clic)
+      if (usuario && !vel && !impulso && !arr && Math.abs(obj - pos) < 0.02) explorar(items[c].id);
+      requestAnimationFrame(pintar);
+    }
+    function explorar(id) {
+      if (explorados.has(id)) return;
+      explorados.add(id);
+      pintarExplorados();
+    }
+    function pintarExplorados() {
+      const k = [...explorados].filter((id) => items.some((it) => it.id === id)).length;
+      $("#ind-exp").textContent = dos(k);   // explorados / total
+      $("#ind-total").textContent = n;
+    }
+
+    // clic: el concepto se colorea en la esfera y se une con el elegido antes
+    function elegir(i) {
+      impulso = 0; vel = 0;
+      const it = items[i];
+      if (elegidos[elegidos.length - 1] !== it.id) {
+        elegidos.push(it.id);
+        if (elegidos.length > MAX_RECORRIDO) elegidos.shift();
+      }
+      usuario = true;
+      explorar(it.id);
+      els.forEach((el) => el.classList.remove("activa"));
+      els[i].classList.add("activa");
+      els.forEach((el, j) => el.classList.toggle("elegida", elegidos.includes(items[j].id)));
+      centrar(i);
+      $("#rueda-desc").textContent = it.descripcion || "";
+      $("#rueda-mapa").hidden = false;
+      $("#rueda-limpiar").hidden = elegidos.length < 2;
+      $("#ficha-acciones [data-accion=limpiar]").hidden = elegidos.length < 2;
+      // escritorio: la misma ficha que en el mapa (descripción, cita, documentos y relaciones)
+      if (innerWidth >= 860) abrirFicha(Nube.nodo(it.id), true);
+      pintarEsfera(true);
+    }
+    function pintarEsfera(enfocar) {
+      if (document.body.dataset.vista !== "inicio") return;
+      Nube.reiniciar();
+      Nube.estado(elegidos, "elegido");
+      if (elegidos.length) Nube.estado([elegidos[elegidos.length - 1]], "activo");
+      Nube.fijarCadena(elegidos);
+      if (enfocar && elegidos.length) Nube.enfocar([elegidos[elegidos.length - 1]]);
+    }
+    function pista() {
+      $("#rueda-desc").textContent = "Elige un concepto para verlo en la esfera. Cada uno que elijas se une con el anterior.";
+      $("#rueda-mapa").hidden = true;
+      $("#rueda-limpiar").hidden = true;
+    }
+    function limpiar() {
+      elegidos = [];
+      els.forEach((el) => el.classList.remove("activa", "elegida"));
+      if (!$("#ficha").hidden) { $("#ficha").hidden = true; document.body.classList.remove("con-ficha"); }
+      pista(); pintarEsfera(false);
+    }
+
+    // escritorio: cerca del borde de arriba o de abajo, gira hacia ese lado y acelera
+    lista.addEventListener("pointermove", (e) => {
+      if (e.pointerType !== "mouse") return;
+      if (arr) return;
+      const r = lista.getBoundingClientRect();
+      if (innerWidth >= 860 && e.clientX < r.left + innerWidth * 0.1) { if (vel) { vel = 0; obj = Math.round(obj); } return; }
+      const t = ((e.clientY - r.top) / r.height) * 2 - 1;      // -1 arriba · 1 abajo
+      const zona = 0.45;                                         // el 27 % de arriba y de abajo
+      const v = Math.abs(t) > zona ? Math.sign(t) * (1 + Math.pow((Math.abs(t) - zona) / (1 - zona), 2) * 9) : 0;   // 1 a 10 renglones/s
+      if (v && !vel) { desde = performance.now(); usuario = true; }
+      if (!v && vel) obj = Math.round(obj);
+      vel = v;
+    });
+    lista.addEventListener("pointerleave", () => { vel = 0; obj = Math.round(obj); });
+
+    lista.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      usuario = true;
+      const d = e.deltaMode === 1 ? e.deltaY * 30 : e.deltaY;   // líneas → píxeles
+      impulso = Math.max(-40, Math.min(40, impulso + d * 0.06));  // renglones por segundo
+    }, { passive: false });
+    // celular: arrastrar para girar, tocar para elegir
+    lista.addEventListener("pointerdown", (e) => {
+      if (e.pointerType === "mouse") { arr = { y: e.clientY, obj, movido: false, mouse: true }; return; }
+      usuario = true;
+      arr = { y: e.clientY, obj: Math.round(obj), movido: false, t: performance.now(), yPrev: e.clientY, v: 0 };
+      impulso = 0;
+      lista.setPointerCapture(e.pointerId);
+    });
+    lista.addEventListener("pointermove", (e) => {
+      if (!arr || arr.mouse) return;
+      const dy = e.clientY - arr.y;
+      if (Math.abs(dy) > 4) arr.movido = true;
+      if (arr.movido) {
+        obj = arr.obj - dy / PASO(); pos = obj;
+        const ahora = performance.now(), dtm = Math.max(1, ahora - arr.t);
+        arr.v = -((e.clientY - arr.yPrev) / PASO()) / (dtm / 1000);   // renglones por segundo
+        arr.t = ahora; arr.yPrev = e.clientY;
+      }
+    });
+    const soltar = (e) => {
+      if (!arr) return;
+      const { movido, v } = arr;
+      arr = null;
+      if (!movido) {
+        const b = e.target.closest && e.target.closest(".rueda-item");
+        if (b) elegir(els.indexOf(b));
+      } else if (Math.abs(v) > 3) impulso = Math.max(-40, Math.min(40, v));
+      else obj = Math.round(obj);
+    };
+    lista.addEventListener("pointerup", soltar);
+    lista.addEventListener("pointercancel", () => { arr = null; obj = Math.round(obj); });
+    lista.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowDown") { e.preventDefault(); usuario = true; mover(1); }
+      if (e.key === "ArrowUp") { e.preventDefault(); usuario = true; mover(-1); }
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); elegir(((Math.round(pos) % n) + n) % n); }
+    });
+    $("#rueda-ant").addEventListener("click", () => { usuario = true; mover(-1); });
+    $("#rueda-sig").addEventListener("click", () => { usuario = true; mover(1); });
+    $("#rueda-limpiar").addEventListener("click", limpiar);
+    function verEnMapa() {
+      const id = elegidos[elegidos.length - 1];
+      if (!id) return;
+      ir("mapa");
+      setTimeout(() => abrirFicha(Nube.nodo(id)), 350);
+    }
+    $("#rueda-mapa").addEventListener("click", verEnMapa);
+
+    // al abrir la página: la esfera gira 1,4 s con todos los conceptos encendidos (y sus nombres)
+    // mientras la rueda da vueltas rápido y frena; luego los conceptos se apagan uno a uno
+    function intro() {
+      if (pausado) return;
+      const ids = items.map((it) => it.id);
+      Nube.estado(ids, "elegido");
+      impulso = 46; friccion = 0.965;   // ~1,7 s hasta detenerse
+      Nube.modo({ zoom: 1, giro: 0.003 });
+      setTimeout(() => {
+        if (document.body.dataset.vista !== "inicio") return;
+        Nube.modo({ zoom: 1, giro: 0.00025 });
+        barajar(ids).forEach((id, k) => setTimeout(() => {
+          if (document.body.dataset.vista === "inicio" && !elegidos.includes(id)) Nube.estado([id], "inactivo");
+        }, k * 10));   // se apagan uno a uno en ~0,5 s
+      }, 1400);
+    }
+
+    return {
+      verEnMapa, limpiar, pista, intro,
+      elegirId(id) { const i = items.findIndex((it) => it.id === id); if (i >= 0) elegir(i); },
+      iniciar() { crear(); requestAnimationFrame(pintar); },
+      activar() { pintarEsfera(false); },   // al volver al inicio, recupera el recorrido
+    };
+  })();
+
   /* ================= Ficha de concepto (mapa) ================= */
   const CORTO = { GEN: "Generales", ENS: "Enseñanza", CIE: "CTeI", EXT: "Extensión", GES: "Gestión" };
 
-  function abrirFicha(n) {
-    Nube.seleccionar(n.id);
+  // la misma ficha sirve en el mapa y en el inicio (al elegir un concepto en la rueda)
+  function abrirFicha(n, enInicio = false) {
+    if (!enInicio) {
+      Nube.seleccionar(n.id);
+      // cada pregunta del Excel une dos conceptos: se resaltan levemente los que comparten pregunta con este
+      const pares = new Set();
+      PREGUNTAS.forEach((p) => { if (p.serie === "base" && p.conceptos.includes(n.id)) p.conceptos.forEach((c) => c !== n.id && pares.add(c)); });
+      Nube.resaltar([...pares]);
+    }
+    // la tarjeta gira como una carta: se voltea hasta quedar de canto, cambia el contenido y termina de girar
+    const f = $("#ficha"), cambia = !f.hidden && f.dataset.concepto && f.dataset.concepto !== n.id;
+    f.dataset.concepto = n.id;
+    if (pausado || quieto.matches) { llenarFicha(n); return; }
+    clearTimeout(f._volteo);
+    f.classList.remove("voltea-sale", "voltea-entra");
+    void f.offsetWidth;
+    // al terminar se quita la clase: si la pestaña está en segundo plano y la animación no avanza, la ficha no queda de canto
+    const entra = () => { llenarFicha(n); f.classList.add("voltea-entra"); f._volteo = setTimeout(() => f.classList.remove("voltea-entra"), 360); };
+    if (cambia) {
+      f.classList.add("voltea-sale");
+      f._volteo = setTimeout(() => { f.classList.remove("voltea-sale"); void f.offsetWidth; entra(); }, 200);
+    } else entra();
+  }
+
+  function llenarFicha(n) {
     const d = DOCS[n.doc_principal];
     $("#ficha-doc").innerHTML = `<i style="background:${d.color}"></i>Sobre todo en ${d.nombre}`;
     $("#ficha-titulo").textContent = n.label;
     $("#ficha-desc").textContent = n.descripcion || "";
     $("#ficha-evidencia").textContent = n.evidencia ? `«${n.evidencia}»` : "";
-    $("#ficha-fuente").textContent = n.cita ? `Lineamientos ${n.cita.documento}, pág. ${n.cita.pagina} · ${n.cita.fragmento}` : "";
+    $("#ficha-fuente").textContent = n.cita ? `Lineamientos ${n.cita.documento}, pág. ${n.cita.pagina}` : "";
     const docs = Object.entries(n.documentos).sort((a, b) => b[1] - a[1]);
     const max = docs[0][1];
     $("#ficha-docs").innerHTML = docs.map(([k, c]) =>
       `<li><span>${CORTO[k]}</span><b style="--c:${DOCS[k].color};width:${(100 * c) / max}%"></b><span>${c}</span></li>`).join("");
+    // relaciones del Excel: cada una con su explicación
     const rel = GRAFO.links.filter((l) => l.source === n.id || l.target === n.id)
-      .sort((a, b) => b.peso - a.peso).slice(0, 6)
-      .map((l) => Nube.nodo(l.source === n.id ? l.target : l.source)).filter(Boolean);
-    $("#ficha-rel").innerHTML = rel.map((r) => `<button class="pildora" data-concepto="${r.id}">${r.label}</button>`).join("");
+      .sort((a, b) => b.peso - a.peso)
+      .map((l) => ({ otro: Nube.nodo(l.source === n.id ? l.target : l.source), l })).filter((x) => x.otro);
+    $("#ficha-rel").innerHTML = "";
+    rel.forEach(({ otro, l }) => {
+      const li = document.createElement("div");
+      li.className = "rel";
+      li.innerHTML = `<button class="pildora" data-concepto="${otro.id}">${otro.label}</button><span></span>`;
+      li.querySelector("span").textContent = l.explicacion || "";
+      $("#ficha-rel").append(li);
+    });
     const nq = PREGUNTAS.filter((p) => p.conceptos.includes(n.id)).length;
     $("#ficha-pie").textContent = `Aparece en ${n.peso} fragmentos de los lineamientos` +
-      (nq ? ` y en ${nq} ${nq === 1 ? "pregunta" : "preguntas"} del juego.` : ".");
+      (nq ? ` y en ${nq} ${nq === 1 ? "pregunta" : "preguntas"} del juego.` : ".") +
+      ` Tiene ${rel.length} ${rel.length === 1 ? "relación" : "relaciones"} en el mapa.`;
     $("#ficha").hidden = false;
     document.body.classList.add("con-ficha");
     $("#ficha").scrollTop = 0;
@@ -532,18 +876,30 @@
   function cerrarFicha() {
     $("#ficha").hidden = true;
     document.body.classList.remove("con-ficha");
-    Nube.seleccionar(null);
+    Nube.resaltar([]);
+    if (document.body.dataset.vista === "inicio") Rueda.pista(); else Nube.seleccionar(null);
   }
 
   Nube.alSeleccionar((n) => {
-    if (document.body.dataset.vista !== "mapa") return;
-    n ? abrirFicha(n) : cerrarFicha();
+    const vista = document.body.dataset.vista;
+    if (vista === "mapa") n ? abrirFicha(n) : cerrarFicha();
+    // en el test y en sus resultados, un clic en un punto abre la misma ficha (sin tocar la esfera)
+    else if ((vista === "quiz" || vista === "cierre") && n) abrirFicha(n, true);
   });
   $("#ficha-cerrar").addEventListener("click", cerrarFicha);
   $("#intro-cerrar").addEventListener("click", () => $("#intro-mapa").classList.add("oculta"));
   $("#ficha-rel").addEventListener("click", (e) => {
     const b = e.target.closest("[data-concepto]");
-    if (b) abrirFicha(Nube.nodo(b.dataset.concepto));
+    if (!b) return;
+    // en el inicio, una relación se elige en la rueda (y se suma al recorrido)
+    const vista = document.body.dataset.vista;
+    if (vista === "inicio") Rueda.elegirId(b.dataset.concepto);
+    else abrirFicha(Nube.nodo(b.dataset.concepto), vista === "quiz" || vista === "cierre");
+  });
+  $("#ficha-acciones").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-accion]");
+    if (b && b.dataset.accion === "mapa") Rueda.verEnMapa();
+    if (b && b.dataset.accion === "limpiar") Rueda.limpiar();
   });
   addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#ficha").hidden) cerrarFicha(); });
 
@@ -554,6 +910,8 @@
       vista = "quiz"; // volver a una partida en curso
     }
     if (vista !== "mapa" && !$("#ficha").hidden) cerrarFicha();
+    // lo que la rueda iluminó en el inicio no debe quedar marcado en el mapa
+    if (document.body.dataset.vista === "inicio" && vista !== "inicio") Nube.reiniciar();
     document.body.dataset.vista = vista;
     const pestana = ["mapa", "consulta", "historias", "acerca"].includes(vista) ? vista : "inicio";
     document.querySelectorAll(".pestana").forEach((b) => {
@@ -563,9 +921,15 @@
 
     if (vista === "mapa") Nube.modo({ zoom: 1.05, giro: 0.00025, interactiva: true });
     else if (vista === "cierre") Nube.modo({ zoom: 0.92, giro: 0.0004, interactiva: true });
-    else if (vista === "quiz") Nube.modo({ zoom: 1.05, giro: 0 });
+    else if (vista === "quiz") Nube.modo({ zoom: 1.05, giro: 0, interactiva: true });   // un clic en un punto abre su ficha
+    else if (vista === "inicio") Nube.modo({ zoom: 1, giro: 0.00025 });
     else Nube.modo({ zoom: 1, giro: 0.0007 });
-    if (vista === "inicio") { juego.preguntas = []; Nube.reiniciar(); pintarInsignias($("#progreso-inicio")); }
+    if (vista === "inicio") {
+      juego.preguntas = []; Nube.reiniciar(); Rueda.activar();
+      // el bloque del test emerge desde abajo: título, párrafo y botón, uno tras otro
+      const ini = $("#inicio");
+      ini.classList.remove("entra"); void ini.offsetWidth; ini.classList.add("entra");
+    }
     if (vista === "historias") $("#historias").scrollTop = 0;
     if (vista !== "historias" && location.hash.startsWith("#historia-")) history.replaceState(null, "", location.pathname);
     if (vista === "historias") mostrarHistoria(location.hash);
@@ -656,24 +1020,8 @@
 
   document.querySelectorAll("[data-ir]").forEach((b) =>
     b.addEventListener("click", (e) => { e.preventDefault(); ir(b.dataset.ir); }));
-  // selector de rol: flechas (o ← → del teclado) para cambiar, «Empezar» para jugar
-  const ROLES = [["estudiante", "Estudiante"], ["profesor", "Profesor"], ["investigador", "Investigador"], ["administrativo", "Administrativo"]];
-  let rolI = Math.max(0, ROLES.findIndex(([r]) => r === leer("tita.rol")));
-  function pintarRol(dir) {
-    const el = $("#rol-actual");
-    el.textContent = ROLES[rolI][1];
-    el.classList.remove("cambia-sig", "cambia-ant");
-    if (dir) { void el.offsetWidth; el.classList.add(dir > 0 ? "cambia-sig" : "cambia-ant"); }
-  }
-  const moverRol = (dir) => { rolI = (rolI + dir + ROLES.length) % ROLES.length; pintarRol(dir); };
-  $("#rol-ant").addEventListener("click", () => moverRol(-1));
-  $("#rol-sig").addEventListener("click", () => moverRol(1));
-  $(".caja-rol").addEventListener("keydown", (e) => {
-    if (e.key === "ArrowLeft") { e.preventDefault(); moverRol(-1); }
-    if (e.key === "ArrowRight") { e.preventDefault(); moverRol(1); }
-  });
-  $("#empezar").addEventListener("click", () => { guardar("tita.rol", ROLES[rolI][0]); empezar(ROLES[rolI][0]); });
-  pintarRol(0);
+  // sin selector de rol: cada ciclo mezcla preguntas de los cinco documentos
+  $("#empezar").addEventListener("click", () => empezar("todos"));
   $("#siguiente").addEventListener("click", siguiente);
   $("#otra").addEventListener("click", () => empezar(juego.rol));
   $("#compartir").addEventListener("click", compartir);
@@ -710,6 +1058,7 @@
     }
     Nube.iniciar();
     ir(location.hash.startsWith("#historia-") ? "historias" : "inicio");
+    if (document.body.dataset.vista === "inicio") Rueda.intro();
   }
   arrancar();
 })();

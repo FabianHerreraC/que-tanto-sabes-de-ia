@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261111i">
+<link rel="stylesheet" href="style.css?v=20261122y">
 </head>
 <body data-vista="carga">
 
@@ -31,33 +31,41 @@
 
 <canvas id="nube" aria-label="Mapa de conceptos de los lineamientos" role="img"></canvas>
 
-<!-- recortes de la pieza «IA en la U»: cada vista muestra los suyos -->
-<div class="recortes" aria-hidden="true">
-  <img class="collage" src="img/collage/collage.jpg" alt="" width="1350" height="770">
-  <img class="recorte c-izq" src="img/collage/manos-libro.jpg" alt="" width="405" height="280">
-  <img class="recorte c-der" src="img/collage/lupa.jpg" alt="" width="540" height="610">
-  <img class="recorte r-lupa" src="img/collage/lupa.jpg" alt="" width="540" height="610">
-  <img class="recorte r-manos" src="img/collage/manos-libro.jpg" alt="" width="405" height="280">
-  <img class="recorte r-pluma" src="img/collage/mano-pluma.jpg" alt="" width="310" height="280">
-  <img class="recorte r-foco" src="img/collage/foco.jpg" alt="" width="160" height="150">
-</div>
 
 <main>
   <!-- Inicio -->
   <section class="panel" id="inicio" aria-labelledby="inicio-t">
-    <h1 class="globo" id="inicio-t"><span class="t1">¿Qué tanto sabes de</span><span class="t2">IA?</span><em>¿Verdad o mentira?</em></h1>
+    <h1 class="globo" id="inicio-t"><span class="t1">¿Qué tanto sabes de</span><span class="t2">IA?</span></h1>
     <p class="nota">Con base en los Lineamientos de IA de la Universidad El Bosque, vamos a revisar cuánto sabes sobre cómo usar la IA en la vida universitaria.</p>
-    <p class="etiqueta" id="rol-t">¿Qué rol tienes?</p>
-    <div class="selector-rol">
-      <div class="caja-rol" role="group" aria-labelledby="rol-t">
-        <button class="flecha" id="rol-ant" aria-label="Rol anterior"><svg viewBox="0 0 12 20" width="10" height="16" aria-hidden="true"><path d="M10 2 2 10l8 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <span class="rol-actual" id="rol-actual" aria-live="polite">Estudiante</span>
-        <button class="flecha" id="rol-sig" aria-label="Rol siguiente"><svg viewBox="0 0 12 20" width="10" height="16" aria-hidden="true"><path d="M2 2l8 8-8 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      </div>
-      <button class="pildora oscura" id="empezar">Empezar <span aria-hidden="true">→</span></button>
-    </div>
-    <div class="progreso" id="progreso-inicio"></div>
+    <button class="pildora oscura" id="empezar">Tomar el test <span aria-hidden="true">→</span></button>
   </section>
+
+  <!-- Test: conceptos revisados (✓ acertado, ✗ fallado); un clic abre su ficha -->
+  <nav class="revisados" id="revisados" aria-label="Conceptos revisados">
+    <p class="etiqueta">Conceptos revisados</p>
+    <div class="revisados-lista" id="revisados-lista"></div>
+  </nav>
+
+  <!-- Inicio: indicadores de las esquinas -->
+  <div class="indicador ind-concepto" aria-live="polite">
+    <span class="ind-num" id="ind-num">01</span>
+    <span class="ind-doc" id="ind-doc">doc 01</span>
+  </div>
+  <div class="indicador ind-explorados">
+    <span class="ind-num"><span id="ind-exp">00</span>/<span id="ind-total">52</span></span>
+  </div>
+
+  <!-- Inicio: rueda de conceptos (gira con la rueda del mouse, arrastrando o con ↑ ↓) -->
+  <nav class="rueda" id="rueda" aria-label="Conceptos de los lineamientos">
+    <div class="rueda-lista" id="rueda-lista" role="listbox" tabindex="0" aria-label="Conceptos: usa las flechas para recorrerlos"></div>
+    <div class="rueda-detalle" id="rueda-detalle" aria-live="polite">
+      <button class="rueda-flecha" id="rueda-ant" aria-label="Concepto anterior">⌃</button>
+      <p class="rueda-desc" id="rueda-desc"></p>
+      <button class="rueda-mapa" id="rueda-mapa" type="button">Ver en el mapa <span aria-hidden="true">→</span></button>
+      <button class="rueda-limpiar" id="rueda-limpiar" type="button" hidden>Empezar otro recorrido</button>
+      <button class="rueda-flecha" id="rueda-sig" aria-label="Concepto siguiente">⌄</button>
+    </div>
+  </nav>
 
   <!-- Quiz -->
   <section class="panel" id="quiz" aria-live="polite">
@@ -78,7 +86,7 @@
 
   <!-- Cierre -->
   <section class="panel" id="cierre" aria-labelledby="rango">
-    <p class="etiqueta">Tu constelación</p>
+    <p class="etiqueta">Resultados</p>
     <p class="cifra"><span id="total">0</span><small> pts</small></p>
     <p class="rango" id="rango"></p>
     <dl class="datos">
@@ -93,12 +101,13 @@
     </div>
     <div class="acciones">
       <button class="pildora oscura" id="otra">Jugar otra vez</button>
-      <button class="pildora" id="compartir">Compartir mi constelación</button>
+      <button class="pildora" id="compartir">Compartir mis resultados</button>
     </div>
   </section>
 
   <!-- Consulta: asistente sobre los documentos (aún sin conectar) -->
   <section class="panel" id="consulta" aria-labelledby="consulta-t">
+    <div class="consulta-col">
     <p class="etiqueta">Consulta</p>
     <p class="globo" id="consulta-t">Pregúntale a los <em>lineamientos</em>.</p>
     <p class="nota">Pregunta con tus palabras sobre los Lineamientos de IA de la Universidad El Bosque.</p>
@@ -121,68 +130,65 @@
       </ul>
     </div>
 
+    </div>
+
+    <div class="consulta-col">
     <div class="consulta-bloque">
       <p class="etiqueta">Preguntas frecuentes</p>
       <div class="faq">
         <details class="faq-item">
           <summary>¿Puedo usar IA en mis trabajos?</summary>
           <p>Depende de la actividad. Los lineamientos piden que cada actividad tenga una regla clara: debes saber si puedes usar IA, para qué, qué tienes que declarar y qué se va a evaluar. Esa instrucción suele estar en el syllabus, la guía de trabajo o la rúbrica.</p>
-          <small>Enseñanza-Aprendizaje, pág. 18</small>
+          <small>Enseñanza-Aprendizaje, pág. 20</small>
         </details>
         <details class="faq-item">
           <summary>¿Cuándo tengo que declarar que usé IA?</summary>
           <p>Cuando la IA tuvo incidencia en lo que entregas, se evalúa, se publica o se deposita en un repositorio: por ejemplo, si la usaste para redactar o reescribir apartados, traducir, generar tablas o imágenes, depurar código o revisar referencias. Declararla no significa que la usaste mal: significa que informas qué apoyo recibiste y asumes la responsabilidad del resultado.</p>
-          <small>Enseñanza-Aprendizaje, pág. 13</small>
+          <small>Enseñanza-Aprendizaje, pág. 15</small>
         </details>
         <details class="faq-item">
           <summary>¿Cómo escribo esa declaración?</summary>
           <p>Para un apoyo puntual basta una frase breve, como la que proponen los lineamientos: «Para la elaboración de este trabajo utilicé la herramienta [nombre] como apoyo para [describir el uso]. El contenido final fue revisado, ajustado y validado por mí. Asumo la responsabilidad sobre el trabajo entregado». Si el uso fue más amplio, la declaración debe ser más precisa.</p>
-          <small>Enseñanza-Aprendizaje, pág. 14</small>
+          <small>Enseñanza-Aprendizaje, pág. 16</small>
         </details>
         <details class="faq-item">
           <summary>¿Qué información no debo poner en una herramienta de IA?</summary>
           <p>No debes cargar información en herramientas cuyos términos permitan almacenarla, usarla para entrenamiento o pasarla a terceros. Eso incluye datos personales y sensibles, historias clínicas, grabaciones o imágenes identificables, calificaciones, trabajos de estudiantes, documentos internos e información institucional no pública, salvo que exista autorización.</p>
-          <small>Enseñanza-Aprendizaje, pág. 24</small>
+          <small>Enseñanza-Aprendizaje, pág. 26</small>
         </details>
         <details class="faq-item">
           <summary>¿La IA puede decidir por mí?</summary>
           <p>No. Cuando la IA interviene en algo que puede incidir en decisiones, prioridades o recursos, la universidad exige supervisión humana: la IA puede aportar información o apoyar el análisis, pero no sustituye el criterio ni la responsabilidad. Sus respuestas no se adoptan de manera automática.</p>
-          <small>Generales, pág. 24</small>
+          <small>Generales, pág. 25</small>
         </details>
         <details class="faq-item">
           <summary>¿Lo que genera la IA tiene derechos de autor?</summary>
           <p>Por regla general, lo que produce una IA sin una intervención creativa humana suficiente puede no reunir las condiciones para ser una obra protegida por el derecho de autor. Cuando hay intervención humana relevante, se analiza según la ley y la Política de Propiedad Intelectual de la universidad.</p>
-          <small>Generales, pág. 27</small>
+          <small>Generales, pág. 28</small>
         </details>
         <details class="faq-item">
           <summary>¿A quién se dirigen estos lineamientos?</summary>
           <p>A estudiantes, profesores, investigadores, directivos y personal administrativo que usen, gestionen o desarrollen IA. También orientan a terceros vinculados a la universidad cuando usan información, recursos o servicios institucionales.</p>
-          <small>Generales, pág. 9</small>
+          <small>Generales, pág. 10</small>
         </details>
         <details class="faq-item">
           <summary>¿Dónde pregunto si tengo una duda que no está aquí?</summary>
           <p>Puedes escribir a la Comisión Institucional de Expertos en Inteligencia Artificial al correo <a href="mailto:comisionia@unbosque.edu.co">comisionia@unbosque.edu.co</a>, sobre todo cuando no es claro si un uso está permitido, si debe declararse o qué área debe revisar el caso.</p>
-          <small>Enseñanza-Aprendizaje, pág. 31</small>
+          <small>Enseñanza-Aprendizaje, pág. 33</small>
         </details>
       </div>
     </div>
     <p class="contacto">Para más información o inquietudes: <a href="mailto:comisionia@unbosque.edu.co">comisionia@unbosque.edu.co</a></p>
+    </div>
   </section>
 
   <!-- Acerca -->
   <section class="panel" id="acerca" aria-labelledby="acerca-t">
-    <p class="globo" id="acerca-t">Un proyecto para explorar <em>de manera compleja y crítica</em> la documentación institucional en torno al uso de la IA.</p>
-    <p class="nota"><b>Una iniciativa de la Vicerrectoría de Investigaciones</b> de la Universidad El Bosque.</p>
-    <p class="nota">Reúne los cinco documentos de Lineamientos de IA de la universidad (Generales, Enseñanza-Aprendizaje, Ciencia, Tecnología e Innovación, Extensión y Educación Continuada, y Gestión Institucional) y propone cuatro maneras de recorrerlos:</p>
-    <ul class="acerca-lista">
-      <li><b>Juego.</b> Ciclos de 10 preguntas: primero dos dilemas que te ponen en situaciones ambiguas para pensar con los lineamientos, y luego ocho afirmaciones de verdad o mentira, tomadas de un banco de 100. Cada respuesta cita el documento y la página, y cada ciclo te da una insignia según tus aciertos.</li>
-      <li><b>Mapa.</b> Los conceptos clave de los lineamientos y cómo se conectan entre documentos. Cada punto abre lo que dice el texto oficial.</li>
-      <li><b>Consulta.</b> Un espacio para preguntar con tus palabras sobre los lineamientos.</li>
-      <li><b>Historias.</b> Proyectos que usan IA en la universidad, contados por sus equipos.</li>
-    </ul>
-    <p class="nota">Las preguntas, explicaciones y fichas se preparan a partir del texto oficial y las revisa la comisión. Tus insignias se guardan solo en este navegador.</p>
-    <p class="nota aviso">Versión de prueba: las 120 preguntas y el mapa están pendientes de revisión por la comisión.</p>
-    <p class="contacto">Para más información o inquietudes: <a href="mailto:comisionia@unbosque.edu.co">comisionia@unbosque.edu.co</a></p>
+    <h1 class="globo" id="acerca-t">Acerca de este sitio</h1>
+    <p class="nota">Este micrositio es una iniciativa de la Universidad El Bosque para facilitar la consulta y comprensión de los lineamientos institucionales de inteligencia artificial. Reúne los Lineamientos Generales y cuatro documentos orientadores sobre enseñanza-aprendizaje, ciencia, tecnología e innovación, extensión y educación continuada, y gestión institucional.</p>
+    <p class="nota">En «Juego» puedes responder preguntas sobre situaciones que se presentan en la vida universitaria. Cada respuesta incluye una explicación basada en los lineamientos. El mapa de conceptos aparece junto a las preguntas para consultar los temas relacionados.</p>
+    <p class="nota">En «Consulta» puedes hacer preguntas, descargar los documentos y revisar las preguntas frecuentes de cada lineamiento. «Historias» presenta iniciativas y experiencias relacionadas con el uso de inteligencia artificial en la Universidad.</p>
+    <p class="contacto">Para consultas sobre los lineamientos, escribe a <a href="mailto:comisionia@unbosque.edu.co">comisionia@unbosque.edu.co</a>.</p>
   </section>
 </main>
 
@@ -256,7 +262,7 @@
   <button class="ficha-cerrar" id="intro-cerrar" aria-label="Ocultar explicación del mapa">×</button>
   <p class="etiqueta">Mapa de conceptos</p>
   <h2 class="intro-titulo" id="intro-mapa-t">Una nueva forma de navegar los lineamientos</h2>
-  <p class="intro-texto">Cada punto es un concepto de los cinco documentos de Lineamientos de IA. Su color indica el documento donde más aparece, su tamaño cuántas veces se menciona y las líneas unen conceptos que aparecen juntos.</p>
+  <p class="intro-texto">Cada punto es un concepto de los cinco documentos de Lineamientos de IA. Su color indica el documento donde más aparece, su tamaño cuántas veces se menciona y cada línea es una relación entre dos conceptos que el juego pone a prueba.</p>
   <p class="intro-uso">Arrastra para girar. Toca un punto para leer qué dice el texto oficial.</p>
 </aside>
 <aside class="ficha" id="ficha" hidden aria-labelledby="ficha-titulo">
@@ -270,12 +276,16 @@
   <p class="etiqueta">Se relaciona con</p>
   <div class="ficha-rel" id="ficha-rel"></div>
   <p class="ficha-pie" id="ficha-pie"></p>
+  <div class="ficha-acciones" id="ficha-acciones">
+    <button class="rueda-mapa" type="button" data-accion="mapa">Ver en el mapa <span aria-hidden="true">→</span></button>
+    <button class="rueda-limpiar" type="button" data-accion="limpiar">Empezar otro recorrido</button>
+  </div>
 </aside>
 <p class="esquina izq lema">Lineamientos de IA · Universidad El Bosque</p>
 <p class="esquina der" id="pie">129 fragmentos · 5 documentos</p>
 <div class="burbuja" id="burbuja" hidden></div>
 
 
-<script src="app.js?v=20261111g"></script>
+<script src="app.js?v=20261123b"></script>
 </body>
 </html>

@@ -6,8 +6,16 @@ Web-juego sobre los Lineamientos de IA de la Universidad El Bosque. El spec vige
 data/       fragmentos.jsonl y corpus_limpio.md (fuente de verdad)
 pipeline/   recuperar.py (BM25) · conceptos_provisionales.py (grafo sin LLM)
 web/        front estático, sin build: index.html, style.css, app.js
-web/data/   graph.json y questions.json
+web/data/   graph.json y questions.json (salen de data/Juego_IA.xlsx)
 ```
+
+Los conceptos, las relaciones y las preguntas viven en **`data/Juego_IA.xlsx`**. Después de editarlo:
+
+```bash
+python3 pipeline/importar_excel.py
+```
+
+Eso escribe `questions.json` (200 preguntas del Excel + 20 reflexivas de `banco_reflexivas.py`) y `graph.json` (52 conceptos y 128 relaciones). Si algo no cuadra, no escribe nada.
 
 Para verlo en local:
 
@@ -19,10 +27,10 @@ Publicado en **https://fabianherrerac.github.io/que-tanto-sabes-de-ia/**. Cada `
 
 ## Estado
 
-- El front está completo: carga, inicio con elección de rol, quiz con feedback y cita, cierre con constelación y PNG para compartir, mapa explorable y página de acerca.
+- El front está completo: carga, inicio con elección de rol, quiz con feedback y cita, pantalla de resultados con PNG para compartir, mapa explorable y página de acerca.
 - `graph.json` es **provisional**: 52 conceptos contados por regex (`pipeline/conceptos_provisionales.py`). Lo reemplaza el Paso A/B del spec.
 - Cada concepto trae una descripción breve y una cita literal verificada (`pipeline/conceptos_descripcion.py`), que se ven en la ficha del mapa al hacer clic en un punto. También están pendientes de revisión.
 - `questions.json` trae **100 preguntas de verdad o mentira** (20 por documento) en estado `pendiente_revision`. Salen de `pipeline/banco_preguntas.py`; cada una guarda una `evidencia` literal del fragmento citado. `python3 pipeline/construir_preguntas.py` comprueba que esa evidencia esté en el fragmento y que los conceptos existan en el grafo, calcula la página real y escribe el JSON. Mientras la comisión revisa, el juego usa también las pendientes (`ESTADOS_JUGABLES` en `app.js`); al publicar, hay que dejar solo `aprobada`.
 - `questions.json` incluye además **20 preguntas reflexivas** (`serie: "reflexiva"`, ids `ref-NNN`): dilemas de Sí/No en escenarios ambiguos, de `pipeline/banco_reflexivas.py`, validados por el mismo `construir_preguntas.py`.
-- Ciclos de 10 preguntas: abren con 2 reflexivas y siguen con 8 del banco base, priorizando las que aún no has acertado. Cada ciclo da una de cuatro insignias según los aciertos: Guardián del criterio (10), Criterioso (8–9), Atento (6–7) y Curioso (5 o menos). La colección y lo acertado se guardan en el navegador (`localStorage`).
+- Ciclos de 10 preguntas: abren con 2 reflexivas y siguen con 8 del banco base, priorizando las que aún no has acertado. Cada ciclo da uno de cuatro resultados según los aciertos: Dominio del tema (10), Muy buen manejo (8–9), Buen avance (6–7) y En proceso (5 o menos). La colección y lo acertado se guardan en el navegador (`localStorage`).
 - La nube es un canvas 2D propio en lugar de `3d-force-graph`, para mantener la estética mínima y el sitio sin dependencias.

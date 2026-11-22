@@ -1,1483 +1,24 @@
 {
- "provisional": true,
+ "provisional": false,
+ "fuente": "data/Juego_IA.xlsx",
  "nodes": [
   {
-   "id": "autoria",
-   "label": "Autoría",
-   "peso": 13,
+   "id": "formacion",
+   "label": "Formación",
+   "peso": 95,
    "documentos": {
-    "CIE": 7,
-    "ENS": 3,
-    "GEN": 2,
-    "GES": 1
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-006",
-    "GEN-008",
-    "ENS-033",
-    "ENS-038",
-    "ENS-045",
-    "CIE-053",
-    "CIE-054",
-    "CIE-058",
-    "CIE-059",
-    "CIE-061",
-    "CIE-069",
-    "CIE-078",
-    "GES-121"
-   ],
-   "descripcion": "Solo las personas pueden ser autoras. La IA no puede figurar como autora, coautora, inventora ni titular de un resultado.",
-   "evidencia": "La autoría implica contribución intelectual, aprobación de la versión final, responsabilidad por el contenido y capacidad de responder por errores",
-   "cita": {
-    "fragmento": "CIE-069",
-    "documento": "Ciencia, Tecnología e Innovación",
-    "pagina": 36
-   }
-  },
-  {
-   "id": "responsabilidad",
-   "label": "Responsabilidad",
-   "peso": 66,
-   "documentos": {
-    "CIE": 19,
-    "GEN": 18,
-    "GES": 12,
-    "EXT": 10,
-    "ENS": 7
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-003",
-    "GEN-006",
-    "GEN-007",
-    "GEN-008",
-    "GEN-009",
-    "GEN-010",
-    "GEN-012",
-    "GEN-015",
-    "GEN-016",
-    "GEN-018",
-    "GEN-019",
-    "GEN-021",
-    "GEN-022",
-    "GEN-023",
-    "GEN-024",
-    "GEN-025",
-    "GEN-026",
-    "GEN-029",
-    "ENS-033",
-    "ENS-034",
-    "ENS-037",
-    "ENS-038",
-    "ENS-039",
-    "ENS-045",
-    "ENS-050",
-    "CIE-053",
-    "CIE-054",
-    "CIE-055",
-    "CIE-056",
-    "CIE-057",
-    "CIE-058",
-    "CIE-059",
-    "CIE-060",
-    "CIE-061",
-    "CIE-062",
-    "CIE-064",
-    "CIE-066",
-    "CIE-068",
-    "CIE-069",
-    "CIE-071",
-    "CIE-072",
-    "CIE-074",
-    "CIE-078",
-    "CIE-079",
-    "EXT-083",
-    "EXT-084",
-    "EXT-085",
-    "EXT-086",
-    "EXT-087",
-    "EXT-088",
-    "EXT-089",
-    "EXT-092",
-    "EXT-098",
-    "EXT-103",
-    "GES-107",
-    "GES-108",
-    "GES-110",
-    "GES-111",
-    "GES-112",
-    "GES-113",
-    "GES-115",
-    "GES-117",
-    "GES-121",
-    "GES-122",
-    "GES-124",
-    "GES-128"
-   ],
-   "descripcion": "Quien incorpora IA a un proceso sigue respondiendo por el resultado, y la universidad responde por sus efectos institucionales.",
-   "evidencia": "La universidad responde por los efectos institucionales del uso y desarrollo de IA, y quienes la incorporan a procesos actúan con cuidado según su rol.",
-   "cita": {
-    "fragmento": "GEN-012",
-    "documento": "Generales",
-    "pagina": 19
-   }
-  },
-  {
-   "id": "supervision-humana",
-   "label": "Supervisión humana",
-   "peso": 23,
-   "documentos": {
-    "GES": 6,
-    "GEN": 5,
-    "ENS": 4,
-    "CIE": 4,
-    "EXT": 4
-   },
-   "doc_principal": "GES",
-   "fragmentos": [
-    "GEN-006",
-    "GEN-007",
-    "GEN-008",
-    "GEN-018",
-    "GEN-019",
-    "ENS-033",
-    "ENS-036",
-    "ENS-042",
-    "ENS-044",
-    "CIE-053",
-    "CIE-054",
-    "CIE-065",
-    "CIE-071",
-    "EXT-089",
-    "EXT-091",
-    "EXT-095",
-    "EXT-097",
-    "GES-107",
-    "GES-111",
-    "GES-116",
-    "GES-118",
-    "GES-122",
-    "GES-127"
-   ],
-   "descripcion": "Revisión humana real, con posibilidad de ajustar, corregir o suspender el uso, cuando la IA incide en decisiones, prioridades o recursos.",
-   "evidencia": "La supervisión humana se entiende como una condición del uso institucional de IA cuando hay efectos relevantes",
-   "cita": {
-    "fragmento": "GEN-018",
-    "documento": "Generales",
-    "pagina": 24
-   }
-  },
-  {
-   "id": "trazabilidad",
-   "label": "Trazabilidad",
-   "peso": 36,
-   "documentos": {
-    "CIE": 14,
-    "GES": 8,
-    "GEN": 7,
-    "ENS": 4,
-    "EXT": 3
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-006",
-    "GEN-008",
-    "GEN-012",
-    "GEN-013",
-    "GEN-016",
-    "GEN-019",
-    "GEN-024",
-    "ENS-036",
-    "ENS-040",
-    "ENS-042",
-    "ENS-048",
-    "CIE-053",
-    "CIE-055",
-    "CIE-056",
-    "CIE-057",
-    "CIE-059",
-    "CIE-060",
-    "CIE-061",
-    "CIE-062",
-    "CIE-063",
-    "CIE-069",
-    "CIE-071",
-    "CIE-072",
-    "CIE-074",
-    "CIE-077",
-    "EXT-089",
-    "EXT-097",
-    "EXT-101",
-    "GES-107",
-    "GES-109",
-    "GES-112",
-    "GES-113",
-    "GES-115",
-    "GES-122",
-    "GES-124",
-    "GES-127"
-   ],
-   "descripcion": "Poder reconstruir para qué se usó la IA, cómo incidió y cómo se revisó. El nivel de detalle es proporcional al caso.",
-   "evidencia": "debe ser posible entender para qué se utilizó, cómo incidió en el proceso y bajo qué criterios se revisó su resultado",
-   "cita": {
-    "fragmento": "GEN-019",
-    "documento": "Generales",
-    "pagina": 24
-   }
-  },
-  {
-   "id": "transparencia",
-   "label": "Transparencia",
-   "peso": 21,
-   "documentos": {
-    "CIE": 8,
-    "GEN": 7,
-    "GES": 3,
-    "ENS": 2,
-    "EXT": 1
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-006",
-    "GEN-008",
-    "GEN-012",
-    "GEN-016",
-    "GEN-019",
-    "GEN-021",
-    "GEN-029",
-    "ENS-037",
-    "ENS-044",
-    "CIE-053",
-    "CIE-054",
-    "CIE-058",
-    "CIE-059",
-    "CIE-060",
-    "CIE-069",
-    "CIE-071",
-    "CIE-078",
-    "EXT-102",
-    "GES-115",
-    "GES-123",
-    "GES-125"
-   ],
-   "descripcion": "Dejar claro cuándo y cómo intervino la IA. Declarar su uso es la forma más concreta de esa transparencia.",
-   "evidencia": "La declaración de uso es un deber de transparencia académica.",
-   "cita": {
-    "fragmento": "ENS-037",
-    "documento": "Enseñanza-Aprendizaje",
-    "pagina": 13
-   }
-  },
-  {
-   "id": "declaracion-de-uso",
-   "label": "Declarar el uso",
-   "peso": 33,
-   "documentos": {
-    "ENS": 11,
-    "CIE": 10,
-    "GES": 5,
-    "EXT": 4,
-    "GEN": 3
-   },
-   "doc_principal": "ENS",
-   "fragmentos": [
-    "GEN-008",
-    "GEN-021",
-    "GEN-029",
-    "ENS-033",
-    "ENS-036",
-    "ENS-037",
-    "ENS-038",
-    "ENS-040",
-    "ENS-041",
-    "ENS-043",
-    "ENS-046",
-    "ENS-048",
-    "ENS-049",
-    "ENS-050",
-    "CIE-053",
-    "CIE-059",
-    "CIE-060",
-    "CIE-061",
-    "CIE-062",
-    "CIE-069",
-    "CIE-074",
-    "CIE-077",
-    "CIE-078",
-    "CIE-079",
-    "EXT-083",
-    "EXT-088",
-    "EXT-099",
-    "EXT-103",
-    "GES-112",
-    "GES-113",
-    "GES-124",
-    "GES-126",
-    "GES-128"
-   ],
-   "descripcion": "Informar qué apoyo dio la IA y asumir la responsabilidad por el resultado. Declarar no significa haberla usado mal.",
-   "evidencia": "El uso debe declararse cuando la IA haya tenido incidencia en el producto que se entrega, evalúa, publica o deposita en un repositorio.",
-   "cita": {
-    "fragmento": "ENS-037",
-    "documento": "Enseñanza-Aprendizaje",
-    "pagina": 13
-   }
-  },
-  {
-   "id": "datos-personales",
-   "label": "Datos personales",
-   "peso": 37,
-   "documentos": {
-    "GES": 10,
-    "GEN": 7,
-    "CIE": 7,
-    "EXT": 7,
-    "ENS": 6
-   },
-   "doc_principal": "GES",
-   "fragmentos": [
-    "GEN-008",
-    "GEN-009",
-    "GEN-010",
-    "GEN-012",
-    "GEN-020",
-    "GEN-028",
-    "GEN-029",
-    "ENS-033",
-    "ENS-037",
-    "ENS-038",
-    "ENS-043",
-    "ENS-047",
-    "ENS-048",
-    "CIE-056",
-    "CIE-058",
-    "CIE-061",
-    "CIE-065",
-    "CIE-066",
-    "CIE-077",
-    "CIE-078",
-    "EXT-083",
-    "EXT-087",
-    "EXT-089",
-    "EXT-093",
-    "EXT-095",
-    "EXT-101",
-    "EXT-102",
-    "GES-107",
-    "GES-110",
-    "GES-111",
-    "GES-113",
-    "GES-115",
-    "GES-119",
-    "GES-121",
-    "GES-125",
-    "GES-126",
-    "GES-127"
-   ],
-   "descripcion": "Información que identifica a personas. Se usa solo la necesaria para la finalidad prevista y con medidas acordes al riesgo.",
-   "evidencia": "usar únicamente la información necesaria para la finalidad prevista",
-   "cita": {
-    "fragmento": "GEN-020",
-    "documento": "Generales",
-    "pagina": 25
-   }
-  },
-  {
-   "id": "datos-sensibles",
-   "label": "Datos sensibles",
-   "peso": 21,
-   "documentos": {
-    "CIE": 6,
-    "ENS": 4,
-    "EXT": 4,
-    "GES": 4,
-    "GEN": 3
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-008",
-    "GEN-009",
-    "GEN-020",
-    "ENS-037",
-    "ENS-038",
-    "ENS-043",
-    "ENS-048",
-    "CIE-056",
-    "CIE-058",
-    "CIE-061",
-    "CIE-066",
-    "CIE-077",
-    "CIE-078",
-    "EXT-089",
-    "EXT-095",
-    "EXT-101",
-    "EXT-102",
-    "GES-113",
-    "GES-121",
-    "GES-126",
-    "GES-127"
-   ],
-   "descripcion": "Datos que exigen protección especial. No se cargan en herramientas abiertas porque pueden vulnerar la privacidad.",
-   "evidencia": "Puede vulnerar la privacidad, la confidencialidad y la protección de datos.",
-   "cita": {
-    "fragmento": "ENS-038",
-    "documento": "Enseñanza-Aprendizaje",
-    "pagina": 15
-   }
-  },
-  {
-   "id": "datos-clinicos",
-   "label": "Datos clínicos",
-   "peso": 19,
-   "documentos": {
-    "CIE": 10,
-    "ENS": 5,
-    "GES": 3,
-    "EXT": 1
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "ENS-036",
-    "ENS-038",
-    "ENS-043",
-    "ENS-044",
-    "ENS-048",
-    "CIE-056",
-    "CIE-057",
-    "CIE-058",
-    "CIE-061",
-    "CIE-065",
-    "CIE-066",
-    "CIE-071",
-    "CIE-077",
-    "CIE-078",
-    "CIE-079",
-    "EXT-095",
-    "GES-113",
-    "GES-126",
-    "GES-127"
-   ],
-   "descripcion": "Historias clínicas, imágenes médicas o datos genómicos. La investigación en salud con IA exige controles reforzados.",
-   "evidencia": "requieren controles reforzados",
-   "cita": {
-    "fragmento": "CIE-071",
-    "documento": "Ciencia, Tecnología e Innovación",
-    "pagina": 39
-   }
-  },
-  {
-   "id": "confidencialidad",
-   "label": "Confidencialidad",
-   "peso": 42,
-   "documentos": {
-    "CIE": 15,
-    "GES": 9,
-    "EXT": 8,
-    "GEN": 6,
-    "ENS": 4
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-008",
-    "GEN-009",
-    "GEN-012",
-    "GEN-020",
-    "GEN-022",
-    "GEN-024",
-    "ENS-037",
-    "ENS-038",
-    "ENS-044",
-    "ENS-048",
-    "CIE-053",
-    "CIE-054",
-    "CIE-055",
-    "CIE-056",
-    "CIE-058",
-    "CIE-059",
-    "CIE-060",
-    "CIE-061",
-    "CIE-064",
-    "CIE-065",
-    "CIE-066",
-    "CIE-070",
-    "CIE-072",
-    "CIE-077",
-    "CIE-078",
-    "EXT-085",
-    "EXT-088",
-    "EXT-089",
-    "EXT-092",
-    "EXT-093",
-    "EXT-095",
-    "EXT-098",
-    "EXT-101",
-    "GES-107",
-    "GES-111",
-    "GES-112",
-    "GES-113",
-    "GES-119",
-    "GES-120",
-    "GES-121",
-    "GES-122",
-    "GES-126"
-   ],
-   "descripcion": "Lo reservado sigue siéndolo aunque sea fácil pegarlo en una herramienta: documentos internos, manuscritos en evaluación, información de aliados.",
-   "evidencia": "La facilidad de copiar y pegar información en una herramienta no elimina las obligaciones de confidencialidad",
-   "cita": {
-    "fragmento": "ENS-044",
-    "documento": "Enseñanza-Aprendizaje",
-    "pagina": 25
-   }
-  },
-  {
-   "id": "privacidad",
-   "label": "Privacidad",
-   "peso": 13,
-   "documentos": {
-    "GEN": 4,
-    "GES": 4,
-    "ENS": 2,
-    "CIE": 2,
-    "EXT": 1
+    "GEN": 21,
+    "CIE": 21,
+    "GES": 21,
+    "EXT": 17,
+    "ENS": 15
    },
    "doc_principal": "GEN",
-   "fragmentos": [
-    "GEN-006",
-    "GEN-009",
-    "GEN-012",
-    "GEN-022",
-    "ENS-038",
-    "ENS-044",
-    "CIE-066",
-    "CIE-072",
-    "EXT-095",
-    "GES-110",
-    "GES-115",
-    "GES-121",
-    "GES-122"
-   ],
-   "descripcion": "Proteger a las personas frente a usos que expongan su información, en especial al usar plataformas externas.",
-   "evidencia": "La universidad asume la protección de la información personal, sensible e institucional como un criterio básico en el uso de IA.",
+   "descripcion": "Conocer cómo funciona la IA, qué errores puede cometer, qué información se puede compartir y cuándo es necesario pedir orientación.",
+   "evidencia": "La formación del personal es una condición necesaria.",
    "cita": {
-    "fragmento": "GEN-020",
-    "documento": "Generales",
-    "pagina": 25
-   }
-  },
-  {
-   "id": "anonimizacion",
-   "label": "Anonimización",
-   "peso": 7,
-   "documentos": {
-    "GES": 3,
-    "EXT": 2,
-    "ENS": 1,
-    "CIE": 1
-   },
-   "doc_principal": "GES",
-   "fragmentos": [
-    "ENS-044",
-    "CIE-066",
-    "EXT-092",
-    "EXT-095",
-    "GES-116",
-    "GES-117",
-    "GES-121"
-   ],
-   "descripcion": "Para ejemplos, pruebas y demostraciones se usan datos ficticios, anonimizados o enmascarados, y la anonimización se revisa con cuidado.",
-   "evidencia": "algunos conjuntos de datos pueden permitir la reidentificación si se combinan con otras fuentes",
-   "cita": {
-    "fragmento": "CIE-066",
-    "documento": "Ciencia, Tecnología e Innovación",
-    "pagina": 30
-   }
-  },
-  {
-   "id": "consentimiento",
-   "label": "Consentimiento",
-   "peso": 5,
-   "documentos": {
-    "CIE": 3,
-    "ENS": 1,
-    "EXT": 1
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "ENS-044",
-    "CIE-056",
-    "CIE-061",
-    "CIE-066",
-    "EXT-095"
-   ],
-   "descripcion": "Usar IA no elimina el consentimiento informado ni las autorizaciones de uso de la información.",
-   "evidencia": "El uso de IA no elimina las obligaciones de consentimiento informado",
-   "cita": {
-    "fragmento": "CIE-066",
-    "documento": "Ciencia, Tecnología e Innovación",
-    "pagina": 30
-   }
-  },
-  {
-   "id": "seguridad-informacion",
-   "label": "Seguridad de la información",
-   "peso": 16,
-   "documentos": {
-    "GEN": 5,
-    "GES": 5,
-    "CIE": 3,
-    "EXT": 2,
-    "ENS": 1
-   },
-   "doc_principal": "GEN",
-   "fragmentos": [
-    "GEN-006",
-    "GEN-008",
-    "GEN-012",
-    "GEN-016",
-    "GEN-020",
-    "ENS-048",
-    "CIE-066",
-    "CIE-072",
-    "CIE-077",
-    "EXT-095",
-    "EXT-098",
-    "GES-108",
-    "GES-115",
-    "GES-121",
-    "GES-122",
-    "GES-126"
-   ],
-   "descripcion": "Controles de acceso, evaluación de proveedores y gestión de incidentes para que la IA no exponga información institucional.",
-   "evidencia": "El uso institucional de IA se articula con la gestión de incidentes de seguridad de la información",
-   "cita": {
-    "fragmento": "GEN-020",
-    "documento": "Generales",
-    "pagina": 25
-   }
-  },
-  {
-   "id": "propiedad-intelectual",
-   "label": "Propiedad intelectual",
-   "peso": 49,
-   "documentos": {
-    "CIE": 20,
-    "EXT": 11,
-    "GEN": 10,
-    "ENS": 5,
-    "GES": 3
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-006",
-    "GEN-008",
-    "GEN-009",
-    "GEN-010",
-    "GEN-012",
-    "GEN-021",
-    "GEN-022",
-    "GEN-024",
-    "GEN-028",
-    "GEN-029",
-    "ENS-033",
-    "ENS-037",
-    "ENS-043",
-    "ENS-044",
-    "ENS-048",
-    "CIE-053",
-    "CIE-054",
-    "CIE-055",
-    "CIE-056",
-    "CIE-057",
-    "CIE-058",
-    "CIE-059",
-    "CIE-060",
-    "CIE-061",
-    "CIE-062",
-    "CIE-063",
-    "CIE-066",
-    "CIE-069",
-    "CIE-070",
-    "CIE-072",
-    "CIE-073",
-    "CIE-074",
-    "CIE-076",
-    "CIE-077",
-    "CIE-078",
-    "EXT-083",
-    "EXT-084",
-    "EXT-086",
-    "EXT-087",
-    "EXT-089",
-    "EXT-093",
-    "EXT-094",
-    "EXT-095",
-    "EXT-099",
-    "EXT-101",
-    "EXT-102",
-    "GES-121",
-    "GES-126",
-    "GES-127"
-   ],
-   "descripcion": "Claridad sobre titularidad, licencias y derechos de terceros. Lo generado solo por IA puede no ser una obra protegida.",
-   "evidencia": "pueden no reunir las condiciones para ser reconocidos como obras protegidas por el derecho de autor",
-   "cita": {
-    "fragmento": "GEN-022",
-    "documento": "Generales",
-    "pagina": 27
-   }
-  },
-  {
-   "id": "integridad-academica",
-   "label": "Integridad académica",
-   "peso": 10,
-   "documentos": {
-    "GEN": 8,
-    "ENS": 1,
-    "CIE": 1
-   },
-   "doc_principal": "GEN",
-   "fragmentos": [
-    "GEN-006",
-    "GEN-007",
-    "GEN-008",
-    "GEN-012",
-    "GEN-016",
-    "GEN-021",
-    "GEN-026",
-    "GEN-027",
-    "ENS-038",
-    "CIE-079"
-   ],
-   "descripcion": "Honestidad, evaluación justa y claridad sobre cómo se produjo un trabajo. La IA no sustituye la demostración del aprendizaje.",
-   "evidencia": "la IA no debe afectar la honestidad académica, la justicia en la evaluación",
-   "cita": {
-    "fragmento": "GEN-021",
-    "documento": "Generales",
-    "pagina": 26
-   }
-  },
-  {
-   "id": "integridad-cientifica",
-   "label": "Integridad científica",
-   "peso": 10,
-   "documentos": {
-    "CIE": 7,
-    "GEN": 3
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-008",
-    "GEN-009",
-    "GEN-024",
-    "CIE-053",
-    "CIE-054",
-    "CIE-061",
-    "CIE-062",
-    "CIE-073",
-    "CIE-077",
-    "CIE-078"
-   ],
-   "descripcion": "Transparencia metodológica, validación de resultados y responsabilidad de quien firma. Inventar datos o referencias puede ser mala práctica.",
-   "evidencia": "En investigación, el uso de IA se mantiene bajo transparencia metodológica, validación suficiente de resultados",
-   "cita": {
-    "fragmento": "GEN-021",
-    "documento": "Generales",
-    "pagina": 26
-   }
-  },
-  {
-   "id": "evaluacion",
-   "label": "Evaluación",
-   "peso": 44,
-   "documentos": {
-    "ENS": 13,
-    "CIE": 11,
-    "GEN": 8,
-    "GES": 7,
-    "EXT": 5
-   },
-   "doc_principal": "ENS",
-   "fragmentos": [
-    "GEN-007",
-    "GEN-008",
-    "GEN-009",
-    "GEN-021",
-    "GEN-024",
-    "GEN-026",
-    "GEN-027",
-    "GEN-028",
-    "ENS-033",
-    "ENS-034",
-    "ENS-036",
-    "ENS-038",
-    "ENS-039",
-    "ENS-040",
-    "ENS-041",
-    "ENS-042",
-    "ENS-043",
-    "ENS-044",
-    "ENS-045",
-    "ENS-048",
-    "ENS-049",
-    "CIE-053",
-    "CIE-056",
-    "CIE-058",
-    "CIE-061",
-    "CIE-062",
-    "CIE-069",
-    "CIE-070",
-    "CIE-072",
-    "CIE-073",
-    "CIE-077",
-    "CIE-078",
-    "EXT-084",
-    "EXT-090",
-    "EXT-094",
-    "EXT-097",
-    "EXT-098",
-    "GES-107",
-    "GES-110",
-    "GES-113",
-    "GES-118",
-    "GES-122",
-    "GES-123",
-    "GES-126"
-   ],
-   "descripcion": "Cada actividad define si admite IA, y la calificación o decisión académica final nunca queda en manos de la herramienta.",
-   "evidencia": "El cuidado debe ser mayor cuando se use IA en procesos que tengan impacto en la evaluación",
-   "cita": {
-    "fragmento": "ENS-036",
-    "documento": "Enseñanza-Aprendizaje",
-    "pagina": 11
-   }
-  },
-  {
-   "id": "retroalimentacion",
-   "label": "Retroalimentación",
-   "peso": 3,
-   "documentos": {
-    "GEN": 3
-   },
-   "doc_principal": "GEN",
-   "fragmentos": [
-    "GEN-007",
-    "GEN-008",
-    "GEN-009"
-   ],
-   "descripcion": "La IA puede apoyar la retroalimentación a estudiantes, con criterios claros y sin desplazar la mediación docente.",
-   "evidencia": "Esto exige criterios claros para el uso de IA en actividades de evaluación, en retroalimentación y en decisiones pedagógicas",
-   "cita": {
-    "fragmento": "GEN-007",
-    "documento": "Generales",
-    "pagina": 11
-   }
-  },
-  {
-   "id": "mediacion-docente",
-   "label": "Mediación docente",
-   "peso": 3,
-   "documentos": {
-    "GEN": 2,
-    "ENS": 1
-   },
-   "doc_principal": "GEN",
-   "fragmentos": [
-    "GEN-007",
-    "GEN-008",
-    "ENS-036"
-   ],
-   "descripcion": "El profesor sigue en el centro: la IA no reemplaza la relación pedagógica ni su responsabilidad sobre los recursos que usa.",
-   "evidencia": "condiciones que mantengan la mediación docente",
-   "cita": {
-    "fragmento": "GEN-007",
-    "documento": "Generales",
-    "pagina": 11
-   }
-  },
-  {
-   "id": "aprendizaje",
-   "label": "Aprendizaje",
-   "peso": 34,
-   "documentos": {
-    "GEN": 15,
-    "ENS": 10,
-    "EXT": 4,
-    "GES": 3,
-    "CIE": 2
-   },
-   "doc_principal": "GEN",
-   "fragmentos": [
-    "GEN-003",
-    "GEN-004",
-    "GEN-007",
-    "GEN-008",
-    "GEN-009",
-    "GEN-012",
-    "GEN-014",
-    "GEN-017",
-    "GEN-019",
-    "GEN-021",
-    "GEN-023",
-    "GEN-024",
-    "GEN-025",
-    "GEN-026",
-    "GEN-027",
-    "ENS-033",
-    "ENS-034",
-    "ENS-035",
-    "ENS-036",
-    "ENS-038",
-    "ENS-040",
-    "ENS-041",
-    "ENS-043",
-    "ENS-045",
-    "ENS-049",
-    "CIE-054",
-    "CIE-074",
-    "EXT-083",
-    "EXT-086",
-    "EXT-090",
-    "EXT-099",
-    "GES-107",
-    "GES-112",
-    "GES-124"
-   ],
-   "descripcion": "La IA puede apoyar el estudio, pero no aprender por el estudiante ni dar cuenta de su criterio.",
-   "evidencia": "La IA puede apoyar el estudio, la escritura y la organización de ideas, pero no aprender por el estudiante.",
-   "cita": {
-    "fragmento": "ENS-039",
-    "documento": "Enseñanza-Aprendizaje",
-    "pagina": 17
-   }
-  },
-  {
-   "id": "competencias",
-   "label": "Competencias",
-   "peso": 11,
-   "documentos": {
-    "ENS": 9,
-    "GEN": 1,
-    "EXT": 1
-   },
-   "doc_principal": "ENS",
-   "fragmentos": [
-    "GEN-026",
-    "ENS-033",
-    "ENS-034",
-    "ENS-035",
-    "ENS-036",
-    "ENS-040",
-    "ENS-041",
-    "ENS-044",
-    "ENS-045",
-    "ENS-049",
-    "EXT-090"
-   ],
-   "descripcion": "Cada programa define qué necesita saber sobre IA un profesional de su campo. No basta con enseñar a usar herramientas.",
-   "evidencia": "qué necesita saber un estudiante sobre IA para ejercer con criterio en su disciplina",
-   "cita": {
-    "fragmento": "ENS-041",
-    "documento": "Enseñanza-Aprendizaje",
-    "pagina": 20
-   }
-  },
-  {
-   "id": "agencia-humana",
-   "label": "Agencia humana",
-   "peso": 2,
-   "documentos": {
-    "GEN": 1,
-    "ENS": 1
-   },
-   "doc_principal": "GEN",
-   "fragmentos": [
-    "GEN-021",
-    "ENS-036"
-   ],
-   "descripcion": "La IA debe fortalecer el juicio de profesores y estudiantes, no desplazarlo ni generar dependencia.",
-   "evidencia": "la IA debe fortalecer la agencia humana y no desplazar el papel de profesores y estudiantes",
-   "cita": {
-    "fragmento": "ENS-036",
-    "documento": "Enseñanza-Aprendizaje",
-    "pagina": 11
-   }
-  },
-  {
-   "id": "sesgos",
-   "label": "Sesgos",
-   "peso": 16,
-   "documentos": {
-    "CIE": 5,
-    "EXT": 4,
-    "ENS": 3,
-    "GEN": 2,
-    "GES": 2
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-006",
-    "GEN-017",
-    "ENS-036",
-    "ENS-041",
-    "ENS-044",
-    "CIE-063",
-    "CIE-067",
-    "CIE-071",
-    "CIE-072",
-    "CIE-074",
-    "EXT-089",
-    "EXT-090",
-    "EXT-096",
-    "EXT-102",
-    "GES-113",
-    "GES-118"
-   ],
-   "descripcion": "La IA puede reproducir sesgos de sus datos de entrenamiento. Por eso se revisan, sobre todo en decisiones sobre personas.",
-   "evidencia": "Puede cometer errores o reproducir sesgos presentes en los datos con los que la IA fue entrenada",
-   "cita": {
-    "fragmento": "GES-113",
     "documento": "Gestión Institucional",
-    "pagina": 16
-   }
-  },
-  {
-   "id": "verificacion",
-   "label": "Verificación",
-   "peso": 36,
-   "documentos": {
-    "CIE": 13,
-    "GEN": 6,
-    "ENS": 6,
-    "EXT": 6,
-    "GES": 5
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-007",
-    "GEN-012",
-    "GEN-017",
-    "GEN-018",
-    "GEN-019",
-    "GEN-029",
-    "ENS-033",
-    "ENS-035",
-    "ENS-036",
-    "ENS-038",
-    "ENS-039",
-    "ENS-041",
-    "CIE-053",
-    "CIE-057",
-    "CIE-058",
-    "CIE-061",
-    "CIE-062",
-    "CIE-064",
-    "CIE-067",
-    "CIE-068",
-    "CIE-069",
-    "CIE-072",
-    "CIE-074",
-    "CIE-078",
-    "CIE-079",
-    "EXT-089",
-    "EXT-090",
-    "EXT-092",
-    "EXT-093",
-    "EXT-098",
-    "EXT-102",
-    "GES-110",
-    "GES-113",
-    "GES-119",
-    "GES-120",
-    "GES-122"
-   ],
-   "descripcion": "Todo resultado de IA se contrasta con fuentes confiables antes de usarlo. Una respuesta que no se puede verificar es solo una idea preliminar.",
-   "evidencia": "Hay que contrastar la información con apuntes, libros, bases de datos o fuentes indicadas por el profesor.",
-   "cita": {
-    "fragmento": "ENS-039",
-    "documento": "Enseñanza-Aprendizaje",
-    "pagina": 17
-   }
-  },
-  {
-   "id": "fuentes",
-   "label": "Fuentes",
-   "peso": 30,
-   "documentos": {
-    "CIE": 13,
-    "ENS": 9,
-    "GES": 5,
-    "EXT": 2,
-    "GEN": 1
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-019",
-    "ENS-035",
-    "ENS-036",
-    "ENS-037",
-    "ENS-038",
-    "ENS-039",
-    "ENS-040",
-    "ENS-041",
-    "ENS-042",
-    "ENS-043",
-    "CIE-053",
-    "CIE-054",
-    "CIE-057",
-    "CIE-059",
-    "CIE-060",
-    "CIE-063",
-    "CIE-066",
-    "CIE-068",
-    "CIE-069",
-    "CIE-072",
-    "CIE-074",
-    "CIE-078",
-    "CIE-079",
-    "EXT-097",
-    "EXT-102",
-    "GES-110",
-    "GES-116",
-    "GES-117",
-    "GES-119",
-    "GES-122"
-   ],
-   "descripcion": "La IA no es una fuente académica. Las fuentes deben existir, poder consultarse y respaldar lo que se afirma.",
-   "evidencia": "las fuentes deben verificarse y las referencias deben ser reales, consultables y trazables",
-   "cita": {
-    "fragmento": "ENS-035",
-    "documento": "Enseñanza-Aprendizaje",
-    "pagina": 9
-   }
-  },
-  {
-   "id": "citas",
-   "label": "Citas",
-   "peso": 9,
-   "documentos": {
-    "ENS": 4,
-    "CIE": 3,
-    "GES": 2
-   },
-   "doc_principal": "ENS",
-   "fragmentos": [
-    "ENS-035",
-    "ENS-038",
-    "ENS-039",
-    "ENS-041",
-    "CIE-057",
-    "CIE-061",
-    "CIE-074",
-    "GES-121",
-    "GES-124"
-   ],
-   "descripcion": "Toda cita sugerida por la IA se busca y se comprueba. Si no aparece, no se usa.",
-   "evidencia": "Si la herramienta propone una cita, hay que buscarla; si no aparece, no debe usarse.",
-   "cita": {
-    "fragmento": "ENS-039",
-    "documento": "Enseñanza-Aprendizaje",
-    "pagina": 17
-   }
-  },
-  {
-   "id": "detectores",
-   "label": "Detectores de IA",
-   "peso": 1,
-   "documentos": {
-    "ENS": 1
-   },
-   "doc_principal": "ENS",
-   "fragmentos": [
-    "ENS-038"
-   ],
-   "descripcion": "Los detectores de IA pueden dar falsos positivos. Sirven como alerta para revisar un caso, no como prueba para sancionar.",
-   "evidencia": "Los detectores de IA deben tratarse con prudencia, como indicadores o alertas para revisar un caso",
-   "cita": {
-    "fragmento": "ENS-038",
-    "documento": "Enseñanza-Aprendizaje",
-    "pagina": 15
-   }
-  },
-  {
-   "id": "alucinaciones",
-   "label": "Información inventada",
-   "peso": 10,
-   "documentos": {
-    "CIE": 4,
-    "GEN": 3,
-    "ENS": 3
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-007",
-    "GEN-008",
-    "GEN-019",
-    "ENS-036",
-    "ENS-038",
-    "ENS-043",
-    "CIE-061",
-    "CIE-068",
-    "CIE-069",
-    "CIE-078"
-   ],
-   "descripcion": "La IA generativa puede producir respuestas, datos o referencias que suenan creíbles pero son falsos.",
-   "evidencia": "puede producir respuestas plausibles pero incorrectas",
-   "cita": {
-    "fragmento": "GEN-019",
-    "documento": "Generales",
-    "pagina": 24
-   }
-  },
-  {
-   "id": "publicacion",
-   "label": "Publicación",
-   "peso": 26,
-   "documentos": {
-    "CIE": 17,
-    "GEN": 5,
-    "ENS": 2,
-    "EXT": 1,
-    "GES": 1
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-001",
-    "GEN-008",
-    "GEN-011",
-    "GEN-028",
-    "GEN-029",
-    "ENS-031",
-    "ENS-035",
-    "CIE-052",
-    "CIE-053",
-    "CIE-055",
-    "CIE-056",
-    "CIE-057",
-    "CIE-058",
-    "CIE-059",
-    "CIE-061",
-    "CIE-062",
-    "CIE-066",
-    "CIE-068",
-    "CIE-069",
-    "CIE-074",
-    "CIE-075",
-    "CIE-076",
-    "CIE-077",
-    "CIE-078",
-    "EXT-081",
-    "GES-105"
-   ],
-   "descripcion": "Revistas, editoriales y financiadores tienen reglas propias sobre IA. Se revisan antes de enviar y prevalecen si son más exigentes.",
-   "evidencia": "Si son más exigentes que estos lineamientos, se aplican las condiciones específicas",
-   "cita": {
-    "fragmento": "CIE-078",
-    "documento": "Ciencia, Tecnología e Innovación",
-    "pagina": 52
-   }
-  },
-  {
-   "id": "revision-por-pares",
-   "label": "Revisión por pares",
-   "peso": 6,
-   "documentos": {
-    "CIE": 6
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "CIE-056",
-    "CIE-058",
-    "CIE-061",
-    "CIE-070",
-    "CIE-074",
-    "CIE-078"
-   ],
-   "descripcion": "Evaluar manuscritos o propuestas exige reserva: no se cargan en herramientas abiertas sin autorización.",
-   "evidencia": "no deben cargarse en herramientas abiertas o no autorizadas documentos no publicados",
-   "cita": {
-    "fragmento": "CIE-070",
-    "documento": "Ciencia, Tecnología e Innovación",
-    "pagina": 38
-   }
-  },
-  {
-   "id": "etica",
-   "label": "Ética",
-   "peso": 31,
-   "documentos": {
-    "CIE": 15,
-    "GEN": 11,
-    "EXT": 3,
-    "ENS": 1,
-    "GES": 1
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-003",
-    "GEN-004",
-    "GEN-006",
-    "GEN-009",
-    "GEN-010",
-    "GEN-011",
-    "GEN-012",
-    "GEN-026",
-    "GEN-027",
-    "GEN-028",
-    "GEN-029",
-    "ENS-041",
-    "CIE-052",
-    "CIE-053",
-    "CIE-054",
-    "CIE-055",
-    "CIE-056",
-    "CIE-057",
-    "CIE-058",
-    "CIE-061",
-    "CIE-065",
-    "CIE-071",
-    "CIE-072",
-    "CIE-074",
-    "CIE-077",
-    "CIE-078",
-    "CIE-080",
-    "EXT-089",
-    "EXT-090",
-    "EXT-095",
-    "GES-125"
-   ],
-   "descripcion": "El protocolo explica qué hará la IA y el Comité de Ética revisa los casos con personas, datos sensibles o poblaciones vulnerables.",
-   "evidencia": "El Comité de Ética deberá revisar con especial cuidado los proyectos en que intervengan personas",
-   "cita": {
-    "fragmento": "CIE-065",
-    "documento": "Ciencia, Tecnología e Innovación",
-    "pagina": 28
-   }
-  },
-  {
-   "id": "riesgo",
-   "label": "Gestión del riesgo",
-   "peso": 55,
-   "documentos": {
-    "GEN": 17,
-    "GES": 13,
-    "CIE": 12,
-    "EXT": 8,
-    "ENS": 5
-   },
-   "doc_principal": "GEN",
-   "fragmentos": [
-    "GEN-003",
-    "GEN-006",
-    "GEN-007",
-    "GEN-008",
-    "GEN-010",
-    "GEN-011",
-    "GEN-012",
-    "GEN-013",
-    "GEN-014",
-    "GEN-016",
-    "GEN-017",
-    "GEN-020",
-    "GEN-022",
-    "GEN-024",
-    "GEN-025",
-    "GEN-026",
-    "GEN-027",
-    "ENS-033",
-    "ENS-036",
-    "ENS-038",
-    "ENS-041",
-    "ENS-048",
-    "CIE-054",
-    "CIE-055",
-    "CIE-057",
-    "CIE-060",
-    "CIE-061",
-    "CIE-062",
-    "CIE-063",
-    "CIE-064",
-    "CIE-065",
-    "CIE-072",
-    "CIE-074",
-    "CIE-077",
-    "EXT-084",
-    "EXT-086",
-    "EXT-087",
-    "EXT-089",
-    "EXT-094",
-    "EXT-098",
-    "EXT-099",
-    "EXT-101",
-    "GES-107",
-    "GES-110",
-    "GES-111",
-    "GES-112",
-    "GES-113",
-    "GES-114",
-    "GES-115",
-    "GES-116",
-    "GES-118",
-    "GES-122",
-    "GES-123",
-    "GES-124",
-    "GES-126"
-   ],
-   "descripcion": "El riesgo cambia según el propósito, los datos, la automatización y los proveedores. Se gestiona desde la adopción hasta el retiro.",
-   "evidencia": "tratar la IA como un asunto de gestión del riesgo institucional",
-   "cita": {
-    "fragmento": "GEN-007",
-    "documento": "Generales",
-    "pagina": 11
-   }
-  },
-  {
-   "id": "alto-riesgo",
-   "label": "Alto riesgo",
-   "peso": 4,
-   "documentos": {
-    "GES": 2,
-    "ENS": 1,
-    "CIE": 1
-   },
-   "doc_principal": "GES",
-   "fragmentos": [
-    "ENS-036",
-    "CIE-058",
-    "GES-111",
-    "GES-118"
-   ],
-   "descripcion": "Usos que pueden afectar la trayectoria de estudiantes o decisiones sobre personas, como evaluación, admisión o empleo, exigen controles reforzados.",
-   "evidencia": "El reglamento europeo de IA considera de alto riesgo varios usos educativos",
-   "cita": {
-    "fragmento": "ENS-036",
-    "documento": "Enseñanza-Aprendizaje",
-    "pagina": 11
-   }
-  },
-  {
-   "id": "niveles-de-uso",
-   "label": "Niveles de uso",
-   "peso": 4,
-   "documentos": {
-    "ENS": 1,
-    "CIE": 1,
-    "EXT": 1,
-    "GES": 1
-   },
-   "doc_principal": "ENS",
-   "fragmentos": [
-    "ENS-036",
-    "CIE-058",
-    "EXT-087",
-    "GES-111"
-   ],
-   "descripcion": "Escalas que van de «sin IA» a usos no delegables. Permiten aplicar controles proporcionales a cada actividad.",
-   "evidencia": "cada profesor o programa debe indicar el nivel de uso permitido en sus actividades",
-   "cita": {
-    "fragmento": "ENS-036",
-    "documento": "Enseñanza-Aprendizaje",
-    "pagina": 11
+    "pagina": 36
    }
   },
   {
@@ -1492,379 +33,49 @@
     "EXT": 5
    },
    "doc_principal": "GEN",
-   "fragmentos": [
-    "GEN-003",
-    "GEN-004",
-    "GEN-005",
-    "GEN-006",
-    "GEN-007",
-    "GEN-008",
-    "GEN-009",
-    "GEN-012",
-    "GEN-013",
-    "GEN-014",
-    "GEN-017",
-    "GEN-018",
-    "GEN-019",
-    "GEN-023",
-    "GEN-024",
-    "GEN-025",
-    "GEN-026",
-    "GEN-027",
-    "GEN-029",
-    "ENS-033",
-    "ENS-034",
-    "ENS-036",
-    "ENS-038",
-    "ENS-041",
-    "ENS-042",
-    "ENS-044",
-    "ENS-045",
-    "ENS-048",
-    "ENS-049",
-    "CIE-053",
-    "CIE-054",
-    "CIE-058",
-    "CIE-061",
-    "CIE-062",
-    "CIE-065",
-    "CIE-071",
-    "CIE-073",
-    "CIE-077",
-    "EXT-083",
-    "EXT-087",
-    "EXT-088",
-    "EXT-089",
-    "EXT-101",
-    "GES-107",
-    "GES-109",
-    "GES-111",
-    "GES-112",
-    "GES-113",
-    "GES-114",
-    "GES-116",
-    "GES-117",
-    "GES-118",
-    "GES-121",
-    "GES-122",
-    "GES-123",
-    "GES-124",
-    "GES-126",
-    "GES-127"
-   ],
-   "descripcion": "La IA puede organizar información para decidir, pero una persona o instancia responsable revisa, interpreta y decide.",
+   "descripcion": "La IA puede ayudar a organizar información, pero las decisiones que afectan a estudiantes, empleados u otras personas deben revisarse y tomarse por responsables humanos.",
    "evidencia": "La IA puede ayudar a organizar información para la toma de decisiones, pero no debe decidir por la Universidad.",
    "cita": {
-    "fragmento": "GES-123",
     "documento": "Gestión Institucional",
-    "pagina": 32
+    "pagina": 34
    }
   },
   {
-   "id": "automatizacion",
-   "label": "Automatización",
-   "peso": 20,
+   "id": "riesgo",
+   "label": "Gestión del riesgo",
+   "peso": 55,
    "documentos": {
-    "GES": 9,
-    "GEN": 8,
-    "ENS": 1,
-    "CIE": 1,
-    "EXT": 1
+    "GEN": 17,
+    "GES": 13,
+    "CIE": 12,
+    "EXT": 8,
+    "ENS": 5
    },
-   "doc_principal": "GES",
-   "fragmentos": [
-    "GEN-007",
-    "GEN-008",
-    "GEN-009",
-    "GEN-011",
-    "GEN-013",
-    "GEN-014",
-    "GEN-016",
-    "GEN-017",
-    "ENS-048",
-    "CIE-077",
-    "EXT-089",
-    "GES-107",
-    "GES-109",
-    "GES-111",
-    "GES-113",
-    "GES-114",
-    "GES-122",
-    "GES-123",
-    "GES-126",
-    "GES-127"
-   ],
-   "descripcion": "La IA puede automatizar tareas repetitivas o clasificar solicitudes, pero no aprobar, negar ni resolver trámites.",
-   "evidencia": "La diferencia entre apoyo y decisión debe mantenerse en todos los procesos.",
+   "doc_principal": "GEN",
+   "descripcion": "Revisar qué podría salir mal al usar IA, según la tarea, los datos y el proveedor. Los cuidados deben ajustarse si cambia la herramienta o su uso.",
+   "evidencia": "tratar la IA como un asunto de gestión del riesgo institucional",
    "cita": {
-    "fragmento": "GES-109",
-    "documento": "Gestión Institucional",
-    "pagina": 8
-   }
-  },
-  {
-   "id": "proveedores",
-   "label": "Proveedores",
-   "peso": 24,
-   "documentos": {
-    "GES": 10,
-    "GEN": 6,
-    "CIE": 4,
-    "EXT": 3,
-    "ENS": 1
-   },
-   "doc_principal": "GES",
-   "fragmentos": [
-    "GEN-007",
-    "GEN-008",
-    "GEN-017",
-    "GEN-020",
-    "GEN-022",
-    "GEN-026",
-    "ENS-048",
-    "CIE-059",
-    "CIE-072",
-    "CIE-074",
-    "CIE-077",
-    "EXT-084",
-    "EXT-098",
-    "EXT-101",
-    "GES-109",
-    "GES-110",
-    "GES-113",
-    "GES-115",
-    "GES-117",
-    "GES-122",
-    "GES-123",
-    "GES-124",
-    "GES-126",
-    "GES-127"
-   ],
-   "descripcion": "Antes de adoptar una herramienta se revisa si el proveedor retiene datos, los usa para entrenar o los transfiere. Un contrato no lo garantiza solo.",
-   "evidencia": "el contrato no garantiza por sí mismo privacidad o propiedad sobre la información procesada",
-   "cita": {
-    "fragmento": "GES-122",
-    "documento": "Gestión Institucional",
-    "pagina": 30
-   }
-  },
-  {
-   "id": "herramientas-autorizadas",
-   "label": "Herramientas autorizadas",
-   "peso": 18,
-   "documentos": {
-    "GES": 8,
-    "EXT": 5,
-    "CIE": 4,
-    "GEN": 1
-   },
-   "doc_principal": "GES",
-   "fragmentos": [
-    "GEN-014",
-    "CIE-061",
-    "CIE-066",
-    "CIE-070",
-    "CIE-078",
-    "EXT-083",
-    "EXT-089",
-    "EXT-092",
-    "EXT-095",
-    "EXT-102",
-    "GES-107",
-    "GES-113",
-    "GES-117",
-    "GES-120",
-    "GES-121",
-    "GES-122",
-    "GES-124",
-    "GES-127"
-   ],
-   "descripcion": "La universidad podrá definir un catálogo de herramientas con su alcance, datos permitidos y responsables.",
-   "evidencia": "La Universidad podrá definir un catálogo de herramientas autorizadas o recomendadas",
-   "cita": {
-    "fragmento": "GES-122",
-    "documento": "Gestión Institucional",
-    "pagina": 30
-   }
-  },
-  {
-   "id": "terceros",
-   "label": "Terceros",
-   "peso": 48,
-   "documentos": {
-    "CIE": 14,
-    "EXT": 14,
-    "GEN": 11,
-    "GES": 6,
-    "ENS": 3
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-003",
-    "GEN-005",
-    "GEN-007",
-    "GEN-008",
-    "GEN-009",
-    "GEN-018",
-    "GEN-019",
-    "GEN-020",
-    "GEN-021",
-    "GEN-022",
-    "GEN-024",
-    "ENS-033",
-    "ENS-043",
-    "ENS-048",
-    "CIE-054",
-    "CIE-055",
-    "CIE-056",
-    "CIE-058",
-    "CIE-059",
-    "CIE-060",
-    "CIE-061",
-    "CIE-062",
-    "CIE-063",
-    "CIE-066",
-    "CIE-068",
-    "CIE-069",
-    "CIE-077",
-    "CIE-078",
-    "EXT-081",
-    "EXT-083",
-    "EXT-084",
-    "EXT-088",
-    "EXT-089",
-    "EXT-092",
-    "EXT-093",
-    "EXT-094",
-    "EXT-095",
-    "EXT-098",
-    "EXT-099",
-    "EXT-101",
-    "EXT-102",
-    "EXT-104",
-    "GES-107",
-    "GES-112",
-    "GES-113",
-    "GES-121",
-    "GES-122",
-    "GES-126"
-   ],
-   "descripcion": "Cuando la IA interviene en servicios o proyectos con aliados, la universidad responde por la calidad, la confidencialidad y los acuerdos.",
-   "evidencia": "En extensión, el análisis se centra en la responsabilidad que asume la universidad cuando usa IA en servicios y proyectos con terceros.",
-   "cita": {
-    "fragmento": "GEN-008",
     "documento": "Generales",
-    "pagina": 12
+    "pagina": 13
    }
   },
   {
-   "id": "comunidades",
-   "label": "Comunidades",
-   "peso": 25,
+   "id": "aprendizaje",
+   "label": "Aprendizaje",
+   "peso": 34,
    "documentos": {
-    "EXT": 12,
-    "CIE": 5,
-    "GEN": 4,
-    "ENS": 3,
-    "GES": 1
+    "GEN": 15,
+    "ENS": 10,
+    "EXT": 4,
+    "GES": 3,
+    "CIE": 2
    },
-   "doc_principal": "EXT",
-   "fragmentos": [
-    "GEN-003",
-    "GEN-005",
-    "GEN-023",
-    "GEN-027",
-    "ENS-033",
-    "ENS-034",
-    "ENS-048",
-    "CIE-054",
-    "CIE-056",
-    "CIE-065",
-    "CIE-066",
-    "CIE-077",
-    "EXT-083",
-    "EXT-085",
-    "EXT-086",
-    "EXT-087",
-    "EXT-088",
-    "EXT-089",
-    "EXT-090",
-    "EXT-091",
-    "EXT-095",
-    "EXT-096",
-    "EXT-101",
-    "EXT-102",
-    "GES-126"
-   ],
-   "descripcion": "En proyectos con comunidades, la IA apoya la sistematización, pero no reemplaza el diálogo ni la participación.",
-   "evidencia": "La IA no debe reemplazar el diálogo con las comunidades.",
+   "doc_principal": "GEN",
+   "descripcion": "La IA puede explicar temas y proponer ejercicios, pero el estudiante debe comprender, practicar y demostrar lo que aprendió.",
+   "evidencia": "La IA puede apoyar el estudio, la escritura y la organización de ideas, pero no aprender por el estudiante.",
    "cita": {
-    "fragmento": "EXT-091",
-    "documento": "Extensión y Educación Continuada",
-    "pagina": 22
-   }
-  },
-  {
-   "id": "poblacion-vulnerable",
-   "label": "Población vulnerable",
-   "peso": 2,
-   "documentos": {
-    "CIE": 1,
-    "EXT": 1
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "CIE-065",
-    "EXT-095"
-   ],
-   "descripcion": "Con niños, pacientes, comunidades o poblaciones vulnerables, el cuidado sobre la información debe ser mayor.",
-   "evidencia": "En proyectos con comunidades, población vulnerable, pacientes, niños, empresas, entidades públicas o aliados estratégicos, el cuidado debe ser mayor",
-   "cita": {
-    "fragmento": "EXT-095",
-    "documento": "Extensión y Educación Continuada",
-    "pagina": 29
-   }
-  },
-  {
-   "id": "entregables",
-   "label": "Entregables",
-   "peso": 22,
-   "documentos": {
-    "EXT": 10,
-    "CIE": 7,
-    "GEN": 5
-   },
-   "doc_principal": "EXT",
-   "fragmentos": [
-    "GEN-008",
-    "GEN-018",
-    "GEN-019",
-    "GEN-022",
-    "GEN-024",
-    "CIE-054",
-    "CIE-056",
-    "CIE-057",
-    "CIE-059",
-    "CIE-062",
-    "CIE-064",
-    "CIE-078",
-    "EXT-083",
-    "EXT-085",
-    "EXT-086",
-    "EXT-087",
-    "EXT-088",
-    "EXT-089",
-    "EXT-092",
-    "EXT-098",
-    "EXT-101",
-    "EXT-102"
-   ],
-   "descripcion": "Un informe o diagnóstico para un tercero solo es final cuando el equipo experto lo valida. No se entregan resultados basados solo en IA.",
-   "evidencia": "La Universidad no debe entregar resultados basados exclusivamente en IA sin verificación técnica",
-   "cita": {
-    "fragmento": "EXT-092",
-    "documento": "Extensión y Educación Continuada",
-    "pagina": 24
+    "documento": "Enseñanza-Aprendizaje",
+    "pagina": 19
    }
   },
   {
@@ -1879,352 +90,11 @@
     "ENS": 4
    },
    "doc_principal": "GEN",
-   "fragmentos": [
-    "GEN-001",
-    "GEN-008",
-    "GEN-009",
-    "GEN-013",
-    "GEN-021",
-    "GEN-022",
-    "GEN-024",
-    "ENS-031",
-    "ENS-035",
-    "ENS-038",
-    "ENS-048",
-    "CIE-052",
-    "CIE-053",
-    "CIE-054",
-    "CIE-055",
-    "CIE-061",
-    "CIE-068",
-    "CIE-077",
-    "EXT-081",
-    "EXT-084",
-    "EXT-086",
-    "EXT-089",
-    "EXT-091",
-    "EXT-097",
-    "EXT-101",
-    "GES-105",
-    "GES-108",
-    "GES-110",
-    "GES-112",
-    "GES-116",
-    "GES-123",
-    "GES-124"
-   ],
-   "descripcion": "Un resultado de IA vale lo que valen sus datos de entrada: exactos, completos, actualizados y de fuentes oficiales.",
+   "descripcion": "Antes de utilizar un resultado de IA, hay que comprobar que los datos sean correctos, completos, actuales y adecuados para la tarea.",
    "evidencia": "La confiabilidad del resultado depende de la calidad y actualización de los datos de entrada",
    "cita": {
-    "fragmento": "GES-110",
     "documento": "Gestión Institucional",
-    "pagina": 10
-   }
-  },
-  {
-   "id": "reputacion",
-   "label": "Reputación",
-   "peso": 8,
-   "documentos": {
-    "EXT": 5,
-    "GES": 2,
-    "GEN": 1
-   },
-   "doc_principal": "EXT",
-   "fragmentos": [
-    "GEN-008",
-    "EXT-083",
-    "EXT-089",
-    "EXT-095",
-    "EXT-096",
-    "EXT-101",
-    "GES-107",
-    "GES-109"
-   ],
-   "descripcion": "Lo que la universidad publica con apoyo de IA se revisa en derechos, sesgos, exactitud y tono antes de salir.",
-   "evidencia": "cualquier contenido publicado por la Universidad puede afectar su reputación",
-   "cita": {
-    "fragmento": "EXT-096",
-    "documento": "Extensión y Educación Continuada",
-    "pagina": 31
-   }
-  },
-  {
-   "id": "auditoria",
-   "label": "Auditoría",
-   "peso": 2,
-   "documentos": {
-    "GES": 2
-   },
-   "doc_principal": "GES",
-   "fragmentos": [
-    "GES-122",
-    "GES-124"
-   ],
-   "descripcion": "Poder revisar, exportar o eliminar lo que una herramienta guarda, para no crear repositorios externos que nadie puede auditar.",
-   "evidencia": "evitar que se consoliden repositorios externos no auditables",
-   "cita": {
-    "fragmento": "GES-122",
-    "documento": "Gestión Institucional",
-    "pagina": 30
-   }
-  },
-  {
-   "id": "formacion",
-   "label": "Formación",
-   "peso": 95,
-   "documentos": {
-    "GEN": 21,
-    "CIE": 21,
-    "GES": 21,
-    "EXT": 17,
-    "ENS": 15
-   },
-   "doc_principal": "GEN",
-   "fragmentos": [
-    "GEN-004",
-    "GEN-005",
-    "GEN-006",
-    "GEN-007",
-    "GEN-008",
-    "GEN-009",
-    "GEN-010",
-    "GEN-011",
-    "GEN-012",
-    "GEN-013",
-    "GEN-016",
-    "GEN-017",
-    "GEN-018",
-    "GEN-019",
-    "GEN-020",
-    "GEN-021",
-    "GEN-022",
-    "GEN-023",
-    "GEN-024",
-    "GEN-027",
-    "GEN-028",
-    "ENS-033",
-    "ENS-035",
-    "ENS-036",
-    "ENS-037",
-    "ENS-038",
-    "ENS-039",
-    "ENS-041",
-    "ENS-042",
-    "ENS-043",
-    "ENS-044",
-    "ENS-045",
-    "ENS-046",
-    "ENS-047",
-    "ENS-048",
-    "ENS-049",
-    "CIE-053",
-    "CIE-054",
-    "CIE-055",
-    "CIE-056",
-    "CIE-057",
-    "CIE-058",
-    "CIE-059",
-    "CIE-060",
-    "CIE-061",
-    "CIE-062",
-    "CIE-063",
-    "CIE-065",
-    "CIE-066",
-    "CIE-067",
-    "CIE-070",
-    "CIE-071",
-    "CIE-072",
-    "CIE-073",
-    "CIE-074",
-    "CIE-077",
-    "CIE-078",
-    "EXT-083",
-    "EXT-084",
-    "EXT-085",
-    "EXT-086",
-    "EXT-087",
-    "EXT-088",
-    "EXT-089",
-    "EXT-090",
-    "EXT-091",
-    "EXT-092",
-    "EXT-093",
-    "EXT-095",
-    "EXT-097",
-    "EXT-098",
-    "EXT-099",
-    "EXT-101",
-    "EXT-102",
-    "GES-107",
-    "GES-108",
-    "GES-109",
-    "GES-110",
-    "GES-111",
-    "GES-112",
-    "GES-113",
-    "GES-114",
-    "GES-115",
-    "GES-116",
-    "GES-117",
-    "GES-118",
-    "GES-119",
-    "GES-120",
-    "GES-121",
-    "GES-122",
-    "GES-123",
-    "GES-124",
-    "GES-125",
-    "GES-126",
-    "GES-127"
-   ],
-   "descripcion": "Alfabetización crítica en IA para cada rol: qué datos usar, cómo detectar errores, cuándo declarar y a quién consultar.",
-   "evidencia": "La formación del personal es una condición necesaria.",
-   "cita": {
-    "fragmento": "GES-124",
-    "documento": "Gestión Institucional",
-    "pagina": 34
-   }
-  },
-  {
-   "id": "inclusion",
-   "label": "Inclusión",
-   "peso": 9,
-   "documentos": {
-    "ENS": 4,
-    "GEN": 2,
-    "EXT": 2,
-    "GES": 1
-   },
-   "doc_principal": "ENS",
-   "fragmentos": [
-    "GEN-006",
-    "GEN-012",
-    "ENS-035",
-    "ENS-042",
-    "ENS-044",
-    "ENS-045",
-    "EXT-090",
-    "EXT-095",
-    "GES-122"
-   ],
-   "descripcion": "La adopción de IA no debe ampliar brechas de acceso, acompañamiento o participación.",
-   "evidencia": "La adopción de IA procura no ampliar brechas de acceso, acompañamiento o participación.",
-   "cita": {
-    "fragmento": "GEN-012",
-    "documento": "Generales",
-    "pagina": 18
-   }
-  },
-  {
-   "id": "transferencia",
-   "label": "Transferencia",
-   "peso": 32,
-   "documentos": {
-    "EXT": 14,
-    "CIE": 13,
-    "GEN": 3,
-    "GES": 2
-   },
-   "doc_principal": "EXT",
-   "fragmentos": [
-    "GEN-008",
-    "GEN-009",
-    "GEN-022",
-    "CIE-053",
-    "CIE-054",
-    "CIE-055",
-    "CIE-056",
-    "CIE-057",
-    "CIE-058",
-    "CIE-061",
-    "CIE-062",
-    "CIE-065",
-    "CIE-066",
-    "CIE-072",
-    "CIE-074",
-    "CIE-077",
-    "EXT-081",
-    "EXT-083",
-    "EXT-084",
-    "EXT-085",
-    "EXT-086",
-    "EXT-087",
-    "EXT-088",
-    "EXT-089",
-    "EXT-093",
-    "EXT-094",
-    "EXT-099",
-    "EXT-101",
-    "EXT-102",
-    "EXT-104",
-    "GES-122",
-    "GES-124"
-   ],
-   "descripcion": "La IA apoya la vigilancia tecnológica y las fichas de transferencia, pero lo transferible exige revisión técnica y jurídica.",
-   "evidencia": "la transferencia exige precisión técnica, cuidado jurídico y claridad sobre la titularidad",
-   "cita": {
-    "fragmento": "EXT-094",
-    "documento": "Extensión y Educación Continuada",
-    "pagina": 27
-   }
-  },
-  {
-   "id": "prototipos",
-   "label": "Prototipos y creación",
-   "peso": 36,
-   "documentos": {
-    "CIE": 20,
-    "GEN": 6,
-    "ENS": 4,
-    "EXT": 4,
-    "GES": 2
-   },
-   "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-001",
-    "GEN-007",
-    "GEN-009",
-    "GEN-012",
-    "GEN-014",
-    "GEN-022",
-    "ENS-031",
-    "ENS-035",
-    "ENS-041",
-    "ENS-042",
-    "CIE-052",
-    "CIE-053",
-    "CIE-054",
-    "CIE-055",
-    "CIE-056",
-    "CIE-057",
-    "CIE-058",
-    "CIE-059",
-    "CIE-060",
-    "CIE-061",
-    "CIE-062",
-    "CIE-064",
-    "CIE-065",
-    "CIE-067",
-    "CIE-069",
-    "CIE-070",
-    "CIE-071",
-    "CIE-074",
-    "CIE-077",
-    "CIE-078",
-    "EXT-081",
-    "EXT-083",
-    "EXT-085",
-    "EXT-094",
-    "GES-105",
-    "GES-107"
-   ],
-   "descripcion": "En desarrollo tecnológico e investigación-creación, la IA puede sugerir diseños o código, pero no garantiza seguridad, pertinencia ni derechos.",
-   "evidencia": "Puede intervenir en el desarrollo de un prototipo, pero no asegura su seguridad ni pertinencia.",
-   "cita": {
-    "fragmento": "CIE-056",
-    "documento": "Ciencia, Tecnología e Innovación",
-    "pagina": 10
+    "pagina": 12
    }
   },
   {
@@ -2239,38 +109,464 @@
     "GES": 1
    },
    "doc_principal": "GEN",
-   "fragmentos": [
-    "GEN-007",
-    "GEN-008",
-    "GEN-009",
-    "GEN-011",
-    "GEN-013",
-    "GEN-019",
-    "GEN-022",
-    "GEN-026",
-    "GEN-029",
-    "ENS-033",
-    "ENS-038",
-    "ENS-040",
-    "CIE-053",
-    "CIE-054",
-    "CIE-057",
-    "CIE-060",
-    "CIE-062",
-    "CIE-063",
-    "CIE-064",
-    "CIE-069",
-    "CIE-070",
-    "EXT-087",
-    "EXT-089",
-    "GES-110"
-   ],
-   "descripcion": "Sistemas que producen texto, imágenes o código. Plantean retos de calidad, veracidad y trazabilidad del contenido.",
+   "descripcion": "Es la IA que puede crear textos, imágenes, código u otros contenidos. Sus respuestas pueden contener errores o información inventada.",
    "evidencia": "la IA generativa plantea desafíos de calidad, veracidad y trazabilidad del contenido",
    "cita": {
-    "fragmento": "GEN-013",
+    "documento": "Generales",
+    "pagina": 21
+   }
+  },
+  {
+   "id": "seguridad-informacion",
+   "label": "Seguridad de la información",
+   "peso": 16,
+   "documentos": {
+    "GEN": 5,
+    "GES": 5,
+    "CIE": 3,
+    "EXT": 2,
+    "ENS": 1
+   },
+   "doc_principal": "GEN",
+   "descripcion": "Proteger documentos y datos para que solo accedan a ellos las personas y herramientas autorizadas. Incluye revisar proveedores y atender incidentes.",
+   "evidencia": "El uso institucional de IA se articula con la gestión de incidentes de seguridad de la información",
+   "cita": {
+    "documento": "Generales",
+    "pagina": 26
+   }
+  },
+  {
+   "id": "privacidad",
+   "label": "Privacidad",
+   "peso": 13,
+   "documentos": {
+    "GEN": 4,
+    "GES": 4,
+    "ENS": 2,
+    "CIE": 2,
+    "EXT": 1
+   },
+   "doc_principal": "GEN",
+   "descripcion": "Proteger los datos de las personas y evitar compartir información innecesaria, especialmente con herramientas externas.",
+   "evidencia": "La universidad asume la protección de la información personal, sensible e institucional como un criterio básico en el uso de IA.",
+   "cita": {
+    "documento": "Generales",
+    "pagina": 26
+   }
+  },
+  {
+   "id": "integridad-academica",
+   "label": "Integridad académica",
+   "peso": 10,
+   "documentos": {
+    "GEN": 8,
+    "ENS": 1,
+    "CIE": 1
+   },
+   "doc_principal": "GEN",
+   "descripcion": "Presentar trabajos honestos, reconocer cuándo se utilizó IA y respetar las reglas de evaluación. El trabajo debe demostrar lo que aprendió el estudiante.",
+   "evidencia": "la IA no debe afectar la honestidad académica, la justicia en la evaluación",
+   "cita": {
+    "documento": "Generales",
+    "pagina": 27
+   }
+  },
+  {
+   "id": "retroalimentacion",
+   "label": "Retroalimentación",
+   "peso": 3,
+   "documentos": {
+    "GEN": 3
+   },
+   "doc_principal": "GEN",
+   "descripcion": "La IA puede sugerir comentarios sobre trabajos académicos, pero el profesor debe comprobar que correspondan a cada estudiante y su actividad.",
+   "evidencia": "Esto exige criterios claros para el uso de IA en actividades de evaluación, en retroalimentación y en decisiones pedagógicas",
+   "cita": {
+    "documento": "Generales",
+    "pagina": 13
+   }
+  },
+  {
+   "id": "mediacion-docente",
+   "label": "Mediación docente",
+   "peso": 3,
+   "documentos": {
+    "GEN": 2,
+    "ENS": 1
+   },
+   "doc_principal": "GEN",
+   "descripcion": "El profesor decide cómo utilizar IA para enseñar y evaluar. También responde por la calidad de los materiales que comparte con sus estudiantes.",
+   "evidencia": "condiciones que mantengan la mediación docente",
+   "cita": {
+    "documento": "Generales",
+    "pagina": 13
+   }
+  },
+  {
+   "id": "agencia-humana",
+   "label": "Agencia humana",
+   "peso": 2,
+   "documentos": {
+    "GEN": 1,
+    "ENS": 1
+   },
+   "doc_principal": "GEN",
+   "descripcion": "La IA debe ayudar a las personas a pensar y decidir, sin sustituir sus capacidades ni generar dependencia.",
+   "evidencia": "la IA debe fortalecer la agencia humana y no desplazar el papel de profesores y estudiantes",
+   "cita": {
+    "documento": "Enseñanza-Aprendizaje",
+    "pagina": 13
+   }
+  },
+  {
+   "id": "evaluacion",
+   "label": "Evaluación",
+   "peso": 44,
+   "documentos": {
+    "ENS": 13,
+    "CIE": 11,
+    "GEN": 8,
+    "GES": 7,
+    "EXT": 5
+   },
+   "doc_principal": "ENS",
+   "descripcion": "El profesor o programa define cuándo se permite utilizar IA en una actividad. La calificación y las decisiones académicas siguen bajo responsabilidad humana.",
+   "evidencia": "El cuidado debe ser mayor cuando se use IA en procesos que tengan impacto en la evaluación",
+   "cita": {
+    "documento": "Enseñanza-Aprendizaje",
+    "pagina": 14
+   }
+  },
+  {
+   "id": "declaracion-de-uso",
+   "label": "Declarar el uso",
+   "peso": 33,
+   "documentos": {
+    "ENS": 11,
+    "CIE": 10,
+    "GES": 5,
+    "EXT": 4,
+    "GEN": 3
+   },
+   "doc_principal": "ENS",
+   "descripcion": "Explicar qué herramienta de IA se utilizó y para qué. Informar su uso permite conocer cómo se elaboró un trabajo y no significa que se haya utilizado mal.",
+   "evidencia": "El uso debe declararse cuando la IA haya tenido incidencia en el producto que se entrega, evalúa, publica o deposita en un repositorio.",
+   "cita": {
+    "documento": "Enseñanza-Aprendizaje",
+    "pagina": 15
+   }
+  },
+  {
+   "id": "competencias",
+   "label": "Competencias",
+   "peso": 11,
+   "documentos": {
+    "ENS": 9,
+    "GEN": 1,
+    "EXT": 1
+   },
+   "doc_principal": "ENS",
+   "descripcion": "Conocimientos y habilidades que cada estudiante debe desarrollar y demostrar. Los programas deben considerar cómo influye la IA en esas capacidades.",
+   "evidencia": "qué necesita saber un estudiante sobre IA para ejercer con criterio en su disciplina",
+   "cita": {
+    "documento": "Enseñanza-Aprendizaje",
+    "pagina": 22
+   }
+  },
+  {
+   "id": "citas",
+   "label": "Citas",
+   "peso": 9,
+   "documentos": {
+    "ENS": 4,
+    "CIE": 3,
+    "GES": 2
+   },
+   "doc_principal": "ENS",
+   "descripcion": "Las referencias sugeridas por IA deben buscarse y comprobarse. Si un artículo o libro no existe o no puede verificarse, no debe citarse.",
+   "evidencia": "Si la herramienta propone una cita, hay que buscarla; si no aparece, no debe usarse.",
+   "cita": {
+    "documento": "Enseñanza-Aprendizaje",
+    "pagina": 19
+   }
+  },
+  {
+   "id": "inclusion",
+   "label": "Inclusión",
+   "peso": 9,
+   "documentos": {
+    "ENS": 4,
+    "GEN": 2,
+    "EXT": 2,
+    "GES": 1
+   },
+   "doc_principal": "ENS",
+   "descripcion": "Utilizar IA de manera que no excluya personas ni aumente diferencias de acceso, aprendizaje o participación.",
+   "evidencia": "La adopción de IA procura no ampliar brechas de acceso, acompañamiento o participación.",
+   "cita": {
     "documento": "Generales",
     "pagina": 20
+   }
+  },
+  {
+   "id": "niveles-de-uso",
+   "label": "Niveles de uso",
+   "peso": 4,
+   "documentos": {
+    "ENS": 1,
+    "CIE": 1,
+    "EXT": 1,
+    "GES": 1
+   },
+   "doc_principal": "ENS",
+   "descripcion": "Las condiciones para usar IA cambian según la actividad. Por ejemplo, una práctica puede permitirla y un examen puede exigir resolverlo sin ayuda.",
+   "evidencia": "cada profesor o programa debe indicar el nivel de uso permitido en sus actividades",
+   "cita": {
+    "documento": "Enseñanza-Aprendizaje",
+    "pagina": 13
+   }
+  },
+  {
+   "id": "detectores",
+   "label": "Detectores de IA",
+   "peso": 1,
+   "documentos": {
+    "ENS": 1
+   },
+   "doc_principal": "ENS",
+   "descripcion": "Herramientas que intentan identificar textos generados con IA. Pueden equivocarse y su resultado, por sí solo, no sirve para demostrar una falta académica.",
+   "evidencia": "Los detectores de IA deben tratarse con prudencia, como indicadores o alertas para revisar un caso",
+   "cita": {
+    "documento": "Enseñanza-Aprendizaje",
+    "pagina": 18
+   }
+  },
+  {
+   "id": "responsabilidad",
+   "label": "Responsabilidad",
+   "peso": 66,
+   "documentos": {
+    "CIE": 19,
+    "GEN": 18,
+    "GES": 12,
+    "EXT": 10,
+    "ENS": 7
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Quien utiliza IA en un trabajo o proceso debe comprobar sus resultados y responder por lo que entrega o decide.",
+   "evidencia": "La universidad responde por los efectos institucionales del uso y desarrollo de IA, y quienes la incorporan a procesos actúan con cuidado según su rol.",
+   "cita": {
+    "documento": "Generales",
+    "pagina": 21
+   }
+  },
+  {
+   "id": "propiedad-intelectual",
+   "label": "Propiedad intelectual",
+   "peso": 49,
+   "documentos": {
+    "CIE": 20,
+    "EXT": 11,
+    "GEN": 10,
+    "ENS": 5,
+    "GES": 3
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Reglas sobre quién tiene derechos sobre obras, diseños e invenciones. Usar IA no elimina las licencias o permisos que correspondan.",
+   "evidencia": "pueden no reunir las condiciones para ser reconocidos como obras protegidas por el derecho de autor",
+   "cita": {
+    "documento": "Generales",
+    "pagina": 28
+   }
+  },
+  {
+   "id": "terceros",
+   "label": "Terceros",
+   "peso": 48,
+   "documentos": {
+    "CIE": 14,
+    "EXT": 14,
+    "GEN": 11,
+    "GES": 6,
+    "ENS": 3
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Empresas, instituciones, comunidades u otras personas externas que trabajan con la Universidad. Al usar IA deben respetarse los acuerdos y protegerse su información.",
+   "evidencia": "En extensión, el análisis se centra en la responsabilidad que asume la universidad cuando usa IA en servicios y proyectos con terceros.",
+   "cita": {
+    "documento": "Generales",
+    "pagina": 14
+   }
+  },
+  {
+   "id": "confidencialidad",
+   "label": "Confidencialidad",
+   "peso": 42,
+   "documentos": {
+    "CIE": 15,
+    "GES": 9,
+    "EXT": 8,
+    "GEN": 6,
+    "ENS": 4
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Los documentos reservados, como manuscritos en evaluación o información de aliados, deben mantenerse protegidos aunque sea fácil copiarlos a una IA.",
+   "evidencia": "La facilidad de copiar y pegar información en una herramienta no elimina las obligaciones de confidencialidad",
+   "cita": {
+    "documento": "Enseñanza-Aprendizaje",
+    "pagina": 27
+   }
+  },
+  {
+   "id": "trazabilidad",
+   "label": "Trazabilidad",
+   "peso": 36,
+   "documentos": {
+    "CIE": 14,
+    "GES": 8,
+    "GEN": 7,
+    "ENS": 4,
+    "EXT": 3
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Conservar información que permita saber para qué se utilizó la IA, qué hizo, qué se comprobó y quién revisó el resultado.",
+   "evidencia": "debe ser posible entender para qué se utilizó, cómo incidió en el proceso y bajo qué criterios se revisó su resultado",
+   "cita": {
+    "documento": "Generales",
+    "pagina": 25
+   }
+  },
+  {
+   "id": "verificacion",
+   "label": "Verificación",
+   "peso": 36,
+   "documentos": {
+    "CIE": 13,
+    "GEN": 6,
+    "ENS": 6,
+    "EXT": 6,
+    "GES": 5
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Comprobar las respuestas de IA con documentos, registros o fuentes confiables antes de utilizarlas.",
+   "evidencia": "Hay que contrastar la información con apuntes, libros, bases de datos o fuentes indicadas por el profesor.",
+   "cita": {
+    "documento": "Enseñanza-Aprendizaje",
+    "pagina": 19
+   }
+  },
+  {
+   "id": "prototipos",
+   "label": "Prototipos y creación",
+   "peso": 36,
+   "documentos": {
+    "CIE": 20,
+    "GEN": 6,
+    "ENS": 4,
+    "EXT": 4,
+    "GES": 2
+   },
+   "doc_principal": "CIE",
+   "descripcion": "La IA puede sugerir diseños, código y soluciones iniciales, pero el equipo debe comprobar si funcionan, son seguros y pueden utilizarse legalmente.",
+   "evidencia": "Puede intervenir en el desarrollo de un prototipo, pero no asegura su seguridad ni pertinencia.",
+   "cita": {
+    "documento": "Ciencia, Tecnología e Innovación",
+    "pagina": 12
+   }
+  },
+  {
+   "id": "etica",
+   "label": "Ética",
+   "peso": 31,
+   "documentos": {
+    "CIE": 15,
+    "GEN": 11,
+    "EXT": 3,
+    "ENS": 1,
+    "GES": 1
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Revisar los posibles efectos de la IA sobre participantes, datos y procedimientos de investigación. El Comité de Ética interviene cuando corresponde.",
+   "evidencia": "El Comité de Ética deberá revisar con especial cuidado los proyectos en que intervengan personas",
+   "cita": {
+    "documento": "Ciencia, Tecnología e Innovación",
+    "pagina": 29
+   }
+  },
+  {
+   "id": "fuentes",
+   "label": "Fuentes",
+   "peso": 30,
+   "documentos": {
+    "CIE": 13,
+    "ENS": 9,
+    "GES": 5,
+    "EXT": 2,
+    "GEN": 1
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Documentos, datos o publicaciones que permiten comprobar una afirmación. Una respuesta de IA no reemplaza por sí sola esas fuentes.",
+   "evidencia": "las fuentes deben verificarse y las referencias deben ser reales, consultables y trazables",
+   "cita": {
+    "documento": "Enseñanza-Aprendizaje",
+    "pagina": 12
+   }
+  },
+  {
+   "id": "publicacion",
+   "label": "Publicación",
+   "peso": 26,
+   "documentos": {
+    "CIE": 17,
+    "GEN": 5,
+    "ENS": 2,
+    "EXT": 1,
+    "GES": 1
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Antes de publicar trabajos con apoyo de IA, deben revisarse sus contenidos, las condiciones de la revista o editorial y las obligaciones de declaración.",
+   "evidencia": "Si son más exigentes que estos lineamientos, se aplican las condiciones específicas",
+   "cita": {
+    "documento": "Ciencia, Tecnología e Innovación",
+    "pagina": 54
+   }
+  },
+  {
+   "id": "transparencia",
+   "label": "Transparencia",
+   "peso": 21,
+   "documentos": {
+    "CIE": 8,
+    "GEN": 7,
+    "GES": 3,
+    "ENS": 2,
+    "EXT": 1
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Dejar claro cuándo se utilizó IA y qué parte del trabajo o resultado recibió su apoyo.",
+   "evidencia": "La declaración de uso es un deber de transparencia académica.",
+   "cita": {
+    "documento": "Enseñanza-Aprendizaje",
+    "pagina": 15
+   }
+  },
+  {
+   "id": "datos-sensibles",
+   "label": "Datos sensibles",
+   "peso": 21,
+   "documentos": {
+    "CIE": 6,
+    "ENS": 4,
+    "EXT": 4,
+    "GES": 4,
+    "GEN": 3
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Información que requiere especial protección, como datos de salud o biométricos. No debe cargarse en herramientas abiertas sin condiciones y autorizaciones adecuadas.",
+   "evidencia": "Puede vulnerar la privacidad, la confidencialidad y la protección de datos.",
+   "cita": {
+    "documento": "Enseñanza-Aprendizaje",
+    "pagina": 18
    }
   },
   {
@@ -2285,4502 +581,1717 @@
     "EXT": 2
    },
    "doc_principal": "CIE",
-   "fragmentos": [
-    "GEN-004",
-    "GEN-025",
-    "GEN-026",
-    "GEN-029",
-    "ENS-044",
-    "ENS-046",
-    "ENS-048",
-    "ENS-050",
-    "CIE-053",
-    "CIE-054",
-    "CIE-074",
-    "CIE-077",
-    "CIE-079",
-    "EXT-101",
-    "EXT-103",
-    "GES-122",
-    "GES-123",
-    "GES-124",
-    "GES-126",
-    "GES-128"
-   ],
-   "descripcion": "La Comisión Institucional de Expertos en IA orienta, aconseja y actualiza los lineamientos, sin reemplazar a las instancias que deciden.",
+   "descripcion": "La Comisión Institucional de Expertos en IA orienta y formula recomendaciones. También apoya la revisión de los lineamientos, sin reemplazar a las áreas que deciden.",
    "evidencia": "la Comisión cumple un papel orientador y consultivo",
    "cita": {
-    "fragmento": "GEN-026",
     "documento": "Generales",
-    "pagina": 30
+    "pagina": 32
+   }
+  },
+  {
+   "id": "datos-clinicos",
+   "label": "Datos clínicos",
+   "peso": 19,
+   "documentos": {
+    "CIE": 10,
+    "ENS": 5,
+    "GES": 3,
+    "EXT": 1
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Información sobre la salud de pacientes, como historias clínicas, imágenes médicas o datos genómicos. Su uso con IA requiere cuidados especiales.",
+   "evidencia": "requieren controles reforzados",
+   "cita": {
+    "documento": "Ciencia, Tecnología e Innovación",
+    "pagina": 40
+   }
+  },
+  {
+   "id": "sesgos",
+   "label": "Sesgos",
+   "peso": 16,
+   "documentos": {
+    "CIE": 5,
+    "EXT": 4,
+    "ENS": 3,
+    "GEN": 2,
+    "GES": 2
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Errores o inclinaciones en las respuestas de IA que pueden favorecer o perjudicar a ciertos grupos de personas.",
+   "evidencia": "Puede cometer errores o reproducir sesgos presentes en los datos con los que la IA fue entrenada",
+   "cita": {
+    "documento": "Gestión Institucional",
+    "pagina": 19
+   }
+  },
+  {
+   "id": "autoria",
+   "label": "Autoría",
+   "peso": 13,
+   "documentos": {
+    "CIE": 7,
+    "ENS": 3,
+    "GEN": 2,
+    "GES": 1
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Las personas que elaboran y responden por una obra o publicación pueden ser autoras. Una herramienta de IA no puede figurar como autora o inventora.",
+   "evidencia": "La autoría implica contribución intelectual, aprobación de la versión final, responsabilidad por el contenido y capacidad de responder por errores",
+   "cita": {
+    "documento": "Ciencia, Tecnología e Innovación",
+    "pagina": 37
+   }
+  },
+  {
+   "id": "integridad-cientifica",
+   "label": "Integridad científica",
+   "peso": 10,
+   "documentos": {
+    "CIE": 7,
+    "GEN": 3
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Realizar investigación sin inventar ni alterar resultados, explicar los métodos utilizados y comprobar los datos antes de publicarlos.",
+   "evidencia": "En investigación, el uso de IA se mantiene bajo transparencia metodológica, validación suficiente de resultados",
+   "cita": {
+    "documento": "Generales",
+    "pagina": 27
+   }
+  },
+  {
+   "id": "alucinaciones",
+   "label": "Información inventada",
+   "peso": 10,
+   "documentos": {
+    "CIE": 4,
+    "GEN": 3,
+    "ENS": 3
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Datos, citas o respuestas creados por IA que parecen verdaderos, pero no existen o son incorrectos.",
+   "evidencia": "puede producir respuestas plausibles pero incorrectas",
+   "cita": {
+    "documento": "Generales",
+    "pagina": 26
+   }
+  },
+  {
+   "id": "revision-por-pares",
+   "label": "Revisión por pares",
+   "peso": 6,
+   "documentos": {
+    "CIE": 6
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Evaluación de artículos o proyectos por especialistas. Los documentos recibidos suelen ser confidenciales y no deben compartirse con una IA sin autorización.",
+   "evidencia": "no deben cargarse en herramientas abiertas o no autorizadas documentos no publicados",
+   "cita": {
+    "documento": "Ciencia, Tecnología e Innovación",
+    "pagina": 39
+   }
+  },
+  {
+   "id": "consentimiento",
+   "label": "Consentimiento",
+   "peso": 5,
+   "documentos": {
+    "CIE": 3,
+    "ENS": 1,
+    "EXT": 1
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Autorización de una persona para participar en un estudio o para utilizar su información, según las condiciones explicadas. El uso de IA no elimina ese requisito.",
+   "evidencia": "El uso de IA no elimina las obligaciones de consentimiento informado",
+   "cita": {
+    "documento": "Ciencia, Tecnología e Innovación",
+    "pagina": 32
+   }
+  },
+  {
+   "id": "poblacion-vulnerable",
+   "label": "Población vulnerable",
+   "peso": 2,
+   "documentos": {
+    "CIE": 1,
+    "EXT": 1
+   },
+   "doc_principal": "CIE",
+   "descripcion": "Personas o grupos que pueden necesitar protección adicional, por ejemplo, menores de edad o pacientes. El uso de sus datos con IA requiere mayor cuidado.",
+   "evidencia": "En proyectos con comunidades, población vulnerable, pacientes, niños, empresas, entidades públicas o aliados estratégicos, el cuidado debe ser mayor",
+   "cita": {
+    "documento": "Extensión y Educación Continuada",
+    "pagina": 31
+   }
+  },
+  {
+   "id": "transferencia",
+   "label": "Transferencia",
+   "peso": 32,
+   "documentos": {
+    "EXT": 14,
+    "CIE": 13,
+    "GEN": 3,
+    "GES": 2
+   },
+   "doc_principal": "EXT",
+   "descripcion": "Proceso para que un conocimiento o tecnología pueda ser utilizado por terceros. La IA puede apoyar la búsqueda de oportunidades, pero se necesita revisión técnica y jurídica.",
+   "evidencia": "la transferencia exige precisión técnica, cuidado jurídico y claridad sobre la titularidad",
+   "cita": {
+    "documento": "Extensión y Educación Continuada",
+    "pagina": 29
+   }
+  },
+  {
+   "id": "comunidades",
+   "label": "Comunidades",
+   "peso": 25,
+   "documentos": {
+    "EXT": 12,
+    "CIE": 5,
+    "GEN": 4,
+    "ENS": 3,
+    "GES": 1
+   },
+   "doc_principal": "EXT",
+   "descripcion": "Grupos o poblaciones con los que la Universidad desarrolla actividades y proyectos. La IA puede ayudar a organizar información, sin reemplazar su participación.",
+   "evidencia": "La IA no debe reemplazar el diálogo con las comunidades.",
+   "cita": {
+    "documento": "Extensión y Educación Continuada",
+    "pagina": 24
+   }
+  },
+  {
+   "id": "entregables",
+   "label": "Entregables",
+   "peso": 22,
+   "documentos": {
+    "EXT": 10,
+    "CIE": 7,
+    "GEN": 5
+   },
+   "doc_principal": "EXT",
+   "descripcion": "Informes, diagnósticos u otros productos que la Universidad entrega a terceros. El equipo responsable debe revisarlos y aprobarlos antes de enviarlos.",
+   "evidencia": "La Universidad no debe entregar resultados basados exclusivamente en IA sin verificación técnica",
+   "cita": {
+    "documento": "Extensión y Educación Continuada",
+    "pagina": 26
+   }
+  },
+  {
+   "id": "reputacion",
+   "label": "Reputación",
+   "peso": 8,
+   "documentos": {
+    "EXT": 5,
+    "GES": 2,
+    "GEN": 1
+   },
+   "doc_principal": "EXT",
+   "descripcion": "Confianza y valoración pública de la Universidad. Los mensajes o imágenes elaborados con IA deben comprobarse antes de divulgarse.",
+   "evidencia": "cualquier contenido publicado por la Universidad puede afectar su reputación",
+   "cita": {
+    "documento": "Extensión y Educación Continuada",
+    "pagina": 33
+   }
+  },
+  {
+   "id": "datos-personales",
+   "label": "Datos personales",
+   "peso": 37,
+   "documentos": {
+    "GES": 10,
+    "GEN": 7,
+    "CIE": 7,
+    "EXT": 7,
+    "ENS": 6
+   },
+   "doc_principal": "GES",
+   "descripcion": "Información que permite identificar a una persona, como nombre, documento o teléfono. Solo debe utilizarse cuando sea necesaria y esté autorizado.",
+   "evidencia": "usar únicamente la información necesaria para la finalidad prevista",
+   "cita": {
+    "documento": "Generales",
+    "pagina": 26
+   }
+  },
+  {
+   "id": "proveedores",
+   "label": "Proveedores",
+   "peso": 24,
+   "documentos": {
+    "GES": 10,
+    "GEN": 6,
+    "CIE": 4,
+    "EXT": 3,
+    "ENS": 1
+   },
+   "doc_principal": "GES",
+   "descripcion": "Empresas que ofrecen herramientas de IA. Antes de utilizarlas, deben revisarse sus condiciones de seguridad, almacenamiento y uso de los datos.",
+   "evidencia": "el contrato no garantiza por sí mismo privacidad o propiedad sobre la información procesada",
+   "cita": {
+    "documento": "Gestión Institucional",
+    "pagina": 32
+   }
+  },
+  {
+   "id": "supervision-humana",
+   "label": "Supervisión humana",
+   "peso": 23,
+   "documentos": {
+    "GES": 6,
+    "GEN": 5,
+    "ENS": 4,
+    "CIE": 4,
+    "EXT": 4
+   },
+   "doc_principal": "GES",
+   "descripcion": "Una persona responsable revisa los resultados de IA y puede corregirlos o detener su uso cuando afectan decisiones o personas.",
+   "evidencia": "La supervisión humana se entiende como una condición del uso institucional de IA cuando hay efectos relevantes",
+   "cita": {
+    "documento": "Generales",
+    "pagina": 25
+   }
+  },
+  {
+   "id": "automatizacion",
+   "label": "Automatización",
+   "peso": 20,
+   "documentos": {
+    "GES": 9,
+    "GEN": 8,
+    "ENS": 1,
+    "CIE": 1,
+    "EXT": 1
+   },
+   "doc_principal": "GES",
+   "descripcion": "Uso de sistemas que realizan tareas repetitivas, como clasificar solicitudes. Las decisiones institucionales que requieren autorización siguen en manos de las personas responsables.",
+   "evidencia": "La diferencia entre apoyo y decisión debe mantenerse en todos los procesos.",
+   "cita": {
+    "documento": "Gestión Institucional",
+    "pagina": 11
+   }
+  },
+  {
+   "id": "herramientas-autorizadas",
+   "label": "Herramientas autorizadas",
+   "peso": 18,
+   "documentos": {
+    "GES": 8,
+    "EXT": 5,
+    "CIE": 4,
+    "GEN": 1
+   },
+   "doc_principal": "GES",
+   "descripcion": "Herramientas cuyo uso ha sido revisado o autorizado para determinadas tareas y datos. La Universidad puede establecer orientaciones o un catálogo al respecto.",
+   "evidencia": "La Universidad podrá definir un catálogo de herramientas autorizadas o recomendadas",
+   "cita": {
+    "documento": "Gestión Institucional",
+    "pagina": 33
+   }
+  },
+  {
+   "id": "anonimizacion",
+   "label": "Anonimización",
+   "peso": 7,
+   "documentos": {
+    "GES": 3,
+    "EXT": 2,
+    "ENS": 1,
+    "CIE": 1
+   },
+   "doc_principal": "GES",
+   "descripcion": "Modificar o retirar datos para dificultar la identificación de una persona. Debe comprobarse que no sea posible reconocerla al combinar la información con otras fuentes.",
+   "evidencia": "algunos conjuntos de datos pueden permitir la reidentificación si se combinan con otras fuentes",
+   "cita": {
+    "documento": "Ciencia, Tecnología e Innovación",
+    "pagina": 31
+   }
+  },
+  {
+   "id": "alto-riesgo",
+   "label": "Alto riesgo",
+   "peso": 4,
+   "documentos": {
+    "GES": 2,
+    "ENS": 1,
+    "CIE": 1
+   },
+   "doc_principal": "GES",
+   "descripcion": "Usos de IA que pueden afectar decisiones importantes sobre personas, como admisión, evaluación o empleo, y que requieren controles más cuidadosos.",
+   "evidencia": "El reglamento europeo de IA considera de alto riesgo varios usos educativos",
+   "cita": {
+    "documento": "Enseñanza-Aprendizaje",
+    "pagina": 14
+   }
+  },
+  {
+   "id": "auditoria",
+   "label": "Auditoría",
+   "peso": 2,
+   "documentos": {
+    "GES": 2
+   },
+   "doc_principal": "GES",
+   "descripcion": "Poder revisar qué información guardó una herramienta, cómo se utilizó y si puede consultarse, exportarse o eliminarse.",
+   "evidencia": "evitar que se consoliden repositorios externos no auditables",
+   "cita": {
+    "documento": "Gestión Institucional",
+    "pagina": 33
    }
   }
  ],
  "links": [
   {
-   "source": "formacion",
-   "target": "responsabilidad",
-   "peso": 53
-  },
-  {
-   "source": "decisiones",
-   "target": "formacion",
-   "peso": 52
-  },
-  {
-   "source": "formacion",
-   "target": "riesgo",
-   "peso": 49
-  },
-  {
-   "source": "formacion",
-   "target": "propiedad-intelectual",
-   "peso": 45
-  },
-  {
-   "source": "formacion",
-   "target": "terceros",
-   "peso": 42
-  },
-  {
-   "source": "confidencialidad",
-   "target": "formacion",
-   "peso": 41
-  },
-  {
-   "source": "evaluacion",
-   "target": "formacion",
-   "peso": 39
-  },
-  {
-   "source": "decisiones",
-   "target": "riesgo",
-   "peso": 36
-  },
-  {
-   "source": "datos-personales",
-   "target": "formacion",
-   "peso": 36
-  },
-  {
-   "source": "decisiones",
-   "target": "responsabilidad",
-   "peso": 35
-  },
-  {
-   "source": "responsabilidad",
-   "target": "riesgo",
-   "peso": 35
-  },
-  {
-   "source": "formacion",
-   "target": "trazabilidad",
-   "peso": 34
-  },
-  {
-   "source": "responsabilidad",
-   "target": "terceros",
-   "peso": 33
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "responsabilidad",
-   "peso": 32
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "terceros",
-   "peso": 32
-  },
-  {
-   "source": "formacion",
-   "target": "verificacion",
-   "peso": 31
-  },
-  {
-   "source": "confidencialidad",
-   "target": "responsabilidad",
-   "peso": 30
-  },
-  {
-   "source": "confidencialidad",
-   "target": "terceros",
-   "peso": 29
-  },
-  {
-   "source": "formacion",
-   "target": "transferencia",
-   "peso": 29
-  },
-  {
-   "source": "aprendizaje",
-   "target": "formacion",
-   "peso": 28
-  },
-  {
-   "source": "decisiones",
-   "target": "evaluacion",
-   "peso": 28
-  },
-  {
-   "source": "formacion",
-   "target": "prototipos",
-   "peso": 27
-  },
-  {
-   "source": "confidencialidad",
-   "target": "propiedad-intelectual",
-   "peso": 27
-  },
-  {
-   "source": "aprendizaje",
-   "target": "decisiones",
-   "peso": 26
-  },
-  {
-   "source": "riesgo",
-   "target": "terceros",
-   "peso": 26
-  },
-  {
-   "source": "etica",
-   "target": "formacion",
-   "peso": 26
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "riesgo",
-   "peso": 26
-  },
-  {
-   "source": "responsabilidad",
-   "target": "verificacion",
-   "peso": 26
-  },
-  {
-   "source": "calidad",
-   "target": "formacion",
-   "peso": 26
-  },
-  {
-   "source": "datos-personales",
-   "target": "propiedad-intelectual",
-   "peso": 26
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "formacion",
-   "peso": 26
-  },
-  {
-   "source": "formacion",
-   "target": "fuentes",
-   "peso": 26
-  },
-  {
-   "source": "decisiones",
-   "target": "terceros",
-   "peso": 25
-  },
-  {
-   "source": "responsabilidad",
-   "target": "trazabilidad",
-   "peso": 25
-  },
-  {
-   "source": "riesgo",
-   "target": "trazabilidad",
-   "peso": 25
-  },
-  {
-   "source": "evaluacion",
-   "target": "responsabilidad",
-   "peso": 25
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "transferencia",
-   "peso": 25
-  },
-  {
-   "source": "evaluacion",
-   "target": "riesgo",
-   "peso": 24
-  },
-  {
-   "source": "confidencialidad",
-   "target": "datos-personales",
-   "peso": 24
-  },
-  {
-   "source": "confidencialidad",
-   "target": "riesgo",
-   "peso": 24
-  },
-  {
-   "source": "decisiones",
-   "target": "propiedad-intelectual",
-   "peso": 23
-  },
-  {
-   "source": "decisiones",
-   "target": "trazabilidad",
-   "peso": 23
-  },
-  {
-   "source": "formacion",
-   "target": "supervision-humana",
-   "peso": 23
-  },
-  {
-   "source": "formacion",
-   "target": "proveedores",
-   "peso": 23
-  },
-  {
-   "source": "confidencialidad",
-   "target": "decisiones",
-   "peso": 23
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "responsabilidad",
-   "peso": 23
-  },
-  {
-   "source": "evaluacion",
-   "target": "propiedad-intelectual",
-   "peso": 23
-  },
-  {
-   "source": "responsabilidad",
-   "target": "transferencia",
-   "peso": 23
-  },
-  {
-   "source": "terceros",
-   "target": "transferencia",
-   "peso": 23
-  },
-  {
-   "source": "aprendizaje",
-   "target": "responsabilidad",
-   "peso": 22
-  },
-  {
-   "source": "comunidades",
-   "target": "formacion",
-   "peso": 22
-  },
-  {
-   "source": "evaluacion",
-   "target": "terceros",
-   "peso": 22
-  },
-  {
-   "source": "prototipos",
-   "target": "responsabilidad",
-   "peso": 22
-  },
-  {
-   "source": "datos-personales",
-   "target": "responsabilidad",
-   "peso": 22
-  },
-  {
-   "source": "datos-personales",
-   "target": "terceros",
-   "peso": 22
-  },
-  {
-   "source": "aprendizaje",
-   "target": "riesgo",
-   "peso": 21
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "trazabilidad",
-   "peso": 21
-  },
-  {
-   "source": "datos-personales",
-   "target": "datos-sensibles",
-   "peso": 21
-  },
-  {
-   "source": "datos-personales",
-   "target": "decisiones",
-   "peso": 21
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "formacion",
-   "peso": 21
-  },
-  {
-   "source": "entregables",
-   "target": "formacion",
-   "peso": 21
-  },
-  {
-   "source": "decisiones",
-   "target": "supervision-humana",
-   "peso": 20
-  },
-  {
-   "source": "proveedores",
-   "target": "riesgo",
-   "peso": 20
-  },
-  {
-   "source": "entregables",
-   "target": "responsabilidad",
-   "peso": 20
-  },
-  {
-   "source": "riesgo",
-   "target": "transferencia",
-   "peso": 20
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "prototipos",
-   "peso": 20
-  },
-  {
-   "source": "etica",
-   "target": "responsabilidad",
-   "peso": 19
-  },
-  {
-   "source": "etica",
-   "target": "propiedad-intelectual",
-   "peso": 19
-  },
-  {
-   "source": "formacion",
-   "target": "transparencia",
-   "peso": 19
-  },
-  {
-   "source": "automatizacion",
-   "target": "formacion",
-   "peso": 19
-  },
-  {
-   "source": "formacion",
-   "target": "ia-generativa",
-   "peso": 19
-  },
-  {
-   "source": "ia-generativa",
-   "target": "responsabilidad",
-   "peso": 19
-  },
-  {
-   "source": "calidad",
-   "target": "riesgo",
-   "peso": 19
-  },
-  {
-   "source": "confidencialidad",
-   "target": "evaluacion",
-   "peso": 19
-  },
-  {
-   "source": "confidencialidad",
-   "target": "transferencia",
-   "peso": 19
-  },
-  {
-   "source": "datos-personales",
-   "target": "riesgo",
-   "peso": 19
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "propiedad-intelectual",
-   "peso": 19
-  },
-  {
-   "source": "terceros",
-   "target": "trazabilidad",
-   "peso": 19
-  },
-  {
-   "source": "fuentes",
-   "target": "responsabilidad",
-   "peso": 19
-  },
-  {
-   "source": "prototipos",
-   "target": "publicacion",
-   "peso": 18
-  },
-  {
-   "source": "aprendizaje",
-   "target": "evaluacion",
-   "peso": 18
-  },
-  {
-   "source": "automatizacion",
-   "target": "decisiones",
-   "peso": 18
-  },
-  {
-   "source": "evaluacion",
-   "target": "verificacion",
-   "peso": 18
-  },
-  {
-   "source": "prototipos",
-   "target": "terceros",
-   "peso": 18
-  },
-  {
-   "source": "riesgo",
-   "target": "verificacion",
-   "peso": 18
-  },
-  {
-   "source": "calidad",
-   "target": "responsabilidad",
-   "peso": 18
-  },
-  {
-   "source": "confidencialidad",
-   "target": "datos-sensibles",
-   "peso": 18
-  },
-  {
-   "source": "confidencialidad",
-   "target": "trazabilidad",
-   "peso": 18
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "propiedad-intelectual",
-   "peso": 18
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "terceros",
-   "peso": 18
-  },
-  {
-   "source": "decisiones",
-   "target": "declaracion-de-uso",
-   "peso": 18
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "evaluacion",
-   "peso": 18
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "terceros",
-   "peso": 18
-  },
-  {
-   "source": "confidencialidad",
-   "target": "prototipos",
-   "peso": 18
-  },
-  {
-   "source": "fuentes",
-   "target": "verificacion",
-   "peso": 18
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "formacion",
-   "peso": 18
-  },
-  {
-   "source": "decisiones",
-   "target": "etica",
-   "peso": 17
-  },
-  {
-   "source": "etica",
-   "target": "riesgo",
-   "peso": 17
-  },
-  {
-   "source": "responsabilidad",
-   "target": "transparencia",
-   "peso": 17
-  },
-  {
-   "source": "automatizacion",
-   "target": "riesgo",
-   "peso": 17
-  },
-  {
-   "source": "decisiones",
-   "target": "verificacion",
-   "peso": 17
-  },
-  {
-   "source": "ia-generativa",
-   "target": "riesgo",
-   "peso": 17
-  },
-  {
-   "source": "prototipos",
-   "target": "riesgo",
-   "peso": 17
-  },
-  {
-   "source": "terceros",
-   "target": "verificacion",
-   "peso": 17
-  },
-  {
-   "source": "entregables",
-   "target": "terceros",
-   "peso": 17
-  },
-  {
-   "source": "evaluacion",
-   "target": "trazabilidad",
-   "peso": 17
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "publicacion",
-   "peso": 17
-  },
-  {
-   "source": "prototipos",
-   "target": "transferencia",
-   "peso": 17
-  },
-  {
-   "source": "formacion",
-   "target": "herramientas-autorizadas",
-   "peso": 17
-  },
-  {
-   "source": "comunidades",
-   "target": "decisiones",
-   "peso": 16
-  },
-  {
-   "source": "formacion",
-   "target": "seguridad-informacion",
-   "peso": 16
-  },
-  {
-   "source": "decisiones",
-   "target": "prototipos",
-   "peso": 16
-  },
-  {
-   "source": "calidad",
-   "target": "decisiones",
-   "peso": 16
-  },
-  {
-   "source": "calidad",
-   "target": "terceros",
-   "peso": 16
-  },
-  {
-   "source": "datos-personales",
-   "target": "evaluacion",
-   "peso": 16
-  },
-  {
-   "source": "decisiones",
-   "target": "transferencia",
-   "peso": 16
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "riesgo",
-   "peso": 16
-  },
-  {
-   "source": "formacion",
-   "target": "publicacion",
-   "peso": 16
-  },
-  {
-   "source": "etica",
-   "target": "prototipos",
-   "peso": 16
-  },
-  {
-   "source": "confidencialidad",
-   "target": "verificacion",
-   "peso": 16
-  },
-  {
-   "source": "comunidades",
-   "target": "terceros",
-   "peso": 15
-  },
-  {
-   "source": "formacion",
-   "target": "sesgos",
-   "peso": 15
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "transparencia",
-   "peso": 15
-  },
-  {
-   "source": "decisiones",
-   "target": "proveedores",
-   "peso": 15
-  },
-  {
-   "source": "evaluacion",
-   "target": "prototipos",
-   "peso": 15
-  },
-  {
-   "source": "proveedores",
-   "target": "responsabilidad",
-   "peso": 15
-  },
-  {
-   "source": "calidad",
-   "target": "propiedad-intelectual",
-   "peso": 15
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "trazabilidad",
-   "peso": 15
-  },
-  {
-   "source": "entregables",
-   "target": "propiedad-intelectual",
-   "peso": 15
-  },
-  {
-   "source": "ia-generativa",
-   "target": "propiedad-intelectual",
-   "peso": 15
-  },
-  {
-   "source": "publicacion",
-   "target": "responsabilidad",
-   "peso": 15
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "verificacion",
-   "peso": 15
-  },
-  {
-   "source": "prototipos",
-   "target": "trazabilidad",
-   "peso": 15
-  },
-  {
-   "source": "aprendizaje",
-   "target": "terceros",
-   "peso": 14
-  },
-  {
-   "source": "comision",
-   "target": "decisiones",
-   "peso": 14
-  },
-  {
-   "source": "decisiones",
-   "target": "ia-generativa",
-   "peso": 14
-  },
-  {
-   "source": "prototipos",
-   "target": "verificacion",
-   "peso": 14
-  },
-  {
-   "source": "aprendizaje",
-   "target": "declaracion-de-uso",
-   "peso": 14
-  },
-  {
-   "source": "calidad",
-   "target": "confidencialidad",
-   "peso": 14
-  },
-  {
-   "source": "calidad",
-   "target": "transferencia",
-   "peso": 14
-  },
-  {
-   "source": "confidencialidad",
-   "target": "declaracion-de-uso",
-   "peso": 14
-  },
-  {
-   "source": "confidencialidad",
-   "target": "entregables",
-   "peso": 14
-  },
-  {
-   "source": "datos-personales",
-   "target": "transferencia",
-   "peso": 14
-  },
-  {
-   "source": "entregables",
-   "target": "transferencia",
-   "peso": 14
-  },
-  {
-   "source": "transferencia",
-   "target": "trazabilidad",
-   "peso": 14
-  },
-  {
-   "source": "confidencialidad",
-   "target": "etica",
-   "peso": 14
-  },
-  {
-   "source": "datos-personales",
-   "target": "etica",
-   "peso": 14
-  },
-  {
-   "source": "fuentes",
-   "target": "trazabilidad",
-   "peso": 14
-  },
-  {
-   "source": "comunidades",
-   "target": "propiedad-intelectual",
-   "peso": 14
-  },
-  {
-   "source": "evaluacion",
-   "target": "fuentes",
-   "peso": 14
-  },
-  {
-   "source": "fuentes",
-   "target": "propiedad-intelectual",
-   "peso": 14
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "datos-personales",
-   "peso": 14
-  },
-  {
-   "source": "calidad",
-   "target": "prototipos",
-   "peso": 13
-  },
-  {
-   "source": "comunidades",
-   "target": "responsabilidad",
-   "peso": 13
-  },
-  {
-   "source": "comision",
-   "target": "formacion",
-   "peso": 13
-  },
-  {
-   "source": "autoria",
-   "target": "responsabilidad",
-   "peso": 13
-  },
-  {
-   "source": "formacion",
-   "target": "privacidad",
-   "peso": 13
-  },
-  {
-   "source": "responsabilidad",
-   "target": "supervision-humana",
-   "peso": 13
-  },
-  {
-   "source": "riesgo",
-   "target": "supervision-humana",
-   "peso": 13
-  },
-  {
-   "source": "evaluacion",
-   "target": "proveedores",
-   "peso": 13
-  },
-  {
-   "source": "proveedores",
-   "target": "terceros",
-   "peso": 13
-  },
-  {
-   "source": "calidad",
-   "target": "evaluacion",
-   "peso": 13
-  },
-  {
-   "source": "calidad",
-   "target": "trazabilidad",
-   "peso": 13
-  },
-  {
-   "source": "datos-personales",
-   "target": "declaracion-de-uso",
-   "peso": 13
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "decisiones",
-   "peso": 13
-  },
-  {
-   "source": "proveedores",
-   "target": "trazabilidad",
-   "peso": 13
-  },
-  {
-   "source": "publicacion",
-   "target": "terceros",
-   "peso": 13
-  },
-  {
-   "source": "etica",
-   "target": "evaluacion",
-   "peso": 13
-  },
-  {
-   "source": "etica",
-   "target": "transferencia",
-   "peso": 13
-  },
-  {
-   "source": "etica",
-   "target": "publicacion",
-   "peso": 13
-  },
-  {
-   "source": "datos-personales",
-   "target": "verificacion",
-   "peso": 13
-  },
-  {
-   "source": "trazabilidad",
-   "target": "verificacion",
-   "peso": 13
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "verificacion",
-   "peso": 13
-  },
-  {
-   "source": "comunidades",
-   "target": "datos-personales",
-   "peso": 13
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "fuentes",
-   "peso": 13
-  },
-  {
-   "source": "confidencialidad",
-   "target": "datos-clinicos",
-   "peso": 13
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "datos-sensibles",
-   "peso": 13
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "propiedad-intelectual",
-   "peso": 13
-  },
-  {
-   "source": "comunidades",
-   "target": "transferencia",
-   "peso": 13
-  },
-  {
-   "source": "calidad",
-   "target": "publicacion",
-   "peso": 12
-  },
-  {
-   "source": "comunidades",
-   "target": "riesgo",
-   "peso": 12
-  },
-  {
-   "source": "autoria",
-   "target": "formacion",
-   "peso": 12
-  },
-  {
-   "source": "etica",
-   "target": "trazabilidad",
-   "peso": 12
-  },
-  {
-   "source": "riesgo",
-   "target": "seguridad-informacion",
-   "peso": 12
-  },
-  {
-   "source": "supervision-humana",
-   "target": "trazabilidad",
-   "peso": 12
-  },
-  {
-   "source": "evaluacion",
-   "target": "ia-generativa",
-   "peso": 12
-  },
-  {
-   "source": "ia-generativa",
-   "target": "terceros",
-   "peso": 12
-  },
-  {
-   "source": "ia-generativa",
-   "target": "verificacion",
-   "peso": 12
-  },
-  {
-   "source": "aprendizaje",
-   "target": "propiedad-intelectual",
-   "peso": 12
-  },
-  {
-   "source": "confidencialidad",
-   "target": "proveedores",
-   "peso": 12
-  },
-  {
-   "source": "confidencialidad",
-   "target": "seguridad-informacion",
-   "peso": 12
-  },
-  {
-   "source": "datos-personales",
-   "target": "trazabilidad",
-   "peso": 12
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "evaluacion",
-   "peso": 12
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "responsabilidad",
-   "peso": 12
-  },
-  {
-   "source": "entregables",
-   "target": "riesgo",
-   "peso": 12
-  },
-  {
-   "source": "evaluacion",
-   "target": "transferencia",
-   "peso": 12
-  },
-  {
-   "source": "publicacion",
-   "target": "transferencia",
-   "peso": 12
-  },
-  {
-   "source": "etica",
-   "target": "verificacion",
-   "peso": 12
-  },
-  {
-   "source": "fuentes",
-   "target": "terceros",
-   "peso": 12
-  },
-  {
-   "source": "comision",
-   "target": "responsabilidad",
-   "peso": 12
-  },
-  {
-   "source": "comision",
-   "target": "declaracion-de-uso",
-   "peso": 12
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "decisiones",
-   "peso": 12
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "evaluacion",
-   "peso": 12
-  },
-  {
-   "source": "fuentes",
-   "target": "riesgo",
-   "peso": 12
-  },
-  {
-   "source": "comunidades",
-   "target": "confidencialidad",
-   "peso": 12
-  },
-  {
-   "source": "confidencialidad",
-   "target": "herramientas-autorizadas",
-   "peso": 12
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "responsabilidad",
-   "peso": 12
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "terceros",
-   "peso": 12
-  },
-  {
-   "source": "etica",
-   "target": "terceros",
-   "peso": 11
-  },
-  {
-   "source": "autoria",
-   "target": "propiedad-intelectual",
-   "peso": 11
-  },
-  {
-   "source": "decisiones",
-   "target": "transparencia",
-   "peso": 11
-  },
-  {
-   "source": "privacidad",
-   "target": "responsabilidad",
-   "peso": 11
-  },
-  {
-   "source": "responsabilidad",
-   "target": "seguridad-informacion",
-   "peso": 11
-  },
-  {
-   "source": "transparencia",
-   "target": "trazabilidad",
-   "peso": 11
-  },
-  {
-   "source": "aprendizaje",
-   "target": "verificacion",
-   "peso": 11
-  },
-  {
-   "source": "automatizacion",
-   "target": "proveedores",
-   "peso": 11
-  },
-  {
-   "source": "evaluacion",
-   "target": "supervision-humana",
-   "peso": 11
-  },
-  {
-   "source": "ia-generativa",
-   "target": "prototipos",
-   "peso": 11
-  },
-  {
-   "source": "automatizacion",
-   "target": "trazabilidad",
-   "peso": 11
-  },
-  {
-   "source": "decisiones",
-   "target": "entregables",
-   "peso": 11
-  },
-  {
-   "source": "ia-generativa",
-   "target": "trazabilidad",
-   "peso": 11
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "proveedores",
-   "peso": 11
-  },
-  {
-   "source": "publicacion",
-   "target": "trazabilidad",
-   "peso": 11
-  },
-  {
-   "source": "decisiones",
-   "target": "herramientas-autorizadas",
-   "peso": 11
-  },
-  {
-   "source": "comision",
-   "target": "riesgo",
-   "peso": 11
-  },
-  {
-   "source": "publicacion",
-   "target": "verificacion",
-   "peso": 11
-  },
-  {
-   "source": "fuentes",
-   "target": "prototipos",
-   "peso": 11
-  },
-  {
-   "source": "confidencialidad",
-   "target": "fuentes",
-   "peso": 11
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "prototipos",
-   "peso": 11
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "terceros",
-   "peso": 11
-  },
-  {
-   "source": "transferencia",
-   "target": "verificacion",
-   "peso": 11
-  },
-  {
-   "source": "datos-personales",
-   "target": "herramientas-autorizadas",
-   "peso": 11
-  },
-  {
-   "source": "aprendizaje",
-   "target": "etica",
-   "peso": 10
-  },
-  {
-   "source": "autoria",
-   "target": "decisiones",
-   "peso": 10
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "seguridad-informacion",
-   "peso": 10
-  },
-  {
-   "source": "riesgo",
-   "target": "sesgos",
-   "peso": 10
-  },
-  {
-   "source": "aprendizaje",
-   "target": "prototipos",
-   "peso": 10
-  },
-  {
-   "source": "automatizacion",
-   "target": "evaluacion",
-   "peso": 10
-  },
-  {
-   "source": "automatizacion",
-   "target": "terceros",
-   "peso": 10
-  },
-  {
-   "source": "supervision-humana",
-   "target": "terceros",
-   "peso": 10
-  },
-  {
-   "source": "aprendizaje",
-   "target": "calidad",
-   "peso": 10
-  },
-  {
-   "source": "aprendizaje",
-   "target": "trazabilidad",
-   "peso": 10
-  },
-  {
-   "source": "automatizacion",
-   "target": "confidencialidad",
-   "peso": 10
-  },
-  {
-   "source": "automatizacion",
-   "target": "datos-personales",
-   "peso": 10
-  },
-  {
-   "source": "confidencialidad",
-   "target": "ia-generativa",
-   "peso": 10
-  },
-  {
-   "source": "confidencialidad",
-   "target": "publicacion",
-   "peso": 10
-  },
-  {
-   "source": "confidencialidad",
-   "target": "supervision-humana",
-   "peso": 10
-  },
-  {
-   "source": "confidencialidad",
-   "target": "transparencia",
-   "peso": 10
-  },
-  {
-   "source": "datos-personales",
-   "target": "proveedores",
-   "peso": 10
-  },
-  {
-   "source": "datos-personales",
-   "target": "seguridad-informacion",
-   "peso": 10
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "declaracion-de-uso",
-   "peso": 10
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "riesgo",
-   "peso": 10
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "transferencia",
-   "peso": 10
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "publicacion",
-   "peso": 10
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "transferencia",
-   "peso": 10
-  },
-  {
-   "source": "evaluacion",
-   "target": "publicacion",
-   "peso": 10
-  },
-  {
-   "source": "formacion",
-   "target": "integridad-cientifica",
-   "peso": 10
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "propiedad-intelectual",
-   "peso": 10
-  },
-  {
-   "source": "seguridad-informacion",
-   "target": "terceros",
-   "peso": 10
-  },
-  {
-   "source": "terceros",
-   "target": "transparencia",
-   "peso": 10
-  },
-  {
-   "source": "confidencialidad",
-   "target": "privacidad",
-   "peso": 10
-  },
-  {
-   "source": "datos-personales",
-   "target": "prototipos",
-   "peso": 10
-  },
-  {
-   "source": "sesgos",
-   "target": "verificacion",
-   "peso": 10
-  },
-  {
-   "source": "entregables",
-   "target": "verificacion",
-   "peso": 10
-  },
-  {
-   "source": "decisiones",
-   "target": "fuentes",
-   "peso": 10
-  },
-  {
-   "source": "fuentes",
-   "target": "ia-generativa",
-   "peso": 10
-  },
-  {
-   "source": "entregables",
-   "target": "prototipos",
-   "peso": 10
-  },
-  {
-   "source": "aprendizaje",
-   "target": "competencias",
-   "peso": 10
-  },
-  {
-   "source": "competencias",
-   "target": "evaluacion",
-   "peso": 10
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "declaracion-de-uso",
-   "peso": 10
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "responsabilidad",
-   "peso": 10
-  },
-  {
-   "source": "comunidades",
-   "target": "entregables",
-   "peso": 10
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "propiedad-intelectual",
-   "peso": 10
-  },
-  {
-   "source": "aprendizaje",
-   "target": "comunidades",
-   "peso": 9
-  },
-  {
-   "source": "comunidades",
-   "target": "etica",
-   "peso": 9
-  },
-  {
-   "source": "decisiones",
-   "target": "sesgos",
-   "peso": 9
-  },
-  {
-   "source": "etica",
-   "target": "transparencia",
-   "peso": 9
-  },
-  {
-   "source": "formacion",
-   "target": "inclusion",
-   "peso": 9
-  },
-  {
-   "source": "integridad-academica",
-   "target": "responsabilidad",
-   "peso": 9
-  },
-  {
-   "source": "privacidad",
-   "target": "propiedad-intelectual",
-   "peso": 9
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "supervision-humana",
-   "peso": 9
-  },
-  {
-   "source": "seguridad-informacion",
-   "target": "trazabilidad",
-   "peso": 9
-  },
-  {
-   "source": "aprendizaje",
-   "target": "ia-generativa",
-   "peso": 9
-  },
-  {
-   "source": "automatizacion",
-   "target": "responsabilidad",
-   "peso": 9
-  },
-  {
-   "source": "autoria",
-   "target": "confidencialidad",
-   "peso": 9
-  },
-  {
-   "source": "autoria",
-   "target": "evaluacion",
-   "peso": 9
-  },
-  {
-   "source": "autoria",
-   "target": "terceros",
-   "peso": 9
-  },
-  {
-   "source": "calidad",
-   "target": "datos-personales",
-   "peso": 9
-  },
-  {
-   "source": "calidad",
-   "target": "declaracion-de-uso",
-   "peso": 9
-  },
-  {
-   "source": "calidad",
-   "target": "ia-generativa",
-   "peso": 9
-  },
-  {
-   "source": "calidad",
-   "target": "proveedores",
-   "peso": 9
-  },
-  {
-   "source": "datos-personales",
-   "target": "publicacion",
-   "peso": 9
-  },
-  {
-   "source": "datos-personales",
-   "target": "transparencia",
-   "peso": 9
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "trazabilidad",
-   "peso": 9
-  },
-  {
-   "source": "decisiones",
-   "target": "integridad-cientifica",
-   "peso": 9
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "ia-generativa",
-   "peso": 9
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "transparencia",
-   "peso": 9
-  },
-  {
-   "source": "entregables",
-   "target": "ia-generativa",
-   "peso": 9
-  },
-  {
-   "source": "entregables",
-   "target": "trazabilidad",
-   "peso": 9
-  },
-  {
-   "source": "evaluacion",
-   "target": "integridad-cientifica",
-   "peso": 9
-  },
-  {
-   "source": "ia-generativa",
-   "target": "transferencia",
-   "peso": 9
-  },
-  {
-   "source": "proveedores",
-   "target": "seguridad-informacion",
-   "peso": 9
-  },
-  {
-   "source": "proveedores",
-   "target": "transferencia",
-   "peso": 9
-  },
-  {
-   "source": "prototipos",
-   "target": "transparencia",
-   "peso": 9
-  },
-  {
-   "source": "aprendizaje",
-   "target": "fuentes",
-   "peso": 9
-  },
-  {
-   "source": "fuentes",
-   "target": "transparencia",
-   "peso": 9
-  },
-  {
-   "source": "comision",
-   "target": "proveedores",
-   "peso": 9
-  },
-  {
-   "source": "comision",
-   "target": "propiedad-intelectual",
-   "peso": 9
-  },
-  {
-   "source": "citas",
-   "target": "formacion",
-   "peso": 9
-  },
-  {
-   "source": "fuentes",
-   "target": "publicacion",
-   "peso": 9
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "riesgo",
-   "peso": 9
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "trazabilidad",
-   "peso": 9
-  },
-  {
-   "source": "comunidades",
-   "target": "datos-sensibles",
-   "peso": 9
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "etica",
-   "peso": 9
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "herramientas-autorizadas",
-   "peso": 9
-  },
-  {
-   "source": "autoria",
-   "target": "transparencia",
-   "peso": 8
-  },
-  {
-   "source": "decisiones",
-   "target": "seguridad-informacion",
-   "peso": 8
-  },
-  {
-   "source": "formacion",
-   "target": "integridad-academica",
-   "peso": 8
-  },
-  {
-   "source": "integridad-academica",
-   "target": "riesgo",
-   "peso": 8
-  },
-  {
-   "source": "privacidad",
-   "target": "riesgo",
-   "peso": 8
-  },
-  {
-   "source": "privacidad",
-   "target": "seguridad-informacion",
-   "peso": 8
-  },
-  {
-   "source": "riesgo",
-   "target": "transparencia",
-   "peso": 8
-  },
-  {
-   "source": "sesgos",
-   "target": "trazabilidad",
-   "peso": 8
-  },
-  {
-   "source": "alucinaciones",
-   "target": "evaluacion",
-   "peso": 8
-  },
-  {
-   "source": "alucinaciones",
-   "target": "formacion",
-   "peso": 8
-  },
-  {
-   "source": "alucinaciones",
-   "target": "responsabilidad",
-   "peso": 8
-  },
-  {
-   "source": "alucinaciones",
-   "target": "terceros",
-   "peso": 8
-  },
-  {
-   "source": "alucinaciones",
-   "target": "verificacion",
-   "peso": 8
-  },
-  {
-   "source": "proveedores",
-   "target": "verificacion",
-   "peso": 8
-  },
-  {
-   "source": "supervision-humana",
-   "target": "verificacion",
-   "peso": 8
-  },
-  {
-   "source": "aprendizaje",
-   "target": "confidencialidad",
-   "peso": 8
-  },
-  {
-   "source": "aprendizaje",
-   "target": "datos-personales",
-   "peso": 8
-  },
-  {
-   "source": "aprendizaje",
-   "target": "transferencia",
-   "peso": 8
-  },
-  {
-   "source": "automatizacion",
-   "target": "datos-sensibles",
-   "peso": 8
-  },
-  {
-   "source": "autoria",
-   "target": "declaracion-de-uso",
-   "peso": 8
-  },
-  {
-   "source": "calidad",
-   "target": "datos-sensibles",
-   "peso": 8
-  },
-  {
-   "source": "confidencialidad",
-   "target": "integridad-cientifica",
-   "peso": 8
-  },
-  {
-   "source": "datos-personales",
-   "target": "entregables",
-   "peso": 8
-  },
-  {
-   "source": "datos-personales",
-   "target": "ia-generativa",
-   "peso": 8
-  },
-  {
-   "source": "datos-personales",
-   "target": "supervision-humana",
-   "peso": 8
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "proveedores",
-   "peso": 8
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "seguridad-informacion",
-   "peso": 8
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "proveedores",
-   "peso": 8
-  },
-  {
-   "source": "evaluacion",
-   "target": "transparencia",
-   "peso": 8
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "responsabilidad",
-   "peso": 8
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "terceros",
-   "peso": 8
-  },
-  {
-   "source": "publicacion",
-   "target": "riesgo",
-   "peso": 8
-  },
-  {
-   "source": "calidad",
-   "target": "etica",
-   "peso": 8
-  },
-  {
-   "source": "datos-personales",
-   "target": "privacidad",
-   "peso": 8
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "etica",
-   "peso": 8
-  },
-  {
-   "source": "etica",
-   "target": "ia-generativa",
-   "peso": 8
-  },
-  {
-   "source": "transparencia",
-   "target": "verificacion",
-   "peso": 8
-  },
-  {
-   "source": "fuentes",
-   "target": "supervision-humana",
-   "peso": 8
-  },
-  {
-   "source": "comision",
-   "target": "evaluacion",
-   "peso": 8
-  },
-  {
-   "source": "competencias",
-   "target": "decisiones",
-   "peso": 8
-  },
-  {
-   "source": "comunidades",
-   "target": "evaluacion",
-   "peso": 8
-  },
-  {
-   "source": "competencias",
-   "target": "formacion",
-   "peso": 8
-  },
-  {
-   "source": "calidad",
-   "target": "fuentes",
-   "peso": 8
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "verificacion",
-   "peso": 8
-  },
-  {
-   "source": "datos-personales",
-   "target": "fuentes",
-   "peso": 8
-  },
-  {
-   "source": "comision",
-   "target": "confidencialidad",
-   "peso": 8
-  },
-  {
-   "source": "fuentes",
-   "target": "transferencia",
-   "peso": 8
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "prototipos",
-   "peso": 8
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "verificacion",
-   "peso": 8
-  },
-  {
-   "source": "comision",
-   "target": "etica",
-   "peso": 7
-  },
-  {
-   "source": "decisiones",
-   "target": "integridad-academica",
-   "peso": 7
-  },
-  {
-   "source": "decisiones",
-   "target": "privacidad",
-   "peso": 7
-  },
-  {
-   "source": "etica",
-   "target": "sesgos",
-   "peso": 7
-  },
-  {
-   "source": "etica",
-   "target": "supervision-humana",
-   "peso": 7
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "sesgos",
-   "peso": 7
-  },
-  {
-   "source": "supervision-humana",
-   "target": "transparencia",
-   "peso": 7
-  },
-  {
-   "source": "aprendizaje",
-   "target": "integridad-academica",
-   "peso": 7
-  },
-  {
-   "source": "aprendizaje",
-   "target": "supervision-humana",
-   "peso": 7
-  },
-  {
-   "source": "automatizacion",
-   "target": "supervision-humana",
-   "peso": 7
-  },
-  {
-   "source": "ia-generativa",
-   "target": "supervision-humana",
-   "peso": 7
-  },
-  {
-   "source": "prototipos",
-   "target": "supervision-humana",
-   "peso": 7
-  },
-  {
-   "source": "alucinaciones",
-   "target": "declaracion-de-uso",
-   "peso": 7
-  },
-  {
-   "source": "automatizacion",
-   "target": "calidad",
-   "peso": 7
-  },
-  {
-   "source": "automatizacion",
-   "target": "propiedad-intelectual",
-   "peso": 7
-  },
-  {
-   "source": "autoria",
-   "target": "datos-personales",
-   "peso": 7
-  },
-  {
-   "source": "autoria",
-   "target": "publicacion",
-   "peso": 7
-  },
-  {
-   "source": "calidad",
-   "target": "entregables",
-   "peso": 7
-  },
-  {
-   "source": "calidad",
-   "target": "integridad-cientifica",
-   "peso": 7
-  },
-  {
-   "source": "calidad",
-   "target": "supervision-humana",
-   "peso": 7
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "publicacion",
-   "peso": 7
-  },
-  {
-   "source": "decisiones",
-   "target": "publicacion",
-   "peso": 7
-  },
-  {
-   "source": "evaluacion",
-   "target": "seguridad-informacion",
-   "peso": 7
-  },
-  {
-   "source": "formacion",
-   "target": "reputacion",
-   "peso": 7
-  },
-  {
-   "source": "ia-generativa",
-   "target": "publicacion",
-   "peso": 7
-  },
-  {
-   "source": "ia-generativa",
-   "target": "transparencia",
-   "peso": 7
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "transferencia",
-   "peso": 7
-  },
-  {
-   "source": "publicacion",
-   "target": "transparencia",
-   "peso": 7
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "prototipos",
-   "peso": 7
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "riesgo",
-   "peso": 7
-  },
-  {
-   "source": "alucinaciones",
-   "target": "fuentes",
-   "peso": 7
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "etica",
-   "peso": 7
-  },
-  {
-   "source": "autoria",
-   "target": "verificacion",
-   "peso": 7
-  },
-  {
-   "source": "calidad",
-   "target": "verificacion",
-   "peso": 7
-  },
-  {
-   "source": "citas",
-   "target": "verificacion",
-   "peso": 7
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "fuentes",
-   "peso": 7
-  },
-  {
-   "source": "evaluacion",
-   "target": "sesgos",
-   "peso": 7
-  },
-  {
-   "source": "citas",
-   "target": "responsabilidad",
-   "peso": 7
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "verificacion",
-   "peso": 7
-  },
-  {
-   "source": "etica",
-   "target": "fuentes",
-   "peso": 7
-  },
-  {
-   "source": "anonimizacion",
-   "target": "formacion",
-   "peso": 7
-  },
-  {
-   "source": "calidad",
-   "target": "comision",
-   "peso": 7
-  },
-  {
-   "source": "calidad",
-   "target": "comunidades",
-   "peso": 7
-  },
-  {
-   "source": "comision",
-   "target": "trazabilidad",
-   "peso": 7
-  },
-  {
-   "source": "comunidades",
-   "target": "datos-clinicos",
-   "peso": 7
-  },
-  {
-   "source": "autoria",
-   "target": "prototipos",
-   "peso": 7
-  },
-  {
-   "source": "comision",
-   "target": "transferencia",
-   "peso": 7
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "publicacion",
-   "peso": 7
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "transferencia",
-   "peso": 7
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "transferencia",
-   "peso": 7
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "trazabilidad",
-   "peso": 7
-  },
-  {
-   "source": "aprendizaje",
-   "target": "comision",
-   "peso": 6
-  },
-  {
-   "source": "autoria",
-   "target": "etica",
-   "peso": 6
-  },
-  {
-   "source": "autoria",
-   "target": "riesgo",
-   "peso": 6
-  },
-  {
-   "source": "autoria",
-   "target": "trazabilidad",
-   "peso": 6
-  },
-  {
-   "source": "decisiones",
-   "target": "inclusion",
-   "peso": 6
-  },
-  {
-   "source": "responsabilidad",
-   "target": "sesgos",
-   "peso": 6
-  },
-  {
-   "source": "sesgos",
-   "target": "supervision-humana",
-   "peso": 6
-  },
-  {
-   "source": "alucinaciones",
-   "target": "aprendizaje",
-   "peso": 6
-  },
-  {
-   "source": "alucinaciones",
-   "target": "decisiones",
-   "peso": 6
-  },
-  {
-   "source": "aprendizaje",
-   "target": "automatizacion",
-   "peso": 6
-  },
-  {
-   "source": "aprendizaje",
-   "target": "proveedores",
-   "peso": 6
-  },
-  {
+   "id": "R-001",
    "source": "automatizacion",
    "target": "ia-generativa",
-   "peso": 6
+   "peso": 1,
+   "explicacion": "La IA también puede clasificar solicitudes aunque no genere textos o imágenes.",
+   "preguntas": [
+    "GEN-001"
+   ]
   },
   {
-   "source": "evaluacion",
-   "target": "integridad-academica",
-   "peso": 6
-  },
-  {
-   "source": "aprendizaje",
-   "target": "entregables",
-   "peso": 6
-  },
-  {
-   "source": "automatizacion",
-   "target": "seguridad-informacion",
-   "peso": 6
-  },
-  {
-   "source": "autoria",
-   "target": "datos-sensibles",
-   "peso": 6
-  },
-  {
-   "source": "autoria",
-   "target": "ia-generativa",
-   "peso": 6
-  },
-  {
-   "source": "datos-personales",
-   "target": "reputacion",
-   "peso": 6
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "entregables",
-   "peso": 6
-  },
-  {
-   "source": "decisiones",
-   "target": "reputacion",
-   "peso": 6
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "entregables",
-   "peso": 6
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "integridad-cientifica",
-   "peso": 6
-  },
-  {
-   "source": "entregables",
-   "target": "evaluacion",
-   "peso": 6
-  },
-  {
-   "source": "entregables",
-   "target": "publicacion",
-   "peso": 6
-  },
-  {
-   "source": "entregables",
-   "target": "transparencia",
-   "peso": 6
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "publicacion",
-   "peso": 6
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "riesgo",
-   "peso": 6
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "trazabilidad",
-   "peso": 6
-  },
-  {
-   "source": "reputacion",
-   "target": "terceros",
-   "peso": 6
-  },
-  {
-   "source": "supervision-humana",
-   "target": "transferencia",
-   "peso": 6
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "prototipos",
-   "peso": 6
-  },
-  {
-   "source": "etica",
-   "target": "integridad-cientifica",
-   "peso": 6
-  },
-  {
-   "source": "evaluacion",
-   "target": "privacidad",
-   "peso": 6
-  },
-  {
-   "source": "privacidad",
-   "target": "terceros",
-   "peso": 6
-  },
-  {
-   "source": "automatizacion",
-   "target": "herramientas-autorizadas",
-   "peso": 6
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "prototipos",
-   "peso": 6
-  },
-  {
-   "source": "entregables",
-   "target": "fuentes",
-   "peso": 6
-  },
-  {
-   "source": "comunidades",
-   "target": "declaracion-de-uso",
-   "peso": 6
-  },
-  {
-   "source": "comunidades",
-   "target": "supervision-humana",
-   "peso": 6
-  },
-  {
-   "source": "citas",
-   "target": "fuentes",
-   "peso": 6
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "supervision-humana",
-   "peso": 6
-  },
-  {
-   "source": "fuentes",
-   "target": "sesgos",
-   "peso": 6
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "fuentes",
-   "peso": 6
-  },
-  {
-   "source": "autoria",
-   "target": "fuentes",
-   "peso": 6
-  },
-  {
-   "source": "citas",
-   "target": "riesgo",
-   "peso": 6
-  },
-  {
-   "source": "comision",
-   "target": "terceros",
-   "peso": 6
-  },
-  {
-   "source": "comunidades",
-   "target": "prototipos",
-   "peso": 6
-  },
-  {
-   "source": "formacion",
-   "target": "revision-por-pares",
-   "peso": 6
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "revision-por-pares",
-   "peso": 6
-  },
-  {
-   "source": "prototipos",
-   "target": "revision-por-pares",
-   "peso": 6
-  },
-  {
-   "source": "fuentes",
-   "target": "proveedores",
-   "peso": 6
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "herramientas-autorizadas",
-   "peso": 6
-  },
-  {
-   "source": "evaluacion",
-   "target": "herramientas-autorizadas",
-   "peso": 6
-  },
-  {
-   "source": "autoria",
-   "target": "supervision-humana",
-   "peso": 5
-  },
-  {
-   "source": "etica",
-   "target": "privacidad",
-   "peso": 5
-  },
-  {
-   "source": "etica",
-   "target": "seguridad-informacion",
-   "peso": 5
-  },
-  {
-   "source": "inclusion",
-   "target": "privacidad",
-   "peso": 5
-  },
-  {
-   "source": "inclusion",
-   "target": "supervision-humana",
-   "peso": 5
-  },
-  {
-   "source": "integridad-academica",
-   "target": "transparencia",
-   "peso": 5
-  },
-  {
-   "source": "privacidad",
-   "target": "trazabilidad",
-   "peso": 5
-  },
-  {
-   "source": "seguridad-informacion",
-   "target": "transparencia",
-   "peso": 5
-  },
-  {
+   "id": "R-002",
    "source": "alucinaciones",
-   "target": "ia-generativa",
-   "peso": 5
-  },
-  {
-   "source": "alucinaciones",
-   "target": "riesgo",
-   "peso": 5
-  },
-  {
-   "source": "automatizacion",
-   "target": "prototipos",
-   "peso": 5
-  },
-  {
-   "source": "automatizacion",
    "target": "verificacion",
-   "peso": 5
-  },
-  {
-   "source": "ia-generativa",
-   "target": "proveedores",
-   "peso": 5
-  },
-  {
-   "source": "prototipos",
-   "target": "proveedores",
-   "peso": 5
-  },
-  {
-   "source": "alucinaciones",
-   "target": "autoria",
-   "peso": 5
-  },
-  {
-   "source": "alucinaciones",
-   "target": "datos-personales",
-   "peso": 5
-  },
-  {
-   "source": "alucinaciones",
-   "target": "datos-sensibles",
-   "peso": 5
-  },
-  {
-   "source": "alucinaciones",
-   "target": "propiedad-intelectual",
-   "peso": 5
-  },
-  {
-   "source": "alucinaciones",
-   "target": "publicacion",
-   "peso": 5
-  },
-  {
-   "source": "alucinaciones",
-   "target": "trazabilidad",
-   "peso": 5
-  },
-  {
-   "source": "aprendizaje",
-   "target": "autoria",
-   "peso": 5
-  },
-  {
-   "source": "aprendizaje",
-   "target": "transparencia",
-   "peso": 5
-  },
-  {
-   "source": "automatizacion",
-   "target": "declaracion-de-uso",
-   "peso": 5
-  },
-  {
-   "source": "automatizacion",
-   "target": "transferencia",
-   "peso": 5
-  },
-  {
-   "source": "autoria",
-   "target": "calidad",
-   "peso": 5
-  },
-  {
-   "source": "autoria",
-   "target": "integridad-cientifica",
-   "peso": 5
-  },
-  {
-   "source": "autoria",
-   "target": "transferencia",
-   "peso": 5
-  },
-  {
-   "source": "calidad",
-   "target": "transparencia",
-   "peso": 5
-  },
-  {
-   "source": "confidencialidad",
-   "target": "reputacion",
-   "peso": 5
-  },
-  {
-   "source": "datos-personales",
-   "target": "integridad-cientifica",
-   "peso": 5
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "integridad-cientifica",
-   "peso": 5
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "transparencia",
-   "peso": 5
-  },
-  {
-   "source": "entregables",
-   "target": "integridad-cientifica",
-   "peso": 5
-  },
-  {
-   "source": "entregables",
-   "target": "proveedores",
-   "peso": 5
-  },
-  {
-   "source": "entregables",
-   "target": "supervision-humana",
-   "peso": 5
-  },
-  {
-   "source": "ia-generativa",
-   "target": "integridad-cientifica",
-   "peso": 5
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "reputacion",
-   "peso": 5
-  },
-  {
-   "source": "reputacion",
-   "target": "trazabilidad",
-   "peso": 5
-  },
-  {
-   "source": "seguridad-informacion",
-   "target": "transferencia",
-   "peso": 5
-  },
-  {
-   "source": "transferencia",
-   "target": "transparencia",
-   "peso": 5
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "privacidad",
-   "peso": 5
-  },
-  {
-   "source": "privacidad",
-   "target": "transferencia",
-   "peso": 5
-  },
-  {
-   "source": "privacidad",
-   "target": "verificacion",
-   "peso": 5
-  },
-  {
-   "source": "aprendizaje",
-   "target": "sesgos",
-   "peso": 5
-  },
-  {
-   "source": "privacidad",
-   "target": "proveedores",
-   "peso": 5
-  },
-  {
-   "source": "comision",
-   "target": "datos-personales",
-   "peso": 5
-  },
-  {
-   "source": "comision",
-   "target": "transparencia",
-   "peso": 5
-  },
-  {
-   "source": "comision",
-   "target": "verificacion",
-   "peso": 5
-  },
-  {
-   "source": "competencias",
-   "target": "declaracion-de-uso",
-   "peso": 5
-  },
-  {
-   "source": "competencias",
-   "target": "verificacion",
-   "peso": 5
-  },
-  {
-   "source": "aprendizaje",
-   "target": "citas",
-   "peso": 5
-  },
-  {
-   "source": "citas",
-   "target": "prototipos",
-   "peso": 5
-  },
-  {
-   "source": "alucinaciones",
-   "target": "datos-clinicos",
-   "peso": 5
-  },
-  {
-   "source": "citas",
-   "target": "decisiones",
-   "peso": 5
-  },
-  {
-   "source": "citas",
-   "target": "declaracion-de-uso",
-   "peso": 5
-  },
-  {
-   "source": "fuentes",
-   "target": "privacidad",
-   "peso": 5
-  },
-  {
-   "source": "evaluacion",
-   "target": "inclusion",
-   "peso": 5
-  },
-  {
-   "source": "anonimizacion",
-   "target": "confidencialidad",
-   "peso": 5
-  },
-  {
-   "source": "comision",
-   "target": "datos-clinicos",
-   "peso": 5
-  },
-  {
-   "source": "confidencialidad",
-   "target": "consentimiento",
-   "peso": 5
-  },
-  {
-   "source": "consentimiento",
-   "target": "datos-clinicos",
-   "peso": 5
-  },
-  {
-   "source": "consentimiento",
-   "target": "formacion",
-   "peso": 5
-  },
-  {
-   "source": "consentimiento",
-   "target": "propiedad-intelectual",
-   "peso": 5
-  },
-  {
-   "source": "automatizacion",
-   "target": "comision",
-   "peso": 5
-  },
-  {
-   "source": "automatizacion",
-   "target": "datos-clinicos",
-   "peso": 5
-  },
-  {
-   "source": "comision",
-   "target": "comunidades",
-   "peso": 5
-  },
-  {
-   "source": "comunidades",
-   "target": "seguridad-informacion",
-   "peso": 5
-  },
-  {
-   "source": "comunidades",
-   "target": "trazabilidad",
-   "peso": 5
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "proveedores",
-   "peso": 5
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "seguridad-informacion",
-   "peso": 5
-  },
-  {
-   "source": "comision",
-   "target": "fuentes",
-   "peso": 5
-  },
-  {
-   "source": "entregables",
-   "target": "etica",
-   "peso": 5
-  },
-  {
-   "source": "confidencialidad",
-   "target": "revision-por-pares",
-   "peso": 5
-  },
-  {
-   "source": "etica",
-   "target": "revision-por-pares",
-   "peso": 5
-  },
-  {
-   "source": "evaluacion",
-   "target": "revision-por-pares",
-   "peso": 5
-  },
-  {
-   "source": "publicacion",
-   "target": "revision-por-pares",
-   "peso": 5
-  },
-  {
-   "source": "responsabilidad",
-   "target": "revision-por-pares",
-   "peso": 5
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "herramientas-autorizadas",
-   "peso": 5
-  },
-  {
-   "source": "anonimizacion",
-   "target": "herramientas-autorizadas",
-   "peso": 5
-  },
-  {
-   "source": "comunidades",
-   "target": "herramientas-autorizadas",
-   "peso": 5
-  },
-  {
-   "source": "fuentes",
-   "target": "herramientas-autorizadas",
-   "peso": 5
-  },
-  {
-   "source": "entregables",
-   "target": "herramientas-autorizadas",
-   "peso": 5
-  },
-  {
-   "source": "comunidades",
-   "target": "reputacion",
-   "peso": 5
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "supervision-humana",
-   "peso": 5
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "proveedores",
-   "peso": 5
-  },
-  {
-   "source": "etica",
-   "target": "inclusion",
-   "peso": 4
-  },
-  {
-   "source": "etica",
-   "target": "integridad-academica",
-   "peso": 4
-  },
-  {
-   "source": "inclusion",
-   "target": "propiedad-intelectual",
-   "peso": 4
-  },
-  {
-   "source": "inclusion",
-   "target": "responsabilidad",
-   "peso": 4
-  },
-  {
-   "source": "inclusion",
-   "target": "seguridad-informacion",
-   "peso": 4
-  },
-  {
-   "source": "inclusion",
-   "target": "trazabilidad",
-   "peso": 4
-  },
-  {
-   "source": "integridad-academica",
-   "target": "propiedad-intelectual",
-   "peso": 4
-  },
-  {
-   "source": "integridad-academica",
-   "target": "seguridad-informacion",
-   "peso": 4
-  },
-  {
-   "source": "integridad-academica",
-   "target": "trazabilidad",
-   "peso": 4
-  },
-  {
-   "source": "privacidad",
-   "target": "supervision-humana",
-   "peso": 4
-  },
-  {
-   "source": "privacidad",
-   "target": "transparencia",
-   "peso": 4
-  },
-  {
-   "source": "seguridad-informacion",
-   "target": "supervision-humana",
-   "peso": 4
-  },
-  {
-   "source": "sesgos",
-   "target": "transparencia",
-   "peso": 4
-  },
-  {
-   "source": "alucinaciones",
-   "target": "prototipos",
-   "peso": 4
-  },
-  {
-   "source": "alucinaciones",
-   "target": "supervision-humana",
-   "peso": 4
-  },
-  {
-   "source": "ia-generativa",
-   "target": "integridad-academica",
-   "peso": 4
-  },
-  {
-   "source": "integridad-academica",
-   "target": "verificacion",
-   "peso": 4
-  },
-  {
-   "source": "proveedores",
-   "target": "supervision-humana",
-   "peso": 4
-  },
-  {
-   "source": "alucinaciones",
-   "target": "calidad",
-   "peso": 4
-  },
-  {
-   "source": "alucinaciones",
-   "target": "confidencialidad",
-   "peso": 4
-  },
-  {
-   "source": "alucinaciones",
-   "target": "transparencia",
-   "peso": 4
-  },
-  {
-   "source": "aprendizaje",
-   "target": "datos-sensibles",
-   "peso": 4
-  },
-  {
-   "source": "aprendizaje",
-   "target": "integridad-cientifica",
-   "peso": 4
-  },
-  {
-   "source": "automatizacion",
-   "target": "reputacion",
-   "peso": 4
-  },
-  {
-   "source": "autoria",
-   "target": "entregables",
-   "peso": 4
-  },
-  {
-   "source": "calidad",
-   "target": "seguridad-informacion",
-   "peso": 4
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "ia-generativa",
-   "peso": 4
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "reputacion",
-   "peso": 4
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "supervision-humana",
-   "peso": 4
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "integridad-academica",
-   "peso": 4
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "seguridad-informacion",
-   "peso": 4
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "supervision-humana",
-   "peso": 4
-  },
-  {
-   "source": "entregables",
-   "target": "reputacion",
-   "peso": 4
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "transparencia",
-   "peso": 4
-  },
-  {
-   "source": "proveedores",
-   "target": "publicacion",
-   "peso": 4
-  },
-  {
-   "source": "proveedores",
-   "target": "transparencia",
-   "peso": 4
-  },
-  {
-   "source": "reputacion",
-   "target": "responsabilidad",
-   "peso": 4
-  },
-  {
-   "source": "reputacion",
-   "target": "riesgo",
-   "peso": 4
-  },
-  {
-   "source": "reputacion",
-   "target": "supervision-humana",
-   "peso": 4
-  },
-  {
-   "source": "reputacion",
-   "target": "transferencia",
-   "peso": 4
-  },
-  {
-   "source": "automatizacion",
-   "target": "etica",
-   "peso": 4
-  },
-  {
-   "source": "calidad",
-   "target": "privacidad",
-   "peso": 4
-  },
-  {
-   "source": "ia-generativa",
-   "target": "privacidad",
-   "peso": 4
-  },
-  {
-   "source": "aprendizaje",
-   "target": "inclusion",
-   "peso": 4
-  },
-  {
-   "source": "confidencialidad",
-   "target": "inclusion",
-   "peso": 4
-  },
-  {
-   "source": "inclusion",
-   "target": "verificacion",
-   "peso": 4
-  },
-  {
-   "source": "seguridad-informacion",
-   "target": "verificacion",
-   "peso": 4
-  },
-  {
-   "source": "aprendizaje",
-   "target": "herramientas-autorizadas",
-   "peso": 4
-  },
-  {
-   "source": "proveedores",
-   "target": "sesgos",
-   "peso": 4
-  },
-  {
-   "source": "comision",
-   "target": "ia-generativa",
-   "peso": 4
-  },
-  {
-   "source": "competencias",
-   "target": "responsabilidad",
-   "peso": 4
-  },
-  {
-   "source": "competencias",
-   "target": "riesgo",
-   "peso": 4
-  },
-  {
-   "source": "etica",
-   "target": "proveedores",
-   "peso": 4
-  },
-  {
-   "source": "comision",
-   "target": "publicacion",
-   "peso": 4
-  },
-  {
-   "source": "comunidades",
-   "target": "ia-generativa",
-   "peso": 4
-  },
-  {
-   "source": "comunidades",
-   "target": "verificacion",
-   "peso": 4
-  },
-  {
-   "source": "calidad",
-   "target": "citas",
-   "peso": 4
-  },
-  {
-   "source": "citas",
-   "target": "publicacion",
-   "peso": 4
-  },
-  {
-   "source": "competencias",
-   "target": "fuentes",
-   "peso": 4
-  },
-  {
-   "source": "competencias",
-   "target": "inclusion",
-   "peso": 4
-  },
-  {
-   "source": "alto-riesgo",
-   "target": "decisiones",
-   "peso": 4
-  },
-  {
-   "source": "alto-riesgo",
-   "target": "formacion",
-   "peso": 4
-  },
-  {
-   "source": "competencias",
-   "target": "sesgos",
-   "peso": 4
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "sesgos",
-   "peso": 4
-  },
-  {
-   "source": "decisiones",
-   "target": "niveles-de-uso",
-   "peso": 4
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "sesgos",
-   "peso": 4
-  },
-  {
-   "source": "formacion",
-   "target": "niveles-de-uso",
-   "peso": 4
-  },
-  {
-   "source": "autoria",
-   "target": "datos-clinicos",
-   "peso": 4
-  },
-  {
-   "source": "calidad",
-   "target": "datos-clinicos",
-   "peso": 4
-  },
-  {
-   "source": "citas",
-   "target": "evaluacion",
-   "peso": 4
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "privacidad",
-   "peso": 4
-  },
-  {
-   "source": "citas",
-   "target": "etica",
-   "peso": 4
-  },
-  {
-   "source": "prototipos",
-   "target": "sesgos",
-   "peso": 4
-  },
-  {
-   "source": "anonimizacion",
-   "target": "decisiones",
-   "peso": 4
-  },
-  {
-   "source": "anonimizacion",
-   "target": "privacidad",
-   "peso": 4
-  },
-  {
-   "source": "anonimizacion",
-   "target": "propiedad-intelectual",
-   "peso": 4
-  },
-  {
-   "source": "comision",
-   "target": "supervision-humana",
-   "peso": 4
-  },
-  {
-   "source": "confidencialidad",
-   "target": "sesgos",
-   "peso": 4
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "transparencia",
-   "peso": 4
-  },
-  {
-   "source": "automatizacion",
-   "target": "comunidades",
-   "peso": 4
-  },
-  {
-   "source": "comision",
-   "target": "datos-sensibles",
-   "peso": 4
-  },
-  {
-   "source": "comision",
-   "target": "seguridad-informacion",
-   "peso": 4
-  },
-  {
-   "source": "comunidades",
-   "target": "proveedores",
-   "peso": 4
-  },
-  {
-   "source": "comision",
-   "target": "prototipos",
-   "peso": 4
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "verificacion",
-   "peso": 4
-  },
-  {
-   "source": "consentimiento",
-   "target": "datos-personales",
-   "peso": 4
-  },
-  {
-   "source": "consentimiento",
-   "target": "datos-sensibles",
-   "peso": 4
-  },
-  {
-   "source": "consentimiento",
-   "target": "terceros",
-   "peso": 4
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "revision-por-pares",
-   "peso": 4
-  },
-  {
-   "source": "datos-personales",
-   "target": "revision-por-pares",
-   "peso": 4
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "revision-por-pares",
-   "peso": 4
-  },
-  {
-   "source": "revision-por-pares",
-   "target": "terceros",
-   "peso": 4
-  },
-  {
-   "source": "revision-por-pares",
-   "target": "transferencia",
-   "peso": 4
-  },
-  {
-   "source": "citas",
-   "target": "propiedad-intelectual",
-   "peso": 4
-  },
-  {
-   "source": "citas",
-   "target": "transferencia",
-   "peso": 4
-  },
-  {
-   "source": "citas",
-   "target": "trazabilidad",
-   "peso": 4
-  },
-  {
-   "source": "revision-por-pares",
-   "target": "verificacion",
-   "peso": 4
-  },
-  {
-   "source": "etica",
-   "target": "herramientas-autorizadas",
-   "peso": 4
-  },
-  {
-   "source": "sesgos",
-   "target": "terceros",
-   "peso": 4
-  },
-  {
-   "source": "anonimizacion",
-   "target": "responsabilidad",
-   "peso": 4
-  },
-  {
-   "source": "anonimizacion",
-   "target": "terceros",
-   "peso": 4
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "privacidad",
-   "peso": 4
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "seguridad-informacion",
-   "peso": 4
-  },
-  {
-   "source": "sesgos",
-   "target": "transferencia",
-   "peso": 4
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "reputacion",
-   "peso": 4
-  },
-  {
-   "source": "comunidades",
-   "target": "sesgos",
-   "peso": 4
-  },
-  {
-   "source": "autoria",
-   "target": "integridad-academica",
-   "peso": 3
-  },
-  {
-   "source": "autoria",
-   "target": "privacidad",
-   "peso": 3
-  },
-  {
-   "source": "autoria",
-   "target": "seguridad-informacion",
-   "peso": 3
-  },
-  {
-   "source": "inclusion",
-   "target": "riesgo",
-   "peso": 3
-  },
-  {
-   "source": "inclusion",
-   "target": "sesgos",
-   "peso": 3
-  },
-  {
-   "source": "inclusion",
-   "target": "transparencia",
-   "peso": 3
-  },
-  {
-   "source": "integridad-academica",
-   "target": "privacidad",
-   "peso": 3
-  },
-  {
-   "source": "integridad-academica",
-   "target": "supervision-humana",
-   "peso": 3
-  },
-  {
-   "source": "privacidad",
-   "target": "sesgos",
-   "peso": 3
-  },
-  {
-   "source": "alucinaciones",
-   "target": "integridad-academica",
-   "peso": 3
-  },
-  {
-   "source": "alucinaciones",
-   "target": "mediacion-docente",
-   "peso": 3
-  },
-  {
-   "source": "aprendizaje",
-   "target": "mediacion-docente",
-   "peso": 3
-  },
-  {
-   "source": "aprendizaje",
-   "target": "retroalimentacion",
-   "peso": 3
-  },
-  {
-   "source": "automatizacion",
-   "target": "integridad-academica",
-   "peso": 3
-  },
-  {
-   "source": "automatizacion",
-   "target": "retroalimentacion",
-   "peso": 3
-  },
-  {
-   "source": "decisiones",
-   "target": "mediacion-docente",
-   "peso": 3
-  },
-  {
-   "source": "decisiones",
-   "target": "retroalimentacion",
-   "peso": 3
-  },
-  {
-   "source": "evaluacion",
-   "target": "mediacion-docente",
-   "peso": 3
-  },
-  {
-   "source": "evaluacion",
-   "target": "retroalimentacion",
-   "peso": 3
-  },
-  {
-   "source": "formacion",
-   "target": "mediacion-docente",
-   "peso": 3
-  },
-  {
-   "source": "formacion",
-   "target": "retroalimentacion",
-   "peso": 3
-  },
-  {
-   "source": "ia-generativa",
-   "target": "retroalimentacion",
-   "peso": 3
-  },
-  {
-   "source": "integridad-academica",
-   "target": "proveedores",
-   "peso": 3
-  },
-  {
-   "source": "integridad-academica",
-   "target": "terceros",
-   "peso": 3
-  },
-  {
-   "source": "mediacion-docente",
-   "target": "riesgo",
-   "peso": 3
-  },
-  {
-   "source": "mediacion-docente",
-   "target": "supervision-humana",
-   "peso": 3
-  },
-  {
-   "source": "responsabilidad",
-   "target": "retroalimentacion",
-   "peso": 3
-  },
-  {
-   "source": "retroalimentacion",
-   "target": "terceros",
-   "peso": 3
-  },
-  {
-   "source": "alucinaciones",
-   "target": "entregables",
-   "peso": 3
-  },
-  {
-   "source": "alucinaciones",
-   "target": "integridad-cientifica",
-   "peso": 3
-  },
-  {
-   "source": "aprendizaje",
-   "target": "publicacion",
-   "peso": 3
-  },
-  {
-   "source": "aprendizaje",
-   "target": "reputacion",
-   "peso": 3
-  },
-  {
-   "source": "automatizacion",
-   "target": "integridad-cientifica",
-   "peso": 3
-  },
-  {
-   "source": "automatizacion",
-   "target": "publicacion",
-   "peso": 3
-  },
-  {
-   "source": "automatizacion",
-   "target": "transparencia",
-   "peso": 3
-  },
-  {
-   "source": "calidad",
-   "target": "integridad-academica",
-   "peso": 3
-  },
-  {
-   "source": "calidad",
-   "target": "reputacion",
-   "peso": 3
-  },
-  {
-   "source": "confidencialidad",
-   "target": "integridad-academica",
-   "peso": 3
-  },
-  {
-   "source": "datos-personales",
-   "target": "integridad-academica",
-   "peso": 3
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "supervision-humana",
-   "peso": 3
-  },
-  {
-   "source": "proveedores",
-   "target": "reputacion",
-   "peso": 3
-  },
-  {
-   "source": "publicacion",
-   "target": "seguridad-informacion",
-   "peso": 3
-  },
-  {
-   "source": "aprendizaje",
-   "target": "privacidad",
-   "peso": 3
-  },
-  {
-   "source": "privacidad",
-   "target": "prototipos",
-   "peso": 3
-  },
-  {
-   "source": "inclusion",
-   "target": "prototipos",
-   "peso": 3
-  },
-  {
-   "source": "automatizacion",
-   "target": "sesgos",
-   "peso": 3
-  },
-  {
-   "source": "competencias",
-   "target": "etica",
-   "peso": 3
-  },
-  {
-   "source": "competencias",
-   "target": "ia-generativa",
-   "peso": 3
-  },
-  {
-   "source": "competencias",
-   "target": "comunidades",
-   "peso": 3
-  },
-  {
-   "source": "competencias",
-   "target": "supervision-humana",
-   "peso": 3
-  },
-  {
-   "source": "fuentes",
-   "target": "inclusion",
-   "peso": 3
-  },
-  {
-   "source": "alto-riesgo",
-   "target": "evaluacion",
-   "peso": 3
-  },
-  {
-   "source": "alto-riesgo",
-   "target": "niveles-de-uso",
-   "peso": 3
-  },
-  {
-   "source": "alto-riesgo",
-   "target": "riesgo",
-   "peso": 3
-  },
-  {
-   "source": "alto-riesgo",
-   "target": "supervision-humana",
-   "peso": 3
-  },
-  {
-   "source": "aprendizaje",
-   "target": "datos-clinicos",
-   "peso": 3
-  },
-  {
-   "source": "niveles-de-uso",
-   "target": "riesgo",
-   "peso": 3
-  },
-  {
-   "source": "autoria",
-   "target": "citas",
-   "peso": 3
-  },
-  {
-   "source": "citas",
-   "target": "confidencialidad",
-   "peso": 3
-  },
-  {
-   "source": "citas",
-   "target": "datos-clinicos",
-   "peso": 3
-  },
-  {
-   "source": "citas",
-   "target": "datos-personales",
-   "peso": 3
-  },
-  {
-   "source": "citas",
-   "target": "datos-sensibles",
-   "peso": 3
-  },
-  {
-   "source": "anonimizacion",
-   "target": "consentimiento",
-   "peso": 3
-  },
-  {
-   "source": "anonimizacion",
-   "target": "datos-clinicos",
-   "peso": 3
-  },
-  {
-   "source": "anonimizacion",
-   "target": "supervision-humana",
-   "peso": 3
-  },
-  {
-   "source": "consentimiento",
-   "target": "evaluacion",
-   "peso": 3
-  },
-  {
-   "source": "consentimiento",
-   "target": "privacidad",
-   "peso": 3
-  },
-  {
-   "source": "comision",
-   "target": "integridad-cientifica",
-   "peso": 3
-  },
-  {
-   "source": "fuentes",
-   "target": "integridad-cientifica",
-   "peso": 3
-  },
-  {
-   "source": "comunidades",
-   "target": "fuentes",
-   "peso": 3
-  },
-  {
-   "source": "comunidades",
-   "target": "consentimiento",
-   "peso": 3
-  },
-  {
-   "source": "comunidades",
-   "target": "publicacion",
-   "peso": 3
-  },
-  {
-   "source": "consentimiento",
-   "target": "etica",
-   "peso": 3
-  },
-  {
-   "source": "consentimiento",
-   "target": "publicacion",
-   "peso": 3
-  },
-  {
-   "source": "consentimiento",
-   "target": "responsabilidad",
-   "peso": 3
-  },
-  {
-   "source": "consentimiento",
-   "target": "transferencia",
-   "peso": 3
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "entregables",
-   "peso": 3
-  },
-  {
-   "source": "revision-por-pares",
-   "target": "trazabilidad",
-   "peso": 3
-  },
-  {
-   "source": "autoria",
-   "target": "revision-por-pares",
-   "peso": 3
-  },
-  {
-   "source": "datos-personales",
-   "target": "niveles-de-uso",
-   "peso": 3
-  },
-  {
-   "source": "niveles-de-uso",
-   "target": "responsabilidad",
-   "peso": 3
-  },
-  {
-   "source": "autoria",
-   "target": "herramientas-autorizadas",
-   "peso": 3
-  },
-  {
-   "source": "calidad",
-   "target": "herramientas-autorizadas",
-   "peso": 3
-  },
-  {
-   "source": "citas",
-   "target": "herramientas-autorizadas",
-   "peso": 3
-  },
-  {
-   "source": "consentimiento",
-   "target": "herramientas-autorizadas",
-   "peso": 3
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "integridad-cientifica",
-   "peso": 3
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "revision-por-pares",
-   "peso": 3
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "publicacion",
-   "peso": 3
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "revision-por-pares",
-   "peso": 3
-  },
-  {
-   "source": "anonimizacion",
-   "target": "datos-personales",
-   "peso": 3
-  },
-  {
-   "source": "anonimizacion",
-   "target": "datos-sensibles",
-   "peso": 3
-  },
-  {
-   "source": "anonimizacion",
-   "target": "fuentes",
-   "peso": 3
-  },
-  {
-   "source": "anonimizacion",
-   "target": "seguridad-informacion",
-   "peso": 3
-  },
-  {
-   "source": "fuentes",
-   "target": "seguridad-informacion",
-   "peso": 3
-  },
-  {
-   "source": "datos-personales",
-   "target": "sesgos",
-   "peso": 3
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "sesgos",
-   "peso": 3
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "sesgos",
-   "peso": 3
-  },
-  {
-   "source": "autoria",
-   "target": "inclusion",
-   "peso": 2
-  },
-  {
-   "source": "inclusion",
-   "target": "integridad-academica",
-   "peso": 2
-  },
-  {
-   "source": "seguridad-informacion",
-   "target": "sesgos",
-   "peso": 2
-  },
-  {
-   "source": "alucinaciones",
-   "target": "automatizacion",
-   "peso": 2
-  },
-  {
-   "source": "alucinaciones",
-   "target": "proveedores",
-   "peso": 2
-  },
-  {
-   "source": "alucinaciones",
-   "target": "retroalimentacion",
-   "peso": 2
-  },
-  {
-   "source": "automatizacion",
-   "target": "mediacion-docente",
-   "peso": 2
-  },
-  {
-   "source": "ia-generativa",
-   "target": "mediacion-docente",
-   "peso": 2
-  },
-  {
-   "source": "integridad-academica",
-   "target": "mediacion-docente",
-   "peso": 2
-  },
-  {
-   "source": "integridad-academica",
-   "target": "prototipos",
-   "peso": 2
-  },
-  {
-   "source": "integridad-academica",
-   "target": "retroalimentacion",
-   "peso": 2
-  },
-  {
-   "source": "mediacion-docente",
-   "target": "proveedores",
-   "peso": 2
-  },
-  {
-   "source": "mediacion-docente",
-   "target": "responsabilidad",
-   "peso": 2
-  },
-  {
-   "source": "mediacion-docente",
-   "target": "retroalimentacion",
-   "peso": 2
-  },
-  {
-   "source": "mediacion-docente",
-   "target": "terceros",
-   "peso": 2
-  },
-  {
-   "source": "mediacion-docente",
-   "target": "verificacion",
-   "peso": 2
-  },
-  {
-   "source": "prototipos",
-   "target": "retroalimentacion",
-   "peso": 2
-  },
-  {
-   "source": "proveedores",
-   "target": "retroalimentacion",
-   "peso": 2
-  },
-  {
-   "source": "retroalimentacion",
-   "target": "riesgo",
-   "peso": 2
-  },
-  {
-   "source": "retroalimentacion",
-   "target": "supervision-humana",
-   "peso": 2
-  },
-  {
-   "source": "alucinaciones",
-   "target": "transferencia",
-   "peso": 2
-  },
-  {
-   "source": "aprendizaje",
-   "target": "seguridad-informacion",
-   "peso": 2
-  },
-  {
-   "source": "automatizacion",
-   "target": "entregables",
-   "peso": 2
-  },
-  {
-   "source": "autoria",
-   "target": "proveedores",
-   "peso": 2
-  },
-  {
-   "source": "calidad",
-   "target": "retroalimentacion",
-   "peso": 2
-  },
-  {
-   "source": "confidencialidad",
-   "target": "retroalimentacion",
-   "peso": 2
-  },
-  {
-   "source": "datos-personales",
-   "target": "retroalimentacion",
-   "peso": 2
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "integridad-academica",
-   "peso": 2
-  },
-  {
-   "source": "datos-sensibles",
-   "target": "retroalimentacion",
-   "peso": 2
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "mediacion-docente",
-   "peso": 2
-  },
-  {
-   "source": "declaracion-de-uso",
-   "target": "reputacion",
-   "peso": 2
-  },
-  {
-   "source": "entregables",
-   "target": "seguridad-informacion",
-   "peso": 2
-  },
-  {
-   "source": "evaluacion",
-   "target": "reputacion",
-   "peso": 2
-  },
-  {
-   "source": "ia-generativa",
-   "target": "reputacion",
-   "peso": 2
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "proveedores",
-   "peso": 2
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "retroalimentacion",
-   "peso": 2
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "seguridad-informacion",
-   "peso": 2
-  },
-  {
-   "source": "mediacion-docente",
-   "target": "trazabilidad",
-   "peso": 2
-  },
-  {
-   "source": "propiedad-intelectual",
-   "target": "retroalimentacion",
-   "peso": 2
-  },
-  {
-   "source": "publicacion",
-   "target": "supervision-humana",
-   "peso": 2
-  },
-  {
-   "source": "reputacion",
-   "target": "seguridad-informacion",
-   "peso": 2
-  },
-  {
-   "source": "retroalimentacion",
-   "target": "transferencia",
-   "peso": 2
-  },
-  {
-   "source": "automatizacion",
-   "target": "privacidad",
-   "peso": 2
-  },
-  {
-   "source": "datos-personales",
-   "target": "inclusion",
-   "peso": 2
-  },
-  {
-   "source": "prototipos",
-   "target": "seguridad-informacion",
-   "peso": 2
-  },
-  {
+   "peso": 2,
+   "explicacion": "Una cifra convincente requiere comprobarse antes de presentarla.",
+   "preguntas": [
+    "GEN-002",
+    "CTI-014"
+   ]
+  },
+  {
+   "id": "R-003",
    "source": "agencia-humana",
    "target": "aprendizaje",
-   "peso": 2
+   "peso": 3,
+   "explicacion": "La IA puede ayudar a estudiar, pero el estudiante necesita resolver y comprender las actividades.",
+   "preguntas": [
+    "GEN-003",
+    "GEN-007",
+    "ENS-001"
+   ]
   },
   {
-   "source": "agencia-humana",
-   "target": "declaracion-de-uso",
-   "peso": 2
+   "id": "R-004",
+   "source": "responsabilidad",
+   "target": "terceros",
+   "peso": 3,
+   "explicacion": "Cuando la IA se utiliza en actividades con aliados o contratistas, la Universidad debe proteger la información y validar los compromisos que asume.",
+   "preguntas": [
+    "GEN-004",
+    "EXT-009",
+    "EXT-021"
+   ]
   },
   {
-   "source": "agencia-humana",
-   "target": "evaluacion",
-   "peso": 2
+   "id": "R-005",
+   "source": "evaluacion",
+   "target": "supervision-humana",
+   "peso": 4,
+   "explicacion": "En las evaluaciones apoyadas por IA, las personas responsables deben comprobar los criterios y resultados antes de decidir.",
+   "preguntas": [
+    "GEN-005",
+    "ENS-011",
+    "CTI-027",
+    "EXT-031"
+   ]
   },
   {
-   "source": "agencia-humana",
-   "target": "formacion",
-   "peso": 2
-  },
-  {
-   "source": "comision",
-   "target": "competencias",
-   "peso": 2
-  },
-  {
-   "source": "comision",
-   "target": "integridad-academica",
-   "peso": 2
-  },
-  {
-   "source": "autoria",
-   "target": "competencias",
-   "peso": 2
-  },
-  {
-   "source": "autoria",
-   "target": "comunidades",
-   "peso": 2
-  },
-  {
-   "source": "competencias",
-   "target": "propiedad-intelectual",
-   "peso": 2
-  },
-  {
-   "source": "citas",
-   "target": "competencias",
-   "peso": 2
-  },
-  {
-   "source": "competencias",
-   "target": "prototipos",
-   "peso": 2
-  },
-  {
+   "id": "R-006",
    "source": "alto-riesgo",
-   "target": "datos-clinicos",
-   "peso": 2
+   "target": "decisiones",
+   "peso": 3,
+   "explicacion": "Las recomendaciones de IA sobre apoyos, sanciones o trayectoria de estudiantes requieren controles y revisión humana.",
+   "preguntas": [
+    "GEN-006",
+    "ENS-030",
+    "GES-023"
+   ]
   },
   {
-   "source": "alto-riesgo",
-   "target": "sesgos",
-   "peso": 2
+   "id": "R-007",
+   "source": "confidencialidad",
+   "target": "riesgo",
+   "peso": 1,
+   "explicacion": "El riesgo aumenta al pasar de documentos públicos a entrevistas reservadas.",
+   "preguntas": [
+    "GEN-008"
+   ]
   },
   {
-   "source": "alto-riesgo",
-   "target": "verificacion",
-   "peso": 2
-  },
-  {
-   "source": "competencias",
-   "target": "datos-clinicos",
-   "peso": 2
-  },
-  {
-   "source": "competencias",
+   "id": "R-008",
+   "source": "niveles-de-uso",
    "target": "trazabilidad",
-   "peso": 2
+   "peso": 3,
+   "explicacion": "Corregir un texto sencillo necesita menos registro que analizar información para tomar una decisión.",
+   "preguntas": [
+    "GEN-009",
+    "CTI-004",
+    "GES-014"
+   ]
   },
   {
-   "source": "datos-clinicos",
-   "target": "niveles-de-uso",
-   "peso": 2
+   "id": "R-009",
+   "source": "responsabilidad",
+   "target": "trazabilidad",
+   "peso": 3,
+   "explicacion": "Para responder por un documento elaborado con IA debe quedar claro qué hizo la herramienta y quién lo revisó.",
+   "preguntas": [
+    "GEN-010",
+    "GES-013",
+    "GES-021"
+   ]
   },
   {
+   "id": "R-010",
+   "source": "datos-personales",
+   "target": "privacidad",
+   "peso": 3,
+   "explicacion": "Solo se deben compartir con IA los datos personales necesarios y autorizados para cada tarea.",
+   "preguntas": [
+    "GEN-011",
+    "GEN-031",
+    "GES-016"
+   ]
+  },
+  {
+   "id": "R-011",
+   "source": "responsabilidad",
+   "target": "verificacion",
+   "peso": 5,
+   "explicacion": "Quien utiliza una respuesta de IA en una actividad institucional debe comprobarla antes de presentarla.",
+   "preguntas": [
+    "GEN-012",
+    "GES-011",
+    "GES-012",
+    "GES-027",
+    "GES-040"
+   ]
+  },
+  {
+   "id": "R-012",
+   "source": "autoria",
+   "target": "propiedad-intelectual",
+   "peso": 1,
+   "explicacion": "La protección de una imagen generada con IA depende, entre otros factores, de los aportes creativos humanos.",
+   "preguntas": [
+    "GEN-013"
+   ]
+  },
+  {
+   "id": "R-013",
+   "source": "privacidad",
+   "target": "proveedores",
+   "peso": 2,
+   "explicacion": "Pagar una suscripción no garantiza que los datos queden protegidos.",
+   "preguntas": [
+    "GEN-014",
+    "GES-005"
+   ]
+  },
+  {
+   "id": "R-014",
+   "source": "riesgo",
+   "target": "proveedores",
+   "peso": 1,
+   "explicacion": "Actualizar una IA puede cambiar cómo se utilizan o guardan los datos.",
+   "preguntas": [
+    "GEN-015"
+   ]
+  },
+  {
+   "id": "R-015",
+   "source": "declaracion-de-uso",
+   "target": "responsabilidad",
+   "peso": 1,
+   "explicacion": "Informar el uso de IA no elimina la responsabilidad por el trabajo entregado.",
+   "preguntas": [
+    "GEN-016"
+   ]
+  },
+  {
+   "id": "R-016",
+   "source": "riesgo",
+   "target": "seguridad-informacion",
+   "peso": 1,
+   "explicacion": "Las instrucciones ocultas en archivos externos pueden intentar acceder a documentos institucionales.",
+   "preguntas": [
+    "GEN-017"
+   ]
+  },
+  {
+   "id": "R-017",
+   "source": "comision",
+   "target": "responsabilidad",
+   "peso": 2,
+   "explicacion": "La Comisión asesora, pero cada área competente toma las decisiones que le corresponden.",
+   "preguntas": [
+    "GEN-018",
+    "GEN-030"
+   ]
+  },
+  {
+   "id": "R-018",
+   "source": "inclusion",
+   "target": "sesgos",
+   "peso": 2,
+   "explicacion": "Es necesario revisar si las recomendaciones excluyen grupos de estudiantes.",
+   "preguntas": [
+    "GEN-019",
+    "GES-019"
+   ]
+  },
+  {
+   "id": "R-019",
+   "source": "integridad-cientifica",
+   "target": "verificacion",
+   "peso": 2,
+   "explicacion": "Una conclusión añadida por IA debe contrastarse con los resultados del estudio.",
+   "preguntas": [
+    "GEN-020",
+    "CTI-031"
+   ]
+  },
+  {
+   "id": "R-020",
+   "source": "confidencialidad",
+   "target": "terceros",
+   "peso": 4,
+   "explicacion": "Trabajar para la Universidad no autoriza compartir información reservada de otras entidades.",
+   "preguntas": [
+    "GEN-021",
+    "CTI-029",
+    "EXT-011",
+    "EXT-022"
+   ]
+  },
+  {
+   "id": "R-021",
+   "source": "agencia-humana",
+   "target": "verificacion",
+   "peso": 1,
+   "explicacion": "Una respuesta rápida no es necesariamente correcta; debe comprobarse.",
+   "preguntas": [
+    "GEN-022"
+   ]
+  },
+  {
+   "id": "R-022",
    "source": "evaluacion",
    "target": "niveles-de-uso",
-   "peso": 2
+   "peso": 2,
+   "explicacion": "Las reglas de uso cambian según se practique o se presente un examen.",
+   "preguntas": [
+    "GEN-023",
+    "ENS-029"
+   ]
   },
   {
-   "source": "niveles-de-uso",
-   "target": "supervision-humana",
-   "peso": 2
-  },
-  {
-   "source": "niveles-de-uso",
-   "target": "verificacion",
-   "peso": 2
-  },
-  {
-   "source": "alucinaciones",
-   "target": "citas",
-   "peso": 2
-  },
-  {
-   "source": "citas",
-   "target": "ia-generativa",
-   "peso": 2
-  },
-  {
-   "source": "citas",
-   "target": "privacidad",
-   "peso": 2
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "ia-generativa",
-   "peso": 2
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "integridad-academica",
-   "peso": 2
-  },
-  {
-   "source": "fuentes",
-   "target": "integridad-academica",
-   "peso": 2
-  },
-  {
-   "source": "citas",
-   "target": "sesgos",
-   "peso": 2
-  },
-  {
-   "source": "anonimizacion",
-   "target": "inclusion",
-   "peso": 2
-  },
-  {
-   "source": "comision",
-   "target": "inclusion",
-   "peso": 2
-  },
-  {
-   "source": "comision",
-   "target": "privacidad",
-   "peso": 2
-  },
-  {
-   "source": "comision",
-   "target": "sesgos",
-   "peso": 2
-  },
-  {
-   "source": "consentimiento",
-   "target": "decisiones",
-   "peso": 2
-  },
-  {
-   "source": "consentimiento",
-   "target": "inclusion",
-   "peso": 2
-  },
-  {
-   "source": "consentimiento",
-   "target": "supervision-humana",
-   "peso": 2
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "inclusion",
-   "peso": 2
-  },
-  {
-   "source": "autoria",
-   "target": "comision",
-   "peso": 2
-  },
-  {
-   "source": "comision",
-   "target": "entregables",
-   "peso": 2
-  },
-  {
-   "source": "comunidades",
-   "target": "integridad-cientifica",
-   "peso": 2
-  },
-  {
-   "source": "comunidades",
-   "target": "transparencia",
-   "peso": 2
-  },
-  {
-   "source": "consentimiento",
-   "target": "prototipos",
-   "peso": 2
-  },
-  {
-   "source": "consentimiento",
-   "target": "revision-por-pares",
-   "peso": 2
-  },
-  {
-   "source": "consentimiento",
-   "target": "trazabilidad",
-   "peso": 2
-  },
-  {
-   "source": "entregables",
-   "target": "revision-por-pares",
-   "peso": 2
-  },
-  {
-   "source": "alto-riesgo",
-   "target": "confidencialidad",
-   "peso": 2
-  },
-  {
-   "source": "alto-riesgo",
-   "target": "datos-personales",
-   "peso": 2
-  },
-  {
-   "source": "alto-riesgo",
-   "target": "responsabilidad",
-   "peso": 2
-  },
-  {
-   "source": "confidencialidad",
-   "target": "niveles-de-uso",
-   "peso": 2
-  },
-  {
+   "id": "R-023",
    "source": "decisiones",
-   "target": "revision-por-pares",
-   "peso": 2
-  },
-  {
-   "source": "niveles-de-uso",
-   "target": "propiedad-intelectual",
-   "peso": 2
-  },
-  {
-   "source": "niveles-de-uso",
-   "target": "transferencia",
-   "peso": 2
-  },
-  {
-   "source": "revision-por-pares",
-   "target": "transparencia",
-   "peso": 2
-  },
-  {
-   "source": "alucinaciones",
-   "target": "etica",
-   "peso": 2
-  },
-  {
-   "source": "alucinaciones",
-   "target": "herramientas-autorizadas",
-   "peso": 2
-  },
-  {
-   "source": "alucinaciones",
-   "target": "revision-por-pares",
-   "peso": 2
-  },
-  {
-   "source": "citas",
-   "target": "revision-por-pares",
-   "peso": 2
-  },
-  {
-   "source": "citas",
-   "target": "terceros",
-   "peso": 2
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "integridad-cientifica",
-   "peso": 2
-  },
-  {
-   "source": "integridad-cientifica",
-   "target": "revision-por-pares",
-   "peso": 2
-  },
-  {
-   "source": "revision-por-pares",
-   "target": "riesgo",
-   "peso": 2
-  },
-  {
-   "source": "ia-generativa",
-   "target": "sesgos",
-   "peso": 2
-  },
-  {
-   "source": "comunidades",
-   "target": "poblacion-vulnerable",
-   "peso": 2
-  },
-  {
-   "source": "confidencialidad",
-   "target": "poblacion-vulnerable",
-   "peso": 2
-  },
-  {
-   "source": "datos-clinicos",
-   "target": "poblacion-vulnerable",
-   "peso": 2
-  },
-  {
-   "source": "datos-personales",
-   "target": "poblacion-vulnerable",
-   "peso": 2
-  },
-  {
-   "source": "etica",
-   "target": "poblacion-vulnerable",
-   "peso": 2
-  },
-  {
-   "source": "formacion",
-   "target": "poblacion-vulnerable",
-   "peso": 2
-  },
-  {
-   "source": "poblacion-vulnerable",
    "target": "supervision-humana",
-   "peso": 2
+   "peso": 3,
+   "explicacion": "Las recomendaciones de IA que afectan a personas deben revisarse antes de convertirse en decisiones.",
+   "preguntas": [
+    "GEN-024",
+    "ENS-026",
+    "GES-002"
+   ]
   },
   {
-   "source": "anonimizacion",
-   "target": "comunidades",
-   "peso": 2
+   "id": "R-024",
+   "source": "privacidad",
+   "target": "propiedad-intelectual",
+   "peso": 1,
+   "explicacion": "Los lineamientos de IA se aplican junto a las políticas institucionales existentes.",
+   "preguntas": [
+    "GEN-025"
+   ]
   },
   {
-   "source": "comunidades",
-   "target": "privacidad",
-   "peso": 2
+   "id": "R-025",
+   "source": "declaracion-de-uso",
+   "target": "propiedad-intelectual",
+   "peso": 2,
+   "explicacion": "Declarar que se utilizó IA no sustituye los permisos para usar obras ajenas.",
+   "preguntas": [
+    "GEN-026",
+    "ENS-025"
+   ]
   },
   {
-   "source": "consentimiento",
-   "target": "seguridad-informacion",
-   "peso": 2
+   "id": "R-026",
+   "source": "transparencia",
+   "target": "trazabilidad",
+   "peso": 1,
+   "explicacion": "Debe poder saberse qué hizo la IA y quién revisó las recomendaciones de un informe.",
+   "preguntas": [
+    "GEN-027"
+   ]
   },
   {
-   "source": "herramientas-autorizadas",
-   "target": "ia-generativa",
-   "peso": 2
-  },
-  {
-   "source": "citas",
-   "target": "comision",
-   "peso": 2
-  },
-  {
-   "source": "citas",
-   "target": "proveedores",
-   "peso": 2
-  },
-  {
-   "source": "fuentes",
-   "target": "revision-por-pares",
-   "peso": 2
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "transparencia",
-   "peso": 2
-  },
-  {
-   "source": "prototipos",
-   "target": "reputacion",
-   "peso": 2
-  },
-  {
-   "source": "entregables",
-   "target": "sesgos",
-   "peso": 2
-  },
-  {
-   "source": "etica",
-   "target": "reputacion",
-   "peso": 2
-  },
-  {
-   "source": "reputacion",
-   "target": "sesgos",
-   "peso": 2
-  },
-  {
-   "source": "comunidades",
-   "target": "inclusion",
-   "peso": 2
-  },
-  {
-   "source": "herramientas-autorizadas",
-   "target": "inclusion",
-   "peso": 2
-  },
-  {
-   "source": "inclusion",
-   "target": "terceros",
-   "peso": 2
-  },
-  {
-   "source": "auditoria",
-   "target": "comision",
-   "peso": 2
-  },
-  {
-   "source": "auditoria",
-   "target": "decisiones",
-   "peso": 2
-  },
-  {
-   "source": "auditoria",
-   "target": "formacion",
-   "peso": 2
-  },
-  {
-   "source": "auditoria",
-   "target": "herramientas-autorizadas",
-   "peso": 2
-  },
-  {
-   "source": "auditoria",
-   "target": "proveedores",
-   "peso": 2
-  },
-  {
-   "source": "auditoria",
-   "target": "responsabilidad",
-   "peso": 2
-  },
-  {
-   "source": "auditoria",
+   "id": "R-027",
+   "source": "datos-clinicos",
    "target": "riesgo",
-   "peso": 2
+   "peso": 1,
+   "explicacion": "Incorporar historias clínicas exige revisar los controles del proyecto.",
+   "preguntas": [
+    "GEN-028"
+   ]
   },
   {
-   "source": "auditoria",
-   "target": "transferencia",
-   "peso": 2
+   "id": "R-028",
+   "source": "decisiones",
+   "target": "sesgos",
+   "peso": 1,
+   "explicacion": "Una recomendación automática puede incluir errores o discriminar a determinados grupos.",
+   "preguntas": [
+    "GEN-029"
+   ]
   },
   {
+   "id": "R-029",
+   "source": "autoria",
+   "target": "integridad-academica",
+   "peso": 1,
+   "explicacion": "Cambiar unas palabras no convierte en propio un trabajo generado por IA.",
+   "preguntas": [
+    "GEN-032"
+   ]
+  },
+  {
+   "id": "R-030",
+   "source": "formacion",
+   "target": "mediacion-docente",
+   "peso": 2,
+   "explicacion": "El profesor necesita conocer los límites de la IA antes de utilizar sus materiales en clase.",
+   "preguntas": [
+    "GEN-033",
+    "EXT-001"
+   ]
+  },
+  {
+   "id": "R-031",
    "source": "auditoria",
    "target": "trazabilidad",
-   "peso": 2
+   "peso": 2,
+   "explicacion": "Conservar versiones permite revisar los cambios hechos al informe.",
+   "preguntas": [
+    "GEN-034",
+    "CTI-033"
+   ]
   },
   {
+   "id": "R-032",
+   "source": "anonimizacion",
+   "target": "privacidad",
+   "peso": 1,
+   "explicacion": "Quitar nombres no siempre evita identificar a las personas entrevistadas.",
+   "preguntas": [
+    "GEN-035"
+   ]
+  },
+  {
+   "id": "R-033",
    "source": "comision",
+   "target": "riesgo",
+   "peso": 1,
+   "explicacion": "Los cambios en las normas pueden hacer necesario actualizar los lineamientos institucionales.",
+   "preguntas": [
+    "GEN-036"
+   ]
+  },
+  {
+   "id": "R-034",
+   "source": "retroalimentacion",
+   "target": "supervision-humana",
+   "peso": 1,
+   "explicacion": "El profesor debe revisar los comentarios generados con IA antes de utilizarlos para evaluar.",
+   "preguntas": [
+    "GEN-037"
+   ]
+  },
+  {
+   "id": "R-035",
+   "source": "herramientas-autorizadas",
+   "target": "proveedores",
+   "peso": 3,
+   "explicacion": "Antes de utilizar una IA en procesos institucionales deben revisarse las condiciones y los riesgos del proveedor.",
+   "preguntas": [
+    "GEN-038",
+    "EXT-023",
+    "GES-039"
+   ]
+  },
+  {
+   "id": "R-036",
+   "source": "integridad-academica",
+   "target": "niveles-de-uso",
+   "peso": 1,
+   "explicacion": "El permiso para practicar con IA no se extiende a un examen cerrado.",
+   "preguntas": [
+    "GEN-039"
+   ]
+  },
+  {
+   "id": "R-037",
+   "source": "riesgo",
+   "target": "responsabilidad",
+   "peso": 1,
+   "explicacion": "Cuando la IA afecta varias dependencias, hay que definir quién revisa y quién decide.",
+   "preguntas": [
+    "GEN-040"
+   ]
+  },
+  {
+   "id": "R-038",
+   "source": "evaluacion",
+   "target": "integridad-academica",
+   "peso": 1,
+   "explicacion": "Usar IA en un examen restringido afecta la validez de la evaluación.",
+   "preguntas": [
+    "ENS-002"
+   ]
+  },
+  {
+   "id": "R-039",
+   "source": "mediacion-docente",
+   "target": "niveles-de-uso",
+   "peso": 2,
+   "explicacion": "El profesor debe comunicar qué apoyo de IA permite en la tarea.",
+   "preguntas": [
+    "ENS-003",
+    "ENS-023"
+   ]
+  },
+  {
+   "id": "R-040",
+   "source": "aprendizaje",
+   "target": "declaracion-de-uso",
+   "peso": 1,
+   "explicacion": "Un uso de IA solo para estudiar puede no requerir declaración si no pasa al trabajo entregado y la actividad no lo exige.",
+   "preguntas": [
+    "ENS-004"
+   ]
+  },
+  {
+   "id": "R-041",
+   "source": "declaracion-de-uso",
+   "target": "integridad-academica",
+   "peso": 2,
+   "explicacion": "La instrucción de la actividad puede exigir informar cualquier apoyo de IA.",
+   "preguntas": [
+    "ENS-005",
+    "ENS-017"
+   ]
+  },
+  {
+   "id": "R-042",
+   "source": "autoria",
+   "target": "declaracion-de-uso",
+   "peso": 2,
+   "explicacion": "Cuando la IA reescribe parte de un trabajo, es necesario informar ese apoyo.",
+   "preguntas": [
+    "ENS-006",
+    "ENS-034"
+   ]
+  },
+  {
+   "id": "R-043",
+   "source": "evaluacion",
+   "target": "verificacion",
+   "peso": 1,
+   "explicacion": "Comparar una respuesta de IA con fuentes permite evaluar si el estudiante identifica errores.",
+   "preguntas": [
+    "ENS-007"
+   ]
+  },
+  {
+   "id": "R-044",
+   "source": "citas",
+   "target": "alucinaciones",
+   "peso": 2,
+   "explicacion": "Una referencia que parece real puede haber sido inventada por IA.",
+   "preguntas": [
+    "ENS-008",
+    "CTI-002"
+   ]
+  },
+  {
+   "id": "R-045",
+   "source": "fuentes",
+   "target": "verificacion",
+   "peso": 4,
+   "explicacion": "Las respuestas de IA deben comprobarse con fuentes confiables antes de utilizarlas como fundamento de una afirmación o decisión.",
+   "preguntas": [
+    "ENS-009",
+    "ENS-021",
+    "CTI-001",
+    "GES-031"
+   ]
+  },
+  {
+   "id": "R-046",
+   "source": "autoria",
+   "target": "responsabilidad",
+   "peso": 1,
+   "explicacion": "Quien firma el trabajo debe poder explicar y respaldar sus argumentos.",
+   "preguntas": [
+    "ENS-010"
+   ]
+  },
+  {
+   "id": "R-047",
+   "source": "detectores",
+   "target": "integridad-academica",
+   "peso": 1,
+   "explicacion": "El resultado de un detector de IA no demuestra por sí solo que un estudiante cometió una falta.",
+   "preguntas": [
+    "ENS-012"
+   ]
+  },
+  {
+   "id": "R-048",
+   "source": "niveles-de-uso",
+   "target": "responsabilidad",
+   "peso": 1,
+   "explicacion": "Si las instrucciones de una actividad no aclaran el uso de IA, debe consultarse al profesor antes de entregar.",
+   "preguntas": [
+    "ENS-013"
+   ]
+  },
+  {
+   "id": "R-049",
+   "source": "calidad",
+   "target": "mediacion-docente",
+   "peso": 2,
+   "explicacion": "El profesor debe comprobar que los materiales de IA correspondan a los objetivos del curso.",
+   "preguntas": [
+    "ENS-014",
+    "ENS-037"
+   ]
+  },
+  {
+   "id": "R-050",
+   "source": "datos-clinicos",
+   "target": "privacidad",
+   "peso": 1,
+   "explicacion": "Los datos de pacientes requieren protección especial incluso en prácticas académicas.",
+   "preguntas": [
+    "ENS-015"
+   ]
+  },
+  {
+   "id": "R-051",
+   "source": "confidencialidad",
+   "target": "datos-personales",
+   "peso": 1,
+   "explicacion": "Los trabajos y calificaciones de estudiantes no deben compartirse con servicios que puedan reutilizarlos sin autorización.",
+   "preguntas": [
+    "ENS-016"
+   ]
+  },
+  {
+   "id": "R-052",
+   "source": "aprendizaje",
+   "target": "competencias",
+   "peso": 1,
+   "explicacion": "Copiar soluciones no demuestra capacidad para resolver los problemas.",
+   "preguntas": [
+    "ENS-018"
+   ]
+  },
+  {
+   "id": "R-053",
+   "source": "competencias",
+   "target": "evaluacion",
+   "peso": 1,
+   "explicacion": "Las evaluaciones deben comprobar los conocimientos y habilidades que el estudiante necesita desarrollar.",
+   "preguntas": [
+    "ENS-019"
+   ]
+  },
+  {
+   "id": "R-054",
+   "source": "declaracion-de-uso",
+   "target": "transparencia",
+   "peso": 3,
+   "explicacion": "Cuando la IA interviene en una parte importante de un producto, debe informarse qué hizo la herramienta.",
+   "preguntas": [
+    "ENS-020",
+    "CTI-022",
+    "EXT-019"
+   ]
+  },
+  {
+   "id": "R-055",
+   "source": "mediacion-docente",
+   "target": "retroalimentacion",
+   "peso": 1,
+   "explicacion": "Los comentarios automáticos deben ser revisados por quien orienta el aprendizaje.",
+   "preguntas": [
+    "ENS-022"
+   ]
+  },
+  {
+   "id": "R-056",
+   "source": "citas",
+   "target": "fuentes",
+   "peso": 1,
+   "explicacion": "Las referencias sugeridas por IA deben localizarse y comprobarse antes de citarlas.",
+   "preguntas": [
+    "ENS-024"
+   ]
+  },
+  {
+   "id": "R-057",
+   "source": "integridad-academica",
+   "target": "responsabilidad",
+   "peso": 1,
+   "explicacion": "Fabricar un certificado afecta la autenticidad de los documentos académicos.",
+   "preguntas": [
+    "ENS-027"
+   ]
+  },
+  {
+   "id": "R-058",
+   "source": "competencias",
+   "target": "niveles-de-uso",
+   "peso": 1,
+   "explicacion": "Los programas pueden acordar condiciones claras para el uso de IA en actividades similares.",
+   "preguntas": [
+    "ENS-028"
+   ]
+  },
+  {
+   "id": "R-059",
+   "source": "declaracion-de-uso",
+   "target": "prototipos",
+   "peso": 1,
+   "explicacion": "Si se utiliza código generado con IA en un trabajo evaluado, debe declararse y probarse.",
+   "preguntas": [
+    "ENS-031"
+   ]
+  },
+  {
+   "id": "R-060",
+   "source": "evaluacion",
+   "target": "mediacion-docente",
+   "peso": 1,
+   "explicacion": "El profesor debe comprobar que la rúbrica corresponde a la actividad antes de calificar.",
+   "preguntas": [
+    "ENS-032"
+   ]
+  },
+  {
+   "id": "R-061",
+   "source": "sesgos",
+   "target": "verificacion",
+   "peso": 1,
+   "explicacion": "Una sola perspectiva de IA requiere contrastarse con otras fuentes.",
+   "preguntas": [
+    "ENS-033"
+   ]
+  },
+  {
+   "id": "R-062",
+   "source": "anonimizacion",
+   "target": "datos-clinicos",
+   "peso": 1,
+   "explicacion": "Un caso ficticio permite practicar sin compartir historias clínicas identificables.",
+   "preguntas": [
+    "ENS-035"
+   ]
+  },
+  {
+   "id": "R-063",
+   "source": "propiedad-intelectual",
+   "target": "publicacion",
+   "peso": 2,
+   "explicacion": "El depósito de imágenes generadas exige documentar su origen y derechos.",
+   "preguntas": [
+    "ENS-036",
+    "CTI-030"
+   ]
+  },
+  {
+   "id": "R-064",
+   "source": "aprendizaje",
+   "target": "verificacion",
+   "peso": 1,
+   "explicacion": "Pedir explicaciones ayuda a aprender si se contrastan con el curso.",
+   "preguntas": [
+    "ENS-038"
+   ]
+  },
+  {
+   "id": "R-065",
+   "source": "confidencialidad",
+   "target": "privacidad",
+   "peso": 1,
+   "explicacion": "La finalidad de calificar no elimina la protección de trabajos identificables.",
+   "preguntas": [
+    "ENS-039"
+   ]
+  },
+  {
+   "id": "R-066",
+   "source": "agencia-humana",
+   "target": "competencias",
+   "peso": 1,
+   "explicacion": "La herramienta debe fortalecer la capacidad de argumentar sin depender de ella.",
+   "preguntas": [
+    "ENS-040"
+   ]
+  },
+  {
+   "id": "R-067",
+   "source": "prototipos",
+   "target": "verificacion",
+   "peso": 2,
+   "explicacion": "Para afirmar que una idea es nueva deben revisarse publicaciones y desarrollos anteriores.",
+   "preguntas": [
+    "CTI-003",
+    "CTI-032"
+   ]
+  },
+  {
+   "id": "R-068",
+   "source": "integridad-cientifica",
+   "target": "trazabilidad",
+   "peso": 2,
+   "explicacion": "El equipo debe registrar y probar el código generado con IA que afecta los resultados del estudio.",
+   "preguntas": [
+    "CTI-005",
+    "CTI-007"
+   ]
+  },
+  {
+   "id": "R-069",
+   "source": "alucinaciones",
+   "target": "integridad-cientifica",
+   "peso": 1,
+   "explicacion": "Los valores estimados no pueden presentarse como si hubieran sido observados.",
+   "preguntas": [
+    "CTI-006"
+   ]
+  },
+  {
+   "id": "R-070",
+   "source": "integridad-cientifica",
+   "target": "responsabilidad",
+   "peso": 1,
+   "explicacion": "El equipo investigador debe interpretar los resultados antes de redactar sus conclusiones.",
+   "preguntas": [
+    "CTI-008"
+   ]
+  },
+  {
+   "id": "R-071",
+   "source": "declaracion-de-uso",
+   "target": "publicacion",
+   "peso": 1,
+   "explicacion": "Una imagen generada con IA debe cumplir las reglas de declaración de la publicación.",
+   "preguntas": [
+    "CTI-009"
+   ]
+  },
+  {
+   "id": "R-072",
+   "source": "autoria",
+   "target": "publicacion",
+   "peso": 1,
+   "explicacion": "Una herramienta puede ayudar a escribir un artículo, pero no puede figurar como autora.",
+   "preguntas": [
+    "CTI-010"
+   ]
+  },
+  {
+   "id": "R-073",
+   "source": "confidencialidad",
+   "target": "revision-por-pares",
+   "peso": 2,
+   "explicacion": "Un manuscrito no publicado debe mantenerse reservado durante la evaluación.",
+   "preguntas": [
+    "CTI-011",
+    "CTI-035"
+   ]
+  },
+  {
+   "id": "R-074",
+   "source": "supervision-humana",
+   "target": "etica",
+   "peso": 1,
+   "explicacion": "El Comité de Ética decide sobre los aspectos éticos de la investigación cuando corresponde.",
+   "preguntas": [
+    "CTI-012"
+   ]
+  },
+  {
+   "id": "R-075",
+   "source": "datos-clinicos",
+   "target": "proveedores",
+   "peso": 1,
+   "explicacion": "Antes de procesar historias clínicas con un proveedor externo deben comprobarse las autorizaciones y medidas de protección.",
+   "preguntas": [
+    "CTI-013"
+   ]
+  },
+  {
+   "id": "R-076",
+   "source": "transferencia",
+   "target": "verificacion",
+   "peso": 2,
+   "explicacion": "Antes de comercializar una tecnología deben revisarse patentes y derechos de terceros.",
+   "preguntas": [
+    "CTI-015",
+    "EXT-037"
+   ]
+  },
+  {
+   "id": "R-077",
+   "source": "calidad",
+   "target": "verificacion",
+   "peso": 5,
+   "explicacion": "Los resultados de IA deben comprobarse con los datos y fuentes correspondientes antes de utilizarlos.",
+   "preguntas": [
+    "CTI-016",
+    "EXT-034",
+    "GES-004",
+    "GES-018",
+    "GES-038"
+   ]
+  },
+  {
+   "id": "R-078",
+   "source": "calidad",
+   "target": "trazabilidad",
+   "peso": 2,
+   "explicacion": "Los cambios de versión deben registrarse y contrastarse con resultados anteriores.",
+   "preguntas": [
+    "CTI-017",
+    "GES-034"
+   ]
+  },
+  {
+   "id": "R-079",
+   "source": "publicacion",
+   "target": "verificacion",
+   "peso": 1,
+   "explicacion": "Una traducción realizada con IA debe comprobarse antes de enviarse a una revista.",
+   "preguntas": [
+    "CTI-018"
+   ]
+  },
+  {
+   "id": "R-080",
+   "source": "propiedad-intelectual",
+   "target": "prototipos",
+   "peso": 2,
+   "explicacion": "Para proteger un diseño deben identificarse los aportes de las personas y los derechos que puedan existir.",
+   "preguntas": [
+    "CTI-019",
+    "EXT-016"
+   ]
+  },
+  {
+   "id": "R-081",
+   "source": "aprendizaje",
+   "target": "formacion",
+   "peso": 1,
+   "explicacion": "El semillero puede usar IA para proponer ideas, pero debe comprobar sus antecedentes.",
+   "preguntas": [
+    "CTI-020"
+   ]
+  },
+  {
+   "id": "R-082",
+   "source": "consentimiento",
+   "target": "etica",
+   "peso": 2,
+   "explicacion": "Cambiar el uso de grabaciones de participantes puede requerir revisar el consentimiento y el protocolo.",
+   "preguntas": [
+    "CTI-021",
+    "CTI-036"
+   ]
+  },
+  {
+   "id": "R-083",
+   "source": "integridad-cientifica",
+   "target": "publicacion",
+   "peso": 1,
+   "explicacion": "El resumen debe respetar la evidencia sin exagerar resultados.",
+   "preguntas": [
+    "CTI-023"
+   ]
+  },
+  {
+   "id": "R-084",
+   "source": "calidad",
+   "target": "datos-clinicos",
+   "peso": 1,
+   "explicacion": "Los errores de clasificación de imágenes médicas deben comprobarse antes de interpretar los resultados.",
+   "preguntas": [
+    "CTI-024"
+   ]
+  },
+  {
+   "id": "R-085",
+   "source": "anonimizacion",
+   "target": "datos-personales",
+   "peso": 1,
+   "explicacion": "Fechas y lugares pueden permitir identificar a participantes sin nombres.",
+   "preguntas": [
+    "CTI-025"
+   ]
+  },
+  {
+   "id": "R-086",
+   "source": "integridad-cientifica",
+   "target": "transparencia",
+   "peso": 1,
+   "explicacion": "Si la IA modifica una imagen experimental, el equipo debe explicar qué se cambió.",
+   "preguntas": [
+    "CTI-026"
+   ]
+  },
+  {
+   "id": "R-087",
+   "source": "datos-sensibles",
+   "target": "riesgo",
+   "peso": 1,
+   "explicacion": "Analizar datos genómicos requiere proteger esa información, además de comprobar la precisión del sistema.",
+   "preguntas": [
+    "CTI-028"
+   ]
+  },
+  {
+   "id": "R-088",
+   "source": "publicacion",
+   "target": "responsabilidad",
+   "peso": 1,
+   "explicacion": "Quien publica debe comprobar que la edición no alteró el sentido de los resultados.",
+   "preguntas": [
+    "CTI-034"
+   ]
+  },
+  {
+   "id": "R-089",
+   "source": "confidencialidad",
    "target": "herramientas-autorizadas",
-   "peso": 2
+   "peso": 1,
+   "explicacion": "Que una herramienta sea gratuita no demuestra que proteja los documentos inéditos.",
+   "preguntas": [
+    "CTI-037"
+   ]
+  },
+  {
+   "id": "R-090",
+   "source": "responsabilidad",
+   "target": "supervision-humana",
+   "peso": 4,
+   "explicacion": "Una decisión institucional apoyada por IA debe ser revisada y aprobada por las personas autorizadas.",
+   "preguntas": [
+    "CTI-038",
+    "GES-008",
+    "GES-015",
+    "GES-025"
+   ]
+  },
+  {
+   "id": "R-091",
+   "source": "autoria",
+   "target": "prototipos",
+   "peso": 1,
+   "explicacion": "La identificación de inventores debe basarse en contribuciones de personas, no de herramientas.",
+   "preguntas": [
+    "CTI-039"
+   ]
+  },
+  {
+   "id": "R-092",
+   "source": "datos-clinicos",
+   "target": "verificacion",
+   "peso": 1,
+   "explicacion": "Los datos simulados deben validarse antes de utilizarlos como representación de pacientes reales.",
+   "preguntas": [
+    "CTI-040"
+   ]
+  },
+  {
+   "id": "R-093",
+   "source": "evaluacion",
+   "target": "formacion",
+   "peso": 1,
+   "explicacion": "El equipo docente debe revisar los objetivos y criterios de evaluación que propone una IA.",
+   "preguntas": [
+    "EXT-002"
+   ]
+  },
+  {
+   "id": "R-094",
+   "source": "calidad",
+   "target": "comunidades",
+   "peso": 3,
+   "explicacion": "La información elaborada con IA sobre una comunidad debe revisarse junto con sus datos y su contexto.",
+   "preguntas": [
+    "EXT-003",
+    "EXT-017",
+    "EXT-025"
+   ]
+  },
+  {
+   "id": "R-095",
+   "source": "comunidades",
+   "target": "verificacion",
+   "peso": 2,
+   "explicacion": "Las necesidades de una comunidad deben contrastarse con las personas que participan en el proyecto.",
+   "preguntas": [
+    "EXT-004",
+    "EXT-018"
+   ]
+  },
+  {
+   "id": "R-096",
+   "source": "entregables",
+   "target": "responsabilidad",
+   "peso": 2,
+   "explicacion": "El equipo experto debe comprobar el informe antes de entregarlo al cliente.",
+   "preguntas": [
+    "EXT-005",
+    "EXT-035"
+   ]
+  },
+  {
+   "id": "R-097",
+   "source": "datos-personales",
+   "target": "niveles-de-uso",
+   "peso": 1,
+   "explicacion": "Analizar datos personales de una comunidad requiere más cuidados que corregir un texto sin esos datos.",
+   "preguntas": [
+    "EXT-006"
+   ]
+  },
+  {
+   "id": "R-098",
+   "source": "datos-personales",
+   "target": "proveedores",
+   "peso": 2,
+   "explicacion": "Antes de cargar listas de asistentes a una IA deben revisarse los permisos y las condiciones del servicio.",
+   "preguntas": [
+    "EXT-007",
+    "EXT-033"
+   ]
+  },
+  {
+   "id": "R-099",
+   "source": "automatizacion",
+   "target": "supervision-humana",
+   "peso": 2,
+   "explicacion": "Un chatbot que responde sobre compromisos contractuales necesita revisión del área responsable.",
+   "preguntas": [
+    "EXT-008",
+    "GES-007"
+   ]
+  },
+  {
+   "id": "R-100",
+   "source": "calidad",
+   "target": "formacion",
+   "peso": 1,
+   "explicacion": "Los ejemplos generados con IA deben revisarse y adaptarse al público del taller.",
+   "preguntas": [
+    "EXT-010"
+   ]
+  },
+  {
+   "id": "R-101",
+   "source": "publicacion",
+   "target": "reputacion",
+   "peso": 1,
+   "explicacion": "Antes de publicar una pieza institucional deben revisarse el texto, las imágenes y el uso de la marca.",
+   "preguntas": [
+    "EXT-012"
+   ]
+  },
+  {
+   "id": "R-102",
+   "source": "reputacion",
+   "target": "transparencia",
+   "peso": 1,
+   "explicacion": "Una imagen generada con IA no debe presentarse como fotografía real de participantes.",
+   "preguntas": [
+    "EXT-013"
+   ]
+  },
+  {
+   "id": "R-103",
+   "source": "prototipos",
+   "target": "transferencia",
+   "peso": 1,
+   "explicacion": "Las aplicaciones sugeridas por IA son ideas iniciales que deben comprobarse antes de buscar su transferencia.",
+   "preguntas": [
+    "EXT-014"
+   ]
+  },
+  {
+   "id": "R-104",
+   "source": "propiedad-intelectual",
+   "target": "transferencia",
+   "peso": 1,
+   "explicacion": "Comercializar exige verificar patentes y derechos de terceros.",
+   "preguntas": [
+    "EXT-015"
+   ]
+  },
+  {
+   "id": "R-105",
+   "source": "entregables",
+   "target": "trazabilidad",
+   "peso": 1,
+   "explicacion": "Si la IA influyó en una consultoría, debe quedar claro qué datos analizó y quién comprobó las recomendaciones.",
+   "preguntas": [
+    "EXT-020"
+   ]
+  },
+  {
+   "id": "R-106",
+   "source": "comunidades",
+   "target": "responsabilidad",
+   "peso": 1,
+   "explicacion": "El equipo debe conservar el diálogo comunitario al definir prioridades.",
+   "preguntas": [
+    "EXT-024"
+   ]
+  },
+  {
+   "id": "R-107",
+   "source": "entregables",
+   "target": "verificacion",
+   "peso": 2,
+   "explicacion": "El equipo debe revisar una propuesta de asesoría antes de enviarla a la entidad.",
+   "preguntas": [
+    "EXT-026",
+    "EXT-027"
+   ]
+  },
+  {
+   "id": "R-108",
+   "source": "consentimiento",
+   "target": "poblacion-vulnerable",
+   "peso": 1,
+   "explicacion": "Los datos de menores requieren autorizaciones y protección reforzada.",
+   "preguntas": [
+    "EXT-028"
+   ]
+  },
+  {
+   "id": "R-109",
+   "source": "reputacion",
+   "target": "verificacion",
+   "peso": 1,
+   "explicacion": "No deben atribuirse problemas a una comunidad sin información que los respalde.",
+   "preguntas": [
+    "EXT-029"
+   ]
+  },
+  {
+   "id": "R-110",
+   "source": "autoria",
+   "target": "transferencia",
+   "peso": 1,
+   "explicacion": "Antes de transferir una tecnología, deben identificarse las contribuciones y los derechos correspondientes.",
+   "preguntas": [
+    "EXT-030"
+   ]
+  },
+  {
+   "id": "R-111",
+   "source": "entregables",
+   "target": "transparencia",
+   "peso": 1,
+   "explicacion": "El informe para el aliado debe explicar qué apoyo aportó la IA y qué verificaciones se hicieron.",
+   "preguntas": [
+    "EXT-032"
+   ]
+  },
+  {
+   "id": "R-112",
+   "source": "comunidades",
+   "target": "confidencialidad",
+   "peso": 1,
+   "explicacion": "Un envío masivo puede divulgar información privada obtenida en entrevistas individuales.",
+   "preguntas": [
+    "EXT-036"
+   ]
+  },
+  {
+   "id": "R-113",
+   "source": "terceros",
+   "target": "verificacion",
+   "peso": 1,
+   "explicacion": "Los compromisos de un convenio deben comprobarse en el documento firmado.",
+   "preguntas": [
+    "EXT-038"
+   ]
+  },
+  {
+   "id": "R-114",
+   "source": "riesgo",
+   "target": "niveles-de-uso",
+   "peso": 1,
+   "explicacion": "Corregir una invitación sin datos personales suele requerir menos cuidados que analizar información de una comunidad.",
+   "preguntas": [
+    "EXT-039"
+   ]
+  },
+  {
+   "id": "R-115",
+   "source": "automatizacion",
+   "target": "responsabilidad",
+   "peso": 3,
+   "explicacion": "La IA puede ayudar a responder consultas, pero el área responsable debe comprobar y corregir sus respuestas.",
+   "preguntas": [
+    "EXT-040",
+    "GES-001",
+    "GES-035"
+   ]
+  },
+  {
+   "id": "R-116",
+   "source": "sesgos",
+   "target": "supervision-humana",
+   "peso": 1,
+   "explicacion": "Una clasificación automática de hojas de vida puede dejar personas por fuera sin una revisión adecuada.",
+   "preguntas": [
+    "GES-003"
+   ]
+  },
+  {
+   "id": "R-117",
+   "source": "proveedores",
+   "target": "seguridad-informacion",
+   "peso": 2,
+   "explicacion": "Una nueva función de IA puede cambiar quién accede a los documentos internos.",
+   "preguntas": [
+    "GES-006",
+    "GES-033"
+   ]
+  },
+  {
+   "id": "R-118",
+   "source": "decisiones",
+   "target": "transparencia",
+   "peso": 2,
+   "explicacion": "El área debe poder explicar qué datos y criterios se utilizaron para generar alertas sobre estudiantes.",
+   "preguntas": [
+    "GES-009",
+    "GES-030"
+   ]
+  },
+  {
+   "id": "R-119",
+   "source": "confidencialidad",
+   "target": "proveedores",
+   "peso": 1,
+   "explicacion": "Comparar ofertas de proveedores no autoriza divulgar información comercial reservada.",
+   "preguntas": [
+    "GES-010"
+   ]
+  },
+  {
+   "id": "R-120",
+   "source": "auditoria",
+   "target": "proveedores",
+   "peso": 1,
+   "explicacion": "Antes de utilizar un proveedor externo debe conocerse dónde guarda los datos y cómo los elimina.",
+   "preguntas": [
+    "GES-017"
+   ]
+  },
+  {
+   "id": "R-121",
+   "source": "proveedores",
+   "target": "responsabilidad",
+   "peso": 1,
+   "explicacion": "El precio más bajo no es el único criterio para contratar a un proveedor.",
+   "preguntas": [
+    "GES-020"
+   ]
+  },
+  {
+   "id": "R-122",
+   "source": "automatizacion",
+   "target": "calidad",
+   "peso": 2,
+   "explicacion": "Si cambian los requisitos de un trámite, también debe actualizarse la información del chatbot.",
+   "preguntas": [
+    "GES-022",
+    "GES-029"
+   ]
+  },
+  {
+   "id": "R-123",
+   "source": "herramientas-autorizadas",
+   "target": "seguridad-informacion",
+   "peso": 1,
+   "explicacion": "Una herramienta gratuita debe revisarse antes de utilizar información institucional.",
+   "preguntas": [
+    "GES-024"
+   ]
+  },
+  {
+   "id": "R-124",
+   "source": "confidencialidad",
+   "target": "seguridad-informacion",
+   "peso": 1,
+   "explicacion": "La IA solo debe tener acceso a los documentos necesarios para la tarea.",
+   "preguntas": [
+    "GES-026"
+   ]
+  },
+  {
+   "id": "R-125",
+   "source": "datos-sensibles",
+   "target": "privacidad",
+   "peso": 1,
+   "explicacion": "Los certificados médicos de empleados requieren cuidados especiales de privacidad.",
+   "preguntas": [
+    "GES-028"
+   ]
+  },
+  {
+   "id": "R-126",
+   "source": "declaracion-de-uso",
+   "target": "trazabilidad",
+   "peso": 1,
+   "explicacion": "Un informe para comité debe indicar qué hizo la IA y quién revisó el contenido.",
+   "preguntas": [
+    "GES-032"
+   ]
+  },
+  {
+   "id": "R-127",
+   "source": "formacion",
+   "target": "riesgo",
+   "peso": 1,
+   "explicacion": "Antes de activar una IA, el personal debe conocer sus límites y cómo corregir errores.",
+   "preguntas": [
+    "GES-036"
+   ]
+  },
+  {
+   "id": "R-128",
+   "source": "auditoria",
+   "target": "decisiones",
+   "peso": 1,
+   "explicacion": "Antes de negar una solicitud hay que comprobar los datos y las reglas del trámite.",
+   "preguntas": [
+    "GES-037"
+   ]
   }
  ]
 }

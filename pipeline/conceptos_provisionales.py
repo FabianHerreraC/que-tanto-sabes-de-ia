@@ -122,4 +122,8 @@ def main():
 
 
 if __name__ == "__main__":
+    # desde 2026-11-21 graph.json sale de data/Juego_IA.xlsx (pipeline/importar_excel.py);
+    # este script solo se conserva por sus funciones auxiliares
+    if "--forzar" not in sys.argv:
+        sys.exit("Usa python3 pipeline/importar_excel.py: graph.json ahora sale del Excel. (--forzar para correr el banco anterior)")
     main()
