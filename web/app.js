@@ -988,12 +988,15 @@
   }
 
   // mosaico con ritmo: alterna tarjetas anchas (2 columnas) y altas (2 filas) entre las normales.
-  // Con «Todas», la forma de cada historia está fijada para que las 7 filas queden llenas (la invitación es un círculo de 1×1):
-  //  filas 1-2: círculo, 01 alta, 02 · 04 · 05 — filas 3-4: 03 ancha, 06 alta, 07, 08 — filas 5-7: 09 ancha, 10 alta, 11 ancha, 12, 13 ancha
-  const FORMA = { "01": "alta", "03": "ancha", "06": "alta", "09": "ancha", "10": "alta", "11": "ancha", "13": "ancha" };
+  // Con «Todas», la forma y el orden de las historias están fijados para que las 7 filas queden llenas
+  // (la invitación es un círculo de 1×1; Creación Digital, la 12, va en el quinto puesto):
+  //  1: círculo + 01 ancha · 2: 02 + 03 ancha · 3: 04, 12, 05 · 4-5: 06 alta, 07, 08, 09 ancha · 6-7: 10 alta, 11 ancha, 13 ancha
+  const FORMA = { "01": "ancha", "03": "ancha", "06": "alta", "09": "ancha", "10": "alta", "11": "ancha", "13": "ancha" };
+  const ORDEN = ["01", "02", "03", "04", "12", "05", "06", "07", "08", "09", "10", "11", "13"];
   function pintarGrilla() {
     const todas = filtro === "Todas";
-    const lista = HISTORIAS.map((h, i) => ({ h, i })).filter(({ h }) => todas || h.tema === filtro);
+    const lista = HISTORIAS.map((h, i) => ({ h, i })).filter(({ h }) => todas || h.tema === filtro)
+      .sort((a, b) => ORDEN.indexOf(a.h.num) - ORDEN.indexOf(b.h.num));
     const primeraConImg = lista.find(({ h }) => h.imagen)?.i;
     const forma = (h, i) => !h.imagen ? "normal" : todas ? (FORMA[h.num] || "normal") : (i === primeraConImg ? "ancha" : "normal");
     const invitacion = !todas ? "" : `
