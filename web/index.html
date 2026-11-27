@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261122y">
+<link rel="stylesheet" href="style.css?v=20261127i">
 </head>
 <body data-vista="carga">
 
@@ -18,13 +18,12 @@
 </div>
 
 <header class="barra">
-  <a class="marca" href="#" data-ir="inicio" aria-label="Universidad El Bosque · inicio"><img src="img/bosque-logo.svg" alt="" width="1108" height="317"></a>
+  <a class="marca" href="#" data-ir="historias" aria-label="Universidad El Bosque · portada"><img src="img/bosque-logo.svg" alt="" width="1108" height="317"></a>
   <nav class="pestanas" aria-label="Secciones">
-    <button class="pestana" data-ir="inicio" aria-current="page"><span>Juego</span><sup>1</sup></button>
-    <button class="pestana" data-ir="mapa"><span>Mapa</span><sup>2</sup></button>
+    <button class="pestana" data-ir="historias" aria-current="page"><span>Historias</span><sup>1</sup></button>
+    <button class="pestana" data-ir="inicio"><span>Juega</span><sup>2</sup></button>
     <button class="pestana" data-ir="consulta"><span>Consulta</span><sup>3</sup></button>
-    <button class="pestana" data-ir="historias"><span>Historias</span><sup>4</sup></button>
-    <button class="pestana" data-ir="acerca"><span>Acerca</span><sup>5</sup></button>
+    <button class="pestana" data-ir="acerca"><span>Acerca</span><sup>4</sup></button>
   </nav>
   <button class="punto" id="movimiento" aria-pressed="false" title="Pausar movimiento"><i></i><span class="sr">Pausar movimiento</span></button>
 </header>
@@ -103,6 +102,8 @@
       <button class="pildora oscura" id="otra">Jugar otra vez</button>
       <button class="pildora" id="compartir">Compartir mis resultados</button>
     </div>
+    <!-- al bajar desde aquí aparece el mapa de conceptos con lo acertado (verde) y lo fallado (rojo) -->
+    <button class="cierre-mapa" id="ver-mapa" type="button"><span>Explora tu mapa de conceptos</span><span class="cierre-flecha" aria-hidden="true">↓</span></button>
   </section>
 
   <!-- Consulta: asistente sobre los documentos (aún sin conectar) -->
@@ -196,62 +197,14 @@
 <section class="revista" id="historias" aria-labelledby="historias-t">
   <div class="rv">
     <div class="rv-portada" id="rv-portada">
+    <!-- vitrina: portada del sitio. Las historias salen de data/historias.json (pipeline/importar_historias.py) -->
     <header class="rv-cabecera">
-      <img class="rv-foto" src="img/collage/estudiantes.jpg" alt="" width="320" height="155">
-      <h1 class="rv-titulo" id="historias-t">Historias <em>con IA</em></h1>
-      <p class="rv-bajada">Proyectos, personas y experiencias que usan inteligencia artificial en la universidad.</p>
+      <h1 class="solo-lectores" id="historias-t">Historias de inteligencia artificial en la Universidad El Bosque</h1>
+      <p class="rv-bajada" id="rv-intro"></p>
     </header>
-    <p class="rv-aviso">Edición de muestra: las historias están por publicarse. Cada espacio corresponde a una de las líneas de trabajo con IA que la universidad identificó en su levantamiento de capacidades.</p>
-    <div class="rv-grilla">
-      <article class="rv-nota destacada" tabindex="0" role="link" data-historia="0">
-        <div class="rv-fila"><span class="rv-num">01</span><span class="rv-tag">Investigación aplicada</span></div>
-        <h2>La historia destacada de la edición</h2>
-        <p>Aquí va el proyecto principal: el equipo, la pregunta que lo mueve, cómo usa la IA y qué cuidados tomó con los datos, la autoría y la supervisión humana.</p>
-        <span class="rv-estado">Próximamente</span>
-      </article>
-      <article class="rv-nota" tabindex="0" role="link" data-historia="1">
-        <div class="rv-fila"><span class="rv-num">02</span><span class="rv-tag">Formación y alfabetización en IA</span></div>
-        <h2>Historia por publicar</h2>
-        <p>Un proyecto de formación y alfabetización en IA en la universidad: quién lo hace, qué problema aborda y qué aprendió.</p>
-        <span class="rv-estado">Próximamente</span>
-      </article>
-      <article class="rv-nota" tabindex="0" role="link" data-historia="2">
-        <div class="rv-fila"><span class="rv-num">03</span><span class="rv-tag">Creación de recursos educativos</span></div>
-        <h2>Historia por publicar</h2>
-        <p>Un proyecto de creación de recursos educativos con IA en la universidad: quién lo hace, qué problema aborda y qué aprendió.</p>
-        <span class="rv-estado">Próximamente</span>
-      </article>
-      <article class="rv-nota" tabindex="0" role="link" data-historia="3">
-        <div class="rv-fila"><span class="rv-num">04</span><span class="rv-tag">Análisis de datos</span></div>
-        <h2>Historia por publicar</h2>
-        <p>Un proyecto de análisis de datos con IA en la universidad: quién lo hace, qué problema aborda y qué aprendió.</p>
-        <span class="rv-estado">Próximamente</span>
-      </article>
-      <article class="rv-nota" tabindex="0" role="link" data-historia="4">
-        <div class="rv-fila"><span class="rv-num">05</span><span class="rv-tag">Servicios al entorno</span></div>
-        <h2>Historia por publicar</h2>
-        <p>Un proyecto de servicios al entorno con IA en la universidad: quién lo hace, qué problema aborda y qué aprendió.</p>
-        <span class="rv-estado">Próximamente</span>
-      </article>
-      <article class="rv-nota" tabindex="0" role="link" data-historia="5">
-        <div class="rv-fila"><span class="rv-num">06</span><span class="rv-tag">Apoyo a procesos administrativos</span></div>
-        <h2>Historia por publicar</h2>
-        <p>Un proyecto de apoyo a procesos administrativos con IA en la universidad: quién lo hace, qué problema aborda y qué aprendió.</p>
-        <span class="rv-estado">Próximamente</span>
-      </article>
-      <aside class="rv-agenda" aria-labelledby="agenda-t">
-        <h3 id="agenda-t">Agenda</h3>
-        <ul>
-          <li><b>Por anunciar</b>Talleres de alfabetización en IA</li>
-          <li><b>Por anunciar</b>Orientaciones para trabajos de grado</li>
-          <li><b>Siempre abierto</b>Canal de orientación: comisionia@unbosque.edu.co</li>
-        </ul>
-      </aside>
-      <div class="rv-convocatoria">
-        <p>¿Tu proyecto usa IA?</p>
-        <span>Pronto podrás postular tu historia para la próxima edición.</span>
-      </div>
-    </div>
+
+    <nav class="vt-filtros" id="rv-filtros" aria-label="Filtrar historias por tema"></nav>
+    <div class="vt-grilla" id="rv-grilla"></div>
     </div>
     <article class="rv-articulo" id="rv-articulo" hidden></article>
   </div>
@@ -265,6 +218,7 @@
   <p class="intro-texto">Cada punto es un concepto de los cinco documentos de Lineamientos de IA. Su color indica el documento donde más aparece, su tamaño cuántas veces se menciona y cada línea es una relación entre dos conceptos que el juego pone a prueba.</p>
   <p class="intro-uso">Arrastra para girar. Toca un punto para leer qué dice el texto oficial.</p>
 </aside>
+<button class="pildora volver-resultados" id="volver-resultados" type="button"><span aria-hidden="true">↑</span> Tus resultados</button>
 <aside class="ficha" id="ficha" hidden aria-labelledby="ficha-titulo">
   <button class="ficha-cerrar" id="ficha-cerrar" aria-label="Cerrar ficha">×</button>
   <p class="ficha-doc" id="ficha-doc"></p>
@@ -286,6 +240,6 @@
 <div class="burbuja" id="burbuja" hidden></div>
 
 
-<script src="app.js?v=20261123b"></script>
+<script src="app.js?v=20261127f"></script>
 </body>
 </html>

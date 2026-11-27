@@ -1,0 +1,182 @@
+{
+ "titulo": "Historias de inteligencia artificial en la Universidad El Bosque",
+ "intro": "Conoce cómo los equipos de El Bosque investigan, enseñan y crean con inteligencia artificial. Aquí encontrarás proyectos de salud, experiencias de estudiantes y opciones de formación.",
+ "historias": [
+  {
+   "titulo": "ALMA y el uso de IA para apoyar la revisión de citologías",
+   "parrafos": [
+    "Un equipo de El Bosque, liderado por la profesora Sandra Perdomo, desarrolló un prototipo de inteligencia artificial para apoyar la lectura de citologías del cuello uterino. En este examen se estudian muestras de células para identificar alteraciones que podrían requerir una evaluación adicional.",
+    "ALMA significa Asistente de Lectura Médica Automatizada. El equipo digitaliza láminas de citología y reúne imágenes que especialistas revisan y clasifican. Con esos ejemplos se entrena un modelo de IA para que reconozca patrones asociados con posibles alteraciones celulares y ayude a señalar imágenes para revisión especializada. El desarrollo se ha presentado como un prototipo que requiere validación clínica."
+   ],
+   "enlaces": [
+    "https://www.unbosque.edu.co/centro-informacion/bosque-contexto/alma-prototipo-inteligencia-artificial-mejoraria-lectura-citologias"
+   ],
+   "num": "01",
+   "tema": "Salud",
+   "imagen": "img/historias/01.jpg",
+   "imagen_fuente": "https://www.unbosque.edu.co/sites/default/files/2025-10/alma-inteligencia-artificial-deteccion-cancer-cervical-universidad-elbosque%20%281%29.png"
+  },
+  {
+   "titulo": "SavIA-Lab y la investigación con imágenes médicas",
+   "parrafos": [
+    "SavIA-Lab es el Laboratorio de Soluciones Avanzadas en Virtualización e Inteligencia Artificial de la Universidad El Bosque. Se creó a partir del trabajo en ALMA, un proyecto que busca apoyar la revisión de citologías del cuello uterino.",
+    "Una línea de trabajo es la patología digital. Consiste en convertir láminas que normalmente se examinan al microscopio en imágenes que se pueden analizar en un computador. El equipo reúne imágenes y las revisa con especialistas para construir conjuntos de datos destinados a la investigación. La Universidad documenta el apoyo de la Agencia Atenea y la colaboración con la Liga Colombiana Contra el Cáncer en el proyecto de detección temprana de cáncer de cuello uterino."
+   ],
+   "enlaces": [
+    "https://www.unbosque.edu.co/sites/default/files/2025-08/6.%20Factor.pdf"
+   ],
+   "num": "02",
+   "tema": "Salud"
+  },
+  {
+   "titulo": "Lab IAx y el desarrollo de soluciones de IA para la salud",
+   "parrafos": [
+    "Lab IAx es un laboratorio abierto impulsado por el HUB iEX en Salud de la Universidad El Bosque. Reúne a profesionales de la salud, investigadores, tecnólogos y emprendedores para desarrollar y probar aplicaciones de IA en el sector.",
+    "Participan IPS Salud El Bosque, Los Cobos Medical Center, Amazon Web Services y BGH Tech Partner. El laboratorio propone trabajar tanto en herramientas para apoyar la atención médica como en aplicaciones para mejorar procesos hospitalarios. Su página explica cómo contactar al equipo para presentar una idea o explorar una colaboración."
+   ],
+   "enlaces": [
+    "https://www.unbosque.edu.co/centro-informacion/relatos/lab-iax-revolucion-inteligencia-artificial-salud-llega-colombia",
+    "https://www.labiax.co/"
+   ],
+   "num": "03",
+   "tema": "Salud",
+   "imagen": "img/historias/03.jpg",
+   "imagen_fuente": "https://www.unbosque.edu.co/sites/default/files/2025-03/Relato%2520-%2520Lab%2520IAx.jpg"
+  },
+  {
+   "titulo": "Herramientas digitales e inteligencia artificial en Arquitectura",
+   "parrafos": [
+    "Un semillero de la Facultad de Creación y Comunicación estudia cómo se organizan los proyectos arquitectónicos con ayuda de herramientas digitales e inteligencia artificial.",
+    "El trabajo se centra en reconocer características que dan forma a un proyecto, como la distribución de los espacios o la relación entre sus partes. La Facultad presenta el semillero como un espacio de investigación formativa para estudiantes de Arquitectura. Su página reúne la información del semillero y otras opciones de participación."
+   ],
+   "enlaces": [
+    "https://creacionycomunicacion.unbosque.edu.co/semilleros-de-investigacion"
+   ],
+   "num": "04",
+   "tema": "Creación"
+  },
+  {
+   "titulo": "Formación de la Biblioteca sobre uso responsable de la IA",
+   "parrafos": [
+    "La Biblioteca ofrece una actividad de formación dirigida a estudiantes y docentes que quieran aprender a usar la inteligencia artificial con criterio en sus actividades académicas.",
+    "La capacitación forma parte del Programa Integral de Formación para la Investigación. Quienes quieran conocer los contenidos u organizar una sesión para su grupo pueden escribir a formacionbiblioteca@unbosque.edu.co."
+   ],
+   "enlaces": [
+    "https://biblioteca.unbosque.edu.co/programa-integral-de-formacion-pif-para-la-investigacion/nivel-intermedio/uso-responsable-de-la"
+   ],
+   "num": "05",
+   "tema": "Formación"
+  },
+  {
+   "titulo": "AcademIA y la formación en ciencia de datos e inteligencia artificial",
+   "parrafos": [
+    "AcademIA es un portafolio de cursos y certificaciones que la Universidad presentó para estudiantes, docentes y personal administrativo interesados en estadística, ciencia de datos e inteligencia artificial.",
+    "Los contenidos incluyen aplicaciones en educación, salud, mercadeo y gestión administrativa. La ciencia de datos reúne métodos para organizar, analizar e interpretar información. El portafolio permite identificar qué cursos pueden responder a las necesidades de cada área y consultar con la Universidad su programación."
+   ],
+   "enlaces": [
+    "https://www.unbosque.edu.co/centro-informacion/noticias/cursos-inteligencia-artificial-ciencia-datos-bosque"
+   ],
+   "num": "06",
+   "tema": "Formación",
+   "imagen": "img/historias/06.jpg",
+   "imagen_fuente": "https://www.unbosque.edu.co/sites/default/files/2025-06/cursos-inteligencia-artificial-ciencia-datos-universidad-elbosque.png"
+  },
+  {
+   "titulo": "Investigación sobre seguimiento ambulatorio de la falla cardiaca",
+   "parrafos": [
+    "La Universidad El Bosque y Los Cobos Medical Center adelantan un proyecto para estudiar el seguimiento de personas con falla cardiaca fuera del hospital mediante dispositivos conectados e inteligencia artificial.",
+    "La propuesta busca explorar cómo integrar información recogida mediante dispositivos conectados a un modelo de seguimiento ambulatorio. El proyecto figura en ejecución en el registro de la Vicerrectoría de Investigaciones. El banco de proyectos financiables documenta su selección en la convocatoria conjunta."
+   ],
+   "enlaces": [
+    "https://www.unbosque.edu.co/sites/default/files/2025-10/Resultados%2Bproyectos%2Bfinales%2BUEB-COBOS%2B2025%2B%281%29.pdf"
+   ],
+   "num": "07",
+   "tema": "Salud"
+  },
+  {
+   "titulo": "La IA en la investigación de los semilleros de Ingeniería",
+   "parrafos": [
+    "La Facultad de Ingeniería dedicó una edición de su Feria de Semilleros a la inteligencia artificial como apoyo a la investigación en ingeniería.",
+    "La programación reunió una conferencia sobre el tema y espacios para que los semilleros compartieran sus proyectos y experiencias. La feria permite a estudiantes y docentes conocer preguntas de investigación de otros equipos y discutir cómo incorporar herramientas de IA en sus propios trabajos."
+   ],
+   "enlaces": [
+    "https://www.unbosque.edu.co/eventos-convocatorias/xvii-feria-semilleros-investigacion-ingenieria"
+   ],
+   "num": "08",
+   "tema": "Investigación"
+  },
+  {
+   "titulo": "Doctorado en Ciencia de Datos e Inteligencia Artificial",
+   "parrafos": [
+    "La Facultad de Ciencias cuenta con una ficha oficial del Doctorado en Ciencia de Datos e Inteligencia Artificial, orientado a la formación de investigadores en estos campos.",
+    "El programa aborda la investigación avanzada sobre datos y los modelos que permiten analizarlos y aprender de ellos. En la página del doctorado se pueden consultar el plan de estudios, el perfil de ingreso y las condiciones de admisión."
+   ],
+   "enlaces": [
+    "https://www.unbosque.edu.co/programas-academicos/facultad-ciencias/doctorado-ciencia-datos-inteligencia-artificial"
+   ],
+   "num": "09",
+   "tema": "Formación",
+   "imagen": "img/historias/09.jpg",
+   "imagen_fuente": "https://www.unbosque.edu.co/sites/default/files/2026-05/doctorado-en-ciencia-de-datos-e-inteligencia-artificial-carrucel.jpg"
+  },
+  {
+   "titulo": "Inteligencia artificial en la formación de educadores",
+   "parrafos": [
+    "La Maestría en Innovación y Tecnologías de la Educación de la Facultad de Educación incluye la IA y el análisis de datos en el diseño de proyectos educativos.",
+    "El programa prepara a sus participantes para planear experiencias de enseñanza que integren recursos digitales. Por ejemplo, al diseñar una actividad de clase, la decisión sobre qué tecnología emplear parte de lo que se espera que aprendan los estudiantes. La ficha del programa explica su enfoque y las posibilidades de formación."
+   ],
+   "enlaces": [
+    "https://www.unbosque.edu.co/programas-academicos/facultad-educacion/maestria-innovacion-tecnologias-educacion"
+   ],
+   "num": "10",
+   "tema": "Formación",
+   "imagen": "img/historias/10.jpg"
+  },
+  {
+   "titulo": "Inteligencia artificial para investigar nuevos medicamentos",
+   "parrafos": [
+    "El diplomado en Inteligencia Artificial para el Desarrollo de Medicamentos aborda cómo pueden emplearse modelos computacionales en la investigación farmacéutica.",
+    "Uno de sus temas es el aprendizaje automático, que consiste en entrenar modelos con datos para reconocer patrones y producir estimaciones. El programa incluye aplicaciones al estudio de rutas de síntesis, es decir, de los pasos químicos que permiten obtener un compuesto. La página de Educación Continua permite revisar el contenido y consultar por próximas cohortes."
+   ],
+   "enlaces": [
+    "https://www.unbosque.edu.co/educacion-continua/diplomado/inteligencia-artificial-desarrollo-medicamentos"
+   ],
+   "num": "11",
+   "tema": "Formación",
+   "imagen": "img/historias/11.jpg",
+   "imagen_fuente": "https://www.unbosque.edu.co/sites/default/files/2025-05/E-00936-cabezotes.jpg"
+  },
+  {
+   "titulo": "Inteligencia artificial en el pregrado en Creación Digital",
+   "parrafos": [
+    "El pregrado en Creación Digital de la Facultad de Creación y Comunicación incluye la IA en una formación que combina diseño, arte y tecnología.",
+    "El programa abarca programación, creación de contenidos y composición en tres dimensiones. Comparte asignaturas con Ingeniería de Sistemas y espacios de formación con otros programas de la Facultad. La ficha permite conocer el plan de estudios y las áreas que combina la carrera."
+   ],
+   "enlaces": [
+    "https://www.unbosque.edu.co/programas-academicos/facultad-creacion-comunicacion/creacion-digital"
+   ],
+   "num": "12",
+   "tema": "Formación",
+   "imagen": "img/historias/12.jpg",
+   "imagen_fuente": "https://www.unbosque.edu.co/sites/default/files/2025-02/DisenoDigitalElBosque32.png",
+   "video": "img/historias/12.mp4",
+   "video_poster": "img/historias/12-video.jpg"
+  },
+  {
+   "titulo": "Cómo investigan con inteligencia artificial los grupos de El Bosque",
+   "parrafos": [
+    "En la Universidad El Bosque, la inteligencia artificial aparece tanto en las líneas de investigación como en proyectos concretos. En la Facultad de Medicina, tres grupos la mencionan de forma expresa en el nombre de una de sus líneas. Medicina Comunitaria y Salud Colectiva la relaciona con el análisis de grandes volúmenes de datos. El Grupo de Cirugía General y Subespecialidades la incluye entre sus temas de innovación en salud, y el Grupo de Investigación en Cirugía General la vincula con el desarrollo de tecnologías emergentes.",
+    "Los proyectos muestran cómo se aplica en otras áreas. El grupo STEM+B, de Ingeniería, trabaja en un sistema que combina imágenes obtenidas con microondas e IA para estudiar su posible aporte a la detección de cáncer de mama. La Unidad de Investigación Básica Oral adelanta un estudio piloto que combina datos clínicos con información sobre los microorganismos presentes en la superficie de la lengua. Con esos datos busca desarrollar un modelo que apoye el diagnóstico de periodontitis, una enfermedad que afecta los tejidos que sostienen los dientes.",
+    "La IA también se usa para investigar y crear en las artes. En Tesoros especulativos, el grupo Expresión, Artes y Creación partió de imágenes tridimensionales de piezas de la cultura Quimbaya para generar nuevas formas. El proyecto llevó algunas de esas formas a esculturas y las usó para abrir una conversación sobre el regreso y la memoria del patrimonio cultural.",
+    "Fuente institucional de las líneas y los proyectos: mapa de líneas de investigación, registro de grupos y registro de proyectos de la Vicerrectoría de Investigaciones."
+   ],
+   "enlaces": [
+    "https://www.unbosque.edu.co/centro-informacion/bosque-contexto/tesoro-quimbaya-reimaginado-inteligencia-artificial"
+   ],
+   "num": "13",
+   "tema": "Investigación",
+   "imagen": "img/historias/13.jpg",
+   "imagen_fuente": "https://www.unbosque.edu.co/sites/default/files/2025-11/tesoro-quimbaya-inteligencia-artificial-universidad-elbosque.png"
+  }
+ ]
+}

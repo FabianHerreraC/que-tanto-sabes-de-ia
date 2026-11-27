@@ -633,3 +633,184 @@ body[data-vista="quiz"] .ficha-acciones, body[data-vista="cierre"] .ficha-accion
 @keyframes voltea-entra { from { transform: perspective(1000px) rotateY(-90deg); } to { transform: perspective(1000px) rotateY(0); } }
 .ficha.voltea-sale { animation: voltea-sale .2s cubic-bezier(.55, 0, 1, .45) both; }
 .ficha.voltea-entra { animation: voltea-entra .32s cubic-bezier(.2, .8, .2, 1) both; }
+
+/* ---------- vitrina de historias (portada) ---------- */
+.rv-cabecera .etiqueta { margin-bottom: 10px; }
+.rv-bajada { max-width: 62ch; font-size: 18px; line-height: 1.5; color: var(--tinta); }
+.rv-lineamientos { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin: 8px 0 30px; padding: 26px 28px;
+  border-radius: 6px; background: var(--verde); color: #fff; }
+.rv-lineamientos .etiqueta { color: rgba(255, 255, 255, .7); }
+.rv-lineamientos h2 { margin: 0 0 8px; font: 400 clamp(26px, 3.2vw, 40px)/1.05 var(--display); color: var(--amarillo); }
+.rv-lineamientos p:last-child { margin: 0; max-width: 60ch; font-size: 16px; line-height: 1.5; color: rgba(255, 255, 255, .9); }
+.pildora.rv-ir, .art-lineamientos .pildora.oscura { flex: none; padding: 12px 18px 11px; font-size: 16px; background: var(--naranja); color: #fff; }
+.pildora.rv-ir:hover, .art-lineamientos .pildora.oscura:hover { background: var(--rojo); color: #fff; }
+.rv-filtros { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; }
+.rv-filtros .pildora { font-size: 15px; font-weight: 400; }
+.rv-filtros .pildora.activa { background: var(--tinta); color: var(--fondo); }
+.rv-leer { margin-top: auto; font: var(--bold) 14px var(--sans); color: var(--verde); }
+.rv-nota:hover .rv-leer { color: var(--naranja); }
+.rv-nota h2 { font-size: 23px; }
+.destacada h2 { font-size: clamp(28px, 3vw, 38px); }
+.destacada p { font-size: 17px; }
+.art-cuerpo p { font-size: 17px; }
+.art-bajada { font-weight: 300; }
+.art-fuentes { margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--linea); }
+.art-fuentes ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.art-fuentes a { color: var(--azul); font-weight: var(--bold); text-decoration: none; overflow-wrap: anywhere; }
+.art-fuentes a:hover { text-decoration: underline; }
+.art-lineamientos { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 30px; padding: 18px 20px;
+  border-radius: 6px; background: var(--pastilla); }
+.art-lineamientos p { margin: 0; font-size: 16px; line-height: 1.45; }
+@media (max-width: 720px) {
+  .rv-titulo { font-size: 8.4vw; }   /* «INTELIGENCIA» cabe en el ancho del celular */
+  .rv-lineamientos, .art-lineamientos { flex-direction: column; align-items: flex-start; padding: 20px; }
+  .rv-bajada { font-size: 16px; }
+}
+
+/* imágenes de las historias (de la noticia enlazada) */
+.rv-nota.con-imagen { padding-top: 0; overflow: hidden; }
+.rv-img { display: block; width: calc(100% + 2 * var(--pad-nota, 18px)); margin: 0 calc(-1 * var(--pad-nota, 18px)) 4px; aspect-ratio: 16 / 9;
+  object-fit: cover; background: var(--pastilla); }
+.destacada .rv-img { aspect-ratio: 16 / 8; }
+.rv-nota.con-imagen .rv-num { font-size: 34px; }
+.destacada.con-imagen .rv-num { font-size: 56px; }
+.art-figura { margin: 0 0 20px; }
+.art-figura img { display: block; width: 100%; border-radius: 6px; }
+.art-figura figcaption { margin-top: 6px; font-size: 13px; color: var(--suave); }
+
+/* ---------- vitrina en mosaico (tarjetas redondeadas con la paleta del sitio) ---------- */
+.rv-cabecera { padding-bottom: 8px; }
+.rv-titulo { font-size: clamp(34px, 5vw, 64px); }
+.vt-filtros { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 22px; margin: 22px 0 26px; }
+.vt-filtros button { padding: 4px 0; border: 0; background: none; cursor: pointer; font: var(--bold) 13px var(--sans);
+  text-transform: uppercase; letter-spacing: .06em; color: var(--tenue); border-bottom: 1.5px solid transparent; }
+.vt-filtros button:hover { color: var(--tinta); }
+.vt-filtros button.activa { color: var(--tinta); border-bottom-color: var(--tinta); }
+
+.vt-grilla { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: minmax(250px, auto); grid-auto-flow: dense; gap: 16px; }
+.vt-card { position: relative; margin: 0; border-radius: 18px; overflow: hidden; min-height: 440px; display: flex; flex-direction: column; cursor: pointer;
+  transition: transform .25s cubic-bezier(.2, .8, .2, 1), box-shadow .25s; }
+.vt-card[role="link"]:hover, .vt-card[role="link"]:focus-visible { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(29, 29, 17, .12); outline: none; }
+.vt-naranja { background: var(--naranja); color: #fff; }
+.vt-azul { background: var(--azul); color: #fff; }
+.vt-verde { background: var(--verde); color: #fff; }
+.vt-amarillo { background: var(--amarillo); color: var(--tinta); }
+
+.vt-cabeza { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 18px; }
+.vt-tag { padding: 3px 8px 2px; border: 1.2px solid currentColor; border-radius: 4px; font: var(--bold) 11px var(--sans); text-transform: uppercase; letter-spacing: .06em; }
+.vt-num { font: 400 20px/1 var(--display); opacity: .9; }
+.vt-marca { font: 400 26px/1 var(--display); }
+.vt-titulo { margin: 0; font: 600 clamp(21px, 1.7vw, 26px)/1.15 var(--sans); letter-spacing: -.01em; }
+.vt-texto { margin: 14px 0 0; font-size: 15px; line-height: 1.45; opacity: .92; }
+.vt-pie { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding: 0; border: 0; background: none;
+  color: inherit; cursor: pointer; font: var(--bold) 13px var(--sans); text-transform: uppercase; letter-spacing: .05em; text-align: left; }
+.vt-flecha { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: var(--tinta); color: #fff; flex: none;
+  transition: transform .25s; }
+.vt-card:hover .vt-flecha { transform: translateX(3px); }
+
+/* tarjeta de color: texto y botón */
+.vt-color { padding: 22px 22px 20px; }
+.vt-color .vt-pie { padding-top: 18px; }
+
+/* tarjeta partida: color arriba, foto abajo */
+.vt-arriba { padding: 22px 22px 22px; }
+.vt-foto { position: relative; flex: 1; min-height: 200px; }
+.vt-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.vt-foto .vt-pie { position: absolute; left: 22px; right: 22px; bottom: 18px; color: #fff; text-shadow: 0 1px 8px rgba(0, 0, 0, .45); }
+.vt-foto .vt-flecha { background: #fff; color: var(--tinta); }
+
+/* tarjeta ancha: foto completa con el título encima */
+.vt-ancha { grid-column: span 2; background: var(--tinta); color: #fff; }
+.vt-ancha > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.vt-sobre { position: relative; margin-top: auto; display: flex; flex-direction: column; padding: 90px 26px 22px;
+  background: linear-gradient(transparent, rgba(10, 12, 14, .78)); }
+.vt-sobre .vt-titulo { font-size: clamp(24px, 2.4vw, 34px); max-width: 26ch; margin-bottom: 18px; }
+.vt-sobre .vt-flecha { background: #fff; color: var(--tinta); }
+
+/* invitación a los lineamientos: tarjeta amarilla ancha */
+.vt-invita { grid-column: span 2; }
+.vt-invita .vt-titulo { font: 400 clamp(30px, 3.6vw, 52px)/1 var(--display); color: var(--tinta); max-width: 14ch; }
+.vt-invita .vt-texto { max-width: 52ch; font-size: 17px; }
+.vt-invita .vt-pie { font-size: 15px; }
+
+@media (max-width: 960px) {
+  .vt-grilla { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .vt-invita, .vt-ancha { grid-column: span 2; }
+}
+@media (max-width: 640px) {
+  .vt-grilla { grid-template-columns: 1fr; }
+  .vt-invita, .vt-ancha { grid-column: auto; }
+  .vt-card { min-height: 380px; }
+  .vt-filtros { justify-content: flex-start; gap: 4px 16px; }
+}
+
+/* ritmo del mosaico: filas de altura fija; las altas ocupan dos filas, las anchas dos columnas */
+.vt-grilla { grid-auto-rows: 360px; }
+.vt-card { min-height: 0; }
+.vt-alta { grid-row: span 2; }
+.vt-alta .vt-titulo { font-size: clamp(24px, 2vw, 30px); }
+.vt-invita .vt-texto { margin-top: 10px; }
+@media (max-width: 640px) {
+  .vt-grilla { grid-auto-rows: auto; }
+  .vt-card { min-height: 360px; }
+  .vt-alta { grid-row: auto; min-height: 520px; }
+}
+
+/* Juega: paso de los resultados al mapa */
+.cierre-mapa { display: flex; flex-direction: column; align-items: center; gap: 6px; width: 100%; margin-top: 26px; padding: 14px 0 4px;
+  border: 0; border-top: 1px solid var(--linea); background: none; cursor: pointer; font: var(--bold) 14px var(--sans);
+  text-transform: uppercase; letter-spacing: .06em; color: var(--tinta); }
+.cierre-flecha { font-size: 22px; animation: baja 1.6s ease-in-out infinite; }
+@keyframes baja { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+.cierre-mapa:hover { color: var(--verde); }
+.volver-resultados { position: fixed; z-index: 24; top: 58px; left: 50%; translate: -50% 0; display: none; box-shadow: 0 4px 16px rgba(29, 29, 17, .12); }
+body.con-resultados[data-vista="mapa"] .volver-resultados { display: inline-flex; gap: 6px; }
+@media (prefers-reduced-motion: reduce) { .cierre-flecha { animation: none; } }
+
+/* video de una historia: ocupa el lugar de la foto */
+.vt-foto video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.art-figura video { display: block; width: 100%; max-height: 80vh; border-radius: 6px; background: var(--tinta); }
+
+/* invitación en círculo */
+.vt-invita { grid-column: auto; background: none; overflow: visible; cursor: default; display: grid; place-items: center; }
+.vt-circulo { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; aspect-ratio: 1; width: min(100%, 360px);
+  padding: 34px; border: 0; border-radius: 50%; background: var(--amarillo); color: var(--tinta); text-align: center; cursor: pointer;
+  transition: transform .3s cubic-bezier(.2, .8, .2, 1), box-shadow .3s; }
+.vt-circulo:hover { transform: scale(1.03); box-shadow: 0 12px 30px rgba(29, 29, 17, .14); }
+.vt-circulo .vt-titulo { font: 400 clamp(22px, 2.2vw, 32px)/1.02 var(--display); max-width: 9ch; }
+.vt-circulo .vt-texto { margin: 0; max-width: 24ch; font-size: 14px; line-height: 1.4; }
+.vt-circulo-ir { display: inline-flex; align-items: center; gap: 10px; font: var(--bold) 13px var(--sans); text-transform: uppercase; letter-spacing: .05em; }
+.vt-circulo-ir .vt-flecha { width: 40px; height: 40px; }
+.vt-circulo:hover .vt-flecha { transform: translateX(3px); }
+
+/* ola de naipes: la tarjeta empieza de canto y gira hasta quedar de frente */
+@keyframes naipe {
+  0% { transform: perspective(1100px) rotateY(-100deg); opacity: 0; }
+  35% { opacity: 1; }
+  75% { transform: perspective(1100px) rotateY(12deg); }
+  100% { transform: perspective(1100px) rotateY(0); opacity: 1; }
+}
+.con-ola .vt-card { opacity: 0; transform: perspective(1100px) rotateY(-100deg); backface-visibility: hidden; }
+.con-ola .vt-card.gira { animation: naipe .9s cubic-bezier(.2, .7, .25, 1) var(--demora, 0ms) both; }
+@media (max-width: 640px) {
+  .vt-invita { min-height: 0; }
+  .vt-circulo { width: min(100%, 340px); }
+}
+
+/* al pasar el mouse, la tarjeta ya girada se inclina un poco en el mismo eje del naipe */
+.con-ola .vt-card.girada { animation: none; opacity: 1; transform: perspective(1100px) rotateY(0);
+  transition: transform .5s cubic-bezier(.2, .8, .2, 1), box-shadow .3s; }
+.con-ola .vt-card.girada:hover { transform: perspective(1100px) rotateY(-9deg); box-shadow: 0 14px 30px rgba(29, 29, 17, .14); }
+@media (hover: none) { .con-ola .vt-card.girada:hover { transform: perspective(1100px) rotateY(0); box-shadow: none; } }
+
+/* círculo: «Navegar los lineamientos» y la flecha van en columna, centrados, para quedar siempre dentro del círculo */
+.vt-circulo { padding: 13.5%; gap: 9px; }
+.vt-circulo-ir { flex-direction: column; gap: 8px; font-size: 12px; text-align: center; }
+.vt-circulo .vt-texto { font-size: 13.5px; }
+@media (max-width: 380px) {   /* celulares angostos: el círculo es más chico, el texto también */
+  .vt-circulo { padding: 15%; gap: 8px; }
+  .vt-circulo .vt-tag { font-size: 10px; }
+  .vt-circulo .vt-titulo { font-size: 21px; }
+  .vt-circulo .vt-texto { font-size: 12.5px; }
+  .vt-circulo-ir .vt-flecha { width: 36px; height: 36px; }
+}

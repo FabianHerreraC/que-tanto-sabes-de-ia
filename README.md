@@ -17,6 +17,8 @@ python3 pipeline/importar_excel.py
 
 Eso escribe `questions.json` (200 preguntas del Excel + 20 reflexivas de `banco_reflexivas.py`) y `graph.json` (52 conceptos y 128 relaciones). Si algo no cuadra, no escribe nada.
 
+La portada es la vitrina de historias. Sale de **`data/Historias_IA_Bosque.docx`**: después de editarlo, `python3 pipeline/importar_historias.py` escribe `web/data/historias.json` (el tema de cada historia, para los filtros, se asigna en ese script).
+
 Para verlo en local:
 
 ```bash

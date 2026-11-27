@@ -173,7 +173,8 @@
         const destacado = d.estado === "activo" || d.estado === "dominado" || d.estado === "fallado" || d.estado === "elegido" || d === hover || d === seleccionado || resaltados.has(d);
         const vistaAhora = document.body.dataset.vista;
         if ((vistaAhora === "inicio" || vistaAhora === "acerca") && !destacado) continue;   // inicio y acerca: esfera limpia
-        if (vistaAhora === "mapa" && W < 860 && !destacado) continue;   // celular: en el mapa solo se rotula lo que se toca
+        // celular: en el mapa solo se rotula lo que se toca (y sus pares), aunque venga coloreado del test
+        if (vistaAhora === "mapa" && W < 860 && d !== seleccionado && d !== hover && !resaltados.has(d)) continue;
         // celular, en el test: sin nombres hasta responder; luego solo los de las preguntas ya respondidas
         if (vistaAhora === "quiz" && W < 860 && d.estado !== "dominado" && d.estado !== "fallado" && d !== hover && d !== seleccionado) continue;
         cx.font = `${destacado ? 700 : 400} ${destacado ? 15 : 13.5}px "Jost", system-ui, sans-serif`;
@@ -294,10 +295,12 @@
   let PREGUNTAS = [], GRAFO = null;
 
   async function cargarDatos() {
-    const [g, q] = await Promise.all([
+    const [g, q, h] = await Promise.all([
       fetch("data/graph.json").then((r) => r.json()),
       fetch("data/questions.json").then((r) => r.json()),
+      fetch("data/historias.json").then((r) => r.json()),
     ]);
+    pintarVitrina(h);
     GRAFO = g;
     PREGUNTAS = q.filter((p) => ESTADOS_JUGABLES.includes(p.estado));
     Nube.cargar(g);
@@ -379,6 +382,7 @@
       dominados: new Set(), fallados: new Set() });
     Nube.reiniciar();
     $("#revisados-lista").innerHTML = "";
+    document.body.classList.remove("con-resultados");
     ir("quiz");
     mostrarPregunta();
   }
@@ -537,6 +541,7 @@
   }
 
   function cerrar() {
+    document.body.classList.add("con-resultados");
     const insignia = insigniaDe(juego.aciertos);
     coleccion[insignia.id] = (coleccion[insignia.id] || 0) + 1;
     guardar("tita.insignias", JSON.stringify(coleccion));
@@ -904,6 +909,34 @@
   addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#ficha").hidden) cerrarFicha(); });
 
   /* ================= Vistas ================= */
+  /* ---- Juega: resultados → mapa al seguir bajando, y de vuelta ---- */
+  // en los resultados, al llegar al final y seguir bajando (rueda, trackpad o dedo) se pasa al mapa;
+  // en el mapa, subir con la rueda (o el botón «Tus resultados») vuelve a los resultados
+  (() => {
+    const panel = $("#cierre");
+    let empuje = 0, toqueY = null;
+    const alFinal = () => panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 2;
+    panel.addEventListener("wheel", (e) => {
+      if (document.body.dataset.vista !== "cierre") return;
+      if (e.deltaY > 0 && alFinal()) { empuje += e.deltaY; if (empuje > 140) { empuje = 0; ir("mapa"); } }
+      else empuje = 0;
+    }, { passive: true });
+    panel.addEventListener("touchstart", (e) => { toqueY = e.touches[0].clientY; }, { passive: true });
+    panel.addEventListener("touchmove", (e) => {
+      if (toqueY !== null && alFinal() && toqueY - e.touches[0].clientY > 80) { toqueY = null; ir("mapa"); }
+    }, { passive: true });
+    $("#ver-mapa").addEventListener("click", () => ir("mapa"));
+    $("#volver-resultados").addEventListener("click", () => ir("cierre"));
+    let subida = 0;
+    addEventListener("wheel", (e) => {
+      if (document.body.dataset.vista !== "mapa" || !document.body.classList.contains("con-resultados")) return;
+      if (e.target.closest(".ficha, .intro-mapa")) return;
+      if (e.deltaY < 0) { subida -= e.deltaY; if (subida > 160) { subida = 0; ir("cierre"); } }
+      else subida = 0;
+    }, { passive: true });
+  })();
+
+  let introHecha = false;
   function ir(vista) {
     const fuera = ["mapa", "consulta", "historias", "acerca"].includes(document.body.dataset.vista);
     if (vista === "inicio" && fuera && juego.preguntas.length && juego.i < juego.preguntas.length) {
@@ -913,7 +946,7 @@
     // lo que la rueda iluminó en el inicio no debe quedar marcado en el mapa
     if (document.body.dataset.vista === "inicio" && vista !== "inicio") Nube.reiniciar();
     document.body.dataset.vista = vista;
-    const pestana = ["mapa", "consulta", "historias", "acerca"].includes(vista) ? vista : "inicio";
+    const pestana = ["consulta", "historias", "acerca"].includes(vista) ? vista : "inicio";   // el mapa es parte de «Juega»
     document.querySelectorAll(".pestana").forEach((b) => {
       if (b.dataset.ir === pestana) b.setAttribute("aria-current", "page");
       else b.removeAttribute("aria-current");
@@ -929,46 +962,128 @@
       // el bloque del test emerge desde abajo: título, párrafo y botón, uno tras otro
       const ini = $("#inicio");
       ini.classList.remove("entra"); void ini.offsetWidth; ini.classList.add("entra");
+      // la primera vez que se entra a Juego, la esfera hace su animación de apertura
+      if (!introHecha) { introHecha = true; Rueda.intro(); }
     }
     if (vista === "historias") $("#historias").scrollTop = 0;
     if (vista !== "historias" && location.hash.startsWith("#historia-")) history.replaceState(null, "", location.pathname);
     if (vista === "historias") mostrarHistoria(location.hash);
   }
 
-  /* ================= Historias: cada tarjeta abre un artículo tipo blog ================= */
-  const HISTORIAS = [...document.querySelectorAll(".rv-nota")].map((el) => ({
-    num: el.querySelector(".rv-num").textContent,
-    tema: el.querySelector(".rv-tag").textContent,
-    titulo: el.querySelector("h2").textContent,
-    bajada: el.querySelector("p").textContent,
-  }));
-  // conceptos de los lineamientos que toda historia debería contar cómo cuidó
-  const CUIDADOS = ["declaracion-de-uso", "datos-personales", "supervision-humana", "autoria", "propiedad-intelectual"];
+  /* ================= Historias: la vitrina es la portada; cada tarjeta abre un artículo ================= */
+  let HISTORIAS = [], filtro = "Todas";
+  const dominio = (url) => { try { return new URL(url).hostname.replace(/^www\./, ""); } catch (e) { return url; } };
+
+  // color de cada tema, dentro de la paleta del sitio
+  const COLOR_TEMA = { Salud: "naranja", Formación: "amarillo", Investigación: "azul", Creación: "verde" };
+  const flecha = `<span class="vt-flecha" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`;
+
+  function pintarVitrina(datos) {
+    HISTORIAS = datos.historias;
+    $("#rv-intro").textContent = datos.intro;
+    const temas = ["Todas", ...new Set(HISTORIAS.map((h) => h.tema))];
+    $("#rv-filtros").innerHTML = temas.map((t) =>
+      `<button type="button" data-tema="${esc(t)}" aria-pressed="${t === filtro}"${t === filtro ? ' class="activa"' : ""}>${esc(t)}</button>`).join("");
+    pintarGrilla();
+  }
+
+  // mosaico con ritmo: alterna tarjetas anchas (2 columnas) y altas (2 filas) entre las normales.
+  // Con «Todas», la forma de cada historia está fijada para que las 7 filas queden llenas (la invitación es un círculo de 1×1):
+  //  filas 1-2: círculo, 01 alta, 02 · 04 · 05 — filas 3-4: 03 ancha, 06 alta, 07, 08 — filas 5-7: 09 ancha, 10 alta, 11 ancha, 12, 13 ancha
+  const FORMA = { "01": "alta", "03": "ancha", "06": "alta", "09": "ancha", "10": "alta", "11": "ancha", "13": "ancha" };
+  function pintarGrilla() {
+    const todas = filtro === "Todas";
+    const lista = HISTORIAS.map((h, i) => ({ h, i })).filter(({ h }) => todas || h.tema === filtro);
+    const primeraConImg = lista.find(({ h }) => h.imagen)?.i;
+    const forma = (h, i) => !h.imagen ? "normal" : todas ? (FORMA[h.num] || "normal") : (i === primeraConImg ? "ancha" : "normal");
+    const invitacion = !todas ? "" : `
+      <section class="vt-card vt-invita" aria-labelledby="lin-t">
+        <button class="vt-circulo" type="button" data-ir="inicio">
+          <span class="vt-tag">Lineamientos de IA</span>
+          <span class="vt-titulo" id="lin-t">¿Qué tanto sabes de IA?</span>
+          <span class="vt-texto">Responde situaciones, explora el mapa de conceptos y consulta los documentos.</span>
+          <span class="vt-circulo-ir">Navegar los lineamientos ${flecha}</span>
+        </button>
+      </section>`;
+    $("#rv-grilla").innerHTML = invitacion + lista.map(({ h, i }) => {
+      const color = COLOR_TEMA[h.tema] || "azul";
+      const cabeza = `<div class="vt-cabeza"><span class="vt-tag">${esc(h.tema)}</span><span class="vt-num">${h.num}</span></div>`;
+      const titulo = `<h2 class="vt-titulo">${esc(h.titulo)}</h2>`;
+      const f = forma(h, i);
+      if (f === "ancha") return `
+        <article class="vt-card vt-ancha" tabindex="0" role="link" data-historia="${i}">
+          <img src="${h.imagen}" alt="" loading="lazy" decoding="async">
+          <div class="vt-sobre">${cabeza}${titulo}<span class="vt-pie"><span>Leer historia</span>${flecha}</span></div>
+        </article>`;
+      if (h.imagen) return `
+        <article class="vt-card vt-partida vt-${color}${f === "alta" ? " vt-alta" : ""}" tabindex="0" role="link" data-historia="${i}">
+          <div class="vt-arriba">${cabeza}${titulo}</div>
+          <div class="vt-foto">${h.video
+            ? `<video class="vt-video" data-src="${h.video}" poster="${h.video_poster}" muted loop playsinline preload="none" aria-hidden="true"></video>`
+            : `<img src="${h.imagen}" alt="" loading="lazy" decoding="async">`}<span class="vt-pie"><span>Ver más</span>${flecha}</span></div>
+        </article>`;
+      return `
+        <article class="vt-card vt-color vt-${color}" tabindex="0" role="link" data-historia="${i}">
+          ${cabeza}${titulo}
+          <p class="vt-texto">${esc(h.parrafos[0].length > 170 ? h.parrafos[0].slice(0, 160).replace(/\s+\S*$/, "") + "…" : h.parrafos[0])}</p>
+          <span class="vt-pie"><span>Leer historia</span>${flecha}</span>
+        </article>`;
+    }).join("");
+    activarVideos($("#rv-grilla"));
+    activarOla($("#rv-grilla"));
+  }
+
+  // al hacer scroll, cada tarjeta que entra a la vista gira sobre sí misma como un naipe;
+  // la demora depende de su altura y su columna, así que entran de arriba hacia abajo como una ola.
+  // Al salir de la vista se vuelve a «tapar» para girar de nuevo la próxima vez.
+  const visorOla = "IntersectionObserver" in window ? new IntersectionObserver((entradas) => entradas.forEach(({ target: c, isIntersecting, boundingClientRect: r }) => {
+    if (isIntersecting) {
+      const alto = innerHeight || 800;
+      const demora = Math.max(0, Math.min(1, r.top / alto)) * 420 + (r.left / (innerWidth || 1)) * 260;
+      c.style.setProperty("--demora", `${Math.round(demora)}ms`);
+      c.classList.add("gira");
+      // respaldo de animationend: si la pestaña no anima (segundo plano), la tarjeta igual queda de frente
+      clearTimeout(c._giro); c._giro = setTimeout(() => c.classList.add("girada"), demora + 950);
+    } else { clearTimeout(c._giro); c.classList.remove("gira", "girada"); }
+  }), { threshold: 0.12 }) : null;
+  function activarOla(raiz) {
+    if (!visorOla || pausado || quieto.matches) return;
+    raiz.classList.add("con-ola");
+    raiz.querySelectorAll(".vt-card").forEach((c) => {
+      visorOla.observe(c);
+      // terminado el giro, la tarjeta queda libre para inclinarse levemente al pasar el mouse
+      c.addEventListener("animationend", (e) => { if (e.animationName === "naipe") c.classList.add("girada"); });
+    });
+  }
+
+  // los videos se cargan y se reproducen solo cuando están a la vista (y se pausan al salir)
+  const visorVideos = "IntersectionObserver" in window ? new IntersectionObserver((entradas) => entradas.forEach(({ target: v, isIntersecting }) => {
+    if (isIntersecting) { if (!v.src) v.src = v.dataset.src; if (!pausado) v.play().catch(() => {}); }
+    else v.pause();
+  }), { threshold: 0.25 }) : null;
+  function activarVideos(raiz) {
+    raiz.querySelectorAll("video[data-src]").forEach((v) => visorVideos ? visorVideos.observe(v) : (v.src = v.dataset.src));
+  }
 
   function pintarArticulo(i) {
     const h = HISTORIAS[i];
-    const conceptos = CUIDADOS.map((id) => Nube.nodo(id)).filter(Boolean)
-      .map((n) => `<button class="pildora" type="button" data-concepto="${n.id}">${esc(n.label)}</button>`).join("");
+    const [bajada, ...cuerpo] = h.parrafos;
+    const enlaces = h.enlaces.map((u) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(dominio(u))} <span aria-hidden="true">↗</span></a></li>`).join("");
     const otras = HISTORIAS.map((o, j) => j === i ? "" :
       `<li><button type="button" data-historia="${j}"><span class="rv-num">${o.num}</span><small>${esc(o.tema)}</small>${esc(o.titulo)}</button></li>`).join("");
     $("#rv-articulo").innerHTML = `
       <button class="pildora art-volver" type="button" data-volver>← Historias</button>
       <div class="art-cabeza"><span class="rv-num">${h.num}</span><span class="rv-tag">${esc(h.tema)}</span></div>
       <h1 class="art-titulo">${esc(h.titulo)}</h1>
-      <p class="art-bajada">${esc(h.bajada)}</p>
-      <p class="art-meta"><span><b>Estado:</b> por publicar</span><span><b>Línea:</b> ${esc(h.tema)}</span></p>
-      <div class="art-imagen">Imagen del proyecto</div>
-      <div class="art-cuerpo">
-        <h2>El proyecto</h2>
-        <p class="pendiente">Aquí irá quién lo hace, desde qué facultad o unidad, y qué pregunta o necesidad lo mueve.</p>
-        <h2>Cómo usa la IA</h2>
-        <p class="pendiente">Qué herramientas o sistemas usa, en qué parte del proceso intervienen y qué hace la IA y qué hacen las personas.</p>
-        <blockquote class="art-cita">Aquí irá una frase de alguien del equipo.</blockquote>
-        <h2>Cuidados según los lineamientos</h2>
-        <p class="pendiente">Cómo declaró el uso de IA, qué datos usó y cómo los protegió, quién revisó los resultados y cómo resolvió la autoría.</p>
-        <div class="art-conceptos">${conceptos}</div>
-        <h2>Lo que aprendió</h2>
-        <p class="pendiente">Qué funcionó, qué no y qué le recomendaría a otro equipo de la universidad.</p>
+      ${h.video
+        ? `<figure class="art-figura"><video data-src="${h.video}" poster="${h.video_poster}" muted loop playsinline controls preload="none"></video></figure>`
+        : h.imagen ? `<figure class="art-figura"><img src="${h.imagen}" alt="">${h.imagen_fuente ? `<figcaption>Imagen: ${esc(dominio(h.imagen_fuente))}</figcaption>` : ""}</figure>` : ""}
+      <p class="art-bajada">${esc(bajada)}</p>
+      <div class="art-cuerpo">${cuerpo.map((t) => `<p>${esc(t)}</p>`).join("")}</div>
+      ${enlaces ? `<div class="art-fuentes"><p class="etiqueta">Para saber más</p><ul>${enlaces}</ul></div>` : ""}
+      <div class="art-lineamientos">
+        <p>¿Cómo se cuida el uso de la IA en proyectos como este? Los lineamientos de la Universidad lo explican.</p>
+        <button class="pildora oscura" type="button" data-ir="inicio">Navegar los lineamientos <span aria-hidden="true">→</span></button>
       </div>
       <nav class="art-otras" aria-label="Otras historias"><p class="etiqueta">Otras historias</p><ul>${otras}</ul></nav>`;
   }
@@ -979,7 +1094,7 @@
     const i = m ? HISTORIAS.findIndex((h) => h.num === m[1]) : -1;
     $("#rv-portada").hidden = i >= 0;
     $("#rv-articulo").hidden = i < 0;
-    if (i >= 0) pintarArticulo(i);
+    if (i >= 0) { pintarArticulo(i); activarVideos($("#rv-articulo")); }
     $("#historias").scrollTop = 0;
   }
   const abrirHistoria = (i) => { location.hash = `historia-${HISTORIAS[i].num}`; };
@@ -988,14 +1103,21 @@
     else if (document.body.dataset.vista === "historias") mostrarHistoria(location.hash);
   });
   $("#historias").addEventListener("click", (e) => {
-    const t = e.target.closest("[data-historia], [data-volver], [data-concepto]");
+    const t = e.target.closest("[data-historia], [data-volver], [data-tema], [data-ir]");
     if (!t) return;
+    // «Navegar los lineamientos»: el de la portada ya lo maneja el manejador general de [data-ir];
+    // el del artículo se crea después, así que se atiende aquí
+    if (t.dataset.ir) { if (t.closest("#rv-articulo, #rv-grilla")) ir(t.dataset.ir); return; }
     if (t.dataset.volver !== undefined) { history.pushState(null, "", location.pathname); mostrarHistoria(""); }
-    else if (t.dataset.concepto) { ir("mapa"); abrirFicha(Nube.nodo(t.dataset.concepto)); }
-    else abrirHistoria(Number(t.dataset.historia));
+    else if (t.dataset.historia !== undefined) abrirHistoria(Number(t.dataset.historia));
+    else if (t.closest("#rv-filtros")) {
+      filtro = t.dataset.tema;
+      $("#rv-filtros").querySelectorAll("button").forEach((b) => { b.classList.toggle("activa", b === t); b.setAttribute("aria-pressed", b === t); });
+      pintarGrilla();
+    }
   });
   $("#historias").addEventListener("keydown", (e) => {
-    const t = e.target.closest(".rv-nota[data-historia]");
+    const t = e.target.closest("[data-historia][role=link]");
     if (t && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); abrirHistoria(Number(t.dataset.historia)); }
   });
 
@@ -1057,8 +1179,7 @@
       return;
     }
     Nube.iniciar();
-    ir(location.hash.startsWith("#historia-") ? "historias" : "inicio");
-    if (document.body.dataset.vista === "inicio") Rueda.intro();
+    ir("historias");   // la vitrina de historias es la portada
   }
   arrancar();
 })();
